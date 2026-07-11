@@ -23,6 +23,9 @@ endif
 if !EventStation_Dewhi100 == 1
 	incsrc "Events/EventStation_Dewhi100.asm"
 endif
+if !EventDoors_Dewhi100 == 1
+	incsrc "Events/EventDoors_Dewhi100.asm"
+endif
 
 ;Jumps
 if !SuitlessSpaceJump_Dewhi100 = 1

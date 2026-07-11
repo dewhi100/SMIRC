@@ -5,10 +5,18 @@ lorom
 
 ;Think 'Fusion Doors'
 ;Gray, Blue, Green, Yellow, and Red doors react to event flags now, letting you simulate the security system in Fusion.
+;To use gray doors, uset their condition to "enemies killed = enemies needed".
+;To use blue doors, use the "Blue Door Cap" PLMs. Regular blue doors will still work like they do in vanilla. 
 ;If the event isn't set, they act like a gray door and ignore your shots. 
+;These overwrite existing door code. If you moved them, this will break.
+
+;Custom Event Flags:
+!blueEvent		= $20
+!greenEvent 	= $21
+!yellowEvent 	= $22
+!redEvent		= $23
 
 ;red, yellow, green doors react to shooting with anything
-
 ;red doors open after 1 shot
 !normalShot = $BD0F
 org $84C01E	;yellow door left
@@ -47,10 +55,7 @@ dw $8724, downGrey
 ;Doors don't flicker blue when locked and shot
 
 ;doors check for events
-!blueEvent		= $20
-!greenEvent 	= $21
-!yellowEvent 	= $22
-!redEvent		= $23
+
 org $84C1AE	;green left
 dw eventCheck
 db !greenEvent
@@ -83,9 +88,10 @@ skip 2
 dw $8724, $C38A
 
 ;Make blue door caps
-org $84F100	;freespace
-
+org !free84	;freespace
+print "Blue Door Cap Left: ", pc
 dw $C7B1, leftMain, leftClose		;F100
+print "Blue Door Cap Right: ", pc
 dw $C7B1, rightMain, rightClose		;F106
 
 ;Blue door cap left
@@ -160,3 +166,4 @@ INY
 INY
 RTS			;pass over next instruction
 
+!free84 #= pc()
