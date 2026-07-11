@@ -13,6 +13,9 @@ incsrc "config.asm"
 if !BeamBasedPseudoScrewDamage_Dewhi100 == 1
 	incsrc "Beams/BeamBasedPseudoScrewDamage_Dewhi100.asm"
 endif
+if !PseudoScrewRequiresSpazer_Dewhi100 == 1
+	incsrc "Beams/PseudoScrewRequiresSpazer_Dewhi100.asm"
+endif
 if !RedBeamsLowHP_Dewhi100 == 1
 	incsrc "Beams/RedBeamsLowHP_Dewhi100.asm"
 endif

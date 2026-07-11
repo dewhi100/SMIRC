@@ -1,79 +1,26 @@
 lorom
 
-;TODO: dont fire beam when hitting (DO still reduce charge counter back down to 0)
 
-org $90A4F5
+;;;Work in Progress;;;
+
+
+org $90A504
+;vanilla: STA $0A6E (samus contact dmg index)
 JSR CheckSpazer
 
-org $90A744
+org $90A74F
+;vanilla: STA $0A6E (samus contact dmg index)
 JSR CheckSpazer
 
+;NOTE: Due to a coincidence, 0004 is the value for both spazer, and for the pseudo screw contact damage index
+;because of this, rather than run a bitflag test, you can simply mask all non-spazer bits, and if non-zero, store to contact damage index
 org !free90
 CheckSpazer:
-LDA $09A6 : BIT #$0004 ;spazer equipped
+LDA $09A6
+AND	#$0004
 BEQ +
-LDA $0CD0		;spazer is equipped. load charge timer
-RTS
+STA $0A6E ;Samus contact damage index
 +
-LDA #$0000	;no spazer. load zero
 RTS
 
 !free90 #= pc()
-
-org $91D75A
-;was LDA $0A6E : CMP #$0004
-LDA $0A6E : CMP #$0004
-;JSL pseudoScrewCheck_long : NOP : NOP
-
-org $91D760 
-;was BNE $0A 
-BRA $0A
-
-org $91D805
-;was DW 9C80,9C80,9C80,9400,9400,9400
-DW $9C80, $9C80, $9C80, $9400, $9400, $9400	;vanilla
-;DW $9C80, $9400, $9C80, $9400, $9C80, $9400
-
-org $A09A8B	;enemy-samus collision handling
-JSR pesudoScrewCheck
-
-org $A0A091
-JSR pesudoScrewCheck
-
-org $A0A4A1
-JSR pesudoScrewCheck
-
-org $A0A4B2
-JSR pesudoScrewCheck
-
-org $A0A4D4
-;was JSL $90F084;} Run Samus command - end charge beam
-;STZ $0CD0 : INC $0CD0 : NOP
-JSR resetPseudoScrew : BRA $07
-
-org !freeA0
-pesudoScrewCheck:
-LDA $09A6	;equipped beams
-BIT #$0004	;spazer
-BEQ +
-LDA #$0077
-CMP $0CD0	;charge beam flare index. #$0078 is full charge
-BPL +
-LDA #$0004
-RTS
-+
-LDA $0A6E	;contact damage index. 4 is pseudo screw
-RTS
-
-resetPseudoScrew:
-LDA #$0002
-STA $0CD0	;charge counter
-STA $0B62	;charge palette index
-RTS
-
-pseudoScrewCheck_long:
-JSR pesudoScrewCheck
-CMP #$0004
-RTL
-
-!freeA0 #= pc()

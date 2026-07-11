@@ -3,6 +3,7 @@ lorom
 ;Beams
 !BeamBasedPseudoScrewDamage_Dewhi100 = 1
 	!DoubleDamage = 0
+!PseudoScrewRequiresSpazer_Dewhi100 = 1
 !RedBeamsLowHP_Dewhi100 = 1
 
 ;Energy
