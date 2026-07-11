@@ -50,6 +50,10 @@ if !SupersNeedMains_Dewhi100 = 1 && !EventStation_Dewhi100 == 1
 endif
 
 ;Room States
+if !BossCountRoomState_Dewhi100 == 1
+	incsrc "RoomStates/BossCountRoomState_Dewhi100.asm"
+endif
+
 if !RandomRoomState_Dewhi100 == 1
 	incsrc "RoomStates/RandomRoomState_Dewhi100.asm"
 endif

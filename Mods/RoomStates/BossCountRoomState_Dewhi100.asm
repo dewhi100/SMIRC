@@ -1,9 +1,9 @@
 lorom
 
 ;takes a single parameter.
-;if number of bosses killed >= param, state triggers
+;if number of bosses killed >= param, state triggers.
 
-org $8F8000
+org !free8F
 bossCount:
 PHY
 PHX		;save index
@@ -37,3 +37,5 @@ INX
 INX
 INX
 RTS
+
+!free8F #= pc()

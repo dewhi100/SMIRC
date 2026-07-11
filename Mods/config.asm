@@ -14,7 +14,6 @@ lorom
 !EventStation_Dewhi100 = 1
 !EventDoors_Dewhi100 = 1
 !ItemEventPLM_Dewhi100 = 1
-!RandomRoomState_Dewhi100 = 1
 !RoomClearEventPLM_Dewhi100 = 1
 
 ;Jumps
@@ -23,6 +22,10 @@ lorom
 ;Misiles
 !SupersNeedMains_Dewhi100 = 1
 	!StarterAmmo = 15
+
+;Room States
+!BossCountRoomState_Dewhi100 = 1
+!RandomRoomState_Dewhi100 = 1
 
 ;Suits
 !PseudoVaria_Dewhi100 = 1
