@@ -11,13 +11,16 @@ chargeHeal:
 if !HealsCutoff == 1
 	LDA $0A6A : BEQ +	;Dont heal if alarm is off.
 endif
-LDA $0CD0
+LDA $0CD0				;Charge Flare Counter
 CMP #$0078 : BMI +
-LDA $0B46 : BNE +
+LDA $0B46 : BNE +		;Samus speed table pointer
 LDA $0A20
 AND #$00FF
 CLC : SBC #$0009 : BPL +	;poses 0...8 are standing still
-LDA $09C2
+LDA $09C2					;Samus Energy
+CMP $09C4					;Samus Max Energy
+BPL +						;|Skip healing if full energy
+BEQ +						;/
 INC
 if !HealsCutoff == 2
 	if !HealthAlarmRevamp_MetroidNerd == 1
