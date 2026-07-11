@@ -1,0 +1,6 @@
+asar.exe
+dll/asar.dll
+dll/bindings/c/asardll.c
+dll/bindings/c/asardll.h
+dll/bindings/c_sharp/asar.cs
+dll/bindings/python/asar.py

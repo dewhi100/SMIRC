@@ -1,0 +1,19 @@
+List of resources, by author:
+
+dewhi100
+- Base Acid Damage (Hex Tweak)
+- Beam-based Pseudo Screw attack damage (a disassembly of the SavageWizrobe IPS)
+- Charge Healing (Inspired by Crashtour's patch)
+- Charged Ice Pseudo-Varia Effect
+- Critical Health Warning (a disassembly of the Flamestar666 IPS)
+- Event Doors
+- Event Station
+- Pseudo-Screw Attack Requires Spazer
+- Red Door Cap Missile Requirement (hex tweak)
+- Red Beams When Low HP
+- Skip Attract Mode Demos
+- Spiderball (Unfinished/Abandoned)
+- Spinjump into Spacejump
+- Suitless Spacejump
+- Super Missile Earthquakes Break Crumble Blocks
+- Yellow Gate Fix (disassembly of the JAM IPS)
