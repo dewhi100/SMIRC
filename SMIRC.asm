@@ -35,6 +35,9 @@ endif
 if !ItemEventPLM_Dewhi100 == 1
 	incsrc "Events/ItemEventPLM_Dewhi100.asm"
 endif
+if !RandomRoomState_Dewhi100 == 1
+	incsrc "Events/RandomRoomState_Dewhi100.asm"
+endif
 if !RoomClearEventPLM_Dewhi100 == 1
 	incsrc "Events/RoomClearEventPLM_Dewhi100.asm"
 endif

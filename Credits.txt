@@ -10,6 +10,7 @@ dewhi100
 - Event Station
 - Item Event PLM
 - Pseudo-Screw Attack Requires Spazer
+- Random Room States
 - Red Door Cap Missile Requirement (hex tweak)
 - Red Beams When Low HP
 - Room Clear Event PLM

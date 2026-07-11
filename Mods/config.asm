@@ -14,6 +14,7 @@ lorom
 !EventStation_Dewhi100 = 1
 !EventDoors_Dewhi100 = 1
 !ItemEventPLM_Dewhi100 = 1
+!RandomRoomState_Dewhi100 = 1
 !RoomClearEventPLM_Dewhi100 = 1
 
 ;Jumps
