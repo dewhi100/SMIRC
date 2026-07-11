@@ -10,6 +10,9 @@ incsrc "config.asm"
 ;File Includes;
 
 ;Beams
+if !BeamBasedPseudoScrewDamage_Dewhi100 == 1
+	incsrc "Beams/BeamBasedPseudoScrewDamage_Dewhi100.asm"
+endif
 if !RedBeamsLowHP_Dewhi100 == 1
 	incsrc "Beams/RedBeamsLowHP_Dewhi100.asm"
 endif

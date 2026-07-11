@@ -1,6 +1,8 @@
 lorom
 
 ;Beams
+!BeamBasedPseudoScrewDamage_Dewhi100 = 1
+	!DoubleDamage = 0
 !RedBeamsLowHP_Dewhi100 = 1
 
 ;Energy
