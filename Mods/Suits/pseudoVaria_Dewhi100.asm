@@ -1,37 +1,34 @@
 ;Pseudo-Varia effect when holding fully charged ice beam.
+;By dewhi100
+;Holding a fully charged Ice Beam will prevent damage from heated rooms, with an option to also reduce lava damage by half
 
-;This patch intentionally conflicts with Smiley's suitdamage.asm in one spot, as this patch hijacks code that suitdamage tweaks.
-;That tweak is included in this patch by default (excluding gravity from heat damage checks)
-;If you WANT gravity to block heat damage, change #$0001 to #$0021 on the indicated instructions below.
-
-;To eliminate the conflict with suitdamage.asm, delete this line from suitdamage.asm: 
-
-;	"org $8DE37D : DB $01	;Gravity Suit no longer nullfies heat damage"
-
-;It should be the final line in the patch.
-
-lorom
+LoROM
 
 org $8DE379 
 NOP : NOP
 JSL ChargedIceCheck
 
 ;Lower lava damage
-org $9081F7
-JSR HalfLava
-BRA +
-org $90820A
-+
+if !HalfDamageInLava != 0
+	org $9081F7
+	JSR CheckIce
+	JSR HalfLava	;loads either subdamage + full lava subdamage, or subdamage + half lava damage, depending on result of CheckIce
+	NOP	;filler
+endif
 
 org !free90
-ChargedIceCheck:
+ChargedIceCheck:	;returns item flags, after bitmasking with varia and/or gravity
 JSR CheckIce
 BCS +
 LDA $09A2	;if charge counter not 78 or euipped beams does not have ice, load normal item flags
-AND #$0001	;CHANGE TO #$0021 TO INCLUDE GRAVITY
+if !HeatProofGravitySuit = 0
+	AND #$0001	;CHANGE TO #$0021 TO INCLUDE GRAVITY
+else
+	AND #$0021	;CHANGE TO #$0021 TO INCLUDE GRAVITY
+endif
 RTL
 +
-LDA #$0001	;CHANGE TO #$0021 TO INCLUDE GRAVITY
+LDA #$0001	;spoof the varia suit flag
 RTL
 
 CheckIce:	;carry clear if not fully charged ice. otherwise carry set
@@ -48,13 +45,15 @@ BEQ -		;branch if ice not equipped
 SEC
 RTS
 
+if !HalfDamageInLava != 0
 HalfLava:
-JSR CheckIce
-LDA #$8000	;lava damage over time
-BCC +
-CLC
-LSR a
-+
-ADC $0A4E : STA $0A4E
-LDA $0A4E : ADC $0000 : STA $0A4E
-RTS
+	LDA #$8000	;lava damage over time
+	BCC +
+	CLC
+	LSR
+	+
+	ADC $0A4E
+	RTS
+endif
+
+!free90 #= pc()

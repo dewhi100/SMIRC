@@ -38,6 +38,11 @@ if !SuitlessSpaceJump_Dewhi100 = 1
 	incsrc "Jumps/SuitlessSpaceJump_Dewhi100.asm"
 endif
 
+;Suits
+if !PseudoVaria_Dewhi100 == 1
+	incsrc "Suits/pseudoVaria_Dewhi100.asm"
+endif
+
 ;;;;;;;;;;;;;;;
 }		;end of master toggle for file
 endif

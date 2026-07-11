@@ -16,3 +16,8 @@ lorom
 
 ;Jumps
 !SuitlessSpaceJump_Dewhi100 = 1
+
+;Suits
+!PseudoVaria_Dewhi100 = 0
+	!HeatProofGravitySuit = 0	;Set to 1 if you want Gravity Suit to protect from heat
+	!HalfDamageInLava = 1		;Set if you want charged Ice Beam to reduce lava damage
