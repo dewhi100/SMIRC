@@ -35,9 +35,6 @@ endif
 if !ItemEventPLM_Dewhi100 == 1
 	incsrc "Events/ItemEventPLM_Dewhi100.asm"
 endif
-if !RandomRoomState_Dewhi100 == 1
-	incsrc "Events/RandomRoomState_Dewhi100.asm"
-endif
 if !RoomClearEventPLM_Dewhi100 == 1
 	incsrc "Events/RoomClearEventPLM_Dewhi100.asm"
 endif
@@ -50,6 +47,11 @@ endif
 ;Missiles
 if !SupersNeedMains_Dewhi100 = 1 && !EventStation_Dewhi100 == 1
 	incsrc "Missiles/SupersNeedMains_Dewhi100.asm"
+endif
+
+;Room States
+if !RandomRoomState_Dewhi100 == 1
+	incsrc "RoomStates/RandomRoomState_Dewhi100.asm"
 endif
 
 ;Suits

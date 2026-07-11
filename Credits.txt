@@ -3,6 +3,7 @@ List of resources, by author:
 dewhi100
 - Base Acid Damage (Hex Tweak)
 - Beam-based Pseudo Screw attack damage (a disassembly of the SavageWizrobe IPS)
+- Boss Count Room State
 - Charge Healing (Inspired by Crashtour's patch)
 - Charged Ice Pseudo-Varia Effect
 - Critical Health Warning (a disassembly of the Flamestar666 IPS)
