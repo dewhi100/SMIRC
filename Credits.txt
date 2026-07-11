@@ -8,10 +8,11 @@ dewhi100
 - Critical Health Warning (a disassembly of the Flamestar666 IPS)
 - Event Doors
 - Event Station
+- Item Event PLM
 - Pseudo-Screw Attack Requires Spazer
 - Red Door Cap Missile Requirement (hex tweak)
 - Red Beams When Low HP
-- Skip Attract Mode Demos
+- Skip Attract Mode Demos	(Hex Tweak)
 - Spiderball (Unfinished/Abandoned)
 - Spinjump into Spacejump
 - Suitless Spacejump
