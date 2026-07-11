@@ -25,6 +25,13 @@ lorom
 	!StarterAmmo = 15
 
 ;Suits
-!PseudoVaria_Dewhi100 = 0
+!PseudoVaria_Dewhi100 = 1
 	!HeatProofGravitySuit = 0	;Set to 1 if you want Gravity Suit to protect from heat
 	!HalfDamageInLava = 1		;Set if you want charged Ice Beam to reduce lava damage
+
+;Tweaks
+;If set to custom values, will trigger ASM. Any ASM that conflicts with these will shut them down
+!AcidSubDamage = $4000		;$8000
+!AcidDamage = $0000			;$0000
+!MissilesPerDoorCap = 5		;5
+!SkipDemo = 0				;1 to skip, 0 to keep

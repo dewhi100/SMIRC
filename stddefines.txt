@@ -38,3 +38,6 @@
 
 !SupersDownloadedMessageIndex = $1D
 !UnknownAmmoMessageIndex = $1E
+
+!acidDamage	= $8000
+!acidSubDamage = $0000

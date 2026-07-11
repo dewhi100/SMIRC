@@ -57,6 +57,32 @@ if !PseudoVaria_Dewhi100 == 1
 	incsrc "Suits/pseudoVaria_Dewhi100.asm"
 endif
 
+;Tweaks
+if !AcidSubDamage = $8000 || !AcidDamage = $0000
+	org $909E8F	;Acid damage
+	DW !AcidSubDamage, !AcidDamage
+endif
+if !MissilesPerDoorCap != 5
+	if !EventDoors_Dewhi100 == 0
+		org $84C32C
+		DB !MissilesPerDoorCap
+		org $84C38E
+		DB !MissilesPerDoorCap
+		org $84C3F0
+		DB !MissilesPerDoorCap
+		org $84C452
+		DB !MissilesPerDoorCap
+	else
+		print "Cannot customize missiles per door (Blocked by Event Doors ASM)"
+	endif
+endif
+if !SkipDemo == 1
+	org $8B9F2C
+	BRA +
+	org $8B9F38
+	+
+endif
+
 ;;;;;;;;;;;;;;;
 }		;end of master toggle for file
 endif
