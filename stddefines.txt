@@ -11,7 +11,7 @@
 !free8C = $8CF400
 !unused8D = $8D8967
 !free8E = $8EE600
-!free8F = $8FF000
+!free8F = $8FE99B
 !free90 = $90F63A
 !unused91 = $91F7F4
 !free91 = $91FFEE
