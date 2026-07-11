@@ -35,6 +35,9 @@ endif
 if !ItemEventPLM_Dewhi100 == 1
 	incsrc "Events/ItemEventPLM_Dewhi100.asm"
 endif
+if !RoomClearEventPLM_Dewhi100 == 1
+	incsrc "Events/RoomClearEventPLM_Dewhi100.asm"
+endif
 
 ;Jumps
 if !SuitlessSpaceJump_Dewhi100 = 1

@@ -12,6 +12,7 @@ dewhi100
 - Pseudo-Screw Attack Requires Spazer
 - Red Door Cap Missile Requirement (hex tweak)
 - Red Beams When Low HP
+- Room Clear Event PLM
 - Skip Attract Mode Demos	(Hex Tweak)
 - Spiderball (Unfinished/Abandoned)
 - Spinjump into Spacejump
