@@ -11,10 +11,10 @@ lorom
 ;These overwrite existing door code. If you moved them, this will break.
 
 ;Custom Event Flags:
-!blueEvent		= $20
-!greenEvent 	= $21
-!yellowEvent 	= $22
-!redEvent		= $23
+; !blueEvent		= $20
+; !greenEvent 	= $21
+; !yellowEvent 	= $22
+; !redEvent		= $23
 
 ;red, yellow, green doors react to shooting with anything
 ;red doors open after 1 shot

@@ -20,6 +20,10 @@ lorom
 ;Jumps
 !SuitlessSpaceJump_Dewhi100 = 1
 
+;Misiles
+!SupersNeedMains_Dewhi100 = 1
+	!StarterAmmo = 15
+
 ;Suits
 !PseudoVaria_Dewhi100 = 0
 	!HeatProofGravitySuit = 0	;Set to 1 if you want Gravity Suit to protect from heat

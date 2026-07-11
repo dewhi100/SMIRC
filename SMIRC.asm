@@ -47,6 +47,11 @@ if !SuitlessSpaceJump_Dewhi100 = 1
 	incsrc "Jumps/SuitlessSpaceJump_Dewhi100.asm"
 endif
 
+;Missiles
+if !SupersNeedMains_Dewhi100 = 1 && !EventStation_Dewhi100 == 1
+	incsrc "Missiles/SupersNeedMains_Dewhi100.asm"
+endif
+
 ;Suits
 if !PseudoVaria_Dewhi100 == 1
 	incsrc "Suits/pseudoVaria_Dewhi100.asm"

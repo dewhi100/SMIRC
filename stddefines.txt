@@ -30,3 +30,11 @@
 !freeDE = $DED1C0
 !freeDF = $DF8000
 
+!blueEvent		= $20
+!greenEvent 	= $21
+!yellowEvent 	= $22
+!redEvent		= $23
+!SuperMissileEvent = $30
+
+!SupersDownloadedMessageIndex = $1D
+!UnknownAmmoMessageIndex = $1E
