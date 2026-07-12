@@ -1,4 +1,5 @@
 !free80 = $80CD8E
+!free80End = $80FFC0
 !free81 = $81EF20
 !free82 = $82F710
 !free83 = $83AD66
@@ -29,6 +30,8 @@
 !freeB8 = $B88000
 !freeDE = $DED1C0
 !freeDF = $DF8000
+
+!NodeverDoorRAM = $7FFC02
 
 !blueEvent		= $20
 !greenEvent 	= $21

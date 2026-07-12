@@ -20,6 +20,11 @@ if !RedBeamsLowHP_Dewhi100 == 1
 	incsrc "Beams/RedBeamsLowHP_Dewhi100.asm"
 endif
 
+;Doors
+if !DoorTransitions_Nodever2 == 1
+	incsrc "Doors/Door_Transitions_v1.1.1_Nodever2.asm"
+endif
+
 ;Enemies
 if !OneRoomElevator_Dewhi100 = 1
 	incsrc "Enemies/OneRoomElevator_Dewhi100.asm"
