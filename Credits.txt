@@ -20,4 +20,5 @@ dewhi100
 - Spinjump into Spacejump
 - Suitless Spacejump
 - Super Missile Earthquakes Break Crumble Blocks
+- Time Elapsed Room State
 - Yellow Gate Fix (disassembly of the JAM IPS)
