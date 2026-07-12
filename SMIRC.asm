@@ -1,7 +1,7 @@
 ;|||   Super Metroid Integrated Resource Collection |||;
 lorom
 
-if 1 == 1	;Easily disable assembling while debugging
+if 1 == 0	;Easily disable assembling while debugging
 {
 ;Configuration;
 
@@ -56,6 +56,10 @@ endif
 
 if !RandomRoomState_Dewhi100 == 1
 	incsrc "RoomStates/RandomRoomState_Dewhi100.asm"
+endif
+
+if !TimeElapsedState_Dewhi100 == 1
+	incsrc "RoomStates/TimeElapsedState_Dewhi100.asm"
 endif
 
 ;Suits

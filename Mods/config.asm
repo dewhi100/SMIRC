@@ -26,6 +26,7 @@ lorom
 ;Room States
 !BossCountRoomState_Dewhi100 = 1
 !RandomRoomState_Dewhi100 = 1
+!TimeElapsedState_Dewhi100 = 1
 
 ;Suits
 !PseudoVaria_Dewhi100 = 1
