@@ -38,7 +38,7 @@ RTL
 SEC			;Target time has elapsed
 RTL
 
-
+warnpc !free80End
 !free80 #= pc()
 
 

@@ -24,7 +24,7 @@ JSR SuperEventCheck
 org $809C16
 JSR SuperEventCheck
 
-org $80CDA0
+org !free80
 SuperEventCheck:
 LDA #$0000+!SuperMissileEvent
 JSL $808233	;carry set if event marked
@@ -33,7 +33,8 @@ BCC +		;branch if event not marked
 LDA $09CC	;max supers
 +
 RTS
-
+warnpc !free80End
+!free80 #= pc()
 ;-------------------------------
 
 ;Super missile ammo pickup message
