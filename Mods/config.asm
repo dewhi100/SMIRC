@@ -12,6 +12,14 @@ lorom
 ;Energy
 !ChargeHeal_Dewhi100 = 1
 	!HealsCutoff = 0				;0 = no limit, 1 = heal if critical alarm is on, 2 = can't heal above critical cutoff (almost same as 1, but cutoff is 1 less)
+!DeathForgivenessRevision2_Nodever2 = 1
+    !HealthThreshold = #$001E ; If Samus has at least this much health, she will survive an instant kill with !HealthRemaining HP. Default: 30 (decimal). This should be greater than !HealthRemaining.
+                              ;   In vanilla, the low health alarm plays when Samus has 30 (decimal) or less HP.
+    !HealthRemaining = #$0001 ; This is how much health Samus will be left with when she takes damage that is otherwise fatal.
+    !ForgivePeriodicDamage       = 1 ; Set to 0 to disable death forgiveness from periodic damage including heat & spikes.
+    !ForgiveWhenReservesNotEmpty = 0 ; Set to 0 to disable forgiveness when Samus' reserve health is not zero (REGARDLESS OF IF RESERVE TANKS ARE ON AUTO OR MANUAL MODE)
+
+
 
 ;Events
 !EventStation_Dewhi100 = 1
