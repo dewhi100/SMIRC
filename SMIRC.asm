@@ -26,6 +26,10 @@ if !DoorTransitions_Nodever2 == 1
 endif
 
 ;Enemies
+if !EnemiesStayDead_Nodever2 = 1
+	incsrc "Enemies/EnemiesStayDead_Nodever2.asm"
+endif
+
 if !OneRoomElevator_Dewhi100 = 1
 	incsrc "Enemies/OneRoomElevator_Dewhi100.asm"
 endif

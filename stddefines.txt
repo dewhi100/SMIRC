@@ -31,7 +31,7 @@
 !freeDE = $DED1C0
 !freeDF = $DF8000
 
-!NodeverDoorRAM = $7FFC02
+!NodeverRAM = $7FFC02
 
 !blueEvent		= $20
 !greenEvent 	= $21

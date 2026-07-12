@@ -84,7 +84,7 @@ math pri on
     !FreespaceAnywhere        	:= !freeB8		;$B88000 ; Anywhere in banks $80-$BF
 ;    !FreespaceAnywhereEnd     = $B8FFFF
  ;   !RamBank                  = $7F0000
-    !RamStart					:= !NodeverDoorRAM ;#= $FC02+!RamBank ; $FB02-$FC01 is used by Amoeba's Custom Scrolling Sky patch; $FE00-$FFFF is used by saveload patch
+    !RamStart					:= !NodeverRAM ;#= $FC02+!RamBank ; $FB02-$FC01 is used by Amoeba's Custom Scrolling Sky patch; $FE00-$FFFF is used by saveload patch
 
     !ScreenFadeDelay        = #$0004 ; ScreenFadeDelay: Controls how fast the screen fades to/from black. Higher = slower. Vanilla: #$000C
 
@@ -129,9 +129,6 @@ math pri on
                                      ;     Note: If you disable this but still include total's SPC optimization patch in your hack, that will still work just fine.
 
     !AddOptionToSkipScrolling   = 0  ; If enabled, set the 10h bit in door elevator properties to skip the scrolling animation. (In SMART: Raw > bitflag)
-    !AddOptionToFadeLayer1      = 0  ; If enabled, set the 20h bit in door elevator properties to fade layer 1 per-door (this works just like the CRE bitflag that bosses use in vanilla). (In SMART: Raw > bitflag)
-
-    !ReportFreespaceAndRamUsage = 1  ; Set to 0 to stop this patch from printing it's freespace and RAM usage to the console when assembled.
 
     !BlackTile = #$8081 ; This is the level data for 1 solid black tile in vanilla. The patch writes this in a few places where you can see OOB.
 
@@ -233,7 +230,7 @@ math pri on
     org !UpDoorYDestinationOffset : dw $0020
 
     ; new variables - can repoint the ram that these use
-    !CurRamAddr                                  := !RamStart
+    !CurRamAddr                                  := !NodeverRAM
     !RamLayer1XStartPos                          := !CurRamAddr : !CurRamAddr := !CurRamAddr+2
     !RamLayer2XStartPos                          := !CurRamAddr : !CurRamAddr := !CurRamAddr+2
     !RamCameraXTableIndex                        := !CurRamAddr : !CurRamAddr := !CurRamAddr+2 ; if negative, run the door transition as fast as possible and don't read from the table.
@@ -249,7 +246,8 @@ math pri on
     !RamAsyncSpcBlockSize                        := !CurRamAddr : !CurRamAddr := !CurRamAddr+2 ; Remaining bytes in current block
     !RamAsyncSpcIndex                            := !CurRamAddr : !CurRamAddr := !CurRamAddr+2 ; Current handshake counter byte (low byte used)
     !RamAsyncSpcStopWaitTarget                   := !CurRamAddr : !CurRamAddr := !CurRamAddr+2 ; InitializeEarlyStartUpload stop-wait: target value of !RamNmiCounter at which StateStopWait sends $FE
-    !RamEnd                                      := !CurRamAddr
+    !RamEnd    	                             	 := !CurRamAddr
+	!NodeverRAM									 := !RamEnd
 
     ; note/todo: we can use 092b and 092d if we just stop the game from setting them
 
@@ -347,8 +345,12 @@ math pri on
 
     ORG !Freespace80
     InitRamOnGameStart:
+if !EnemiesStayDead_Nodever2 != 1
         STZ $07E9 ; instruction replaced by hijack
-    InitRam:
+else
+		JSR InitRam_DeadEnemies
+endif
+    InitRam_DoorTransition:
         PHP : REP #$30
         PHA : PHX : LDA #$0000
 ;		NOP #3
@@ -358,7 +360,7 @@ math pri on
         PLX : PLA : PLP : RTS
     InitRamOnBoot:
         LDA #$0000 : TCD : PHK : PLB : SEP #$30 ; instruction replaced by hijack
-        BRA InitRam
+        BRA InitRam_DoorTransition
         .freespace
 ;    !Freespace80 := InitRamOnBoot_freespace
 	!Freespace80 #= pc()
