@@ -21,6 +21,9 @@ if !RedBeamsLowHP_Dewhi100 == 1
 endif
 
 ;Doors
+if !GadoraChargeVulnerability_Nodever2 == 1
+	incsrc "Doors/GadoraChargeVulnerability.asm"
+endif
 if !DoorTransitions_Nodever2 == 1
 	incsrc "Doors/Door_Transitions_v1.1.1_Nodever2.asm"
 endif
