@@ -20,3 +20,11 @@ dewhi100
 - Suitless Spacejump
 - Super Missile Earthquakes Break Crumble Blocks
 - Time Elapsed Room State
+
+Nodever2
+- Death Forgiveness
+- Door Transitions
+- Enemies Stay Dead
+- Gadora Charge Beam Vulnerability
+- Homing Drops
+- HUD Energy and Ammo Counter Animation
