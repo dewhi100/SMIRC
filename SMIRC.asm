@@ -25,6 +25,11 @@ if !DoorTransitions_Nodever2 == 1
 	incsrc "Doors/Door_Transitions_v1.1.1_Nodever2.asm"
 endif
 
+;Drops
+if !HomingDrops_Nodever2 == 1
+	 incsrc "Drops/HomingDrops_Nodever2.asm"
+endif
+
 ;Enemies
 if !EnemiesStayDead_Nodever2 = 1
 	incsrc "Enemies/EnemiesStayDead_Nodever2.asm"
