@@ -6,7 +6,6 @@ dewhi100
 - Boss Count Room State
 - Charge Healing (Inspired by Crashtour's patch)
 - Charged Ice Pseudo-Varia Effect
-- Critical Health Warning (a disassembly of the Flamestar666 IPS)
 - Event Doors
 - Event Station
 - Item Event PLM
