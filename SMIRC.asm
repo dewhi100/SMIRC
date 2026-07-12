@@ -1,7 +1,7 @@
 ;|||   Super Metroid Integrated Resource Collection |||;
 lorom
 
-if 1 == 0	;Easily disable assembling while debugging
+if 1 == 1	;Easily disable assembling while debugging
 {
 ;Configuration;
 
@@ -18,6 +18,11 @@ if !PseudoScrewRequiresSpazer_Dewhi100 == 1
 endif
 if !RedBeamsLowHP_Dewhi100 == 1
 	incsrc "Beams/RedBeamsLowHP_Dewhi100.asm"
+endif
+
+;Enemies
+if !OneRoomElevator_Dewhi100 = 1
+	incsrc "Enemies/OneRoomElevator_Dewhi100.asm"
 endif
 
 ;Energy

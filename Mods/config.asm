@@ -6,6 +6,9 @@ lorom
 !PseudoScrewRequiresSpazer_Dewhi100 = 1
 !RedBeamsLowHP_Dewhi100 = 1
 
+;Enemies
+!OneRoomElevator_Dewhi100 = 1
+
 ;Energy
 !ChargeHeal_Dewhi100 = 1
 	!HealsCutoff = 0				;0 = no limit, 1 = heal if critical alarm is on, 2 = can't heal above critical cutoff (almost same as 1, but cutoff is 1 less)
