@@ -36,6 +36,9 @@ lorom
 !ItemEventPLM_Dewhi100 = 1
 !RoomClearEventPLM_Dewhi100 = 1
 
+;HUD
+!HudCounterAnimation_Nodever2 = 1
+
 ;Jumps
 !SuitlessSpaceJump_Dewhi100 = 1
 

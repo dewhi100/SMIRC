@@ -21,11 +21,11 @@ if !RedBeamsLowHP_Dewhi100 == 1
 endif
 
 ;Doors
-if !GadoraChargeVulnerability_Nodever2 == 1
-	incsrc "Doors/GadoraChargeVulnerability.asm"
-endif
 if !DoorTransitions_Nodever2 == 1
 	incsrc "Doors/Door_Transitions_v1.1.1_Nodever2.asm"
+endif
+if !GadoraChargeVulnerability_Nodever2 == 1
+	incsrc "Doors/GadoraChargeVulnerability.asm"
 endif
 
 ;Drops
@@ -62,6 +62,11 @@ if !ItemEventPLM_Dewhi100 == 1
 endif
 if !RoomClearEventPLM_Dewhi100 == 1
 	incsrc "Events/RoomClearEventPLM_Dewhi100.asm"
+endif
+
+;HUD
+if !HudCounterAnimation_Nodever2 == 1
+	incsrc "HUD/HudCounterAnimation_Nodever2.asm"
 endif
 
 ;Jumps
