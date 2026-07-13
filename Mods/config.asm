@@ -65,4 +65,5 @@ lorom
 !AcidSubDamage = $4000		;$8000
 !AcidDamage = $0000			;$0000
 !MissilesPerDoorCap = $05		;5
+!RemoveMorphBounce = 1
 !SkipDemo = 0				;1 to skip, 0 to keep

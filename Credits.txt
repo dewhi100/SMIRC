@@ -28,5 +28,6 @@ Nodever2
 - Gadora Charge Beam Vulnerability
 - Homing Drops
 - HUD Energy and Ammo Counter Animation
+- Morph Bounce Removal (Hex Tweak)
 - Reserve Tank Bugfixes
 - Speed Booster Jump Momentum Fix
