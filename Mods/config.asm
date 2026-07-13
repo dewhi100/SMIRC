@@ -41,6 +41,9 @@ lorom
 !FullReserveTankIndicator_Compatability_Nodever2 = 1
 !HudCounterAnimation_Nodever2 = 1
 
+;Intro
+!SkipIntroFlashbacks_Nodever2 = 1
+
 ;Jumps
 !SuitlessSpaceJump_Dewhi100 = 1
 

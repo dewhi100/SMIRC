@@ -31,4 +31,5 @@ Nodever2
 - HUD Energy and Ammo Counter Animation
 - Morph Bounce Removal (Hex Tweak)
 - Reserve Tank Bugfixes
+- Skip Intro Flashbacks
 - Speed Booster Jump Momentum Fix

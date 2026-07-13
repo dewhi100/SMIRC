@@ -76,6 +76,11 @@ if !HudCounterAnimation_Nodever2 == 1
 	incsrc "HUD/HudCounterAnimation_Nodever2.asm"
 endif
 
+;Intro
+if !SkipIntroFlashbacks_Nodever2 == 1
+	incsrc "Intro/SkipIntroFlashbacks_Nodever2.asm"
+endif
+
 ;Jumps
 if !SuitlessSpaceJump_Dewhi100 = 1
 	incsrc "Jumps/SuitlessSpaceJump_Dewhi100.asm"
