@@ -33,3 +33,4 @@ Nodever2
 - Reserve Tank Bugfixes
 - Skip Intro Flashbacks
 - Speed Booster Jump Momentum Fix
+- Torizo Area Bit Using Speed1

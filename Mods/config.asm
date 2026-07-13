@@ -20,6 +20,7 @@ lorom
 !EnemiesStayDead_Nodever2 = 1	
     !NumRooms             = $0005 ; The last !NumRooms rooms where an enemy was killed will be remembered.
 !OneRoomElevator_Dewhi100 = 1
+!TorizoAreaBit_Nodever2 = 1
 
 ;Energy
 !ChargeHeal_Dewhi100 = 1
