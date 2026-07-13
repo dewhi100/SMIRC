@@ -38,6 +38,7 @@ lorom
 !RoomClearEventPLM_Dewhi100 = 1
 
 ;HUD
+!FullReserveTankIndicator_Compatability_Nodever2 = 1
 !HudCounterAnimation_Nodever2 = 1
 
 ;Jumps

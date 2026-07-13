@@ -68,6 +68,10 @@ if !RoomClearEventPLM_Dewhi100 == 1
 endif
 
 ;HUD
+if !FullReserveTankIndicator_Compatability_Nodever2 == 1
+	incsrc "HUD/FullReserveTankIndicator_Compatability_Nodever2.asm"
+endif
+
 if !HudCounterAnimation_Nodever2 == 1
 	incsrc "HUD/HudCounterAnimation_Nodever2.asm"
 endif

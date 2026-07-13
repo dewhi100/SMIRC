@@ -25,6 +25,7 @@ Nodever2
 - Death Forgiveness
 - Door Transitions
 - Enemies Stay Dead
+- Full Reserves HUD Indicator (Compatability Version)
 - Gadora Charge Beam Vulnerability
 - Homing Drops
 - HUD Energy and Ammo Counter Animation
