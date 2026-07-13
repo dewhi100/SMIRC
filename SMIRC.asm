@@ -49,6 +49,9 @@ endif
 if !DeathForgivenessRevision2_Nodever2
 	incsrc "Energy/DeathForgivenessRevision2_Nodever2.asm"
 endif
+if !ReserveTankBugfixes_Nodever2 == 1
+	incsrc "Energy/ReserveTankBugfixes_Nodever2.asm"
+endif
 
 ;Events
 if !EventStation_Dewhi100 == 1
@@ -90,6 +93,11 @@ endif
 
 if !TimeElapsedState_Dewhi100 == 1
 	incsrc "RoomStates/TimeElapsedState_Dewhi100.asm"
+endif
+
+;Speed Booster
+if !FixSpeedBoosterJumpMomentum_Nodever2 == 1
+	incsrc "Speedbooster/FixSpeedBoosterJumpMomentum_Nodever2.asm"	
 endif
 
 ;Suits
