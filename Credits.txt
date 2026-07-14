@@ -41,3 +41,4 @@ OmegaDragnet9
 - Generic Maridia Tube
 - Item Grey Doors
 - Morph Speed
+- Skip Zebes Mode7 Escape

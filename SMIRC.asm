@@ -41,6 +41,11 @@ if !HomingDrops_Nodever2 == 1
 	 incsrc "Drops/HomingDrops_Nodever2.asm"
 endif
 
+;Ending
+if !SkipZebesMode7_OmegaDragnet == 1
+	incsrc "Ending/SkipZebesMode7_OmegaDragnet.asm"
+endif
+
 ;Enemies
 if !EnemiesStayDead_Nodever2 = 1
 	incsrc "Enemies/EnemiesStayDead_Nodever2.asm"
