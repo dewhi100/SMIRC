@@ -13,8 +13,9 @@ lorom
 !DoorTransitions_Nodever2 = 1	;see file for full list of custom options. There are too many to list here.
     !AddOptionToFadeLayer1      = 1  ; If enabled, set the 20h bit in door elevator properties to fade layer 1 per-door (this works just like the CRE bitflag that bosses use in vanilla). (In SMART: Raw > bitflag)
     !ReportFreespaceAndRamUsage = 0  ; Set to 0 to stop this patch from printing it's freespace and RAM usage to the console when assembled.
-!EventDoors_Dewhi100 = 0
+!EventDoors_Dewhi100 = 1
 !GadoraChargeVulnerability_Nodever2 = 1
+!ItemGrayDoors_OmegaDragnet = 1
 
 ;Drops
 !HomingDrops_Nodever2 = 1

@@ -38,3 +38,4 @@ Nodever2
 OmegaDragnet9
 - Event BTS
 - Generic Maridia Tube
+- Item Grey Doors

@@ -32,6 +32,9 @@ endif
 if !GadoraChargeVulnerability_Nodever2 == 1
 	incsrc "Doors/GadoraChargeVulnerability.asm"
 endif
+if !ItemGrayDoors_OmegaDragnet == 1
+	incsrc "Doors/ItemGrayDoors_OmegaDragnet.asm"
+endif
 
 ;Drops
 if !HomingDrops_Nodever2 == 1
