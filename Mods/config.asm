@@ -14,6 +14,9 @@ lorom
     !AddOptionToFadeLayer1      = 1  ; If enabled, set the 20h bit in door elevator properties to fade layer 1 per-door (this works just like the CRE bitflag that bosses use in vanilla). (In SMART: Raw > bitflag)
     !ReportFreespaceAndRamUsage = 0  ; Set to 0 to stop this patch from printing it's freespace and RAM usage to the console when assembled.
 !EventDoors_Dewhi100 = 1
+!EventGrayDoors_OmegaDragnet =1
+	!btsEventDoor = 1
+	!plmEventDoor = 1
 !GadoraChargeVulnerability_Nodever2 = 1
 !ItemGrayDoors_OmegaDragnet = 1
 
@@ -41,6 +44,7 @@ lorom
 !ReserveTankBugfixes_Nodever2 = 1
 
 ;Events
+!BossEvents_OmegaDragnet = 1
 !EventStation_Dewhi100 = 1
 !ItemEventPLM_Dewhi100 = 1
 !RoomClearEventPLM_Dewhi100 = 1

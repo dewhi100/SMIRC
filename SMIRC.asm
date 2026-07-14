@@ -70,11 +70,17 @@ if !ReserveTankBugfixes_Nodever2 == 1
 endif
 
 ;Events
+if !BossEvents_OmegaDragnet == 1
+	incsrc "Events/BossEvents_OmegaDragnet.asm"
+endif
 if !EventStation_Dewhi100 == 1
 	incsrc "Events/EventStation_Dewhi100.asm"
 endif
 if !EventDoors_Dewhi100 == 1
 	incsrc "Events/EventDoors_Dewhi100.asm"
+endif
+if !EventGrayDoors_OmegaDragnet == 1
+	incsrc "Events/EventGrayDoors_OmegaDragnet.asm"
 endif
 if !ItemEventPLM_Dewhi100 == 1
 	incsrc "Events/ItemEventPLM_Dewhi100.asm"
