@@ -108,6 +108,9 @@ if !MorphSpeed_OmegaDragnet == 1
 endif
 
 ;PLMs
+if !FX_LevelPLM_OmegaDragnet == 1
+	incsrc "PLMs/FX_LevelPLM_OmegaDragnet.asm"
+endif
 if !GenericMaridiaTube_OmegaDragnet == 1
 	incsrc "PLMs/GenericMaridiaTube_OmegaDragnet.asm"
 endif
