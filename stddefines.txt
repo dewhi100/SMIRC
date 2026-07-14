@@ -32,13 +32,17 @@
 !freeDE = $DED1C0
 !freeDF = $DF8000
 
+!OmegaDragnetRAM = $7EF4A0
 !NodeverRAM = $7FFC02
+
 
 !blueEvent		= $20
 !greenEvent 	= $21
 !yellowEvent 	= $22
 !redEvent		= $23
 !SuperMissileEvent = $30
+
+!Event_bts = $0A 
 
 !SupersDownloadedMessageIndex = $1D
 !UnknownAmmoMessageIndex = $1E
