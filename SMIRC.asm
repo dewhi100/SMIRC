@@ -94,6 +94,11 @@ if !SupersNeedMains_Dewhi100 = 1 && !EventStation_Dewhi100 == 1
 	incsrc "Missiles/SupersNeedMains_Dewhi100.asm"
 endif
 
+;PLMs
+if !GenericMaridiaTube_OmegaDragnet == 1
+	incsrc "PLMs/GenericMaridiaTube_OmegaDragnet.asm"
+endif
+
 ;Room States
 if !BossCountRoomState_Dewhi100 == 1
 	incsrc "RoomStates/BossCountRoomState_Dewhi100.asm"

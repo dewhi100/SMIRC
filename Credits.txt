@@ -34,3 +34,6 @@ Nodever2
 - Skip Intro Flashbacks
 - Speed Booster Jump Momentum Fix
 - Torizo Area Bit Using Speed1
+
+OmegaDragnet9
+- Generic Maridia Tube

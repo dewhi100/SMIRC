@@ -52,6 +52,11 @@ lorom
 !SupersNeedMains_Dewhi100 = 1	
 	!StarterAmmo = 15
 
+;PLMs
+!GenericMaridiaTube_OmegaDragnet = 1
+	!TheHardcodedTile = $0140 ;Change this to if you want to use another tile.
+	!WaitForInput = 1
+
 ;Room States
 !BossCountRoomState_Dewhi100 = 1
 !RandomRoomState_Dewhi100 = 1
