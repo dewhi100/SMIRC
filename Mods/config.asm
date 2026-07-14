@@ -17,6 +17,7 @@ lorom
 !EventGrayDoors_OmegaDragnet =1
 	!btsEventDoor = 1
 	!plmEventDoor = 1
+	!bossEventBTS = 1
 !GadoraChargeVulnerability_Nodever2 = 1
 !ItemGrayDoors_OmegaDragnet = 1
 

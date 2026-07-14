@@ -48,19 +48,32 @@ lorom
 ;In editor, select "Miniboss defeated."
 ;Has to be $01, $02, $04, $08, $10, $20, $40, and $80
 ;Has to be the very first BTS block in the room.
-
-; org !BTS_BossBitCondition	
-; JSR BossBitDefeated
-; NOP #4
+if !bossEventBTS == 1
+print "Gray Door Miniboss Mode: Look for area boss bit in BTS in top corner."
+org !BTS_BossBitCondition	
+JSR BossBitDefeated
+NOP #4
+else
+;vanilla
+LDA #$0002
+JSL $8081DC
+endif
 
 ;--------CHECK EVENT BASED OFF OF BTS TILES--------------------------
 ;In editor select "Torizo Defeated."
 ;Can be used to check Events including and beyond Vanilla array
 ;Has to be the very first 2 BTS blocks in the room. 
 
+if !btsEventDoor == 1
 org !BTS_EventCondition   
+print "Gray Door Torizo Mode: Look for event flag in BTS in top corner."
 JSR EventCheckBTS
 NOP #4
+else
+;vanilla
+LDA #$0004
+JSL $8081DC
+endif
 
 ;-------CHECK EVENT BASED OFF OF DOOR PLM ARGUMENT-----------------
 ;In editor, you select "Etecoons/Dachora Rescued"
@@ -68,9 +81,16 @@ NOP #4
 ;Currently setup to use extended event array as well.
 ;Using this, you MUST match the door index to the event.
 
+if !plmEventDoor == 1
+print "Gray Door Dachora Mode: Use low byte of the PLM Argument to define Event flag."
 org !PLM_ArgumentEventCondtion 
 JSR EventCheckPLM
 NOP #4
+else
+;vanilla
+LDA #$000F
+JSL $808233
+endif
 
 ;-----------NEW GRAY DOOR BEHAVIORS------------------------
 ;Uses about $31 bytes of freespace in Bank $84 
@@ -78,8 +98,6 @@ NOP #4
 org !free84 ;!84FreeSpace1
 
 if !plmEventDoor == 1
-
-print "Event Door (PLM Arg): ", pc
 EventCheckPLM:
 PHY
 LDY $1C27        ;PLM index
@@ -96,15 +114,15 @@ endif
 ; JSL !EventCheck
 ; RTS
 
-; BossBitDefeated:	 ;Comment this as well as lines 52-54 if you want this functionality. (Mainly for Boss Area Event System.)  
-; LDA !FirstBTS      ;Gets first BTS Block from Room
-; AND #$00FF
-; JSL !BossBitCheck
-; RTS
+if !bossEventBTS == 1
+BossBitDefeated:	 ;Comment this as well as lines 52-54 if you want this functionality. (Mainly for Boss Area Event System.)  
+LDA !FirstBTS      ;Gets first BTS Block from Room
+AND #$00FF
+JSL !BossBitCheck
+RTS
+endif
 
 if !btsEventDoor == 1
-
-print "Event Door (level BTS): ", pc
 EventCheckBTS:
 LDA !FirstBTS       ;Gets first BTS Block from Room
 XBA                 ;Needs to be XBA because using 2 blocks his time (for events higher than $FF)
