@@ -86,6 +86,7 @@ lorom
 
 ;Speed Booster
 !FixSpeedBoosterJumpMomentum_Nodever2 = 1
+!RemoveShinesparkHealthDrain_Exister = 1
 
 ;Suits
 !PseudoVaria_Dewhi100 = 1

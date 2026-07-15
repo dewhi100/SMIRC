@@ -148,6 +148,9 @@ endif
 if !FixSpeedBoosterJumpMomentum_Nodever2 == 1
 	incsrc "Speedbooster/FixSpeedBoosterJumpMomentum_Nodever2.asm"	
 endif
+if !RemoveShinesparkHealthDrain_Exister == 1
+	incsrc "SpeedBooster/RemoveShinesparkHealthDrain_Exister.asm"
+endif
 
 ;Suits
 if !PseudoVaria_Dewhi100 == 1

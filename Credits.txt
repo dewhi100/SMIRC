@@ -21,6 +21,9 @@ dewhi100
 - Super Missile Earthquakes Break Crumble Blocks
 - Time Elapsed Room State
 
+Exister
+- Remove Shinespark Health Dreain
+
 Nodever2
 - Death Forgiveness
 - Door Transitions
