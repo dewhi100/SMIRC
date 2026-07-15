@@ -22,7 +22,8 @@ dewhi100
 - Time Elapsed Room State
 
 Exister
-- Remove Shinespark Health Dreain
+- Missile Tanks Refill (Hex Tweak)
+- Remove Shinespark Health Drain
 
 Nodever2
 - Death Forgiveness

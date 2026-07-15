@@ -176,6 +176,11 @@ if !MissilesPerDoorCap != 5
 		print "Cannot customize missiles per door (Blocked by Event Doors ASM)"
 	endif
 endif
+if !MissilePickupsRefill = 1
+	org $8489B3
+	STA $09C6		;Store max missile that was just calculated to samus missile
+	JMP $89BD		;Jump past now undeeded code space
+endif
 if !RemoveMorphBounce == 1
 	org $91F204 : DW $F245 : DW $F245 : dw $F245
 	org $91F279 : DW $F2C0 : DW $F2C0 : dw $F2C0
