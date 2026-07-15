@@ -25,6 +25,11 @@ if !EventBTS_OmegaDragnet == 1
 	incsrc "Blocks/EventBTS_OmegaDragnet.asm"
 endif
 
+;Bombs
+if !BombLauncher_Ob == 1
+	incsrc "Bombs/BombLauncher_Ob.asm"
+endif
+
 ;Doors
 if !DoorTransitions_Nodever2 == 1
 	incsrc "Doors/Door_Transitions_v1.1.1_Nodever2.asm"

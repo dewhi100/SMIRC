@@ -32,6 +32,7 @@
 !freeDE = $DED1C0
 !freeDF = $DF8000
 
+!UniversalAmmoRAM = $09EE
 !OmegaDragnetRAM = $7EF4A0
 !NodeverRAM = $7FFC02
 

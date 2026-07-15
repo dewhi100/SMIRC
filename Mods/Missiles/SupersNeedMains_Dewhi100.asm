@@ -77,8 +77,10 @@ RTS
 
 ;HUD select override
 
-org $90C564
-JSR SuperEventCheck90
+if !BombLauncher_Ob == 0
+	org $90C564
+	JSR SuperEventCheck90
+endif
 
 org !free90
 ;checks CURRENT supers as opposed to max supers like in bank 80

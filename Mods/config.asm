@@ -9,12 +9,18 @@ lorom
 ;Blocks
 !EventBTS_OmegaDragnet = 1
 
+;Bombs
+!BombLauncher_Ob = 1
+	!HUD_Index = 4 ; 0..4
+	!bombLauncherBitflag = $8000	;the item you want to use as the bomb launcher. $1000 is the bombs flag. $8000 is X-ray
+
+
 ;Doors
 !DoorTransitions_Nodever2 = 1	;see file for full list of custom options. There are too many to list here.
     !AddOptionToFadeLayer1      = 1  ; If enabled, set the 20h bit in door elevator properties to fade layer 1 per-door (this works just like the CRE bitflag that bosses use in vanilla). (In SMART: Raw > bitflag)
     !ReportFreespaceAndRamUsage = 0  ; Set to 0 to stop this patch from printing it's freespace and RAM usage to the console when assembled.
 !EventDoors_Dewhi100 = 1
-!EventGrayDoors_OmegaDragnet =1
+!EventGrayDoors_OmegaDragnet = 1
 	!btsEventDoor = 1
 	!plmEventDoor = 1
 	!bossEventBTS = 1
