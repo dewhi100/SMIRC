@@ -15,6 +15,7 @@
 !free8F = $8FE99B
 !free90 = $90F63A
 !unused91 = $91F7F4
+!unused91End = $91F88C
 !free91 = $91FFEE
 !free92 = $92EDF4
 !free93 = $93F61D
@@ -32,6 +33,7 @@
 !freeDE = $DED1C0
 !freeDF = $DF8000
 
+!SlopeFlagRAM = $39
 !UniversalAmmoRAM = $09EE
 !OmegaDragnetRAM = $7EF4A0
 !NodeverRAM = $7FFC02

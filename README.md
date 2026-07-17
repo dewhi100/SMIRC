@@ -1,14 +1,15 @@
 # SMIRC
 Super Metroid Integrated Resource Collection
 
-asarParams.txt	-	Meant to be pasted into SMART 's "Extra Arguments" field (under "Config>Global") 
-SMIRC.asm 	-	Main build file.  
-stddefines.txt	-	Lists freespace, RAM addresses, or other constants or shared values you might want to track, such as custom BTS indices  
-stdincludes.txt	-	I don't really have a good use for this, apart from including the base "Mods" folder  
-test.asm	-	Used to detect ASM collistions between SMIRC and new ASMs before integrating them  
-scratchpad	-	Not needed, but possibly useful for separating out in-development mods  
-Mods		-	Hosts all the different patches  
-Mods/config.asm	-	The UI for SMIRC. Has all the flags for indivual mods and features, and other defines for them.  
+asarParams.txt		-	Meant to be pasted into SMART 's "Extra Arguments" field (under "Config>Global") 
+SMIRC.asm 		-	Main build file.  
+FreespaceUsed.txt	-	Tracks which ASMs use which banks' freespace.
+stddefines.txt		-	Lists freespace, RAM addresses, or other constants or shared values you might want to track, such as custom BTS indices  
+stdincludes.txt		-	I don't really have a good use for this, apart from including the base "Mods" folder  
+test.asm		-	Used to detect ASM collistions between SMIRC and new ASMs before integrating them  
+scratchpad		-	Not needed, but possibly useful for separating out in-development mods  
+Mods			-	Hosts all the different patches  
+Mods/config.asm		-	The UI for SMIRC. Has all the flags for indivual mods and features, and other defines for them.  
 
 
 || To use in a hack ||

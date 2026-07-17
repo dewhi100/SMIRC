@@ -122,7 +122,9 @@ endif
 if !MorphSpeed_OmegaDragnet == 1
 	incsrc "Morph/MorphSpeed_OmegaDragnet.asm"
 endif
-
+if !SafeUnmorph_Tundain == 1
+	incsrc "Morph/SafeUnmorph_Tundain.asm"
+endif
 ;PLMs
 if !FX_LevelPLM_OmegaDragnet == 1
 	incsrc "PLMs/FX_LevelPLM_OmegaDragnet.asm"

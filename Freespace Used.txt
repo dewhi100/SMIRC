@@ -1,0 +1,76 @@
+Freespace used, by bank:
+
+Bank 80
+- Boss Events (OmegaDragnet)
+- Door Transitions (Nodever2)
+- Enemies Stay Dead (Nodever2)
+- HUD Counter Animation (Nodever2)
+- Supers Need Mains (dewhi100)
+
+Bank 81
+- Downsparking (Tundain)
+
+Bank 82
+- Door Transitions (Nodever2)
+
+Bank83
+- Downsparking (Tundain) (Relocated) (Can be anywhere)
+- Enemies Stay Dead (Nodever2) (Can be anywhere)
+- Homing Drops (Nodever2) (Can be anywhere)
+
+Bank 84
+- Event Doors (dewhi100)
+- Event Gray Doors (OmegaDragnet)
+- Event Station (dewhi100)
+- FX Level PLM
+- Gadora Charge Vulnerability (Nodever2)
+- Generic Maridia Tube (OmegaDragnet)
+- Item Gray Doors (OmegaDragnet)
+- Item Event PLM (dewhi100)
+- Supers Need Mains (dewhi100)
+
+Bank 8F
+- Boss Count Room State (dewhi100)
+- Random Room State (dewhi100)
+- Time Elapsed Room State (dewhi100)
+- Room ASM: Earthquakes Break Crumbles (dewhi100)
+- Room ASM: Supers Need Mains (dewhi100)
+
+Bank 90
+- Bomb Launcher (Ob)
+- Charge Heal (dewhi100)
+- Downsparking (Tundain)
+- Morph Speed (OmegaDragnet)
+- Pseudo-Varia with Charged Ice Beam (dewhi100)
+- Pseudo-Screw Attack Requires Spazer (dewhi100)
+- Red Beams at Low HP (dewhi100)
+- Spinjump into Spacejump (dewhi100)
+- Suitless Spacejump (dewhi100)
+- Supers Need Mains (dewhi100)
+
+Bank 91 (Overwriting Unused Code)
+- Downsparking (Tundain)
+- Safe Unmorph (Tundain)
+- Spacejump into Spinjump (dewhi100)
+
+Bank 91
+
+Bank 94
+- Bomb Launcher (Ob)
+- Event BTS (OmegaDragnet)
+- Safe Unmorph (Tundain)
+
+Bank A0
+- Beam Based Pseudo-Screw Attack Damage (dewhi100)
+- Bomb Launcher (Ob)
+- Enemies Stay Dead (Nodever2)
+
+Bank A3
+- One-room Elevators (dewhi100)
+
+Bank AA
+- Torizo Area Bit (Nodever2)
+
+Bank B8
+- Door Transitions (Nodever2) (Can be anywhere)
+- Full Reserve Tank Indicator (Nodever2) (Can be anywhere)

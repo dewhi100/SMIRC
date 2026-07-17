@@ -72,6 +72,7 @@ lorom
 
 ;Morph
 !MorphSpeed_OmegaDragnet = 1
+!SafeUnmorph_Tundain = 1
 
 ;PLMs
 !FX_LevelPLM_OmegaDragnet = 1

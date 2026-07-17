@@ -16,8 +16,8 @@ DW $0A00	;Maximum Y velocity needed to space jump under water. was DW $0500
 org !free90
 Bubblejump:
 JSL $9098BC
-JSR $8156
-JSR $8156
+;JSR $8156	;These make bubbles even if you are not in water. need to add some further checks before turning these on.
+;JSR $8156
 RTS
 
 !free90 #= pc()

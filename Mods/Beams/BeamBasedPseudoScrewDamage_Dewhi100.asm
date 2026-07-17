@@ -1,7 +1,7 @@
 lorom
 
 ;Beam-based pseudo-screw attack damage, by dewhi100
-;Inspired by the Savage Wizzrobe patch"Variable Pseudo Screw Attack Damage"
+;Inspired by the Savage Wizzrobe patch "Variable Pseudo Screw Attack Damage"
 ;Usable with splasma, as long as you know where to look for the relocated beam data pointer array.
 
 ;!ChargedBeamsListPointer = ChargedBeamsListPointer	;Label used in the splasma included as part of MFreak's beam overhaul patch.

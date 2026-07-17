@@ -61,7 +61,7 @@ JMP alsodown
 org $9181A1
 JSR extra : RTS
 
-org $91F7F4;replace unused code
+org !unused91;replace unused code
 ;this code sets allows enrering the shinespark windup state even if you're golding angle down when jumping
 alsodown:
 CMP #$006B : BEQ +
@@ -78,20 +78,28 @@ JMP $F571
 ;this is a bit ugly, but it's easier than including the entire transition table in this patch
 extra:
 JSR $81A9
+JSL extra_long
+RTS
+
+warnpc !unused91End
+!unused91 #= pc()
+
+org !freeB8
+extra_long:
 LDA $0A1C;are you in the windup state?
 CMP #$00C7 : BEQ +
 CMP #$00C8 : BEQ ++
-RTS
+RTL
 +
 LDA $8B : BIT $09BC : BEQ +;facing right + angle down = diagonal downspark down
 LDA #$00CD : BRA +++
-RTS
+RTL
 +
 LDA $8B : BIT $09BE : BNE +;if not holding angle up, and do holding down, then spark down facing right
 BIT $09AC : BEQ +
 LDA #$00CB : BRA +++
 +
-RTS
+RTL
 ++
 LDA $8B : BIT $09BC : BEQ +;facing left + angle down = diagonal downspark down
 LDA #$00CE : BRA +++
@@ -100,15 +108,13 @@ LDA $8B : BIT $09BE : BNE +;if not holding angle up, and do holding down, then s
 BIT $09AC : BEQ +
 LDA #$00CC : BRA +++
 +
-RTS
+RTL
 +++
 STA $0A28
 LDA #$0002 : STA $0B36
-RTS
+RTL
 
-
-
-warnpc $91F88C
+!freeB8 #= pc()
 
 
 
