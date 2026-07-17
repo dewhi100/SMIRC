@@ -19,6 +19,9 @@ endif
 if !RedBeamsLowHP_Dewhi100 == 1
 	incsrc "Beams/RedBeamsLowHP_Dewhi100.asm"
 endif
+if !SmoothGrappleBetterLatching_Tundain == 1
+	incsrc "Beams/SmoothGrappleBetterLatching_Tundain.asm"
+endif
 
 ;Blocks
 if !EventBTS_OmegaDragnet == 1

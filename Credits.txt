@@ -55,3 +55,4 @@ OmegaDragnet9
 Tundain
 - Downsparking
 - Safe Unmorph
+- Smooth Grapple & Better Latching (Tundain)

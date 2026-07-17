@@ -44,6 +44,7 @@ Bank 90
 - Pseudo-Varia with Charged Ice Beam (dewhi100)
 - Pseudo-Screw Attack Requires Spazer (dewhi100)
 - Red Beams at Low HP (dewhi100)
+- Smooth Grapple & Better Latching (Tundain)
 - Spinjump into Spacejump (dewhi100)
 - Suitless Spacejump (dewhi100)
 - Supers Need Mains (dewhi100)
@@ -59,6 +60,10 @@ Bank 94
 - Bomb Launcher (Ob)
 - Event BTS (OmegaDragnet)
 - Safe Unmorph (Tundain)
+- Smooth Grapple & Better Latching (Tundain)
+
+Bank 9B
+- Smooth Grapple & Better Latching (Tundain)
 
 Bank A0
 - Beam Based Pseudo-Screw Attack Damage (dewhi100)

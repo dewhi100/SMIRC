@@ -5,6 +5,7 @@ lorom
 	!DoubleDamage = 1
 !PseudoScrewRequiresSpazer_Dewhi100 = 1
 !RedBeamsLowHP_Dewhi100 = 1
+!SmoothGrappleBetterLatching_Tundain = 1
 
 ;Blocks
 !EventBTS_OmegaDragnet = 1
