@@ -85,6 +85,7 @@ lorom
 !TimeElapsedState_Dewhi100 = 1
 
 ;Speed Booster
+!Downsparking_Tundain = 1
 !FixSpeedBoosterJumpMomentum_Nodever2 = 1
 !RemoveShinesparkHealthDrain_Exister = 1
 

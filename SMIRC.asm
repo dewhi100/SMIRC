@@ -145,6 +145,9 @@ if !TimeElapsedState_Dewhi100 == 1
 endif
 
 ;Speed Booster
+if !Downsparking_Tundain == 1
+	incsrc "SpeedBooster/Downsparking_Tundain.asm"
+endif
 if !FixSpeedBoosterJumpMomentum_Nodever2 == 1
 	incsrc "Speedbooster/FixSpeedBoosterJumpMomentum_Nodever2.asm"	
 endif

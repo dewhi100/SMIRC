@@ -51,3 +51,6 @@ OmegaDragnet9
 - Item Grey Doors
 - Morph Speed
 - Skip Zebes Mode7 Escape
+
+Tundain
+- Downsparking
