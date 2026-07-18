@@ -6,6 +6,7 @@ lorom
 !PseudoScrewRequiresSpazer_Dewhi100 = 1
 !RedBeamsLowHP_Dewhi100 = 1
 !SmoothGrappleBetterLatching_Tundain = 1
+!SpinningChargeFlare_Tundain = 0	;possiblyly bugged. tundain is looking.
 
 ;Blocks
 !EventBTS_OmegaDragnet = 1
@@ -35,7 +36,7 @@ lorom
 !SkipZebesMode7_OmegaDragnet = 1
 
 ;Enemies
-!EnemiesStayDead_Nodever2 = 1	
+!EnemiesStayDead_Nodever2 = 1
     !NumRooms             = $0005 ; The last !NumRooms rooms where an enemy was killed will be remembered.
 !OneRoomElevator_Dewhi100 = 1
 !TorizoAreaBit_Nodever2 = 1
@@ -68,7 +69,7 @@ lorom
 !SuitlessSpaceJump_Dewhi100 = 1
 
 ;Misiles
-!SupersNeedMains_Dewhi100 = 1	
+!SupersNeedMains_Dewhi100 = 1
 	!StarterAmmo = 15
 
 ;Morph

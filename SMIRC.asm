@@ -22,6 +22,9 @@ endif
 if !SmoothGrappleBetterLatching_Tundain == 1
 	incsrc "Beams/SmoothGrappleBetterLatching_Tundain.asm"
 endif
+if !SpinningChargeFlare_Tundain == 1
+	incsrc "Beams/SpinningChargeFlare_Tundain.asm"
+endif
 
 ;Blocks
 if !EventBTS_OmegaDragnet == 1
