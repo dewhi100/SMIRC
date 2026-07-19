@@ -96,6 +96,7 @@ lorom
 !Downsparking_Tundain = 1
 !FixSpeedBoosterJumpMomentum_Nodever2 = 1
 !RemoveShinesparkHealthDrain_Exister = 1
+!ShinesparkCompatibleReflecs_Tundain = 1
 
 ;Suits
 !PseudoVaria_Dewhi100 = 1

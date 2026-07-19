@@ -78,6 +78,7 @@ Bank A0
 
 Bank A3
 - One-room Elevators (dewhi100)
+- Shinespark Compatible Reflecs (Tundain)
 
 Bank AA
 - Torizo Area Bit (Nodever2)

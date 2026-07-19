@@ -170,6 +170,9 @@ endif
 if !RemoveShinesparkHealthDrain_Exister == 1
 	incsrc "SpeedBooster/RemoveShinesparkHealthDrain_Exister.asm"
 endif
+if !ShinesparkCompatibleReflecs_Tundain == 1
+	incsrc "SpeedBooster/ShinesparkCompatibleReflecs_Tundain.asm"
+endif
 
 ;Suits
 if !PseudoVaria_Dewhi100 == 1
