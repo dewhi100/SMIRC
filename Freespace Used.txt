@@ -33,6 +33,12 @@ Bank 84
 Bank 89
 - Charge Missiles (Tundain) (If using PLM)
 
+Bank 8B
+- Non-Explosive Planet (Tundain) (If exploding the area)
+
+Bank 8C
+- Non-Explosive Planet (Tundain)
+
 Bank 8F
 - Boss Count Room State (dewhi100)
 - Random Room State (dewhi100)

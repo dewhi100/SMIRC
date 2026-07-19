@@ -33,6 +33,8 @@ lorom
 !HomingDrops_Nodever2 = 1
 
 ;Ending
+!NonExplosivePlanet_Tundain = 1
+	!AreaDoesExplode = 1			;If set to 1, part of the surface will still explode. You must supply the art yourself.
 !SkipZebesMode7_OmegaDragnet = 1
 
 ;Enemies
@@ -75,7 +77,6 @@ lorom
 	!withPLMs = 1			;if 1, will use PLMs to set the item flags
 !SupersNeedMains_Dewhi100 = 1
 	!StarterAmmo = 15
-
 
 ;Morph
 !MorphSpeed_OmegaDragnet = 1

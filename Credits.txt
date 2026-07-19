@@ -57,6 +57,7 @@ Tundain
 - Downsparking
 - Enemy Always Freezes Vulnerability
 - Missile Grabbing Golden Torizo
+- Non-Explosive Planet
 - Safe Unmorph
 - Shinespark Compatible Reflecs
 - Smooth Grapple & Better Latching

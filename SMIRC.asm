@@ -53,6 +53,9 @@ if !HomingDrops_Nodever2 == 1
 endif
 
 ;Ending
+if !NonExplosivePlanet_Tundain == 1
+	incsrc "Ending/NonExplosivePlanet/NonExplosivePlanet_Tundain.asm"
+endif
 if !SkipZebesMode7_OmegaDragnet == 1
 	incsrc "Ending/SkipZebesMode7_OmegaDragnet.asm"
 endif
