@@ -56,6 +56,7 @@ Tundain
 - Charge Missiles
 - Downsparking
 - Enemy Always Freezes Vulnerability
+- Flipped Bomb Torizo
 - Missile Grabbing Golden Torizo
 - Non-Explosive Planet
 - Safe Unmorph

@@ -41,6 +41,7 @@ lorom
 !EnemyAlwaysFreezesVulnerability_Tundain = 1
 !EnemiesStayDead_Nodever2 = 1
     !NumRooms             = $0005 ; The last !NumRooms rooms where an enemy was killed will be remembered.
+!FlippedBombTorizo_Tundain = 1
 !MissileGrabbingGoldenTorizo_Tundain = 1
 !OneRoomElevator_Dewhi100 = 1
 !SlopeCompatibleSpacePirates_Tundain = 1

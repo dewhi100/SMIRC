@@ -67,6 +67,9 @@ endif
 if !EnemiesStayDead_Nodever2 == 1
 	incsrc "Enemies/EnemiesStayDead_Nodever2.asm"
 endif
+if !FlippedBombTorizo_Tundain == 1
+	incsrc "Enemies/FlippedBombTorizo_Tundain.asm"
+endif
 if !MissileGrabbingGoldenTorizo_Tundain == 1
 	incsrc "Enemies/MissileGrabbingGoldenTorizo_Tundain.asm"
 endif
