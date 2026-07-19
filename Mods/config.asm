@@ -6,7 +6,7 @@ lorom
 !PseudoScrewRequiresSpazer_Dewhi100 = 1
 !RedBeamsLowHP_Dewhi100 = 1
 !SmoothGrappleBetterLatching_Tundain = 1
-!SpinningChargeFlare_Tundain = 0	;possiblyly bugged. tundain is looking.
+!SpinningChargeFlare_Tundain = 0	;possibly bugged. tundain is looking at it.
 
 ;Blocks
 !EventBTS_OmegaDragnet = 1
@@ -69,8 +69,11 @@ lorom
 !SuitlessSpaceJump_Dewhi100 = 1
 
 ;Misiles
+!ChargeMissiles_Tundain = 1	;Note: add $0100 to the PLM argument to make it a charged Super item rather than charged missile
+	!withPLMs = 1			;if 1, will use PLMs to set the item flags
 !SupersNeedMains_Dewhi100 = 1
 	!StarterAmmo = 15
+
 
 ;Morph
 !MorphSpeed_OmegaDragnet = 1

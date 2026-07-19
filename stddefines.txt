@@ -33,7 +33,9 @@
 !freeDE = $DED1C0
 !freeDF = $DF8000
 
+
 !SlopeFlagRAM = $39
+!spawnSbaFlag = $0332
 !UniversalAmmoRAM = $09EE
 !OmegaDragnetRAM = $7EF4A0
 !NodeverRAM = $7FFC02
@@ -45,10 +47,18 @@
 !redEvent		= $23
 !SuperMissileEvent = $30
 
+
 !Event_bts = $0A 
+
 
 !SupersDownloadedMessageIndex = $1D
 !UnknownAmmoMessageIndex = $1E
+!ChargemissilesMsgBox = $1F
+!ChargesupersMsgbox = $20
+
 
 !acidDamage	= $8000
 !acidSubDamage = $0000
+
+!Chargemissilesitembit = #$0010
+!Chargesupersitembit = #$0040

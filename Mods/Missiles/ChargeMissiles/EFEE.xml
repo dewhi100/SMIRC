@@ -1,0 +1,20 @@
+<PLMInfo>
+  <Name>Charge missiles/super missiles</Name>
+  <Properties>
+    <Property>
+      <Name>type of switch</Name>
+      <Mask>0x0300</Mask>
+      <NameValues>
+          <NameValue Value="0" Name="regular charge missiles"/>
+          <NameValue Value="1" Name="regular charge super missiles"/>
+          <NameValue Value="2" Name="item orb charge missiles"/>
+          <NameValue Value="3" Name="item orb charge super missiles"/>
+      </NameValues>
+    </Property>
+    <Property>
+      <Name>item ID</Name>
+      <Description>item ID the game will check to see if the item is collected</Description>
+      <Mask>0x00FF</Mask>
+    </Property>    
+  </Properties>
+</PLMInfo>

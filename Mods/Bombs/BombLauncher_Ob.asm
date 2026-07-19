@@ -335,12 +335,20 @@ dw $B80D ; Nothing
 	if !HUD_Index == 0
 		dw BombLauncherHandler ; Bomb Launcher replaces Super missiles
 	else
+		if !ChargeMissiles_Tundain == 1
+		dw missilehandler	;in the tundain Charge Missiles asm
+		else
 		dw $BE62 ; Missiles
+		endif
 	endif
 	if !HUD_Index == 1
 		dw BombLauncherHandler ; Bomb Launcher replaces Super missiles
 	else
+		if !ChargeMissiles_Tundain == 1
+		dw missilehandler
+		else
 		dw $BE62 ; Super Missiles (same as missiles)
+		endif
 	endif
 	if !HUD_Index == 2
 		dw BombLauncherHandler ; Bomb Launcher replaces Super missiles

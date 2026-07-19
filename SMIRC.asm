@@ -120,6 +120,9 @@ if !SuitlessSpaceJump_Dewhi100 = 1
 endif
 
 ;Missiles
+if !ChargeMissiles_Tundain == 1
+	incsrc "Missiles/ChargeMissiles/ChargeMissiles_Tundain.asm"
+endif
 if !SupersNeedMains_Dewhi100 = 1 && !EventStation_Dewhi100 == 1
 	incsrc "Missiles/SupersNeedMains_Dewhi100.asm"
 endif

@@ -19,6 +19,7 @@ Bank83
 - Homing Drops (Nodever2) (Can be anywhere)
 
 Bank 84
+- Charge Missiles (Tundain) (If using PLM)
 - Event Doors (dewhi100)
 - Event Gray Doors (OmegaDragnet)
 - Event Station (dewhi100)
@@ -28,6 +29,9 @@ Bank 84
 - Item Gray Doors (OmegaDragnet)
 - Item Event PLM (dewhi100)
 - Supers Need Mains (dewhi100)
+
+Bank 89
+- Charge Missiles (Tundain) (If using PLM)
 
 Bank 8F
 - Boss Count Room State (dewhi100)
@@ -39,6 +43,7 @@ Bank 8F
 Bank 90
 - Bomb Launcher (Ob)
 - Charge Heal (dewhi100)
+- Charge Missiles (Tundain)
 - Downsparking (Tundain)
 - Morph Speed (OmegaDragnet)
 - Pseudo-Varia with Charged Ice Beam (dewhi100)
