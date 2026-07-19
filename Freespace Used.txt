@@ -81,6 +81,7 @@ Bank A0
 - Bomb Launcher (Ob)
 - Enemy Always Freezes Vulnerability (Tundain)
 - Enemies Stay Dead (Nodever2)
+- Variable Knockback (Tundain)
 
 Bank A3
 - One-room Elevators (dewhi100)

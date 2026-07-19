@@ -61,3 +61,4 @@ Tundain
 - Safe Unmorph
 - Shinespark Compatible Reflecs
 - Smooth Grapple & Better Latching
+- Variable Knockback

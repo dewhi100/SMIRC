@@ -44,6 +44,7 @@ lorom
 !MissileGrabbingGoldenTorizo_Tundain = 1
 !OneRoomElevator_Dewhi100 = 1
 !TorizoAreaBit_Nodever2 = 1
+!VariableKnockback_Tundain = 1
 
 ;Energy
 !ChargeHeal_Dewhi100 = 1

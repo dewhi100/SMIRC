@@ -76,6 +76,9 @@ endif
 if !TorizoAreaBit_Nodever2 == 1
 	incsrc "Enemies/TorizoAreaBit_Nodever2.asm"
 endif
+if !VariableKnockback_Tundain == 1
+	incsrc "Enemies/VariableKnockback_Tundain.asm"
+endif
 
 ;Energy
 if !ChargeHeal_Dewhi100 == 1
