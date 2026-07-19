@@ -27,6 +27,7 @@
 !freeA3 = $A3F1AB
 !freeAA = $AAF820
 !freeB0 = $B0EE00
+!freeB2 = $B2FEAA
 !freeB4 = $B4F4B8
 !freeB6 = $B6F200
 !freeB8 = $B88000

@@ -90,6 +90,9 @@ Bank A3
 Bank AA
 - Torizo Area Bit (Nodever2)
 
+Bank B2
+- Slope Compatible Space Pirates (Tundain)
+
 Bank B8
 - Door Transitions (Nodever2) (Can be anywhere)
 - Full Reserve Tank Indicator (Nodever2) (Can be anywhere)

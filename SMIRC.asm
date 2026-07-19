@@ -64,14 +64,17 @@ endif
 if !EnemyAlwaysFreezesVulnerability_Tundain == 1
 	incsrc "Enemies/EnemyAlwaysFreezesVulnerability_Tundain.asm"
 endif
-if !EnemiesStayDead_Nodever2 = 1
+if !EnemiesStayDead_Nodever2 == 1
 	incsrc "Enemies/EnemiesStayDead_Nodever2.asm"
 endif
 if !MissileGrabbingGoldenTorizo_Tundain == 1
 	incsrc "Enemies/MissileGrabbingGoldenTorizo_Tundain.asm"
 endif
-if !OneRoomElevator_Dewhi100 = 1
+if !OneRoomElevator_Dewhi100 == 1
 	incsrc "Enemies/OneRoomElevator_Dewhi100.asm"
+endif
+if !SlopeCompatibleSpacePirates_Tundain == 1
+	incsrc "Enemies/SlopeCompatibleSpacePirates_Tundain.asm"
 endif
 if !TorizoAreaBit_Nodever2 == 1
 	incsrc "Enemies/TorizoAreaBit_Nodever2.asm"
@@ -84,7 +87,7 @@ endif
 if !ChargeHeal_Dewhi100 == 1
 	incsrc "Energy/ChargeHeal_Dewhi100.asm"
 endif
-if !DeathForgivenessRevision2_Nodever2
+if !DeathForgivenessRevision2_Nodever2 == 1
 	incsrc "Energy/DeathForgivenessRevision2_Nodever2.asm"
 endif
 if !ReserveTankBugfixes_Nodever2 == 1
@@ -126,7 +129,7 @@ if !SkipIntroFlashbacks_Nodever2 == 1
 endif
 
 ;Jumps
-if !SuitlessSpaceJump_Dewhi100 = 1
+if !SuitlessSpaceJump_Dewhi100 == 1
 	incsrc "Jumps/SuitlessSpaceJump_Dewhi100.asm"
 endif
 
@@ -134,7 +137,7 @@ endif
 if !ChargeMissiles_Tundain == 1
 	incsrc "Missiles/ChargeMissiles/ChargeMissiles_Tundain.asm"
 endif
-if !SupersNeedMains_Dewhi100 = 1 && !EventStation_Dewhi100 == 1
+if !SupersNeedMains_Dewhi100 == 1 && !EventStation_Dewhi100 == 1
 	incsrc "Missiles/SupersNeedMains_Dewhi100.asm"
 endif
 
@@ -204,7 +207,7 @@ if !MissilesPerDoorCap != 5
 		print "Cannot customize missiles per door (Blocked by Event Doors ASM)"
 	endif
 endif
-if !MissilePickupsRefill = 1
+if !MissilePickupsRefill == 1
 	org $8489B3
 	STA $09C6		;Store max missile that was just calculated to samus missile
 	JMP $89BD		;Jump past now undeeded code space
