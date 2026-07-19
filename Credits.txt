@@ -55,5 +55,6 @@ OmegaDragnet9
 Tundain
 - Charge Missiles
 - Downsparking
+- Enemy Always Freezes Vulnerability
 - Safe Unmorph
 - Smooth Grapple & Better Latching (Tundain)

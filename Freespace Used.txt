@@ -73,6 +73,7 @@ Bank 9B
 Bank A0
 - Beam Based Pseudo-Screw Attack Damage (dewhi100)
 - Bomb Launcher (Ob)
+- Enemy Always Freezes Vulnerability (Tundain)
 - Enemies Stay Dead (Nodever2)
 
 Bank A3

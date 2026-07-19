@@ -58,6 +58,9 @@ if !SkipZebesMode7_OmegaDragnet == 1
 endif
 
 ;Enemies
+if !EnemyAlwaysFreezesVulnerability_Tundain == 1
+	incsrc "Enemies/EnemyAlwaysFreezesVulnerability_Tundain.asm"
+endif
 if !EnemiesStayDead_Nodever2 = 1
 	incsrc "Enemies/EnemiesStayDead_Nodever2.asm"
 endif
