@@ -64,10 +64,12 @@ endif
 if !EnemiesStayDead_Nodever2 = 1
 	incsrc "Enemies/EnemiesStayDead_Nodever2.asm"
 endif
+if !MissileGrabbingGoldenTorizo_Tundain == 1
+	incsrc "Enemies/MissileGrabbingGoldenTorizo_Tundain.asm"
+endif
 if !OneRoomElevator_Dewhi100 = 1
 	incsrc "Enemies/OneRoomElevator_Dewhi100.asm"
 endif
-
 if !TorizoAreaBit_Nodever2 == 1
 	incsrc "Enemies/TorizoAreaBit_Nodever2.asm"
 endif
