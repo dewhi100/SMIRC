@@ -15,14 +15,18 @@ LoROM
 
 ;HUD changes---------------------
 
+
 org $809AD2
 JSR SuperEventCheck
 
+if !UniversalAmmo_Tundain == 0
 org $809B0F
 JSR SuperEventCheck
 
 org $809C16
 JSR SuperEventCheck
+endif
+
 
 org !free80
 SuperEventCheck:
@@ -30,9 +34,14 @@ LDA #$0000+!SuperMissileEvent
 JSL $808233	;carry set if event marked
 LDA #$0000	;default if zero
 BCC +		;branch if event not marked
-LDA $09CC	;max supers
+if !UniversalAmmo_Tundain != 0
+JSL CheckSupersLong
+else
+LDA $09CA	;current supers
+endif
 +
 RTS
+
 warnpc !free80End
 !free80 #= pc()
 ;-------------------------------
@@ -89,8 +98,18 @@ LDA #$0000+!SuperMissileEvent
 JSL $808233	;carry set if event marked
 LDA #$0000	;default if zero
 BCC +		;branch if event not marked
+if !UniversalAmmo_Tundain == 1
+  JSR checkifcanselectsupers
+else
 LDA $09CA	;current supers
+endif
 +
 RTS
+
+if !UniversalAmmo_Tundain
+CheckSupersLong:
+JSR checkifnotenoughsupers
+RTL
+endif
 
 !free90 #= pc()

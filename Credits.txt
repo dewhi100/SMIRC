@@ -63,4 +63,5 @@ Tundain
 - Shinespark Compatible Reflecs
 - Smooth Grapple & Better Latching
 - Slope-Compatible Space Pirates 
+- Universal Ammo
 - Variable Knockback

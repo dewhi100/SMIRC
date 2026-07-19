@@ -6,6 +6,7 @@ Bank 80
 - Enemies Stay Dead (Nodever2)
 - HUD Counter Animation (Nodever2)
 - Supers Need Mains (dewhi100)
+- Universal Ammo (Tundain)
 
 Bank 81
 - Downsparking (Tundain)
@@ -29,6 +30,10 @@ Bank 84
 - Item Gray Doors (OmegaDragnet)
 - Item Event PLM (dewhi100)
 - Supers Need Mains (dewhi100)
+- Universal Ammo (Tundain)
+
+Bank 86
+- Universal Ammo (Tundain)
 
 Bank 89
 - Charge Missiles (Tundain) (If using PLM)
@@ -59,6 +64,7 @@ Bank 90
 - Spinjump into Spacejump (dewhi100)
 - Suitless Spacejump (dewhi100)
 - Supers Need Mains (dewhi100)
+- Universal Ammo (Tundain)
 
 Bank 91 (Overwriting Unused Code)
 - Downsparking (Tundain)

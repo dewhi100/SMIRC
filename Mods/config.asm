@@ -12,9 +12,9 @@ lorom
 !EventBTS_OmegaDragnet = 1
 
 ;Bombs
-!BombLauncher_Ob = 1
+!BombLauncher_Ob = 1	;set the item bit you want for this in stddefines.txt. Does not handle drawing icon the HUD.
 	!HUD_Index = 4 ; 0..4
-	!bombLauncherBitflag = $8000	;the item you want to use as the bomb launcher. $1000 is the bombs flag. $8000 is X-ray
+	!bombLauncherAmmoRequirement = 0	;if using universal ammo, you can use it for bomb launcher too.
 
 
 ;Doors
@@ -75,11 +75,14 @@ lorom
 ;Jumps
 !SuitlessSpaceJump_Dewhi100 = 1
 
-;Misiles
+;Missiles
 !ChargeMissiles_Tundain = 1	;Note: add $0100 to the PLM argument to make it a charged Super item rather than charged missile
 	!withPLMs = 1			;if 1, will use PLMs to set the item flags
 !SupersNeedMains_Dewhi100 = 1
 	!StarterAmmo = 15
+!UniversalAmmo_Tundain = 1	;You must supply the "ammo:" HUD text yourself 
+	!AmmoPLM = 1	;a specialized universal ammo tank.
+
 
 ;Morph
 !MorphSpeed_OmegaDragnet = 1

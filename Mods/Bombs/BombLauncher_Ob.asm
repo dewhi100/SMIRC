@@ -260,11 +260,12 @@ org !90+!HUDSwitch
 	endif
 
     SWMissiles: 
-;		LDA $09EE			;unused ram used by the universal ammo routine to check whether any missiles have been collected. ie a "missile launcher"
-;		BEQ ++
-        LDA $09C6           ;\
+		if !UniversalAmmo_Tundain != 0
+			JSR checkifcanselectmissiles
+		else
+			LDA $09C6           ;\
+		endif
         BNE +             ;} If [Samus missiles] = 0
-;        ++ 
 		SEC : RTS           ;/ Return carry set	;go here if failure
         + BRA SwitchCommon    ;go here if success
 
@@ -272,20 +273,23 @@ org !90+!HUDSwitch
 		if !SupersNeedMains_Dewhi100 == 1
 			JSR SuperEventCheck90
 		else
-			LDA $09CA           ;\
+			if !UniversalAmmo_Tundain == 1
+				JSR checkifcanselectsupers
+			else
+				LDA $09CA           ;\
+			endif
 		endif
         BNE $02             ;} If [Samus super missiles] = 0
         SEC : RTS           ;/ Return carry set
         BRA SwitchCommon    ;
 
     SWPowerB: 
-;		LDA $09C6			;check missiles if using universal ammo
-;		CMP #$000A			;need at least as many as it costs to fire them or else you underflow
-;		BMI ++
-;		LDA $09D0		;check max pb instead if using universal ammo
-        LDA $09CE           ;\
+		if !UniversalAmmo_Tundain == 1
+			JSR checkifcanselectpbs
+		else
+			LDA $09CE           ;\
+		endif
         BNE +             ;} If [Samus power bomes] = 0
-;        ++ 
 		SEC : RTS           ;/ Return carry set
         + BRA SwitchCommon    ;
 
@@ -312,13 +316,15 @@ org !90+!HUDSwitch
 
     SWLauncher: 
         LDA $09A2       ;\
-        BIT #!bombLauncherBitflag      ;} Check item equipped
+        BIT !bombLauncherBitflag      ;} Check item equipped
         BNE +         ;/
 		-
         SEC : RTS       ;} Return if not
 		+
-;		LDA $09C6 : BEQ -	;check for missiles if using universal ammo
-        STZ $0C9A
+		if !UniversalAmmo_Tundain != 0 && !bombLauncherAmmoRequirement > 0
+		JSR checkIfEnoughBombLauncherAmmo : BEQ -	;if we cant afford bombs because we have an ammo requirement turned on.
+		endif
+        STZ $0C9A		;Dewhi note: Why?
 
     SwitchCommon:
         STZ $0CD0       ; Clear beam charge counter
@@ -388,6 +394,22 @@ org !90+!ArmTable ;Arm Cannon state: 00/01 is Close/Open by HUD index.
 	endif
 
 org !free90
+
+	if !UniversalAmmo_Tundain != 0 && !bombLauncherAmmoRequirement > 0
+	checkIfEnoughBombLauncherAmmo:
+	LDA $09C6
+	CMP #$0000+!bombLauncherAmmoRequirement
+	BMI +
+	LDA $09C6 : RTS
+	+
+	LDA #$0000 : RTS
+	subtractBombLauncherAmmo:
+	LDA $09C6
+	SEC : SBC #$0000+!bombLauncherAmmoRequirement
+	STA $09C6
+	RTS
+	endif
+
     print pc, " - Bomb launcher pre inst"
     PreInst:
 {;Preinstructions for grenade variant of bomb
@@ -520,6 +542,19 @@ org !free90
     print pc, " - start of launching"
     .LaunchBomb
     {;
+	
+		if !UniversalAmmo_Tundain != 0 && !bombLauncherAmmoRequirement > 0
+			JSR subtractBombLauncherAmmo
+			;if 0 or less, cancel hud
+			BPL +
+			-
+			STZ $09D2	;item cancel if out of ammo
+			BRA ++
+			+
+			BEQ -
+			++
+		endif
+	
         LDA #!LauncherCooldown : STA !CoolTimer
 ;		DEC $09C6 ;make it cost ammo (universal ammo ie missiles) 
 ;		BNE + 

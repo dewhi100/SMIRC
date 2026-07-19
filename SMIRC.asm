@@ -143,6 +143,9 @@ endif
 if !SupersNeedMains_Dewhi100 == 1 && !EventStation_Dewhi100 == 1
 	incsrc "Missiles/SupersNeedMains_Dewhi100.asm"
 endif
+if !UniversalAmmo_Tundain == 1
+	incsrc "Missiles/UniversalAmmo_Tundain.asm"
+endif
 
 ;Morph
 if !MorphSpeed_OmegaDragnet == 1
