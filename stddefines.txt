@@ -14,6 +14,7 @@
 !free8E = $8EE600
 !free8F = $8FE99B
 !free90 = $90F63A
+!disassemblyFreespace = $918014
 !unused91 = $91F7F4
 !unused91End = $91F88C
 !free91 = $91FFEE

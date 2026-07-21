@@ -105,6 +105,7 @@ lorom
 
 ;Samus GFX
 !SamusElbowFix_Kejardon = 1
+!SamusMasterDisassembly_Crashtour99 = 0
 
 ;Speed Booster
 !Downsparking_Tundain = 1

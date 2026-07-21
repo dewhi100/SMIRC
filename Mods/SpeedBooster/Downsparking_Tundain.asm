@@ -58,8 +58,10 @@ NOP #3;remove setting her y direction to 0 (this allows the correct spritemap to
 org $91F55F
 JMP alsodown
 
+if !SamusMasterDisassembly_Crashtour99 == 0
 org $9181A1
-JSR extra : RTS
+JSR extra_downspark : RTS
+endif
 
 org !unused91;replace unused code
 ;this code sets allows enrering the shinespark windup state even if you're golding angle down when jumping
@@ -76,7 +78,7 @@ JMP $F571
 
 ;some extra code attached to the input handler when shinesparking
 ;this is a bit ugly, but it's easier than including the entire transition table in this patch
-extra:
+extra_downspark:
 JSR $81A9
 JSL extra_long
 RTS

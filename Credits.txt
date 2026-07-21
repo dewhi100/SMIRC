@@ -1,5 +1,8 @@
 List of resources, by author:
 
+crashtour99
+- Samus Master Disassembly
+
 dewhi100
 - Base Acid Damage (Hex Tweak)
 - Beam-based Pseudo Screw attack damage (a disassembly of the SavageWizrobe IPS)

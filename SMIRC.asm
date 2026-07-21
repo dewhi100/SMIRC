@@ -187,6 +187,9 @@ endif
 if !SamusElbowFix_Kejardon == 1
 	incsrc "SamusGFX/SamusElbowFix_Kejardon.asm"
 endif
+if !SamusMasterDisassembly_Crashtour99 == 1
+	incsrc "SamusGFX/SamusMasterDisassembly_Crashtour99.asm"
+endif
 
 ;Speed Booster
 if !Downsparking_Tundain == 1
