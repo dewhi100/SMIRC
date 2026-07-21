@@ -25,6 +25,12 @@ Exister
 - Missile Tanks Refill (Hex Tweak)
 - Remove Shinespark Health Drain
 
+Kejardon
+- Decompression Optimization (With Maddo, and Tundain)
+
+Maddo
+- Decompression Optimization (With Kejardon, and Tundain)
+
 Nodever2
 - Death Forgiveness
 - Door Transitions
@@ -54,6 +60,7 @@ OmegaDragnet9
 
 Tundain
 - Charge Missiles
+- Decompression Optimization (With Kejardon, and Maddo)
 - Downsparking
 - Enemy Always Freezes Vulnerability
 - Flipped Bomb Torizo

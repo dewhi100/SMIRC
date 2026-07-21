@@ -165,6 +165,11 @@ if !GenericMaridiaTube_OmegaDragnet == 1
 	incsrc "PLMs/GenericMaridiaTube_OmegaDragnet.asm"
 endif
 
+;Optimizations
+; if !Decompression_Kejardon_Tundain == 1
+	; incsrc "Optimizations/Decompression_Kejardon_Tundain.asm"
+; endif
+
 ;Room States
 if !BossCountRoomState_Dewhi100 == 1
 	incsrc "RoomStates/BossCountRoomState_Dewhi100.asm"

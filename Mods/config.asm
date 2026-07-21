@@ -89,6 +89,9 @@ lorom
 !MorphSpeed_OmegaDragnet = 1
 !SafeUnmorph_Tundain = 1
 
+;Optimizations
+!Decompression_Kejardon_Tundain = 1	;So much work went into this by both that it makes sense to include them.
+
 ;PLMs
 !FX_LevelPLM_OmegaDragnet = 1
 !GenericMaridiaTube_OmegaDragnet = 1
