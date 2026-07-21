@@ -38,6 +38,7 @@
 !SlopeFlagRAM = $39
 !spawnSbaFlag = $0332
 !UniversalAmmoRAM = $09EE
+!AuraRAM = $0A02
 !OmegaDragnetRAM = $7EF4A0
 !NodeverRAM = $7FFC02
 
