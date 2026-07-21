@@ -183,6 +183,11 @@ if !TimeElapsedState_Dewhi100 == 1
 	incsrc "RoomStates/TimeElapsedState_Dewhi100.asm"
 endif
 
+;Samus GFX
+if !SamusElbowFix_Kejardon == 1
+	incsrc "SamusGFX/SamusElbowFix_Kejardon.asm"
+endif
+
 ;Speed Booster
 if !Downsparking_Tundain == 1
 	incsrc "SpeedBooster/Downsparking_Tundain.asm"

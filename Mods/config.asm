@@ -103,6 +103,9 @@ lorom
 !RandomRoomState_Dewhi100 = 1
 !TimeElapsedState_Dewhi100 = 1
 
+;Samus GFX
+!SamusElbowFix_Kejardon = 1
+
 ;Speed Booster
 !Downsparking_Tundain = 1
 !FixSpeedBoosterJumpMomentum_Nodever2 = 1
