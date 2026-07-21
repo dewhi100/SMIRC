@@ -35,6 +35,9 @@ endif
 if !BombLauncher_Ob == 1
 	incsrc "Bombs/BombLauncher_Ob.asm"
 endif
+if !PowerBombsRemoveWater_Moehr == 1
+	incsrc "Bombs/PowerBombsRemoveWater_Moehr.asm"
+endif
 
 ;Doors
 if !DoorTransitions_Nodever2 == 1

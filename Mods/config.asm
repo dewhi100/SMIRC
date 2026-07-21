@@ -15,6 +15,7 @@ lorom
 !BombLauncher_Ob = 1	;set the item bit you want for this in stddefines.txt. Does not handle drawing icon the HUD.
 	!HUD_Index = 4 ; 0..4
 	!bombLauncherAmmoRequirement = 0	;if using universal ammo, you can use it for bomb launcher too.
+!PowerBombsRemoveWater_Moehr = 1
 
 
 ;Doors
