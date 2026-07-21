@@ -157,6 +157,12 @@ endif
 if !SafeUnmorph_Tundain == 1
 	incsrc "Morph/SafeUnmorph_Tundain.asm"
 endif
+
+;Optimizations
+if !Decompression_Kejardon_Tundain == 1
+	incsrc "Optimizations/Decompression_Kejardon_Tundain.asm"
+endif
+
 ;PLMs
 if !FX_LevelPLM_OmegaDragnet == 1
 	incsrc "PLMs/FX_LevelPLM_OmegaDragnet.asm"
@@ -164,11 +170,6 @@ endif
 if !GenericMaridiaTube_OmegaDragnet == 1
 	incsrc "PLMs/GenericMaridiaTube_OmegaDragnet.asm"
 endif
-
-;Optimizations
-; if !Decompression_Kejardon_Tundain == 1
-	; incsrc "Optimizations/Decompression_Kejardon_Tundain.asm"
-; endif
 
 ;Room States
 if !BossCountRoomState_Dewhi100 == 1
