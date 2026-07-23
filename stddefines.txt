@@ -5,12 +5,13 @@
 !free83 = $83AD66
 !free84 = $84EFD3
 !free85 = $859643
-!free86 = $86F500
+!free86 = $86F4A6
 !free88 = $88EE40
 !free89 = $89AEFD
 !free8B = $8BF760
 !free8C = $8CF400
 !unused8D = $8D8967
+!free8D = $8D8967
 !free8E = $8EE600
 !free8F = $8FE99B
 !free90 = $90F63A

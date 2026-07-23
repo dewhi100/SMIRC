@@ -1,12 +1,10 @@
-lorom
-
 ;Beams
 !BeamBasedPseudoScrewDamage_Dewhi100 = 1
 	!DoubleDamage = 1
 !PseudoScrewRequiresSpazer_Dewhi100 = 1
 !RedBeamsLowHP_Dewhi100 = 1
 !SmoothGrappleBetterLatching_Tundain = 1
-!SpinningChargeFlare_Tundain = 0	;possibly bugged. tundain is looking at it.
+!SpinningChargeFlare_Tundain = 0	;possibly bugged. tundain is notified.
 
 ;Blocks
 !EventBTS_OmegaDragnet = 1
@@ -14,7 +12,7 @@ lorom
 ;Bombs
 !BombLauncher_Ob = 1	;set the item bit you want for this in stddefines.txt. Does not handle drawing icon the HUD.
 	!HUD_Index = 4 ; 0..4
-	!bombLauncherAmmoRequirement = 0	;if using universal ammo, you can use it for bomb launcher too.
+	!bombLauncherAmmoRequirement = 1	;if using universal ammo, you can use it for bomb launcher too.
 !PowerBombsRemoveWater_Moehr = 1
 
 
@@ -32,6 +30,9 @@ lorom
 
 ;Drops
 !HomingDrops_Nodever2 = 1
+
+;Effects
+!WaterDroplets_Oi27 = 1		;NOTE: you wont see the graphics ingame right away when quickmetting. You need to go through a door transition in order to properly load the GFX
 
 ;Ending
 !NonExplosivePlanet_Tundain = 1
@@ -125,6 +126,6 @@ lorom
 !AcidSubDamage = $4000		;$8000
 !AcidDamage = $0000			;$0000
 !MissilesPerDoorCap = $05		;5
-!MissilePickupsRefill = 1
-!RemoveMorphBounce = 1
+!MissilePickupsRefill = 1	;By Exister
+!RemoveMorphBounce = 1		;By Omegadragnet
 !SkipDemo = 0				;1 to skip, 0 to keep

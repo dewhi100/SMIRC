@@ -53,6 +53,9 @@ Nodever2
 Ob
 - Bomb Launcher
 
+Oi27
+- Water Droplets Effect
+
 OmegaDragnet9
 - Boss Events
 - Event BTS

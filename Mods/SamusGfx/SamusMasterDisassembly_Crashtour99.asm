@@ -1,5 +1,7 @@
 lorom 
 
+math pri off
+
 if !SparkBounce_Kejardon != 0
 !TilemapIndexBase = TilemapIndices-$92808D/2
 endif

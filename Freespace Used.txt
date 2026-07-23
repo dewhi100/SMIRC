@@ -19,6 +19,7 @@ Bank83
 - Enemies Stay Dead (Nodever2) (Can be anywhere)
 - Homing Drops (Nodever2) (Can be anywhere)
 - Spark Bounce (Kejardon) (Can be anywhere)
+- Water Droplets Effect (Oi27) (Can be anywhere)
 
 Bank 84
 - Charge Missiles (Tundain) (If using PLM)
@@ -32,9 +33,11 @@ Bank 84
 - Item Event PLM (dewhi100)
 - Supers Need Mains (dewhi100)
 - Universal Ammo (Tundain)
+- Water Droplets Effect (Oi27)
 
 Bank 86
 - Universal Ammo (Tundain)
+- Water Droplets Effect (Oi27)
 
 Bank 89
 - Charge Missiles (Tundain) (If using PLM)
@@ -44,6 +47,9 @@ Bank 8B
 
 Bank 8C
 - Non-Explosive Planet (Tundain)
+
+Bank 8D
+- Water Droplets Effect (Oi27)
 
 Bank 8F
 - Boss Count Room State (dewhi100)

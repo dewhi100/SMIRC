@@ -21,12 +21,13 @@
 
 lorom
 
-!84Free = $84FE00 ;for plm code
-!86Free = $86F4A6 ;for projectile code
-!8DFree = $8D8967 ;for projectile spritemaps (default overwrites unused spritemaps)
-!AnyFree = $DF8000 ;for graphics
+;!84Free = $84FE00 ;for plm code
+;!86Free = $86F4A6 ;for projectile code
+;!8DFree = $8D8967 ;for projectile spritemaps (default overwrites unused spritemaps)
+;!AnyFree = $DF8000 ;for graphics
 
-org !84Free
+org !free84
+print "water droplet PLM:: ", pc
 DropletSpawner:
 {
 dw .setup, .inst
@@ -171,6 +172,8 @@ RTS
 }
 }
 
+!free84 #= pc()
+
 org $868077
 JSR ProjectileRamInitialize
 JMP $808C
@@ -180,7 +183,7 @@ JSR ProjectileRamInitialize
 JMP $80F9
 warnpc $8680F9
 
-org !86Free
+org !free86
 ProjectileRamInitialize:
 ;[Y] projectile index
 TDC
@@ -399,7 +402,10 @@ dw $0004, EnvDropletSpritemaps_stalactite_f8
 dw $8154 ;delete
 }
 }
-org !8DFree
+
+!free86 #= pc()
+
+org !free8D
 EnvDropletSpritemaps:
 {
 .smoke
@@ -473,7 +479,11 @@ dw $0001
 dw $01FC : db $FC : dw $20D7
 }
 }
-org $83AE00
+
+!free8D #= pc()
+
+org !free83	;can be anywhere
+
 DropletGraphics:
 .flatCeiling
 incbin "water-drop-ceiling.GFX"
@@ -481,3 +491,5 @@ incbin "water-drop-ceiling.GFX"
 .stalactite
 incbin "water-drop-stalactite.GFX"
 ..end
+
+!free83 #= pc()

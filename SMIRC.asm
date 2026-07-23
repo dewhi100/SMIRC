@@ -55,6 +55,11 @@ if !HomingDrops_Nodever2 == 1
 	 incsrc "Drops/HomingDrops_Nodever2.asm"
 endif
 
+;Effects
+if !WaterDroplets_Oi27 == 1
+	incsrc "Effects/WaterDroplets_Oi27/waterDrops.asm"
+endif
+
 ;Ending
 if !NonExplosivePlanet_Tundain == 1
 	incsrc "Ending/NonExplosivePlanet/NonExplosivePlanet_Tundain.asm"
