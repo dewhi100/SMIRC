@@ -69,5 +69,6 @@
 !Chargemissilesitembit = #$0010
 !Chargesupersitembit = #$0040
 !bombLauncherBitflag = #$0080
+!AuraITM = $0020
 !SparkbounceEquipmentSlot = $0000
 

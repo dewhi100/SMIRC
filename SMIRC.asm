@@ -56,6 +56,9 @@ if !HomingDrops_Nodever2 == 1
 endif
 
 ;Effects
+if !SuitAura_Oi27 == 1
+	incsrc "Effects/SuitAura_Oi27.asm"
+endif
 if !WaterDroplets_Oi27 == 1
 	incsrc "Effects/WaterDroplets_Oi27/waterDrops.asm"
 endif

@@ -156,6 +156,8 @@ STX $0590
 .Return:
 PLB : RTL
 
+warnpc $818A37
+
 org !free81	;!Bank81Freespace
 checkflip:
 LDA $0B36 : CMP #$0002 : BNE +  ;make sure it's down
@@ -174,7 +176,14 @@ LDA #$00F8
 STA $00
 LDA #$00F8 : SEC : SBC $0002,y : CLC : ADC $00;flip position
 CLC : ADC $12 : STA $0371,x
-LDA $0003,y : EOR #$8000 : STA $0372,x;flip gfx
+LDA $0003,y : EOR #$8000 
+
+if !SuitAura_Oi27 == 0
+	STA $0372,x;flip gfx
+else
+	JSL AURA_DrawAura
+endif
+
 RTS
 
 !free81 #= pc()

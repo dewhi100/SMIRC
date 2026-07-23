@@ -32,6 +32,9 @@
 !HomingDrops_Nodever2 = 1
 
 ;Effects
+!SuitAura_Oi27 = 1		;you can set the item that grants aura in the stddefines.txt file
+	!AuraRadius = 1     ;(d. pixels)
+
 !WaterDroplets_Oi27 = 1		;NOTE: you wont see the graphics ingame right away when quickmetting. You need to go through a door transition in order to properly load the GFX
 
 ;Ending

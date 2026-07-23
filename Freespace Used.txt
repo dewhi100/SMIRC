@@ -10,6 +10,7 @@ Bank 80
 
 Bank 81
 - Downsparking (Tundain)
+- Suit Aura (Oi27)
 
 Bank 82
 - Door Transitions (Nodever2)
@@ -19,6 +20,7 @@ Bank83
 - Enemies Stay Dead (Nodever2) (Can be anywhere)
 - Homing Drops (Nodever2) (Can be anywhere)
 - Spark Bounce (Kejardon) (Can be anywhere)
+- Suit Aura (Oi27) (Can be anywhere from 80 to BF)
 - Water Droplets Effect (Oi27) (Can be anywhere)
 
 Bank 84
@@ -70,6 +72,7 @@ Bank 90
 - Smooth Grapple & Better Latching (Tundain)
 - Spark Bounce (Kejardon)
 - Spinjump into Spacejump (dewhi100)
+- Suit Aura (Oi27)
 - Suitless Spacejump (dewhi100)
 - Supers Need Mains (dewhi100)
 - Universal Ammo (Tundain)

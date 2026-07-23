@@ -17,8 +17,11 @@ Mods/config.asm		-	The UI for SMIRC. Has all the flags for indivual mods and fea
 	- SMIRC.asm and test.asm should be the only ASM files at the root level. sort any ASMs you have into the Mods folder.
 - Open Mods/config.asm; To enable a mod, set its flag to 1. To disable, set it to zero.
 	- Example: !ChargeHeal_Dewhi100 = 0	;enable dewhi100s Charge Healing
+- I recommend running an instance of ASAR directly in the ASM folder. 
+	- If you don't you will need to copy stddefines and stdincludes to wherever you are keeping ASAR.
+	- In the copy of stdincludes.txt, change the filepath so that it points to your Mods folder.
 
-Then run the Asar assembler, using whatever method you prefer.
+Once you are set up, run the Asar assembler, using whatever method you prefer.
 SMIRC should be the only assembly file that runs when you assemble. Otherwise, you'll get mods overwriting each other in freespace.
 
 || To add new resources to the project ||

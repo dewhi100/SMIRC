@@ -54,6 +54,7 @@ Ob
 - Bomb Launcher
 
 Oi27
+- Suit Aura
 - Water Droplets Effect
 
 OmegaDragnet9
