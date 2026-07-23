@@ -31,6 +31,7 @@ Exister
 Kejardon
 - Decompression Optimization (With Maddo, and Tundain)
 - Samus Elbow Fix
+- Spark Bounce
 
 Maddo
 - Decompression Optimization (With Kejardon, and Tundain)

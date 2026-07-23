@@ -205,6 +205,10 @@ endif
 if !ShinesparkCompatibleReflecs_Tundain == 1
 	incsrc "SpeedBooster/ShinesparkCompatibleReflecs_Tundain.asm"
 endif
+if !SparkBounce_Kejardon == 1
+	incsrc "SpeedBooster/SparkBounce_Kejarardon/SparkBounceFunctions.asm"
+	incsrc "SpeedBooster/SparkBounce_Kejarardon/SparkBounceTransitionTable.asm"
+endif
 
 ;Suits
 if !PseudoVaria_Dewhi100 == 1

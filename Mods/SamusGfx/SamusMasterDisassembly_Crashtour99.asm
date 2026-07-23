@@ -1,11 +1,15 @@
 lorom 
 
+if !SparkBounce_Kejardon != 0
+!TilemapIndexBase = TilemapIndices-$92808D/2
+endif
+
 ;Samus animations master disassembly;
 
 
 					;$91:8000 checks movement type, and goes to 91:(8014,X), X being 2x movement type.
 ;ORG $918014			;optimizing transition routine pointer table for extra space
-ORG !disassemblyFreespace ;optimizing transition routine pointer table for extra space
+ORG $918014 ;optimizing transition routine pointer table for extra space
 	DW MT_00, MT_01, MT_02, MT_03, MT_04, MT_05, MT_06, MT_07, MT_08, MT_09, MT_0A
 	DW MT_0B, MT_0C, MT_0D, MT_0E, MT_0F, MT_10, MT_11, MT_12, MT_13, MT_14, MT_15
 	DW MT_16, MT_17, MT_18, MT_19, MT_1A, MT_1B
@@ -58,12 +62,17 @@ MT_18:		;turning while falling
 	JSR $81A9 : RTS
 
 warnpc $9181A9
-!disassemblyFreespace #= pc()
 ;	PadByte $FF : Pad $9181A9  ;$138 bytes of freespace now
 
 ;----------------------------------------------------------------------------------------------------------
 
-org $919EE2	;original transition table disassembly by Kej
+org $9181B5
+LDA TransitionTable,x
+
+;org $919EE2	;original transition table disassembly by Kej
+org !transitionTable91
+; print "master disassembly table start: ", pc
+TransitionTable:
 	DW T00,T01,T02,T03,T04,T05,T06,T07,T08,T09,T0A,T0B,T0C,T0D,T0E,T0F
 	DW T10,T11,T12,T13,T14,T15,T16,T17,T18,T19,T1A,T1B,T1C,T1D,T1E,T1F
 	DW T20,T21,T22,T23,T24,T25,T26,T27,T28,T29,T2A,T2B,T2C,T2D,T2E,T2F
@@ -80,6 +89,9 @@ org $919EE2	;original transition table disassembly by Kej
 	DW TD0,TD1,TD2,TD3,TD4,TD5,TD6,TD7,TD8,TD9,TDA,TDB,TDC,TDD,TDE,TDF
 	DW TE0,TE1,TE2,TE3,TE4,TE5,TE6,TE7,TE8,TE9,TEA,TEB,TEC,TED,TEE,TEF
 	DW TF0,TF1,TF2,TF3,TF4,TF5,TF6,TF7,TF8,TF9,TFA,TFB,TFC
+
+
+
 
 T00:		;00:;Facing forward, ala Elevator pose (power suit)
 T9B:		;9B:;Facing forward, ala Elevator pose (Varia and/or Gravity Suit)
@@ -393,8 +405,11 @@ DW $0000,$0100,$001E
 DW $0000,$0200,$001F
 DW $FFFF
 
+if !SparkBounce_Kejardon == 0
 T20:		;20:;Spinjump right. Unused?
 T21:		;21:;Spinjump right. Unused?
+endif
+
 T22:		;22:;Spinjump right. Unused?
 T23:		;23:;Spinjump right. Unused?
 T24:		;24:;Spinjump right. Unused?
@@ -885,10 +900,12 @@ DW $0000,$0800,$00F0
 DW $0000,$0400,$00F0
 DW $FFFF
 
-PadByte $FF : Pad $91B00F		;$46E bytes of freespace now
+warnpc !transitionTableEnd
+!transitionTable91 #= pc()
+
+;PadByte $FF : Pad $91B00F		;$46E bytes of freespace now
 
 ;Transition Table ends right at start of Animation Frame Timer Table
-
 
 ORG $91B010		;ANIMATION FRAME TIMER TABLE
 ;animation frame delays are positive bytes
@@ -912,7 +929,14 @@ ORG $91B010		;ANIMATION FRAME TIMER TABLE
 
 DW FD_00, FD_01, FD_02, FD_03, FD_04, FD_05, FD_06, FD_07, FD_08, FD_09, FD_0A, FD_0B, FD_0C, FD_0D, FD_0E, FD_0F
 DW FD_10, FD_11, FD_12, FD_13, FD_14, FD_15, FD_16, FD_17, FD_18, FD_19, FD_1A, FD_1B, FD_1C, FD_1D, FD_1E, FD_1F
-DW FD_20, FD_21, FD_22, FD_23, FD_24, FD_25, FD_26, FD_27, FD_28, FD_29, FD_2A, FD_2B, FD_2C, FD_2D, FD_2E, FD_2F
+
+if !SparkBounce_Kejardon == 0
+DW FD_20, FD_21
+else
+DW $B32A, $B32A
+endif
+
+DW FD_22, FD_23, FD_24, FD_25, FD_26, FD_27, FD_28, FD_29, FD_2A, FD_2B, FD_2C, FD_2D, FD_2E, FD_2F
 DW FD_30, FD_31, FD_32, FD_33, FD_34, FD_35, FD_36, FD_37, FD_38, FD_39, FD_3A, FD_3B, FD_3C, FD_3D, FD_3E, FD_3F
 DW FD_40, FD_41, FD_42, FD_43, FD_44, FD_45, FD_46, FD_47, FD_48, FD_49, FD_4A, FD_4B, FD_4C, FD_4D, FD_4E, FD_4F
 DW FD_50, FD_51, FD_52, FD_53, FD_54, FD_55, FD_56, FD_57, FD_58, FD_59, FD_5A, FD_5B, FD_5C, FD_5D, FD_5E, FD_5F
@@ -1659,8 +1683,15 @@ DB $04, $03, $FF, $FF, $00, $00, $0C, $00 ;T1C:;Space jump left
 DB $08, $04, $FF, $FF, $00, $00, $07, $00 ;T1D:;Facing right as morphball, no springball
 DB $08, $04, $1D, $FF, $00, $00, $07, $00 ;T1E:;Moving right as a morphball on ground without springball
 DB $04, $04, $41, $FF, $00, $00, $07, $00 ;T1F:;Moving left as a morphball on ground without springball
-DB $08, $07, $FF, $FF, $00, $00, $07, $00 ;T20:;Spinjump right. Unused?
-DB $01, $07, $20, $FF, $00, $00, $07, $00 ;T21:;Spinjump right. Unused?
+
+if !SparkBounce_Kejardon == 0
+	DB $08, $07, $FF, $FF, $00, $00, $07, $00 ;T20:;Spinjump right. Unused?
+	DB $01, $07, $20, $FF, $00, $00, $07, $00 ;T21:;Spinjump right. Unused?
+else
+	DB $08,$1B,$CB,$FF,$04,$00,$13,$00
+	DB $04,$1B,$CC,$FF,$04,$00,$13,$00
+endif
+
 DB $02, $07, $20, $FF, $00, $00, $07, $00 ;T22:;Spinjump right. Unused?
 DB $04, $07, $42, $FF, $00, $00, $07, $00 ;T23:;Spinjump right. Unused?
 DB $08, $07, $20, $FF, $00, $00, $07, $00 ;T24:;Spinjump right. Unused?
@@ -3355,7 +3386,15 @@ DB $E0, $01, $00, $20, $3A
 ORG $929263		;upper half indexing
 DW P00_UT-$808D/2, P01_UT-$808D/2, P02_UT-$808D/2, P03_UT-$808D/2, P04_UT-$808D/2, P05_UT-$808D/2, P06_UT-$808D/2, P07_UT-$808D/2, P08_UT-$808D/2, P09_UT-$808D/2, P0A_UT-$808D/2, P0B_UT-$808D/2, P0C_UT-$808D/2, P0D_UT-$808D/2, P0E_UT-$808D/2, P0F_UT-$808D/2
 DW P10_UT-$808D/2, P11_UT-$808D/2, P12_UT-$808D/2, P13_UT-$808D/2, P14_UT-$808D/2, P15_UT-$808D/2, P16_UT-$808D/2, P17_UT-$808D/2, P18_UT-$808D/2, P19_UT-$808D/2, P1A_UT-$808D/2, P1B_UT-$808D/2, P1C_UT-$808D/2, P1D_UT-$808D/2, P1E_UT-$808D/2, P1F_UT-$808D/2
-DW P20_UT-$808D/2, P21_UT-$808D/2, P22_UT-$808D/2, P23_UT-$808D/2, P24_UT-$808D/2, P25_UT-$808D/2, P26_UT-$808D/2, P27_UT-$808D/2, P28_UT-$808D/2, P29_UT-$808D/2, P2A_UT-$808D/2, P2B_UT-$808D/2, P2C_UT-$808D/2, P2D_UT-$808D/2, P2E_UT-$808D/2, P2F_UT-$808D/2
+
+if !SparkBounce_Kejardon == 0
+DW P20_UT-$808D/2, P21_UT-$808D/2
+else
+DW !TilemapIndexBase, !TilemapIndexBase+4
+endif
+
+DW P22_UT-$808D/2, P23_UT-$808D/2, P24_UT-$808D/2, P25_UT-$808D/2, P26_UT-$808D/2, P27_UT-$808D/2, P28_UT-$808D/2, P29_UT-$808D/2, P2A_UT-$808D/2, P2B_UT-$808D/2, P2C_UT-$808D/2, P2D_UT-$808D/2, P2E_UT-$808D/2, P2F_UT-$808D/2
+
 DW P30_UT-$808D/2, P31_UT-$808D/2, P32_UT-$808D/2, P33_UT-$808D/2, P34_UT-$808D/2, P35_UT-$808D/2, P36_UT-$808D/2, P37_UT-$808D/2, P38_UT-$808D/2, P39_UT-$808D/2, P3A_UT-$808D/2, P3B_UT-$808D/2, P3C_UT-$808D/2, P3D_UT-$808D/2, P3E_UT-$808D/2, P3F_UT-$808D/2
 DW P40_UT-$808D/2, P41_UT-$808D/2, P42_UT-$808D/2, P43_UT-$808D/2, P44_UT-$808D/2, P45_UT-$808D/2, P46_UT-$808D/2, P47_UT-$808D/2, P48_UT-$808D/2, P49_UT-$808D/2, P4A_UT-$808D/2, P4B_UT-$808D/2, P4C_UT-$808D/2, P4D_UT-$808D/2, P4E_UT-$808D/2, P4F_UT-$808D/2
 DW P50_UT-$808D/2, P51_UT-$808D/2, P52_UT-$808D/2, P53_UT-$808D/2, P54_UT-$808D/2, P55_UT-$808D/2, P56_UT-$808D/2, P57_UT-$808D/2, P58_UT-$808D/2, P59_UT-$808D/2, P5A_UT-$808D/2, P5B_UT-$808D/2, P5C_UT-$808D/2, P5D_UT-$808D/2, P5E_UT-$808D/2, P5F_UT-$808D/2
@@ -3375,7 +3414,14 @@ DW PF0_UT-$808D/2, PF1_UT-$808D/2, PF2_UT-$808D/2, PF3_UT-$808D/2, PF4_UT-$808D/
 ORG $92945D		;lower half indexing
 DW P00_LT-$808D/2, P01_LT-$808D/2, P02_LT-$808D/2, P03_LT-$808D/2, P04_LT-$808D/2, P05_LT-$808D/2, P06_LT-$808D/2, P07_LT-$808D/2, P08_LT-$808D/2, P09_LT-$808D/2, P0A_LT-$808D/2, P0B_LT-$808D/2, P0C_LT-$808D/2, P0D_LT-$808D/2, P0E_LT-$808D/2, P0F_LT-$808D/2
 DW P10_LT-$808D/2, P11_LT-$808D/2, P12_LT-$808D/2, P13_LT-$808D/2, P14_LT-$808D/2, P15_LT-$808D/2, P16_LT-$808D/2, P17_LT-$808D/2, P18_LT-$808D/2, P19_LT-$808D/2, P1A_LT-$808D/2, P1B_LT-$808D/2, P1C_LT-$808D/2, P1D_LT-$808D/2, P1E_LT-$808D/2, P1F_LT-$808D/2
-DW P20_LT-$808D/2, P21_LT-$808D/2, P22_LT-$808D/2, P23_LT-$808D/2, P24_LT-$808D/2, P25_LT-$808D/2, P26_LT-$808D/2, P27_LT-$808D/2, P28_LT-$808D/2, P29_LT-$808D/2, P2A_LT-$808D/2, P2B_LT-$808D/2, P2C_LT-$808D/2, P2D_LT-$808D/2, P2E_LT-$808D/2, P2F_LT-$808D/2
+
+if !SparkBounce_Kejardon = 0
+DW P20_LT-$808D/2, P21_LT-$808D/2
+else
+DW !TilemapIndexBase+2, !TilemapIndexBase+6
+endif
+
+DW P22_LT-$808D/2, P23_LT-$808D/2, P24_LT-$808D/2, P25_LT-$808D/2, P26_LT-$808D/2, P27_LT-$808D/2, P28_LT-$808D/2, P29_LT-$808D/2, P2A_LT-$808D/2, P2B_LT-$808D/2, P2C_LT-$808D/2, P2D_LT-$808D/2, P2E_LT-$808D/2, P2F_LT-$808D/2
 DW P30_LT-$808D/2, P31_LT-$808D/2, P32_LT-$808D/2, P33_LT-$808D/2, P34_LT-$808D/2, P35_LT-$808D/2, P36_LT-$808D/2, P37_LT-$808D/2, P38_LT-$808D/2, P39_LT-$808D/2, P3A_LT-$808D/2, P3B_LT-$808D/2, P3C_LT-$808D/2, P3D_LT-$808D/2, P3E_LT-$808D/2, P3F_LT-$808D/2
 DW P40_LT-$808D/2, P41_LT-$808D/2, P42_LT-$808D/2, P43_LT-$808D/2, P44_LT-$808D/2, P45_LT-$808D/2, P46_LT-$808D/2, P47_LT-$808D/2, P48_LT-$808D/2, P49_LT-$808D/2, P4A_LT-$808D/2, P4B_LT-$808D/2, P4C_LT-$808D/2, P4D_LT-$808D/2, P4E_LT-$808D/2, P4F_LT-$808D/2
 DW P50_LT-$808D/2, P51_LT-$808D/2, P52_LT-$808D/2, P53_LT-$808D/2, P54_LT-$808D/2, P55_LT-$808D/2, P56_LT-$808D/2, P57_LT-$808D/2, P58_LT-$808D/2, P59_LT-$808D/2, P5A_LT-$808D/2, P5B_LT-$808D/2, P5C_LT-$808D/2, P5D_LT-$808D/2, P5E_LT-$808D/2, P5F_LT-$808D/2
@@ -8583,7 +8629,14 @@ DW LT_DMA7, LT_DMA8, LT_DMA9, LT_DMAA
 ORG $92D94E		;POSE POINTERS TO ANIMATION FRAME PROGRESSION TABLES
 DW AFP_T00, AFP_T01, AFP_T02, AFP_T03, AFP_T04, AFP_T05, AFP_T06, AFP_T07, AFP_T08, AFP_T09, AFP_T0A, AFP_T0B, AFP_T0C, AFP_T0D, AFP_T0E, AFP_T0F
 DW AFP_T10, AFP_T11, AFP_T12, AFP_T13, AFP_T14, AFP_T15, AFP_T16, AFP_T17, AFP_T18, AFP_T19, AFP_T1A, AFP_T1B, AFP_T1C, AFP_T1D, AFP_T1E, AFP_T1F
-DW AFP_T20, AFP_T21, AFP_T22, AFP_T23, AFP_T24, AFP_T25, AFP_T26, AFP_T27, AFP_T28, AFP_T29, AFP_T2A, AFP_T2B, AFP_T2C, AFP_T2D, AFP_T2E, AFP_T2F
+
+if !SparkBounce_Kejardon == 0
+DW AFP_T20, AFP_T21
+else
+DW Pose20GraphicIndexes, Pose21GraphicIndexes
+endif
+
+DW AFP_T22, AFP_T23, AFP_T24, AFP_T25, AFP_T26, AFP_T27, AFP_T28, AFP_T29, AFP_T2A, AFP_T2B, AFP_T2C, AFP_T2D, AFP_T2E, AFP_T2F
 DW AFP_T30, AFP_T31, AFP_T32, AFP_T33, AFP_T34, AFP_T35, AFP_T36, AFP_T37, AFP_T38, AFP_T39, AFP_T3A, AFP_T3B, AFP_T3C, AFP_T3D, AFP_T3E, AFP_T3F
 DW AFP_T40, AFP_T41, AFP_T42, AFP_T43, AFP_T44, AFP_T45, AFP_T46, AFP_T47, AFP_T48, AFP_T49, AFP_T4A, AFP_T4B, AFP_T4C, AFP_T4D, AFP_T4E, AFP_T4F
 DW AFP_T50, AFP_T51, AFP_T52, AFP_T53, AFP_T54, AFP_T55, AFP_T56, AFP_T57, AFP_T58, AFP_T59, AFP_T5A, AFP_T5B, AFP_T5C, AFP_T5D, AFP_T5E, AFP_T5F
@@ -10891,5 +10944,4 @@ XY_PE1:		;E1:;Landing from normal jump, facing left and aiming up
 XY_PF2:		;F2:;Crouch transition, facing left and aiming up
 XY_PF8:		;F8:;Crouching to standing, facing left and aiming up
 DB $09, $01 
-DB $FA, $E1, $FA, $E1 
-
+DB $FA, $E1, $FA, $E1

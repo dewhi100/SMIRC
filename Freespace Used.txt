@@ -18,6 +18,7 @@ Bank83
 - Downsparking (Tundain) (Relocated) (Can be anywhere)
 - Enemies Stay Dead (Nodever2) (Can be anywhere)
 - Homing Drops (Nodever2) (Can be anywhere)
+- Spark Bounce (Kejardon) (Can be anywhere)
 
 Bank 84
 - Charge Missiles (Tundain) (If using PLM)
@@ -61,6 +62,7 @@ Bank 90
 - Pseudo-Screw Attack Requires Spazer (dewhi100)
 - Red Beams at Low HP (dewhi100)
 - Smooth Grapple & Better Latching (Tundain)
+- Spark Bounce (Kejardon)
 - Spinjump into Spacejump (dewhi100)
 - Suitless Spacejump (dewhi100)
 - Supers Need Mains (dewhi100)

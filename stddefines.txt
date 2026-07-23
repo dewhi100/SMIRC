@@ -14,7 +14,8 @@
 !free8E = $8EE600
 !free8F = $8FE99B
 !free90 = $90F63A
-!disassemblyFreespace = $918014
+!transitionTable91 = $919EE2
+!transitionTableEnd = $91B00F
 !unused91 = $91F7F4
 !unused91End = $91F88C
 !free91 = $91FFEE
@@ -58,6 +59,7 @@
 !UnknownAmmoMessageIndex = $1E
 !ChargemissilesMsgBox = $1F
 !ChargesupersMsgbox = $20
+!SparkbounceMessageIndex = $21
 
 
 !acidDamage	= $8000
@@ -66,4 +68,5 @@
 !Chargemissilesitembit = #$0010
 !Chargesupersitembit = #$0040
 !bombLauncherBitflag = #$0080
+!SparkbounceEquipmentSlot = $0000
 
