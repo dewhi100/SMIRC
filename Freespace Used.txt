@@ -65,6 +65,7 @@ Bank 90
 - Charge Heal (dewhi100)
 - Charge Missiles (Tundain)
 - Downsparking (Tundain)
+- Limited Space Jump (Oi27)
 - Morph Speed (OmegaDragnet)
 - Pseudo-Varia with Charged Ice Beam (dewhi100)
 - Pseudo-Screw Attack Requires Spazer (dewhi100)
@@ -79,6 +80,7 @@ Bank 90
 
 Bank 91 (Overwriting Unused Code)
 - Downsparking (Tundain)
+- Limited Space Jump (Oi27)
 - Safe Unmorph (Tundain)
 - Spacejump into Spinjump (dewhi100)
 

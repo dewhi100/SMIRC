@@ -78,6 +78,8 @@
 !SkipIntroFlashbacks_Nodever2 = 1
 
 ;Jumps
+!LimitedSpaceJumps_Oi27 = 1
+	!JumpsAllowed = $0002 		;number of jumps incl the one from the ground
 !SuitlessSpaceJump_Dewhi100 = 1
 
 ;Missiles

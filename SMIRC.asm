@@ -146,6 +146,9 @@ endif
 if !SuitlessSpaceJump_Dewhi100 == 1
 	incsrc "Jumps/SuitlessSpaceJump_Dewhi100.asm"
 endif
+if !LimitedSpaceJumps_Oi27 == 1
+	incsrc "Jumps/LimitedSpaceJumps_Oi27.asm"
+endif
 
 ;Missiles
 if !ChargeMissiles_Tundain == 1

@@ -7,7 +7,7 @@ lorom
 ;Requires free RAM as a jump counter. Other patches sometimes use this same RAM by default, so be careful.
 
 ;Number of Jumps made since last grounded. 0 = on floor; 1 = jumped from floor or wall; 2+ = jumped in midair i.e. utilized Space Jump
-!JumpCounter = $099A ;any free RAM
+;!JumpCounter = $099A ;any free RAM
 ;Free space in $90 and $91
 !90Free = $90F63A
 !91Free = $91EC9D ;overwrite unused routine

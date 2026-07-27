@@ -17,6 +17,8 @@
 !free90 = $90F63A
 !transitionTable91 = $919EE2
 !transitionTableEnd = $91B00F
+!unused91EC9D = $91EC9D
+!unused91EC9DEnd = $91ECD0
 !unused91 = $91F7F4
 !unused91End = $91F88C
 !free91 = $91FFEE
@@ -40,6 +42,7 @@
 
 !SlopeFlagRAM = $39
 !spawnSbaFlag = $0332
+!JumpCounter = $099A
 !UniversalAmmoRAM = $09EE
 !AuraRAM = $0A02
 !OmegaDragnetRAM = $7EF4A0
