@@ -1,8 +1,8 @@
 ;Suit Aura
 ;-------------
 lorom
-;!AuraRadius = 1     ;(d. pixels)
-;!AuraITM = $0020	;item to activate the aura:
+!AuraRadius = 1     ;(d. pixels)
+!AuraITM = $0020	;item to activate the aura:
 ;        			0001: Varia suit
 ;        			0002: Spring ball
 ;        			0004: Morph ball
@@ -14,7 +14,7 @@ lorom
 ;        			2000: Speed booster
 ;        			4000: Grapple
 ;        			8000: X-Ray
-;!AuraRAM = $0A02	;any unused RAM
+!AuraRAM = $0A02	;any unused RAM
 !AuraPAL = $0000	;change this value to change color of aura
 ;#$0A00 for generic palette | but it looks bad
 ;#$0C00 for beam palette    | changes color depending on the equipped beam(!)
@@ -22,11 +22,12 @@ lorom
 ;#$0000 for enemy hurt palette (white)
 
 
-;!81Free = $81EF1A	;Code to change aura palette 
-;!8FFree = $8FEA00	;Code to create aura. Relocatable anywhere in the ROM below $B8.
-;!90Free = $90F73E	;Code to create aura. Has to stay in $90.
+!81Free = $81EF1A	;Code to change aura palette 
+!8FFree = $8FEA00	;Code to create aura. Relocatable anywhere in the ROM below $B8.
+!90Free = $90F73E	;Code to create aura. Has to stay in $90.
 
 macro AuRad(radius,code)         ;repeat INC/DEC $14 and $12 for the defined AuraRadius
+ 
 	!counter = 0
 	while !counter < <radius>
 		<code>
@@ -38,25 +39,18 @@ endmacro
 ;Major credit to PJ for the bank log!
 ;------------------------
 ;------------------------
-
 org $828BA8	;hijack of main game loop where it would handle room Main ASM
 JSL AURA_DrawAura
 
-if !Downsparking_Tundain == 0
 org $818A1D	;hijack samus transfer to OAM
 JSR EchoesPaletteChange
-endif
 
-org !free83	;relocatable anywhere in the ROM with shortRAM access (Bank 80 .. Bank BF)
+org !8FFree
 AURA:
-.DrawAura	
+.DrawAura	;relocatable anywhere in the ROM with shortRAM access
 {
 PHX : PHY : PHB
-if !AuraITM != $0000
-LDA $09A2 : BIT #!AuraITM : BNE +	;if Aura item Equipped continue
-else
-BRA +
-endif
+LDA $09A2 : BIT #!AuraITM : BNE +	;if Gravity Suit Equipped continue
 ..out
 	PLB
 	JSL $8FE8BD								;handle room main ASM.
@@ -125,6 +119,8 @@ JSL $8FE8BD								;handle room main ASM. DB will be $82 coming into here and co
 PLY : PLX
 RTL
 
+
+
 ..manipPOS
 ;INC or DEC 12 and 14 depending on the position of some RAM
 ;00 = down, 01 = right, 02 = up, 03 = left
@@ -158,9 +154,8 @@ endif
 RTS
 }
 
-!free83 #= pc()
 
-org !free81
+org !81Free
 EchoesPaletteChange:
 ;[X] = OAM index, [Y] = tiles pointer
 ; More specifically, a spritemap entry is:
@@ -173,9 +168,7 @@ PLA
 STA $0372,x
 RTS
 
-!free81 #= pc()
-
-org !free90
+org !90Free
 EchoesHook:
 PHB : PHX
 PHK : PLB
@@ -188,4 +181,4 @@ PLX : PLB
 SEC			;Re-set Carry after PLB
 RTL
 
-!free90 #= pc()
+

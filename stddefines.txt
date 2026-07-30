@@ -1,6 +1,6 @@
 !free80 = $80CD8E
 !free80End = $80FFC0
-!free81 = $81EF20
+!free81 = $81EF1A
 !free82 = $82F70F
 !free83 = $83AD66
 !free84 = $84EFD3
@@ -42,9 +42,9 @@
 
 !SlopeFlagRAM = $39
 !spawnSbaFlag = $0332
+!AuraRAM = $0336
 !JumpCounter = $099A
 !UniversalAmmoRAM = $09EE
-!AuraRAM = $0A02
 !OmegaDragnetRAM = $7EF4A0
 !NodeverRAM = $7FFC02
 
@@ -72,6 +72,6 @@
 !Chargemissilesitembit = #$0010
 !Chargesupersitembit = #$0040
 !bombLauncherBitflag = #$0080
-!AuraITM = $0020
+!AuraITM = $0000
 !SparkbounceEquipmentSlot = $0000
 

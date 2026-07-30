@@ -165,7 +165,14 @@ LDA $0A1C : AND #$00FF;make sure it's a vertical shinespark
 CMP #$00CB : BEQ doflip
 CMP #$00CC : BEQ doflip
 +
-LDA $0002,y : CLC : ADC $12 : STA $0371,x : LDA $0003,y : STA $0372,x;set ypos and properties normally
+LDA $0002,y : CLC : ADC $12 : STA $0371,x : LDA $0003,y 
+
+if !SuitAura_Oi27 == 0
+	STA $0372,x;set ypos and properties normally
+else
+	JSR EchoesPaletteChange
+endif
+
 RTS
 doflip:
 LDA $0000,y : BMI +;the small tiles need a different offset
@@ -181,7 +188,7 @@ LDA $0003,y : EOR #$8000
 if !SuitAura_Oi27 == 0
 	STA $0372,x;flip gfx
 else
-	JSL AURA_DrawAura
+	JSR EchoesPaletteChange
 endif
 
 RTS
