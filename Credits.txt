@@ -16,6 +16,7 @@ dewhi100
 - Random Room States
 - Red Door Cap Missile Requirement (hex tweak)
 - Red Beams When Low HP
+- Respin (rearranging the transition table, and extra jump code) (With Kejardon, PJBoy, Scyzer)
 - Room Clear Event PLM
 - Skip Attract Mode Demos	(Hex Tweak)
 - Spiderball (Unfinished/Abandoned)
@@ -30,6 +31,7 @@ Exister
 
 Kejardon
 - Decompression Optimization (With Maddo, and Tundain)
+- Respin (With PJBoy, Scyzer)
 - Samus Elbow Fix
 - Spark Bounce
 
@@ -67,6 +69,12 @@ OmegaDragnet9
 - Item Grey Doors
 - Morph Speed
 - Skip Zebes Mode7 Escape
+
+PJBoy
+- Respin (With Kejardon, Scyzer)
+
+Scyzer
+- Respin (With Kejardon, PJBoy)
 
 Tundain
 - Charge Missiles

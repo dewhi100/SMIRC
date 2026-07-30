@@ -32,7 +32,7 @@
 !HomingDrops_Nodever2 = 1
 
 ;Effects
-!SuitAura_Oi27 = 1		;you can set the item that grants aura in the stddefines.txt file
+!SuitAura_Oi27 = 0		;you can set the item that grants aura in the stddefines.txt file
 	!AuraRadius = 1     ;(d. pixels)
 
 !WaterDroplets_Oi27 = 1		;NOTE: you wont see the graphics ingame right away when quickmetting. You need to go through a door transition in order to properly load the GFX
@@ -80,6 +80,7 @@
 ;Jumps
 !LimitedSpaceJumps_Oi27 = 1
 	!JumpsAllowed = $0002 		;number of jumps incl the one from the ground
+!Respin_Kejardon = 1
 !SuitlessSpaceJump_Dewhi100 = 1
 
 ;Missiles

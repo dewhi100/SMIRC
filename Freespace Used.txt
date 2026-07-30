@@ -70,6 +70,7 @@ Bank 90
 - Pseudo-Varia with Charged Ice Beam (dewhi100)
 - Pseudo-Screw Attack Requires Spazer (dewhi100)
 - Red Beams at Low HP (dewhi100)
+- Respin (Kejardon)
 - Smooth Grapple & Better Latching (Tundain)
 - Spark Bounce (Kejardon)
 - Spinjump into Spacejump (dewhi100)

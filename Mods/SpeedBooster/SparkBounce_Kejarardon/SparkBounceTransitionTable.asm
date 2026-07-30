@@ -250,6 +250,9 @@ DW $0000,$0020,$0008
 DW $FFFF
 
 T13:
+if !Respin_Various == 1
+DW $0080,$0000,$0019	;Respin
+endif
 DW $0000,$0900,$0069
 DW $0000,$0500,$006B
 DW $0000,$0190,$0069
@@ -264,6 +267,9 @@ DW $0000,$0040,$0013
 DW $FFFF
 
 T14:
+if !Respin_Various == 1
+DW $0080,$0000,$001A	;Respin
+endif
 DW $0000,$0A00,$006A
 DW $0000,$0600,$006C
 DW $0000,$0290,$006A
@@ -282,6 +288,9 @@ T4D:
 T51:
 T69:
 T6B:
+if !Respin_Various == 1
+DW $0080,$0000,$0019	;Respin
+endif
 DW $0000,$0900,$0069
 DW $0000,$0500,$006B
 DW $0000,$0190,$0069
@@ -302,6 +311,9 @@ T4E:
 T52:
 T6A:
 T6C:
+if !Respin_Various == 1
+DW $0080,$0000,$001A	;Respin
+endif
 DW $0000,$0A00,$006A
 DW $0000,$0600,$006C
 DW $0000,$0290,$006A
@@ -318,6 +330,10 @@ DW $0000,$0040,$0014
 DW $FFFF
 
 T17:
+if !Respin_Various == 1
+DW $0080 $0400,$0017	;PREVENTS respin if down is held. PJBoy added this guardrail to prevent respin from interfering with mockball.
+DW $0080,$0000,$0019	;Respin
+endif
 DW $0400,$0000,$0037
 DW $0000,$0900,$0069
 DW $0000,$0500,$006B
@@ -335,6 +351,10 @@ DW $0000,$0040,$0013
 DW $FFFF
 
 T18:
+if !Respin_Various == 1
+DW $0080 $0400,$0018	;PREVENTS respin if down is held. PJBoy added this guardrail to prevent respin from interfering with mockball.
+DW $0080,$0000,$001A	;Respin
+endif
 DW $0400,$0000,$0038
 DW $0000,$0A00,$006A
 DW $0000,$0600,$006C
@@ -595,6 +615,9 @@ T29:
 T2B:
 T6D:
 T6F:
+if !Respin_Various == 1
+DW $0080,$0000,$0019	;Respin
+endif
 DW $0000,$0900,$006D
 DW $0000,$0500,$006F
 DW $0000,$0200,$0087
@@ -610,6 +633,9 @@ T2A:
 T2C:
 T6E:
 T70:
+if !Respin_Various == 1
+DW $0080,$0000,$001A	;Respin
+endif
 DW $0000,$0A00,$006E
 DW $0000,$0600,$0070
 DW $0000,$0100,$0088
@@ -622,6 +648,10 @@ DW $0000,$0200,$002A
 DW $FFFF
 
 T2D:
+if !Respin_Various == 1
+DW $0080 $0400,$002D	;PREVENTS respin if down is held. PJBoy added this guardrail to prevent respin from interfering with mockball.
+DW $0080,$0000,$0019	;Respin
+endif
 DW $0400,$0000,$0037
 DW $0000,$0900,$006D
 DW $0000,$0500,$006F
@@ -635,6 +665,10 @@ DW $0000,$0100,$0029
 DW $FFFF
 
 T2E:
+if !Respin_Various == 1
+DW $0080 $0400,$002E	;PREVENTS respin if down is held. PJBoy added this guardrail to prevent respin from interfering with mockball.
+DW $0080,$0000,$001A	;Respin
+endif
 DW $0400,$0000,$0038
 DW $0000,$0A00,$006E
 DW $0000,$0600,$0070
@@ -714,6 +748,9 @@ DW $0000,$0180,$004F
 DW $FFFF
 
 T67:
+if !Respin_Various == 1
+DW $0080,$0000,$0019	;Respin
+endif
 DW $0000,$0900,$006D
 DW $0000,$0500,$006F
 DW $0000,$0800,$002B
@@ -726,6 +763,9 @@ DW $0000,$0100,$0067
 DW $FFFF
 
 T68:
+if !Respin_Various == 1
+DW $0080,$0000,$001A	;Respin
+endif
 DW $0000,$0A00,$006E
 DW $0000,$0600,$0070
 DW $0000,$0800,$002C

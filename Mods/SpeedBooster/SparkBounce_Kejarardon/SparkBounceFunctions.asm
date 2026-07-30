@@ -1,5 +1,9 @@
 lorom
 
+if !SamusMasterDisassembly_Crashtour99 == 0
+incsrc "../../SamusGfx/TransitionTable_Kejardon.asm"
+endif
+
 ;incsrc SparkBounceCustomizeOptions.asm
 
 ;Customizable variables.

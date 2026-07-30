@@ -1,5 +1,5 @@
 lorom
-;Spinjump Into Spacejump  	Animation Override by dewhi100
+;Spinjump Into Spacejump Animation Override by dewhi100
 ;Based on Spin Boost AKA Limited Space Jump, by Oi27
 ;---------------------
 ;Plays the normal spinjump animation when jumping off a floor or wall. Space jump animation only triggers when jumping in midair.
@@ -7,11 +7,11 @@ lorom
 ;Requires free RAM as a jump counter. Other patches sometimes use this same RAM by default, so be careful.
 
 ;Number of Jumps made since last grounded. 0 = on floor; 1 = jumped from floor or wall; 2+ = jumped in midair i.e. utilized Space Jump
-;!JumpCounter = $099A ;any free RAM
+!JumpCounter = $0A02 ;any free RAM
 ;Free space in $90 and $91
 !90Free = $90F63A
 !91Free = $91EC9D ;overwrite unused routine
-!ItemMask = #$FDF7 	;Masking Space Jump. Use FDF7 instead  if you also want to mask Screw Attack.
+!ItemMask = #$FDFF 	;Masking Space Jump. Use FDF7 instead  if you also want to mask Screw Attack. (Screw Attack is bit $0008)
 									;Screw attack not masked = screw attack whenever jumping with it equipped (Nullifying the space jump animation override)
 									;Screw attack masked = only perform a screw attack on and after your first midair jump (i.e. when the space jump animation would play)
 
@@ -28,10 +28,12 @@ org $909E7F
 JSR RefreshByWallJump
 
 org !90Free
+CountJump:
 JSR RefreshPose		;initial spinjump doesnt work without this
-LDA !JumpCounter
-INC
-STA !JumpCounter
+INC !JumpCounter
+;LDA !JumpCounter
+;INC
+;STA !JumpCounter
 JSR RefreshPose		;initial spacejump doesn't work without this
 PLA							;\
 PHP : PHB : PHK		;|---This is the code block that got hijacked. nothing to do with the patch. well, sort of. you  get the idea

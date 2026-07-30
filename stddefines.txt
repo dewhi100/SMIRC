@@ -1,7 +1,7 @@
 !free80 = $80CD8E
 !free80End = $80FFC0
 !free81 = $81EF20
-!free82 = $82F710
+!free82 = $82F70F
 !free83 = $83AD66
 !free84 = $84EFD3
 !free85 = $859643
