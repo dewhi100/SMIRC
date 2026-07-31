@@ -45,6 +45,8 @@
 !AuraRAM = $0336
 !JumpCounter = $099A
 !UniversalAmmoRAM = $09EE
+!ammoFlags = $09F0
+!msgRam = $0B0C
 !OmegaDragnetRAM = $7EF4A0
 !NodeverRAM = $7FFC02
 

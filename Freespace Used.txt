@@ -33,6 +33,7 @@ Bank 84
 - Generic Maridia Tube (OmegaDragnet)
 - Item Gray Doors (OmegaDragnet)
 - Item Event PLM (dewhi100)
+- M2 Varia Suit Effect (Oi27)
 - Supers Need Mains (dewhi100)
 - Universal Ammo (Tundain)
 - Water Droplets Effect (Oi27)
@@ -101,9 +102,11 @@ Bank A0
 - Bomb Launcher (Ob)
 - Enemy Always Freezes Vulnerability (Tundain)
 - Enemies Stay Dead (Nodever2)
+- M2 Varia Suit Effect (Oi27)
 - Variable Knockback (Tundain)
 
 Bank A3
+- M2 Varia Suit Effect (Oi27)
 - One-room Elevators (dewhi100)
 - Shinespark Compatible Reflecs (Tundain)
 
@@ -116,3 +119,4 @@ Bank B2
 Bank B8
 - Door Transitions (Nodever2) (Can be anywhere)
 - Full Reserve Tank Indicator (Nodever2) (Can be anywhere)
+- M2 Varia Suit Effect (Oi27)

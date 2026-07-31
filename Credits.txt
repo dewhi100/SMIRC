@@ -57,6 +57,7 @@ Ob
 
 Oi27
 - Limited Space Jump
+- M2 Varia Suit Effect
 - Suit Aura
 - Water Droplets Effect
 

@@ -226,6 +226,9 @@ if !SparkBounce_Kejardon == 1
 endif
 
 ;Suits
+if !M2anim_Oi27 == 1
+	incsrc "Suits/M2anim_Oi27/M2_Varia_DMA.asm"
+endif
 if !PseudoVaria_Dewhi100 == 1
 	incsrc "Suits/pseudoVaria_Dewhi100.asm"
 endif

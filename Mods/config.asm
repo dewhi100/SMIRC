@@ -122,6 +122,7 @@
 	!disableVertical = 1	;I think vertical sparks from walljump pose feel jarring, so here's an option to disable them.
 
 ;Suits
+!M2anim_Oi27 = 1				;This breaks the hidden block variety of Varia, but you weren't planning on using that... were you?
 !PseudoVaria_Dewhi100 = 1
 	!HeatProofGravitySuit = 0	;Set to 1 if you want Gravity Suit to protect from heat
 	!HalfDamageInLava = 1		;Set if you want charged Ice Beam to reduce lava damage
