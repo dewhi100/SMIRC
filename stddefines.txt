@@ -61,11 +61,11 @@
 !redEvent		= $23
 !SuperMissileEvent = $30
 
-
+!BlockGFX = $7F
 !Event_bts = $0A
-!BTS_horizontal = #$000D
-!BTS_vertical = #$000E
-!BTS_junction = #$000F
+!BTS_horizontal = #$0D
+!BTS_vertical = #$0E
+!BTS_junction = #$0F
 
 !EnergyTankMessageIndex = $01
 !MissileTankMessageIndex = $02

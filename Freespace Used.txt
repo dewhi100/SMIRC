@@ -29,6 +29,7 @@ Bank 84
 - Accel Charge (Oi27)
 - Chain Blocks (Black Falcon)
 - Charge Missiles (Tundain) (If using PLM)
+- Delayed Crumble Blocks (Black Falcon)
 - Event Doors (dewhi100)
 - Event Gray Doors (OmegaDragnet)
 - Event Station (dewhi100)

@@ -36,6 +36,9 @@ endif
 if !ChainBlocks_BlackFalcon == 1
 	incsrc "Blocks/ChainBlocks_BlackFalcon.asm"
 endif
+if !CrumbleDelay_BlackFalcon
+	incsrc "Blocks/CrumbleDelay_BlackFalcon.asm"
+endif
 if !EventBTS_OmegaDragnet == 1
 	incsrc "Blocks/EventBTS_OmegaDragnet.asm"
 endif

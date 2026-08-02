@@ -9,7 +9,8 @@
 !SpinningChargeFlare_Tundain = 0	;possibly bugged. tundain is notified.
 
 ;Blocks
-!ChainBlocks_BlackFalcon = 1	;D horizontal E veritcal F = cross. uses shotblcoks and bomb blocks
+!ChainBlocks_BlackFalcon = 1	;D horizontal E veritcal F = cross. uses shotblcoks and bomb blocks. crumbles would be nice
+!CrumbleDelay_BlackFalcon = 1
 !EventBTS_OmegaDragnet = 1
 
 ;Bombs

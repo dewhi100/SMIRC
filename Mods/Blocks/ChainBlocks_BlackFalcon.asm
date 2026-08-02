@@ -221,9 +221,9 @@ JSR_CheckVerticalChain:
 JSR_CheckChainElements:
     JSR JSR_GetBlockType : CMP !PLM_Blocktype,x : BEQ +                              ; check if the adjacent block is of the same type as the current block
                            CMP #$8000 : BNE +++                                      ; or if it is solid
-+   LDA !TEMP_index : LSR a : JSR JSR_GetBlockBTS : CMP !BTS_junction : BEQ ++
-                                                    CMP !BTS_vertical : BEQ +
-                                                    CMP !BTS_horizontal : BNE +++
++   LDA !TEMP_index : LSR a : JSR JSR_GetBlockBTS : CMP.w !BTS_junction : BEQ ++
+                                                    CMP.w !BTS_vertical : BEQ +
+                                                    CMP.w !BTS_horizontal : BNE +++
 +   JSR JSR_SpawnDirectionalChain : BRA +++
 ++  JSR JSR_SpawnChainJunction
 +++ RTS
