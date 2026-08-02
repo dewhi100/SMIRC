@@ -10,8 +10,14 @@ incsrc "config.asm"
 ;File Includes;
 
 ;Beams
+if !AccelCharge_Oi27 == 1
+;	incsrc "Beams/AccelCharge_Oi27/accel-charge.asm"
+endif
 if !BeamBasedPseudoScrewDamage_Dewhi100 == 1
 	incsrc "Beams/BeamBasedPseudoScrewDamage_Dewhi100.asm"
+endif
+if !BrokenChargeBeam_PHOSPHOTiDYL
+	incsrc "Beams/BrokenChargeBeam_PHOSPHOTiDYL.asm"
 endif
 if !PseudoScrewRequiresSpazer_Dewhi100 == 1
 	incsrc "Beams/PseudoScrewRequiresSpazer_Dewhi100.asm"

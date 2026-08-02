@@ -26,6 +26,7 @@ Bank83
 - Water Droplets Effect (Oi27) (Can be anywhere)
 
 Bank 84
+- Accel Charge (Oi27)
 - Chain Blocks (Black Falcon)
 - Charge Missiles (Tundain) (If using PLM)
 - Event Doors (dewhi100)
@@ -48,9 +49,11 @@ Bank 86
 - Water Droplets Effect (Oi27)
 
 Bank 89
+- Accel Charge (Oi27)
 - Charge Missiles (Tundain) (If using PLM)
 
 Bank 8B
+- Accel Charge (Oi27)
 - Non-Explosive Planet (Tundain) (If exploding the area)
 
 Bank 8C
@@ -67,7 +70,9 @@ Bank 8F
 - Room ASM: Supers Need Mains (dewhi100)
 
 Bank 90
+- Accel Charge (Oi27)
 - Bomb Launcher (Ob)
+- BrokenChargeBeam (BrokenChargeBeam)
 - Charge Heal (dewhi100)
 - Charge Missiles (Tundain)
 - Downsparking (Tundain)
@@ -92,6 +97,7 @@ Bank 91 (Overwriting Unused Code)
 - Spacejump into Spinjump (dewhi100)
 
 Bank 91
+- Accel Charge (Oi27)
 
 Bank 93
 - MOAR Items (Mccad)

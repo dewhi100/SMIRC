@@ -337,9 +337,14 @@ warnpc $90C5C4
 }
 
 org $90dd61			;hud handlers.	may comment some entries depending on what other ASM you use (ex. charge missiles) and how you want to arrange hud
-dw $B80D ; Nothing
+
+if !BrokenChargeBeam_PHOSPHOTiDYL == 0
+	dw $B80D ; Nothing
+else
+	dw NewBeamFire
+endif
 	if !HUD_Index == 0
-		dw BombLauncherHandler ; Bomb Launcher replaces Super missiles
+		dw BombLauncherHandler ; Bomb Launcher replaces missiles
 	else
 		if !ChargeMissiles_Tundain == 1
 		dw missilehandler	;in the tundain Charge Missiles asm
@@ -357,17 +362,22 @@ dw $B80D ; Nothing
 		endif
 	endif
 	if !HUD_Index == 2
-		dw BombLauncherHandler ; Bomb Launcher replaces Super missiles
+		dw BombLauncherHandler ; Bomb Launcher replaces PBs
 	else
+		if !BrokenChargeBeam_PHOSPHOTiDYL == 0
+			dw $B80D ; Nothing
+		else
+			dw NewBeamFire
+		endif
 		dw $B80D ; Power bombs
 	endif
 	if !HUD_Index == 3
-		dw BombLauncherHandler ; Bomb Launcher replaces Super missiles
+		dw BombLauncherHandler ; Bomb Launcher replaces Grapple
 	else
 		dw $DD6F ; Grapple
 	endif
 	if !HUD_Index == 4
-		dw BombLauncherHandler ; Bomb Launcher replaces Super missiles
+		dw BombLauncherHandler ; Bomb Launcher replaces X-ray
 	else
 		dw $DDC8 ; X-ray
 	endif

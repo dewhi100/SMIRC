@@ -62,6 +62,7 @@ Ob
 - Bomb Launcher
 
 Oi27
+- Accel Charge
 - Ice Plus Missile Damage
 - Instant Pickups
 - Limited Space Jump
@@ -78,6 +79,9 @@ OmegaDragnet9
 - Item Grey Doors
 - Morph Speed
 - Skip Zebes Mode7 Escape
+
+PHOSPHOTiDYL
+- BrokenChargeBeam
 
 PJBoy
 - Bomb Torizo Item Override

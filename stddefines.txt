@@ -46,8 +46,10 @@
 !JumpCounter = $099A
 !UniversalAmmoRAM = $09EE
 !ammoFlags = $09F0
+!AccelChargeCounter = $09F4
 !MoarItemsCustomFlags = $0A1A 
 !msgRam = $0B0C
+
 !VarWState = $7FFA02
 !OmegaDragnetRAM = $7EF4A0
 !NodeverRAM = $7FFC02
@@ -82,6 +84,7 @@
 !MSGWaveDsh = $01
 !MSGGaussMs	= $01
 !MSGHammer = $01
+!AccelChargeMessageIndex = $01
 
 !acidDamage	= $8000
 !acidSubDamage = $0000

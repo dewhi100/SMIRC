@@ -1,6 +1,8 @@
 ;Beams
+!AccelCharge_Oi27 = 1
 !BeamBasedPseudoScrewDamage_Dewhi100 = 1
 	!DoubleDamage = 1
+!BrokenChargeBeam_PHOSPHOTiDYL = 1
 !PseudoScrewRequiresSpazer_Dewhi100 = 1
 !RedBeamsLowHP_Dewhi100 = 1
 !SmoothGrappleBetterLatching_Tundain = 1
