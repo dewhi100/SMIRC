@@ -12,6 +12,8 @@
 !ChainBlocks_BlackFalcon = 1	;D horizontal E veritcal F = cross. uses shotblcoks and bomb blocks. crumbles would be nice
 !CrumbleDelay_BlackFalcon = 1
 !EventBTS_OmegaDragnet = 1
+!MissileBlock_Oi27 = 1
+!ScrewAttackBlock_Crashtour99 = 1
 
 ;Bombs
 !BombLauncher_Ob = 1	;set the item bit you want for this in stddefines.txt. Does not handle drawing icon the HUD.

@@ -62,6 +62,9 @@
 !SuperMissileEvent = $30
 
 !BlockGFX = $7F
+!screwBlockGFX = $7E
+!missileBlockGFX = $7D
+
 !Event_bts = $0A
 !BTS_horizontal = #$0D
 !BTS_vertical = #$0E

@@ -68,6 +68,7 @@ Oi27
 - Instant Pickups
 - Limited Space Jump
 - M2 Varia Suit Effect
+- Missile Block
 - Suit Aura
 - Water Droplets Effect
 

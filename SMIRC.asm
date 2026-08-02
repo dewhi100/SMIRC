@@ -42,6 +42,12 @@ endif
 if !EventBTS_OmegaDragnet == 1
 	incsrc "Blocks/EventBTS_OmegaDragnet.asm"
 endif
+if !MissileBlock_Oi27 == 1
+;	incsrc "Blocks/MissileBlock_Oi27.asm"
+endif
+if !ScrewAttackBlock_Crashtour99 == 1
+	incsrc "Blocks/ScrewAttackBlock_Crashtour99.asm"
+endif
 
 ;Bombs
 if !BombLauncher_Ob == 1
