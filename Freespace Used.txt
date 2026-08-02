@@ -26,6 +26,7 @@ Bank83
 - Water Droplets Effect (Oi27) (Can be anywhere)
 
 Bank 84
+- Chain Blocks (Black Falcon)
 - Charge Missiles (Tundain) (If using PLM)
 - Event Doors (dewhi100)
 - Event Gray Doors (OmegaDragnet)

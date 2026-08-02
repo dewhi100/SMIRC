@@ -58,7 +58,10 @@
 !SuperMissileEvent = $30
 
 
-!Event_bts = $0A 
+!Event_bts = $0A
+!BTS_horizontal = #$000D
+!BTS_vertical = #$000E
+!BTS_junction = #$000F
 
 !EnergyTankMessageIndex = $01
 !MissileTankMessageIndex = $02
