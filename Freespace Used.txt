@@ -38,6 +38,7 @@ Bank 84
 - Item Gray Doors (OmegaDragnet)
 - Item Event PLM (dewhi100)
 - M2 Varia Suit Effect (Oi27)
+- MOAR Items (Mccad)
 - Supers Need Mains (dewhi100)
 - Universal Ammo (Tundain)
 - Water Droplets Effect (Oi27)
@@ -92,9 +93,13 @@ Bank 91 (Overwriting Unused Code)
 
 Bank 91
 
+Bank 93
+- MOAR Items (Mccad)
+
 Bank 94
 - Bomb Launcher (Ob)
 - Event BTS (OmegaDragnet)
+- MOAR Items (Mccad)
 - Safe Unmorph (Tundain)
 - Smooth Grapple & Better Latching (Tundain)
 
@@ -108,6 +113,7 @@ Bank A0
 - Enemies Stay Dead (Nodever2)
 - Ice Plus Missile Damage (Oi27)
 - M2 Varia Suit Effect (Oi27)
+- MOAR Items (Mccad)
 - Variable Knockback (Tundain)
 
 Bank A3
@@ -120,6 +126,9 @@ Bank AA
 
 Bank B2
 - Slope Compatible Space Pirates (Tundain)
+
+Bank B4
+- MOAR Items (Mccad)
 
 Bank B8
 - Door Transitions (Nodever2) (Can be anywhere)

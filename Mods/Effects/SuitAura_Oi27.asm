@@ -65,6 +65,24 @@ endif
 +
 LDA $18A8 : BNE ..out				;Quit drawing them when flashing (hurt)
 LDA $0A5C : CMP #$EB87 : BPL ..out	;also quit drawing the aura if Samus is dead/others
+
+if !WaveDash_Mccad == 1 && !OverrideAura == 1
+	LDA !VarWState : BNE ..out
+endif
+if !criticalAura == 1
+	LDA $0A6A : BNE ++
+endif
+if !chargeAura == 1
+	; if !AccelCharge_Amoeba == 1
+		; JSL CheckMoreAnimationsLong : BEQ ++ : BMI ++
+	; else
+		LDA $0CD0 : CMP #$0078 : BEQ ++ ; change to BNE + if you uncomment below.	need more complex if using accel charge.
+;	endif
+endif
+if !gravityEffect == 1
+	LDA $09A2 : BIT #$0020 : BEQ ..out	;if Gravity Suit not Equipped, abort
+	LDA $0AD2 : BEQ ..out		;if physics is not water, abort
+endif
 ;    $0A5C: Samus drawing handler
 ;    
 ;        $EB52: Default
@@ -73,6 +91,7 @@ LDA $0A5C : CMP #$EB87 : BPL ..out	;also quit drawing the aura if Samus is dead/
 ;        $EBF3: End of shinespark
 ;        $EC14: Using elevator
 ;        $EC1D: Samus received fatal damage
+++
 LDX #$0000
 LDA !AuraRAM : ORA #$8000 : STA !AuraRAM 		;flip neg again so $81 will mess with the palette
 PEA $9200
@@ -167,6 +186,22 @@ EchoesPaletteChange:
 ;     s000000xxxxxxxxx yyyyyyyy   YXpp PPPt tttt tttt
 PHA
 	LDA !AuraRAM : BPL +	
+if !criticalAura == 1
+	LDA $0A6A : BNE +++
+endif
+if !chargeAura == 1
+		; if !AccelCharge_Amoeba == 1
+			; JSL CheckMoreAnimationsLong : BEQ +++ : BPL ++ 
+		; else
+			LDA $0CD0 : CMP #$0077 : BMI ++
+		; endif
++++
+endif
+if !criticalAura == 1 || !chargeAura == 1
+			PLA : AND #$F1FF : ORA #$0C00 : PHA	;use beam palette. useful for varia
+			BRA +
+		++
+endif
 		PLA : AND #$F1FF : ORA #!AuraPAL : PHA	;mess with the palette
 	+
 PLA

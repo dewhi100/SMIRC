@@ -147,6 +147,9 @@ endif
 if !InstantPickups_Oi27 == 1
 	incsrc "Items/InstantPickupsRefactor_Oi27.asm"
 endif
+if !WaveDash_Mccad == 1 || !HammerBall_Mccad == 1 || !GaussMissiles_Mccad == 1
+	incsrc "Items\MoarItems_Mccad\master_custom.asm"
+endif
 
 ;Intro
 if !SkipIntroFlashbacks_Nodever2 == 1

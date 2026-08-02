@@ -41,6 +41,9 @@ Kejardon
 Maddo
 - Decompression Optimization (With Kejardon, and Tundain)
 
+Mccad
+- MOAR Items (Hammerball, Wave Dash, Gauss Missiles)
+
 Nodever2
 - Death Forgiveness
 - Door Transitions
