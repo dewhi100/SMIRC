@@ -87,6 +87,7 @@
 ;Missiles
 !ChargeMissiles_Tundain = 1	;Note: add $0100 to the PLM argument to make it a charged Super item rather than charged missile
 	!withPLMs = 1			;if 1, will use PLMs to set the item flags
+!IcePlusMissileDamage_Oi27 = 1
 !SupersNeedMains_Dewhi100 = 1
 	!StarterAmmo = 15
 !UniversalAmmo_Tundain = 1	;You must supply the "ammo:" HUD text yourself 

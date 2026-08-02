@@ -1,12 +1,10 @@
-;Missiles deal xtra damage to frozen enemies
+;Missiles deal xtra damage to frozen enemies - by Oi27
 ;----------
 lorom
 
-!A0Free = $A0FF00
-
 org $A0A74A : JSR IceDamage ;hijack enemy shot damage calculation | LDA $187A
 
-org !A0Free
+org !freeA0
 IceDamage:
 ;if enemy is frozen && incoming damage is super/missile then INC the damage multiplier
 PHX
@@ -22,3 +20,5 @@ LDA $0F9E,x : BEQ .out
 PLX
 LDA $187A
 RTS
+
+!freeA0 #= pc()

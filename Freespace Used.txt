@@ -105,6 +105,7 @@ Bank A0
 - Bomb Launcher (Ob)
 - Enemy Always Freezes Vulnerability (Tundain)
 - Enemies Stay Dead (Nodever2)
+- Ice Plus Missile Damage (Oi27)
 - M2 Varia Suit Effect (Oi27)
 - Variable Knockback (Tundain)
 

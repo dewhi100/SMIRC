@@ -12,4 +12,3 @@
 ; !AmmoPLM = 1
 ; incsrc "Missiles/UniversalAmmo_Tundain.asm"
 
-incsrc "Missiles/IcePlusMissileDamage_Oi27.asm"

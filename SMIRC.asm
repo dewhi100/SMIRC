@@ -163,6 +163,9 @@ endif
 if !ChargeMissiles_Tundain == 1
 	incsrc "Missiles/ChargeMissiles/ChargeMissiles_Tundain.asm"
 endif
+if !IcePlusMissileDamage_Oi27 == 1
+	incsrc "Missiles/IcePlusMissileDamage_Oi27.asm"
+endif
 if !SupersNeedMains_Dewhi100 == 1 && !EventStation_Dewhi100 == 1
 	incsrc "Missiles/SupersNeedMains_Dewhi100.asm"
 endif
