@@ -60,12 +60,20 @@
 
 !Event_bts = $0A 
 
-
+!EnergyTankMessageIndex = $01
+!MissileTankMessageIndex = $02
+!SuperMissileTankMessageIndex = $03
+!PowerBombTankMessageIndex = $04
+!GrappleMessageIndex = $05
+!XRayMessageIndex = $06
+!ReserveTankMessageIndex = $19
 !SupersDownloadedMessageIndex = $1D
 !UnknownAmmoMessageIndex = $1E
 !ChargemissilesMsgBox = $1F
 !ChargesupersMsgbox = $20
 !SparkbounceMessageIndex = $21
+!SmallammoMsgbox = $22
+!LargeammoMsgbox = $23
 
 
 !acidDamage	= $8000
@@ -77,3 +85,5 @@
 !AuraITM = $0000
 !SparkbounceEquipmentSlot = $0000
 
+!smallammo_CRE_address = #$B077
+!largeammo_CRE_address = #$B076

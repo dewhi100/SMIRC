@@ -34,10 +34,6 @@ lorom
 
 ; Ammo PLMs
 ; change the low byte of these values to change which tile in the tilemap selector the small ammo pickup uses
-!smallammotilemap = #$B077
-!largeammotilemap = #$B076
-!SmallammoMsgbox = #$001D ; which msg box small ammo pickups display
-!LargeammoMsgbox = #$001E ;msg box of large ammo pickup
 !smallammoweight = #$0005 ;how much a small plm gives
 !largeammoweight = #$000A ;how much a large plm gives
 ;FREESPACE!
@@ -152,6 +148,7 @@ updatemissles:
   RTS
 
 if !AmmoPLM != 0
+{
 SmallAmmotank:
 print " ammo tank plm: ",pc
 DW Setup : DW main
@@ -188,8 +185,14 @@ largetilemaps:
 DW $0004,largetilemap2; 
 DW $86B4
 collected:
+
+if !InstantPickups_Oi27 == 0
 DW $8899
 DW $8BDD : DB $02
+else
+%plmData(!INSTAPICK, $16)
+endif
+
 DW collectammopickup,!smallammoweight,!largeammoweight
 skip:
 DW $8724,$DFA9
@@ -228,10 +231,10 @@ DW $8A2E,$E032
 DW $8724,mainbutshotblock
 
 smalltilemap1:
-DW #$0001,!smallammotilemap,#$0000
+DW #$0001,!smallammo_CRE_address,#$0000
 
 largetilemap2:
-DW #$0001,!largeammotilemap,#$0000
+DW #$0001,!largeammo_CRE_address,#$0000
 
 checksize: ; check which gfx to show based on the plm argument
   LDA $1DC7,x
@@ -268,17 +271,30 @@ ADC $0002,y
 displaymsgbox:
 STA $09C6
 INY : INY
+
+;if !InstantPickups_Oi27 == 0 
 LDA #$0168
 JSL $82E118
+;endif
+
 LDA $1DC7,x
 BIT #$1000
 BNE largepickup
-LDA !SmallammoMsgbox
+
+if !InstantPickups_Oi27 == 0
+LDA.w #!SmallammoMsgbox
 JSL $858080
+endif
+
 BRA exitcollection
+
 largepickup:
-LDA !LargeammoMsgbox
+
+if !InstantPickups_Oi27 == 0
+LDA.w #!LargeammoMsgbox
 JSL $858080
+endif
+
 exitcollection:
 INY : INY
 RTS
@@ -293,6 +309,7 @@ org $84EE5F
 setplmitemgfx:
 org $84EE89
 setshotplmgfx:
+}
 endif
   
  ;-------------bank $90 stuff---------------
@@ -435,10 +452,6 @@ cannotSBA:
 
 !free90 #= pc()
 
-
-
-
-
 ;----------------Bank $86 stuff----------------
 ;making item drops give you universal ammo
 org $86F0F7
@@ -447,9 +460,7 @@ org $86F0F7
   
 org $86F0D9
   LDA !PowerbombdropWeight
-  JSL $91DF80
-
- 
+  JSL $91DF80 
   
 org $86F1B1 ;makes enemies be able to drop other stuff than missiles
   JSR checksuperdrops

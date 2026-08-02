@@ -51,8 +51,10 @@ warnpc !free80End
 org $8489E6
 NOP : NOP : NOP : NOP		;skip hud code
 
-org $8489F1
-JSR PickMessage
+if !InstantPickups_Oi27 == 0
+	org $8489F1
+	JSR PickMessage
+endif
 
 org !free84
 PickMessage:

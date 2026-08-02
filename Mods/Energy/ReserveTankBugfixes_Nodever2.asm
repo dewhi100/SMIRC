@@ -56,10 +56,12 @@ lorom
 
 ;--------------------------------------
 ; Hijacks and such (I overwrite existing routines with vanilla code that's already there to trigger SMART's patch collision detection if anyone else uses these spaces):
-    
-org $848961 ; point this at any "JSL $858080 : INY : INY : RTS" in $84.
+
+org $848961
 DisplayMsgAndReturn:
+if !InstantPickups_Oi27 == 0
     JSL $858080 : INY : INY : RTS
+endif
 
 org $848CE7 ; point this at any "LDA #$0001 : JSL $90F084 : PLY : PLX : RTS" in $84.
 UnlockSamusAndReturn:
@@ -78,8 +80,10 @@ InstructionCollectEnergyTank:
     LDA !SamusMaxHealthRam
     CLC : ADC $0000,y
     STA !SamusMaxHealthRam : JSR FillHealthAndReserves
+if !InstantPickups_Oi27 == 0
     LDA #$0168 : JSL $82E118
-    LDA #$0001 : JMP DisplayMsgAndReturn
+    LDA #$0001 : INY : INY : RTS
+endif
 
 ;--------------------------------------
 ; Reserve tanks come full
@@ -90,8 +94,11 @@ InstructionCollectReserveTank:
     STA !SamusMaxReserveHealthRam
     STA !SamusReserveHealthRam ; makes reserves come full
     LDA !ReserveHealthMode : BNE + : INC !ReserveHealthMode
-+   LDA #$0168 : JSL $82E118
++  	
+if !InstantPickups_Oi27 == 0
+	LDA #$0168 : JSL $82E118
     LDA #$0019 : JMP DisplayMsgAndReturn
+endif
 
 ;--------------------------------------
 ; Allow Samus to use energy refill if health full but reserves are not.

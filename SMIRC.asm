@@ -137,6 +137,11 @@ if !HudCounterAnimation_Nodever2 == 1
 	incsrc "HUD/HudCounterAnimation_Nodever2.asm"
 endif
 
+;Items
+if !InstantPickups_Oi27 == 1
+	incsrc "Items/InstantPickupsRefactor_Oi27.asm"
+endif
+
 ;Intro
 if !SkipIntroFlashbacks_Nodever2 == 1
 	incsrc "Intro/SkipIntroFlashbacks_Nodever2.asm"

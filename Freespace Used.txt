@@ -5,6 +5,7 @@ Bank 80
 - Door Transitions (Nodever2)
 - Enemies Stay Dead (Nodever2)
 - HUD Counter Animation (Nodever2)
+- Instant Pickups (Oi27)
 - Supers Need Mains (dewhi100)
 - Universal Ammo (Tundain)
 
@@ -14,6 +15,7 @@ Bank 81
 
 Bank 82
 - Door Transitions (Nodever2)
+- Instant Pickups (Oi27)
 
 Bank83
 - Downsparking (Tundain) (Relocated) (Can be anywhere)
@@ -31,6 +33,7 @@ Bank 84
 - FX Level PLM
 - Gadora Charge Vulnerability (Nodever2)
 - Generic Maridia Tube (OmegaDragnet)
+- Instant Pickups (Oi27)
 - Item Gray Doors (OmegaDragnet)
 - Item Event PLM (dewhi100)
 - M2 Varia Suit Effect (Oi27)

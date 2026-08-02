@@ -15,7 +15,6 @@
 	!bombLauncherAmmoRequirement = 1	;if using universal ammo, you can use it for bomb launcher too.
 !PowerBombsRemoveWater_Moehr = 1
 
-
 ;Doors
 !DoorTransitions_Nodever2 = 1	;see file for full list of custom options. There are too many to list here.
     !AddOptionToFadeLayer1      = 0  ; If enabled, set the 20h bit in door elevator properties to fade layer 1 per-door (this works just like the CRE bitflag that bosses use in vanilla). (In SMART: Raw > bitflag)
@@ -73,6 +72,9 @@
 !FullReserveTankIndicator_Compatability_Nodever2 = 1
 !HudCounterAnimation_Nodever2 = 1
 
+;Items
+!InstantPickups_Oi27 = 1
+
 ;Intro
 !SkipIntroFlashbacks_Nodever2 = 1
 
@@ -88,8 +90,7 @@
 !SupersNeedMains_Dewhi100 = 1
 	!StarterAmmo = 15
 !UniversalAmmo_Tundain = 1	;You must supply the "ammo:" HUD text yourself 
-	!AmmoPLM = 1	;a specialized universal ammo tank.
-
+	!AmmoPLM = 1	;a specialized universal ammo tank.	0XXX = big, 1XXX = small, X0XX ... X2XX are normal/orb/hidden
 
 ;Morph
 !MorphSpeed_OmegaDragnet = 1
