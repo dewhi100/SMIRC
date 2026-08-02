@@ -11,3 +11,5 @@
 ; !InstantPickups_Oi27 = 0
 ; !AmmoPLM = 1
 ; incsrc "Missiles/UniversalAmmo_Tundain.asm"
+
+incsrc "Missiles/IcePlusMissileDamage_Oi27.asm"
