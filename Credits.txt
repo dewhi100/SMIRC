@@ -77,6 +77,7 @@ OmegaDragnet9
 - Skip Zebes Mode7 Escape
 
 PJBoy
+- Bomb Torizo Item Override
 - Respin (With Kejardon, Scyzer)
 
 Scyzer

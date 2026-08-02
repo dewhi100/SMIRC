@@ -75,6 +75,9 @@ if !SkipZebesMode7_OmegaDragnet == 1
 endif
 
 ;Enemies
+if !BombTorizoItemOverride_PjBoy == 1
+	incsrc "Enemies/BombTorizoItemOverride_PjBoy.asm"
+endif
 if !EnemyAlwaysFreezesVulnerability_Tundain == 1
 	incsrc "Enemies/EnemyAlwaysFreezesVulnerability_Tundain.asm"
 endif
@@ -278,6 +281,8 @@ if !SkipDemo == 1
 	org $8B9F38
 	+
 endif
+;Bomb Torizo Door Closing Timer (PJ Boy)
+org $84BA54 : dw $28 ; Change this if you want, vanilla is 28h
 ;;;;;;;;;;;;;;;
 }		;end of master toggle for file
 endif
