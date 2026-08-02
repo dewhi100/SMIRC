@@ -183,12 +183,12 @@ DW $0000,$0800,$0015	;up
 DW $0000,$0400,$0017	;down
 DW $0000,$0010,$0069	;aim up
 DW $0000,$0020,$006B	;aim down
-DW $0000,$0040,$0013	;shoot
 if !Respin_Kejardon != 0
 DW $0080,$0000,$0019
 endif
 DW $0000,$0200,$002F	;left
 DW $0000,$0100,$0051	;right
+DW $0000,$0040,$0013	;shoot
 DW $FFFF
 
 T14:		;14:;Normal jump facing left, gun extended, not aiming or moving
@@ -200,12 +200,12 @@ DW $0000,$0800,$0016
 DW $0000,$0400,$0018
 DW $0000,$0010,$006A
 DW $0000,$0020,$006C
-DW $0000,$0040,$0014
 if !Respin_Kejardon != 0
 DW $0080,$0000,$001A
 endif
 DW $0000,$0200,$0052
 DW $0000,$0100,$0030
+DW $0000,$0040,$0014
 DW $FFFF
 
 T15:		;15:;Normal jump facing right, aiming up
