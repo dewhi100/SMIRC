@@ -72,6 +72,7 @@ Ob
 
 Oi27
 - Accel Charge
+- Drop-Thru Platforms
 - Ice Plus Missile Damage
 - Instant Pickups
 - Limited Space Jump

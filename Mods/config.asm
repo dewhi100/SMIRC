@@ -12,6 +12,7 @@
 ;Blocks
 !ChainBlocks_BlackFalcon = 1	;D horizontal E veritcal F = cross. uses shotblcoks and bomb blocks. crumbles would be nice
 !CrumbleDelay_BlackFalcon = 1
+!DropThruPlatforms_Oi27 = 1
 !EventBTS_OmegaDragnet = 1
 !MissileBlock_Oi27 = 1
 !ScrewAttackBlock_Crashtour99 = 1

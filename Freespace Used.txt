@@ -114,6 +114,7 @@ Bank 93
 
 Bank 94
 - Bomb Launcher (Ob)
+- Drop-Thru Platforms
 - Event BTS (OmegaDragnet)
 - MOAR Items (Mccad)
 - Safe Unmorph (Tundain)

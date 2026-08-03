@@ -42,6 +42,9 @@ endif
 if !CrumbleDelay_BlackFalcon
 	incsrc "Blocks/CrumbleDelay_BlackFalcon.asm"
 endif
+if !DropThruPlatforms_Oi27 == 1
+	incsrc "Blocks/DropThruPlatforms_Oi27.asm"
+endif
 if !EventBTS_OmegaDragnet == 1
 	incsrc "Blocks/EventBTS_OmegaDragnet.asm"
 endif
