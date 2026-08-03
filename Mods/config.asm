@@ -103,7 +103,6 @@
 !GaussMissiles_Mccad = 0				;|(Much) Faster missiles, also hit harder
 	!GaussMissilesNoPLM = 0				;/Set to 1 if for some reason you plan to enable gauss missile in a non-item way
 
-
 ;Intro
 !SkipIntroFlashbacks_Nodever2 = 1
 
@@ -120,7 +119,7 @@
 !IcePlusMissileDamage_Oi27 = 1
 !SupersNeedMains_Dewhi100 = 1
 	!StarterAmmo = 15
-!UniversalAmmo_Tundain = 0	;You must supply the "ammo:" HUD text yourself 
+!UniversalAmmo_Tundain = 1	;You must supply the "ammo:" HUD text yourself 
 	!AmmoPLM = 1	;a specialized universal ammo tank.	0XXX = big, 1XXX = small, X0XX ... X2XX are normal/orb/hidden
 
 ;Morph
@@ -135,6 +134,7 @@
 !GenericMaridiaTube_OmegaDragnet = 1
 	!TheHardcodedTile = $0140 ;Change this to if you want to use another tile.
 	!WaitForInput = 1
+!SingleUseGates_Nodever2 = 1
 
 ;Room States
 !BossCountRoomState_Dewhi100 = 1

@@ -45,6 +45,7 @@ Bank 84
 - M2 Varia Suit Effect (Oi27)
 - Missile Block (Oi27)
 - MOAR Items (Mccad)
+- Single Use Gates (Nodever2)
 - Supers Need Mains (dewhi100)
 - Universal Ammo (Tundain)
 - Water Droplets Effect (Oi27)

@@ -60,6 +60,7 @@ Nodever2
 - Max Health Highlight
 - Morph Bounce Removal (Hex Tweak)
 - Reserve Tank Bugfixes
+- Single Use Gates
 - Skip Intro Flashbacks
 - Speed Booster Jump Momentum Fix
 - Torizo Area Bit Using Speed1

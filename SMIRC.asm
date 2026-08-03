@@ -227,6 +227,9 @@ endif
 if !GenericMaridiaTube_OmegaDragnet == 1
 	incsrc "PLMs/GenericMaridiaTube_OmegaDragnet.asm"
 endif
+if !SingleUseGates_Nodever2 == 1
+incsrc "PLMs/SingleUseGates_Nodever2.asm"
+endif
 
 ;Room States
 if !BossCountRoomState_Dewhi100 == 1
