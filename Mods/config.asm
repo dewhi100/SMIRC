@@ -142,6 +142,7 @@
 !TimeElapsedState_Dewhi100 = 1
 
 ;Samus GFX
+!MorphRoll_BlackFalcon = 1
 !SamusElbowFix_Kejardon = 1
 !SamusMasterDisassembly_Crashtour99 = 1
 

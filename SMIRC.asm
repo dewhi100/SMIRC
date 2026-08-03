@@ -245,6 +245,9 @@ if !TimeElapsedState_Dewhi100 == 1
 endif
 
 ;Samus GFX
+if !MorphRoll_BlackFalcon == 1
+	incsrc "SamusGFX/MorphRoll_BlackFalcon.asm"
+endif
 if !SamusElbowFix_Kejardon == 1
 	incsrc "SamusGFX/SamusElbowFix_Kejardon.asm"
 endif

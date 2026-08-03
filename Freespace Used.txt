@@ -84,6 +84,7 @@ Bank 90
 - Downsparking (Tundain)
 - Full Health Charge Shots
 - Limited Space Jump (Oi27)
+- Morph Roll (Black Falcon)
 - Morph Speed (OmegaDragnet)
 - Pseudo-Varia with Charged Ice Beam (dewhi100)
 - Pseudo-Screw Attack Requires Spazer (dewhi100)
