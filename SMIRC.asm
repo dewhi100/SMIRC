@@ -105,6 +105,9 @@ endif
 if !FlippedBombTorizo_Tundain == 1
 	incsrc "Enemies/FlippedBombTorizo_Tundain.asm"
 endif
+if !ImprovedMetroidLatching_Tundain == 1
+	incsrc "Enemies/ImprovedMetroidLatching_Tundain.asm"
+endif
 if !MissileGrabbingGoldenTorizo_Tundain == 1
 	incsrc "Enemies/MissileGrabbingGoldenTorizo_Tundain.asm"
 endif

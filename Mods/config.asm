@@ -57,6 +57,7 @@
 !EnemiesStayDead_Nodever2 = 1
     !NumRooms             = $0005 ; The last !NumRooms rooms where an enemy was killed will be remembered.
 !FlippedBombTorizo_Tundain = 1
+!ImprovedMetroidLatching_Tundain = 1
 !MissileGrabbingGoldenTorizo_Tundain = 1
 !OneRoomElevator_Dewhi100 = 1
 !SlopeCompatibleSpacePirates_Tundain = 1
@@ -87,7 +88,7 @@
 ;Items
 !InstantPickups_Oi27 = 1
 
-;MOAR Items							;There are just so many that I separated them into their own thing
+;Items: MOAR Items							;There are just so many that I separated them into their own thing
 !WaveDash_Mccad = 1						;\While spinjumping, hold [run] and double tap left or right. (Mccad's MOAR Items)
 	!WaveDashSingleTap = 1				;|single tapping to activate (normally a double tap)
 	!WaveDashSetMinimumSpeed = 1 		;|sets speed to a minimum of the below value when activated

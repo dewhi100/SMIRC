@@ -84,6 +84,7 @@ Bank 90
 - Charge Missiles (Tundain)
 - Downsparking (Tundain)
 - Full Health Charge Shots
+- Improved Metroid Latching (Tundain)
 - Limited Space Jump (Oi27)
 - Morph Roll (Black Falcon)
 - Morph Speed (OmegaDragnet)
@@ -132,6 +133,7 @@ Bank A0
 - Variable Knockback (Tundain)
 
 Bank A3
+- Improved Metroid Latching (Tundain)
 - M2 Varia Suit Effect (Oi27)
 - One-room Elevators (dewhi100)
 - Shinespark Compatible Reflecs (Tundain)

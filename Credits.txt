@@ -106,6 +106,7 @@ Tundain
 - Downsparking
 - Enemy Always Freezes Vulnerability
 - Flipped Bomb Torizo
+- Improved Metroid Latching
 - Missile Grabbing Golden Torizo
 - Non-Explosive Planet
 - Safe Unmorph
