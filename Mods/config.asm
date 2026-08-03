@@ -114,6 +114,7 @@
 !SuitlessSpaceJump_Dewhi100 = 1
 
 ;Missiles
+!AmmoRegen_Dewhi100 = 1
 !ChargeMissiles_Tundain = 1	;Note: add $0100 to the PLM argument to make it a charged Super item rather than charged missile
 	!withPLMs = 1			;if 1, will use PLMs to set the item flags
 !IcePlusMissileDamage_Oi27 = 1

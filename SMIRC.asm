@@ -187,7 +187,7 @@ endif
 
 
 ;Missiles
-if !AmmoRegen_Dewhi100
+if !AmmoRegen_Dewhi100 == 1
 	incsrc "Missiles/AmmoRegen_Dewhi100.asm"
 endif
 
