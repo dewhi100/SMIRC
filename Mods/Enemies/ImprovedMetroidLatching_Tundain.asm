@@ -62,12 +62,12 @@ RTS
 
 org $A3EF8C
 LDA.w #!Bombed_off_time ;<-- set a longer time to be knocked off 
-JSR setdirection
+JSR setdirection_metroidLatch
 
 
 ;randomly get knocked to the left/right
 org !freeA3	;!BankA3Freespace
-setdirection:
+setdirection_metroidLatch:
 STA $0FB0,x
 JSL $808111 : AND #$0001 : ASL : TAY
 LDA XSpeeds,y : STA $0FAA,x
