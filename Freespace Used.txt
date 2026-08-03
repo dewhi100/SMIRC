@@ -77,6 +77,7 @@ Bank 8F
 
 Bank 90
 - Accel Charge (Oi27)
+- Acid Mod (Black Falcon)
 - Bomb Launcher (Ob)
 - BrokenChargeBeam (BrokenChargeBeam)
 - Charge Heal (dewhi100)

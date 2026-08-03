@@ -274,6 +274,9 @@ if !SparkBounce_Kejardon == 1
 endif
 
 ;Suits
+if !AcidMod_BlackFalcon == 1
+	incsrc "Suits/AcidMod_BlackFalcon.asm"	
+endif
 if !M2anim_Oi27 == 1
 	incsrc "Suits/M2anim_Oi27/M2_Varia_DMA.asm"
 endif
