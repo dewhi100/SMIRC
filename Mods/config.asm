@@ -120,7 +120,7 @@
 !IcePlusMissileDamage_Oi27 = 1
 !SupersNeedMains_Dewhi100 = 1
 	!StarterAmmo = 15
-!UniversalAmmo_Tundain = 1	;You must supply the "ammo:" HUD text yourself 
+!UniversalAmmo_Tundain = 0	;You must supply the "ammo:" HUD text yourself 
 	!AmmoPLM = 1	;a specialized universal ammo tank.	0XXX = big, 1XXX = small, X0XX ... X2XX are normal/orb/hidden
 
 ;Morph

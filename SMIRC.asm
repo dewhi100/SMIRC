@@ -128,6 +128,9 @@ endif
 if !DeathForgivenessRevision2_Nodever2 == 1
 	incsrc "Energy/DeathForgivenessRevision2_Nodever2.asm"
 endif
+
+incsrc "Energy/MaxHealthHighlight_Nodever2.asm"
+
 if !ReserveTankBugfixes_Nodever2 == 1
 	incsrc "Energy/ReserveTankBugfixes_Nodever2.asm"
 endif

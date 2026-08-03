@@ -6,6 +6,7 @@ Bank 80
 - Enemies Stay Dead (Nodever2)
 - HUD Counter Animation (Nodever2)
 - Instant Pickups (Oi27)
+- MAx Health Highlight (Nodever2)
 - Supers Need Mains (dewhi100)
 - Universal Ammo (Tundain)
 

@@ -57,6 +57,7 @@ Nodever2
 - Gadora Charge Beam Vulnerability
 - Homing Drops
 - HUD Energy and Ammo Counter Animation
+- Max Health Highlight
 - Morph Bounce Removal (Hex Tweak)
 - Reserve Tank Bugfixes
 - Skip Intro Flashbacks
