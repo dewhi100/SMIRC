@@ -43,7 +43,11 @@
 !SlopeFlagRAM = $39
 !spawnSbaFlag = $0332
 !AuraRAM = $0336
+!AmmoRegenSubammo = $05EF
 !JumpCounter = $099A
+!missilesCurrent = $09C6
+!missilesMax = $09C8
+!AmmoRegenRate_SRAM = $09EC
 !UniversalAmmoRAM = $09EE
 !ammoFlags = $09F0
 !AccelChargeCounter = $09F4

@@ -19,6 +19,9 @@ endif
 if !BrokenChargeBeam_PHOSPHOTiDYL
 	incsrc "Beams/BrokenChargeBeam_PHOSPHOTiDYL.asm"
 endif
+if !FullHealthChargeShot_InsaneFirebat == 1
+	incsrc "Beams/FullHealthChargeShot_InsaneFirebat.asm"
+endif
 if !PseudoScrewRequiresSpazer_Dewhi100 == 1
 	incsrc "Beams/PseudoScrewRequiresSpazer_Dewhi100.asm"
 endif
@@ -184,6 +187,10 @@ endif
 
 
 ;Missiles
+if !AmmoRegen_Dewhi100
+	incsrc "Missiles/AmmoRegen_Dewhi100.asm"
+endif
+
 if !ChargeMissiles_Tundain == 1
 	incsrc "Missiles/ChargeMissiles/ChargeMissiles_Tundain.asm"
 endif

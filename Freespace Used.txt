@@ -14,6 +14,7 @@ Bank 81
 - Suit Aura (Oi27)
 
 Bank 82
+- Ammo Regen (dewhi100
 - Door Transitions (Nodever2)
 - Instant Pickups (Oi27)
 
@@ -27,6 +28,7 @@ Bank83
 
 Bank 84
 - Accel Charge (Oi27)
+- Ammo Regen (dewhi100
 - Chain Blocks (Black Falcon)
 - Charge Missiles (Tundain) (If using PLM)
 - Delayed Crumble Blocks (Black Falcon)
@@ -78,6 +80,7 @@ Bank 90
 - Charge Heal (dewhi100)
 - Charge Missiles (Tundain)
 - Downsparking (Tundain)
+- Full Health Charge Shots
 - Limited Space Jump (Oi27)
 - Morph Speed (OmegaDragnet)
 - Pseudo-Varia with Charged Ice Beam (dewhi100)

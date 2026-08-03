@@ -8,6 +8,7 @@ crashtour99
 - Samus Master Disassembly
 
 dewhi100
+- Ammo Regeneration
 - Base Acid Damage (Hex Tweak)
 - Beam-based Pseudo Screw attack damage (a disassembly of the SavageWizrobe IPS)
 - Boss Count Room State
@@ -32,6 +33,9 @@ dewhi100
 Exister
 - Missile Tanks Refill (Hex Tweak)
 - Remove Shinespark Health Drain
+
+Insane Firebat
+- Full Health Charge Shots
 
 Kejardon
 - Decompression Optimization (With Maddo, and Tundain)

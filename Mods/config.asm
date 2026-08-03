@@ -3,6 +3,7 @@
 !BeamBasedPseudoScrewDamage_Dewhi100 = 1
 	!DoubleDamage = 1
 !BrokenChargeBeam_PHOSPHOTiDYL = 1
+!FullHealthChargeShot_InsaneFirebat = 1
 !PseudoScrewRequiresSpazer_Dewhi100 = 1
 !RedBeamsLowHP_Dewhi100 = 1
 !SmoothGrappleBetterLatching_Tundain = 1
