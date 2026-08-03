@@ -1,0 +1,297 @@
+More interesting gravity suit:
+
+local gravity. gets reset when doing door transition.
+
+gravity suit ignores local gravity and uses vanilla
+
+bonus feature. heavy gravity as a default. ZM-like
+
+;;; 90 $9E8B: Samus physics constants ;;;
+
+$90:9E93             dw 0003    ; Samus animation delay in water
+$90:9E95             dw 0002    ; Samus animation delay in lava/acid
+$90:9E97             dw 0280    ; Space jump minimum Y velocity in air * 100h
+$90:9E99             dw 0500    ; Space jump maximum Y velocity in air * 100h
+$90:9E9B             dw 0080    ; Space jump minimum Y velocity in water * 100h
+$90:9E9D             dw 0500    ; Space jump maximum Y velocity in water * 100h
+$90:9E9F             dw 0008    ; Maximum distance from wall for wall-jump
+$90:9EA1             dw 1C00    ; Samus Y subacceleration in air
+$90:9EA3             dw 0800    ; Samus Y subacceleration in water
+$90:9EA5             dw 0900    ; Samus Y subacceleration in acid/lava
+$90:9EA7             dw 0000    ; Samus Y acceleration in air
+$90:9EA9             dw 0000    ; Samus Y acceleration in water
+$90:9EAB             dw 0000    ; Samus Y acceleration in acid/lava
+
+
+Initial Y speed in air | initial Y speed in water | Initial Y speed in lava/acid | initial subspeed air | water | acid/lava
+
+$90:9EB9             dw 0004,0001,0002, E000,C000,C000 ; When jumping
+$90:9EC5             dw 0006,0002,0003, 0000,8000,8000 ; When jumping with hi-jump
+$90:9ED1             dw 0004,0000,0002, A000,4000,A000 ; When wall-jumping
+$90:9EDD             dw 0005,0000,0003, 8000,8000,8000 ; When wall-jumping with hi-jump
+$90:9EE9             dw 0005,0002,0002, 0000,0000,0000 ; During knockback
+$90:9EF5             dw 0002,0000,0000, C000,1000,1000 ; During bomb jump
+
+
+OTHER IDEA
+
+split acid physics from lava and put into water.
+
+and lava have super slow falling when not in grav.
+
+because rock is dense.
+
+and acid is just hurty water
+
+and, animation delay should be more in lava than in acid/water !
+
+$0AD2: Liquid physics type
+    {
+        0: Air
+        1: Water
+        2: Lava/acid
+    }
+Change this!
+
+1 = water/acid
+
+looks like its done indirectly by a lot of shared lava/acid routines.
+
+need to find where acid is included, and overwrite with water routines
+
+;;; $81C0: Animate Samus - FX = lava ;;;
+
+;;; $8219: Animate Samus - FX = acid ;;;
+
+
+81c0 - 824c lava/acid
+
+org $908067             
+8078,	none 
+81C0, 	lava	
+8219, 	acid
+80B8, 	water
+8077, 	...
+8077, 
+8077, 
+8077
+
+LDA $196E FX type
+AND #$000F 
+TAX
+JSR ($8067,x)
+
+---
+
+STA $0AD2		;called in 5 places
+1) $80B8: Animate Samus - FX = water ;;;
+2) $81C0: Animate Samus - FX = lava ;;;
+3) $824C: Animate Samus - Samus is submerged in lava/acid ;;;
+4) $8E3A: Set liquid physics type - lava/acid ;;;
+5) $8E4A: Set liquid physics type - water ;;;
+
+824c <- 81c0
+
+$90:8E26             dw 8E36, ; 0: None / 20h: Unused scrolling sky
+                        8E3A, ; 2: Lava / 22h: Unused
+                        8E3A, ; 4: Acid / 24h: Fireflea
+                        8E4A, ; 6: Water / 26h: Tourian entrance statue
+                        8E36, ; 8: Spores / 28h: Ceres Ridley
+                        8E36, ; Ah: Rain / 2Ah: Ceres elevator
+                        8E36, ; Ch: Fog / 2Ch: Ceres haze
+                        8E36
+-
+
+8e26 <- $8E0F: Set liquid physics type ;;;
+
+lava and acid share. but what if water func instead
+
+it worked. maybe.
+
+gravity is still applying to acid.
+
+now to make lava more syrupy, and buoyant
+
+$81C0: Animate Samus - FX = lava ;;;
+
+;Make acid's physical properties match water instead of lava.
+;Make lava thicker and buoyant force
+
+LoROM
+
+org $908E2A	;pointer to set acid physics type
+DW $8E4A	;$8E4A is water. was $8E3A (lava)
+
+org $909E95	;lava animation delay
+DW $0005	;was $0002
+
+
+
+org $909EA5
+dw $0300    ; Samus Y subacceleration in acid/lava (was $0900)
+
+org $909EAB
+dw $0000    ; Samus Y acceleration in acid/lava
+
+----------------
+
+
+Thats too complicated. though there's a flag for when you enter water to base things off of.
+back to local gravity
+
+using gravity -> vanilla physics
+no gravity -> check for local physics
+no local physics -> use ZM-like physics
+
+BUT physics is a whole table. very annoying.
+
+
+$90:9E93             dw 0003    ; Samus animation delay in water
+$90:9E95             dw 0002    ; Samus animation delay in lava/acid
+$90:9E97             dw 0280    ; Space jump minimum Y velocity in air * 100h
+$90:9E99             dw 0500    ; Space jump maximum Y velocity in air * 100h
+$90:9E9B             dw 0080    ; Space jump minimum Y velocity in water * 100h
+$90:9E9D             dw 0500    ; Space jump maximum Y velocity in water * 100h
+$90:9E9F             dw 0008    ; Maximum distance from wall for wall-jump
+$90:	             dw 1C00    ; Samus Y subacceleration in air
+$90:9EA3             dw 0800    ; Samus Y subacceleration in water
+$90:9EA5             dw 0900    ; Samus Y subacceleration in acid/lava
+$90:9EA7             dw 0000    ; Samus Y acceleration in air
+$90:9EA9             dw 0000    ; Samus Y acceleration in water
+$90:9EAB             dw 0000    ; Samus Y acceleration in acid/lava
+
+not bad. $D bytes.
+
+Initial Y speed in air | initial Y speed in water | Initial Y speed in lava/acid | initial subspeed air | water | acid/lava
+
+$90:9EB9             dw 0004,0001,0002, E000,C000,C000 ; When jumping
+$90:9EC5             dw 0006,0002,0003, 0000,8000,8000 ; When jumping with hi-jump
+$90:9ED1             dw 0004,0000,0002, A000,4000,A000 ; When wall-jumping
+$90:9EDD             dw 0005,0000,0003, 8000,8000,8000 ; When wall-jumping with hi-jump
+$90:9EE9             dw 0005,0002,0002, 0000,0000,0000 ; During knockback
+$90:9EF5             dw 0002,0000,0000, C000,1000,1000 ; During bomb jump
+
+and 36 bytes here.
+
+but what if you want to have fluctuating along a curve. tables bad
+
+try a different approach.
+
+1C00 = vanilla subacceleration in air
+
+water = air - 400
+lava = air - 300
+
+and store a modifier. range of -800 for bouncy to 0 for normal, and then plus for heavier.
+
+so need a copy of the ZM physics. full table.
+
+for variant:
+
+default is 0. can reset with doors. or with room ASM which would let it perseist.
+doors is simpler though.
+
+for different table... so where normally you would pull from normal table, need to modify.
+
+wait... gravity = air (gravity) for everything.
+only need a set of properties for air (no gravity)
+
+so can use a complete copy of "heavy physics", and just a few vanilla things:
+Samus Y subacceleration in air
+Samus Y acceleration in air
+Jump
+hi jump
+wall jump
+walljump highjump
+bomb jump 
+
+anywhere where stuff is skipped because of gravity, need to check for air
+and vice versa.
+
+well, since the physics table isnt super indexed, guess can look for direct stuff.
+
+$90:9C7B AD A1 9E    LDA $9EA1 subaccel only happens in one spot.
+
+9EB9  table is indexed though.
+
+maybe repoint and add a 4th index for gravity on.
+
+LDA equip, if grav, LDA #$0006
+else load liquid phys type, and x2
+TAX
+load equip, test hi jump
+if hi jump, TXA, ASL, TAX to double X
+access table using X
+
+LoJumpTable:
+HiJumpTable:
+LoWallJumpTable:
+HiWallJumpTable:
+BombJumpTable:
+
+GravCheck:
+LDX #$0006
+LDA $09A2	;items
+BIT #$0020	;gravity
+BNE +
+LDA $0AD2	;Liquid physics type. 0 = air, 1 = water, 2 = lava/acid
+ASL : TAX
++
+LDA $09A2	;items
+BIT #$0100	;hijump
+BEQ +
+TXA : ASL : TAX
++
+
+just need a value for X going into branch merge @ $90:98F7
+
+in the gravity check, hijack:
+
+$90:98C2 AD A2 09    LDA $09A2		;load items, check for gravity, branch to end of checks and directly load X = 0
+
+if no gravity, does other checks that may branch into liquids.
+
+so  BRANCH_NORMAL_GRAVITY $90:98E2
+happens if you have grav OR if you are in air. those will be two different things for me though.
+
+so put another check there I guess.
+
+if grav is equipped, LDX 6
+or else ldx 0
+
+but can do a cheeky refactor at branch merge.
+
+vanilla 34 bytes
+
+LDA items	3
+BIT grav	6
+BEQ +		8
+LDX #$0006	11
++
+
+refactor to 23
+
+LDA items	3
+BIT hijump	6
+BEQ +		8
+TXA : ASL : TAX	11
++
+LDA $9EBF,x	14
+STA $0B2C	17
+LDA $9EB9,x	20
+STA $0B2E	23
+
+that fits. zero freespace. except, table must move.
+or must it?
+the gravity index can be set ludicrously high.
+or can it
+
+hijump makes it awkward
+
+in that case, can repoint tables.
+
+the space can possibly be recycled.
+
+and this was only one spot.
+
+walljump does seem to be the same structure though
