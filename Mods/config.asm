@@ -115,10 +115,6 @@
 !Respin_Kejardon = 1
 !SuitlessSpaceJump_Dewhi100 = 1
 
-;Miscellaneous
-!LocalGravity_Dewhi100 = 0
-	!resetGravityMode = 0	;0: use RoomVar, 1:  use RoomVar (positive values only), 2: Zeroed on entering rooms.
-
 ;Missiles
 !AmmoRegen_Dewhi100 = 1
 !ChargeMissiles_Tundain = 1	;Note: add $0100 to the PLM argument to make it a charged Super item rather than charged missile
@@ -135,6 +131,11 @@
 
 ;Optimizations
 !Decompression_Kejardon_Tundain = 1	;So much work went into this by both that it makes sense to include them.
+
+;Physics
+!LocalGravity_Dewhi100 = 1
+	!resetGravityMode = 0	;0: use RoomVar, 1:  use RoomVar (positive values only), 2: Zeroed on entering rooms.
+!PlanetaryGravityRework_Dewhi100 = 1	;See patch for customization options
 
 ;PLMs
 !FX_LevelPLM_OmegaDragnet = 1

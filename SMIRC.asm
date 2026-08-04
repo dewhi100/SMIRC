@@ -197,11 +197,6 @@ if !SuitlessSpaceJump_Dewhi100 == 1
 	incsrc "Jumps/SuitlessSpaceJump_Dewhi100.asm"
 endif
 
-;Miscellaneous
-if !LocalGravity_Dewhi100 == 1
-	incsrc "Misc/LocalGravity_Dewhi100.asm"
-endif
-
 ;Missiles
 if !AmmoRegen_Dewhi100 == 1
 	incsrc "Missiles/AmmoRegen_Dewhi100.asm"
@@ -231,6 +226,14 @@ endif
 ;Optimizations
 if !Decompression_Kejardon_Tundain == 1
 	incsrc "Optimizations/Decompression_Kejardon_Tundain.asm"
+endif
+
+;Physics
+if !LocalGravity_Dewhi100 == 1
+	incsrc "Physics/LocalGravity_Dewhi100.asm"
+endif
+if !PlanetaryGravityRework_Dewhi100 == 1
+	incsrc "Physics/PlanetaryGravityRework_Dewhi100.asm"
 endif
 
 ;PLMs

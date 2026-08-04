@@ -12,7 +12,12 @@ lorom
 
 
 ;anyway, this code fixes both of those problems.
-org $909927
+if !PlanetaryGravityRework_Dewhi100 == 0
+	org $909927
+else
+	org $9099B4	
+endif
+
 LDA $0B44		;\
 ROR				;|use carry from previous LSR
 CLC				;|

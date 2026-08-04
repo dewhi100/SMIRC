@@ -1,7 +1,9 @@
 lorom
 
 if !SamusMasterDisassembly_Crashtour99 == 0
-incsrc "../../SamusGfx/TransitionTable_Kejardon.asm"
+	org !transitionTable91
+	incsrc "../../SamusGfx/TransitionTable_Kejardon.asm"
+	!transitionTable91 #= pc()
 endif
 
 ;incsrc SparkBounceCustomizeOptions.asm

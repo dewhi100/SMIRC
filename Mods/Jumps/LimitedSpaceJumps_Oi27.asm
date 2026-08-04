@@ -10,8 +10,10 @@ lorom
 ;!90Free = $90F63A
 ;!91Free = $91EC9D ;overwrite unused routine
 
-org $9098BC
-JSR CountJump
+if !PlanetaryGravityRework_Dewhi100 == 0
+	org $9098BC
+	JSR CountJump
+endif
 
 org $9099CA
 JSR RefreshByWallJump

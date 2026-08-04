@@ -20,6 +20,7 @@ dewhi100
 - Event Station
 - Item Event PLM
 - Local Gravity
+- Planetary Gravity Rework
 - Pseudo-Screw Attack Requires Spazer
 - Random Room States
 - Red Door Cap Missile Requirement (hex tweak)
