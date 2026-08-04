@@ -19,6 +19,7 @@ dewhi100
 - Event Doors
 - Event Station
 - Item Event PLM
+- Local Gravity
 - Pseudo-Screw Attack Requires Spazer
 - Random Room States
 - Red Door Cap Missile Requirement (hex tweak)

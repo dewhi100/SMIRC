@@ -71,6 +71,7 @@ Bank 8D
 Bank 8F
 - Boss Count Room State (dewhi100)
 - Random Room State (dewhi100)
+- Local Gravity (dewhi100)
 - Time Elapsed Room State (dewhi100)
 - Room ASM: Earthquakes Break Crumbles (dewhi100)
 - Room ASM: Supers Need Mains (dewhi100)
@@ -87,6 +88,7 @@ Bank 90
 - Full Health Charge Shots
 - Improved Metroid Latching (Tundain)
 - Limited Space Jump (Oi27)
+- Local Gravity (dewhi100)
 - Morph Roll (Black Falcon)
 - Morph Speed (OmegaDragnet)
 - Pseudo-Varia with Charged Ice Beam (dewhi100)

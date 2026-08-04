@@ -53,6 +53,7 @@
 !AccelChargeCounter = $09F4
 !MoarItemsCustomFlags = $0A1A 
 !msgRam = $0B0C
+!localGravity = $0B30
 
 !VarWState = $7FFA02
 !OmegaDragnetRAM = $7EF4A0

@@ -295,3 +295,49 @@ the space can possibly be recycled.
 and this was only one spot.
 
 walljump does seem to be the same structure though
+
+---
+
+
+just do simplest thing first- local gravity, ignored by grav suit.
+
+Where is Y accel set:
+
+$0B32: Samus Y subacceleration
+$0B34: Samus Y acceleration
+
+written at
+
+$9C5B: Determine Samus Y acceleration ;;;
+
+$90:9C7E 8D 32 0B    STA $0B32
+
+$90:9C94 8D 32 0B    STA $0B32
+
+$90:9CA2 8D 32 0B    STA $0B32
+
+the routine:
+PHA
+LDA $09A2
+BIT #$0020
+BEQ +
+PLA
+RTS
++
+PLA
+CLC
+ADC [localGravityRAM]
+RTS
+
+;;; 8f:$E88F: Execute room setup ASM ;;;
+
+$8F:E893 LDX $07BB	;replace with jsr clear gravity modifier
+
+
+clear grav modifier:
+PHX
+LDX $07BB : LDA $8F0010, X
+STA !localGravity
+LDA $07BB
+PLX
+RTS

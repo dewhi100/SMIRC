@@ -197,6 +197,10 @@ if !SuitlessSpaceJump_Dewhi100 == 1
 	incsrc "Jumps/SuitlessSpaceJump_Dewhi100.asm"
 endif
 
+;Miscellaneous
+if !LocalGravity_Dewhi100 == 1
+	incsrc "Misc/LocalGravity_Dewhi100.asm"
+endif
 
 ;Missiles
 if !AmmoRegen_Dewhi100 == 1

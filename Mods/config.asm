@@ -115,6 +115,9 @@
 !Respin_Kejardon = 1
 !SuitlessSpaceJump_Dewhi100 = 1
 
+;Miscellaneous
+!LocalGravity_Dewhi100 = 1
+
 ;Missiles
 !AmmoRegen_Dewhi100 = 1
 !ChargeMissiles_Tundain = 1	;Note: add $0100 to the PLM argument to make it a charged Super item rather than charged missile
