@@ -54,6 +54,7 @@
 
 ;Enemies
 !BombTorizoItemOverride_PjBoy = 1
+!Donkkon_Ob = 1
 !EnemyAlwaysFreezesVulnerability_Tundain = 1
 !EnemiesStayDead_Nodever2 = 1
     !NumRooms             = $0005 ; The last !NumRooms rooms where an enemy was killed will be remembered.

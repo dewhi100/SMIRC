@@ -69,6 +69,7 @@ Nodever2
 
 Ob
 - Bomb Launcher
+- Donkkon (Barrel Enemy)
 
 Oi27
 - Accel Charge

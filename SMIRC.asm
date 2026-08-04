@@ -99,6 +99,9 @@ endif
 if !BombTorizoItemOverride_PjBoy == 1
 	incsrc "Enemies/BombTorizoItemOverride_PjBoy.asm"
 endif
+if !Donkkon_Ob == 1
+	incsrc "Enemies/Donkkon_Ob/DONKKONv1.0.asm"
+endif
 if !EnemyAlwaysFreezesVulnerability_Tundain == 1
 	incsrc "Enemies/EnemyAlwaysFreezesVulnerability_Tundain.asm"
 endif

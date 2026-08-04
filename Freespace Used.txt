@@ -82,6 +82,7 @@ Bank 90
 - BrokenChargeBeam (BrokenChargeBeam)
 - Charge Heal (dewhi100)
 - Charge Missiles (Tundain)
+- Donkkon (Ob)
 - Downsparking (Tundain)
 - Full Health Charge Shots
 - Improved Metroid Latching (Tundain)
@@ -132,6 +133,9 @@ Bank A0
 - M2 Varia Suit Effect (Oi27)
 - MOAR Items (Mccad)
 - Variable Knockback (Tundain)
+
+-Bank A2
+- Donkkon (Ob)
 
 Bank A3
 - Improved Metroid Latching (Tundain)
