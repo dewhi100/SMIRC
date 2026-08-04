@@ -261,6 +261,9 @@ if !TimeElapsedState_Dewhi100 == 1
 endif
 
 ;Samus GFX
+if !DualSuitGfx_Crashtour99 == 1
+	incsrc "SamusGFX/DualSuitGfx_Crashtour99.asm"
+endif
 if !MorphRoll_BlackFalcon == 1
 	incsrc "SamusGFX/MorphRoll_BlackFalcon.asm"
 endif

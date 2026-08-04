@@ -112,6 +112,9 @@ Bank 91 (Overwriting Unused Code)
 Bank 91
 - Accel Charge (Oi27)
 
+Bank 92
+- Dual Suits (Crashtour99)
+
 Bank 93
 - MOAR Items (Mccad)
 
