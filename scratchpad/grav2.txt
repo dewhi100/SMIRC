@@ -1,0 +1,116 @@
+physics refactor
+
+"tables" at 90:9E8B
+
+$0AD2: Liquid physics type
+
+liquid damage only applies to lava/acid, other values would be 0. inefficient
+
+animation delay could be split, would be adding a 0 for air
+
+acceleration is the big deal. starts at $90:9EA1
+
+index by physics type for subaccel, then double for accel
+
+$90:9EA1 used at 
+$90:9C7B 
+
+only accesses at  $9C5B: Determine Samus Y acceleration ;;;
+
+this can simply be refactored
+
+may not need to do submersion check
+
+$9C5B <- $E6C9: Samus current state handler - demo ;;;
+
+$9C5B <- $E695: Samus current state handler - normal ;;; <- 90:E692 <- $82:8B58 <-  $82:8B44 Game state 8 (main gameplay)
+
+--
+
+90:8000 <- E73B <- $E725 <- $E722 <- $82:8B69 <- $8B44: Game state 8 (main gameplay)
+
+
+$90:8E26             dw 8E36, ; 0: None / 20h: Unused scrolling sky
+                        8E3A, 
+; 2: Lava / 22h: Unused
+                        8E3A, ; 4: Acid / 24h: Fireflea
+                        8E4A, ; 6: Water / 26h: Tourian entrance statue
+                        8E36, ; 8: Spores / 28h: Ceres Ridley
+                        8E36, ; Ah: Rain / 2Ah: Ceres elevator
+                        8E36, ; Ch: Fog / 2Ch: Ceres haze
+                        8E36
+
+$90:8067             dw 8078, 81C0, 8219, 80B8, 8077, 8077, 8077, 8077
+
+and where is liquid physics set?
+air			$90:808C <-	$8078	
+								$8078 <- $80B8	...		;Animate Samus
+								$8078 <- $81C0
+								800E (8067)  <- $8000	;Animate Samus
+air			$90:8E36 <- ($8E26) <- $8E20 <- $8E0F		;Set liquid physics type <- $82:80A4 <- $82:8000 load game data/new game/demo
+																					$82:E725 <- $82:E6A2 door transition
+air			$90:8088 <- $8078 <- $800E(8067) <- $8000	;Animate Samus
+water 		$90:80DC
+water		$90:8E60
+water		$90:80DC
+lava acid	$90:8215
+lava acid	$90:8255
+lava acid	$90:8E46
+
+so, probably- Animate Samus takes over on the frames while the other one is once only (so sont care)
+simply need to have liquid type being set before its read
+
+---
+
+$82:8B58 22 92 E6 90 JSL $90E692[$90:E692]  ; Samus current state handler	where physics type would be used
+...
+$82:8B69 22 22 E7 90 JSL $90E722[$90:E722]  ; Samus new state handler		where it is set.
+
+fuck it who cares
+
+---
+
+possible issue with not checking submersion? in the previous frame, the other routine checked that, and assigned physics flagg accordingly. MAYBE is safe to skip it.
+if not, maybe make an "is samus submerged" subroutine
+
+possibly, even grav might not matter.
+
+
+org $909C5B
+JSR GetPhysicsIndex					;X = air/water/lava physics table index
+LDA subGravityTable,x : STA $0B32	;Samus Y subacceleration
+LDA gravityTable,x 	: STA $0B34		;Samus Y acceleration
+RTS
+
+GetPhysicsIndex:
+LDX #$0000
+LDA $09A2	;Equipment
+BIT $0020	;Gravity
+BNE +
+LDA $197E	;FX liquid flags
+BIT #$0004	;Disable physics flag
+BNE +
+LDA $0AD2	;Liquid physics type
+ASL : TAX
++
+RTS
+
+subGravityTable:
+DW !airSubGravity, !waterSubGravity, !lavaSubGravity
+gravityTable:
+DW !airGravity, !waterGravity, !lavaGravity
+
+warnpc $909CAC
+
+it works. now for jumping etc
+
+-----------
+
+9EB9 etc, probably only used at one place each
+
+$90:98BC Make samus Jump
+
+same nonsense again. this could all be an index
+
+org $9098C2
+JSR GetPhysicsIndex

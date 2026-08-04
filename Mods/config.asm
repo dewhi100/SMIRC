@@ -116,7 +116,8 @@
 !SuitlessSpaceJump_Dewhi100 = 1
 
 ;Miscellaneous
-!LocalGravity_Dewhi100 = 1
+!LocalGravity_Dewhi100 = 0
+	!resetGravityMode = 0	;0: use RoomVar, 1:  use RoomVar (positive values only), 2: Zeroed on entering rooms.
 
 ;Missiles
 !AmmoRegen_Dewhi100 = 1

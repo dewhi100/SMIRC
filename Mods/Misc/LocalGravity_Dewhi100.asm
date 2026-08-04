@@ -9,11 +9,6 @@
 
 lorom
 
-!free8F = $8FE99B
-!free90 = $90F63A
-
-!resetGravityMode = 0	;0: use RoomVar, 1:  use RoomVar (positive values only), 2: Zeroed on entering rooms.
-
 org $8FE893
 JSR setLocalGravity
 
