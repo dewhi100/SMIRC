@@ -150,9 +150,9 @@
 !TimeElapsedState_Dewhi100 = 1
 
 ;Samus GFX
-!DualSuitGfx_Crashtour99 = 1
+!DualSuitGfx_Crashtour99 = 0
 !MorphRoll_BlackFalcon = 1
-!SamusElbowFix_Kejardon = 1
+!SamusElbowFix_Kejardon = 0	;not needed if you use different gfx. I think.
 !SamusMasterDisassembly_Crashtour99 = 1
 
 ;Speed Booster

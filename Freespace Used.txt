@@ -114,6 +114,7 @@ Bank 91
 
 Bank 92
 - Dual Suits (Crashtour99)
+- Spark Bounce (Kejardon)
 
 Bank 93
 - MOAR Items (Mccad)
