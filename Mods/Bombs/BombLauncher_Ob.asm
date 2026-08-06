@@ -270,7 +270,7 @@ org !90+!HUDSwitch
         + BRA SwitchCommon    ;go here if success
 
     SWSupers: 
-		if !SupersNeedMains_Dewhi100 == 1
+		if !SupersNeedMains_Dewhi100 == 1 && !EventStation_Dewhi100 == 1
 			JSR SuperEventCheck90
 		else
 			if !UniversalAmmo_Tundain == 1

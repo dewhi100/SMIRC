@@ -2,13 +2,18 @@ lorom
 
 ;$9B/E000	;original gfx set
 ;$DF/E000	;new gfx start
+check bankcross off
+org $DFE000
+incbin !DualGfxPath
+check bankcross half
 
 ORG $92803A			;LDA $D91E,y[$92:D92C]  ;|		DMA TABLE STUFFS
 JSR U_DMA_2
 ORG $928078			;LDA $D938,y[$92:D938]  ;|	DMA TABLE STUFFS
 JSR L_DMA_2
 
-ORG !free92	;$92EDF4			;FREESPACE STARTS HERE
+ORG !free92	
+;org $92EDF4			;FREESPACE STARTS HERE
 U_DMA_2:
 PHX : LDA $09A2 : BIT #$0001 : BNE UT2
 BIT #$0020 : BNE UT2 : BRA UT2_2

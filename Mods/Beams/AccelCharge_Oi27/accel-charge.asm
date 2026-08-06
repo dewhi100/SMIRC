@@ -29,9 +29,11 @@ dw $09C4, $09D4, $09C8, $09CC, $09D0, !AccelChargeCounter; RAM addresses to meas
 dw $0064, $0064, $0005, $0005, $0005, $0002 ; Divisors
 
 ;hijacks
-org $8BE62F : LDX #$000A ;+2 for each address to count, zero indexed
-org $8BE634 : LDA.w EndPercent_ammoDivisors,x : TAY
-org $8BE640 : LDA.w EndPercent_ammoDivisors+(EndPercent_count-EndPercent_ammoDivisors),x : STA $4206
+if !PercentTime_FelicityVi == 0
+	org $8BE62F : LDX #$000A ;+2 for each address to count, zero indexed
+	org $8BE634 : LDA.w EndPercent_ammoDivisors,x : TAY
+	org $8BE640 : LDA.w EndPercent_ammoDivisors+(EndPercent_count-EndPercent_ammoDivisors),x : STA $4206
+endif
 
 org $90A4F8 : JSR AccelCharge_checkIfCharged ;hijack pseudo screw :: CMP #$003C
 org $90A747 : JSR AccelCharge_checkIfCharged ;hijack pseudo screw :: CMP #$003C
@@ -72,6 +74,11 @@ AccelChargePickup:
 LDA.w !AccelChargeCounter : INC : INC : CMP.w #AccelCharge_sba-AccelCharge_beam : BPL +
 	STA !AccelChargeCounter ;cap it at table size.
 +
+
+;if !equip_screen_itemstime != 0
+;	JSL COLLECTTANK
+;endif
+
 ;show messagebox
 LDA #$0168 : JSL $82E118 ;play room music after fanfare
 

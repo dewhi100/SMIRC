@@ -7,7 +7,26 @@ if 1 == 1	;Easily disable assembling while debugging
 
 incsrc "config.asm"
 
-;File Includes;
+;"Offline" resources. These are in my local build but not source control.
+;This is because I haven't received permission to host them, or was explicitly told not to.
+;(Nobody has told me "no" yet, only left me on read. In the future I may host those people's resources depending on circumstances.)"
+;(For example, an author who nobody has seen nor heard from in years. Not naming any names.)
+;If you want any of these, DM me.
+if !MapOverhaul_Mfreak == 1
+	incsrc "Offline/MapOverhaul/MapOverhaul_v1.2.7(asar).asm"
+endif
+if !MenuColoredSamus_RealRed == 1
+	incsrc "Offline/MenuColoredSamus.asm"
+endif
+if !PercentTime_FelicityVi == 1
+	incsrc "Offline/equip-screen-itemstime.asm"
+endif
+if !SkipHexMap_Mfreak == 1
+	incsrc "Offline/MapOverhaul/NoHexMap.asm"	;smart HATES this. do not use, or at least only use the code part
+endif
+if !SkipIntro_Phosphotidyl = 1
+	incsrc "Offline/SkipIntro_PhosphotiDYL.asm"
+endif
 
 ;Beams
 if !AccelCharge_Oi27 == 1
@@ -236,6 +255,11 @@ if !PlanetaryGravityRework_Dewhi100 == 1
 	incsrc "Physics/PlanetaryGravityRework_Dewhi100.asm"
 endif
 
+;Pause screen
+if !EquipScreenDisassembly_Tundain = 1
+	incsrc "Offline/EquipScreenTilemap_Tundain.asm"
+end
+
 ;PLMs
 if !FX_LevelPLM_OmegaDragnet == 1
 	incsrc "PLMs/FX_LevelPLM_OmegaDragnet.asm"
@@ -272,6 +296,13 @@ if !SamusElbowFix_Kejardon == 1
 endif
 if !SamusMasterDisassembly_Crashtour99 == 1
 	incsrc "SamusGFX/SamusMasterDisassembly_Crashtour99.asm"
+endif
+if !SamusResprite != ""
+	check bankcross off
+	org $9BE000
+	incbin !SamusResprite
+	warnpc $9FF740
+	check bankcross half
 endif
 
 ;Speed Booster

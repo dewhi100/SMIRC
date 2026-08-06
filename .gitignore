@@ -20,3 +20,68 @@ SamusGfxRedesign_Physix.gfx
 scratchpad/DualSuitsVanillaPower.asm
 scratchpad/SamusGfxRedesign_Physix.ips
 scratchpad/VanillaSamusGFX.gfx
+Mods/Offline/SamusGfxRedesign_Physix.ips
+Mods/Offline/PowerSuit_StarryMelody/StarryMelodySuitGFX.gfx
+Mods/Offline/PowerSuit_StarryMelody/Pow_07.gfx
+Mods/Offline/PowerSuit_StarryMelody/Pow_06.gfx
+Mods/Offline/PowerSuit_StarryMelody/Pow_05.gfx
+Mods/Offline/PowerSuit_StarryMelody/Pow_04.gfx
+Mods/Offline/PowerSuit_StarryMelody/Pow_03.gfx
+Mods/Offline/PowerSuit_StarryMelody/Pow_02.gfx
+Mods/Offline/PowerSuit_StarryMelody/Pow_01.gfx
+Mods/Offline/PowerSuit_StarryMelody/Pow_00.gfx
+Mods/Offline/Pause menu.asm
+Mods/Offline/MenuColoredSamus.asm
+Mods/Offline/MapOverhaul/New folder/README.txt
+Mods/Offline/MapOverhaul/New folder/NoHexMap.asm
+Mods/Offline/MapOverhaul/New folder/MapTiles.bin
+Mods/Offline/MapOverhaul/New folder/MapOverhaulResources/MaptileGlow.asm
+Mods/Offline/MapOverhaul/New folder/MapOverhaulResources/MapDecoration.asm
+Mods/Offline/MapOverhaul/New folder/MapOverhaulResources/ItembitTilechangeList.asm
+Mods/Offline/MapOverhaul/New folder/MapOverhaulResources/Example/MaptileGlow.asm
+Mods/Offline/MapOverhaul/New folder/MapOverhaulResources/Example/MapDecoration.asm
+Mods/Offline/MapOverhaul/New folder/MapOverhaulResources/Example/ItembitTilechangeList.asm
+Mods/Offline/MapOverhaul/New folder/MapOverhaulResources/Example/DoorbitSpritelockList.asm
+Mods/Offline/MapOverhaul/New folder/MapOverhaulResources/Example/CoverTileList.asm
+Mods/Offline/MapOverhaul/New folder/MapOverhaulResources/Example/AdjacentMaptileTable.asm
+Mods/Offline/MapOverhaul/New folder/MapOverhaulResources/DoorbitSpritelockList.asm
+Mods/Offline/MapOverhaul/New folder/MapOverhaulResources/CoverTileList.asm
+Mods/Offline/MapOverhaul/New folder/MapOverhaulResources/Compiler/xkas.asm
+Mods/Offline/MapOverhaul/New folder/MapOverhaulResources/Compiler/asar.asm
+Mods/Offline/MapOverhaul/New folder/MapOverhaulResources/ASM/PauseScreenRoutines.asm
+Mods/Offline/MapOverhaul/New folder/MapOverhaulResources/ASM/Misc_Banks.asm
+Mods/Offline/MapOverhaul/New folder/MapOverhaulResources/ASM/Minimap.asm
+Mods/Offline/MapOverhaul/New folder/MapOverhaulResources/ASM/MapConstruction.asm
+Mods/Offline/MapOverhaul/New folder/MapOverhaulResources/AdjacentMaptileTable.asm
+Mods/Offline/MapOverhaul/New folder/MapOverhaulButtons.asm
+Mods/Offline/MapOverhaul/New folder/MapOverhaul_v1.2_Example.ips
+Mods/Offline/MapOverhaul/New folder/MapOverhaul_v1.2.7(xkas).asm
+Mods/Offline/MapOverhaul/New folder/MapOverhaul_v1.2.7(asar).asm
+Mods/Offline/MapOverhaul/New folder/BasicGraphicPatch.ips
+Mods/Offline/MapOverhaul/MapTiles.bin
+Mods/Offline/MapOverhaul/MapOverhaulResources/MaptileGlow.asm
+Mods/Offline/MapOverhaul/MapOverhaulResources/MapDecoration.asm
+Mods/Offline/MapOverhaul/MapOverhaulResources/ItembitTilechangeList.asm
+Mods/Offline/MapOverhaul/MapOverhaulResources/Example/MaptileGlow.asm
+Mods/Offline/MapOverhaul/MapOverhaulResources/Example/MapDecoration.asm
+Mods/Offline/MapOverhaul/MapOverhaulResources/Example/ItembitTilechangeList.asm
+Mods/Offline/MapOverhaul/MapOverhaulResources/Example/DoorbitSpritelockList.asm
+Mods/Offline/MapOverhaul/MapOverhaulResources/Example/CoverTileList.asm
+Mods/Offline/MapOverhaul/MapOverhaulResources/Example/AdjacentMaptileTable.asm
+Mods/Offline/MapOverhaul/MapOverhaulResources/DoorbitSpritelockList.asm
+Mods/Offline/MapOverhaul/MapOverhaulResources/CoverTileList.asm
+Mods/Offline/MapOverhaul/MapOverhaulResources/Compiler/xkas.asm
+Mods/Offline/MapOverhaul/MapOverhaulResources/Compiler/asar.asm
+Mods/Offline/MapOverhaul/MapOverhaulResources/ASM/PauseScreenRoutines.asm
+Mods/Offline/MapOverhaul/MapOverhaulResources/ASM/Misc_Banks.asm
+Mods/Offline/MapOverhaul/MapOverhaulResources/ASM/Minimap.asm
+Mods/Offline/MapOverhaul/MapOverhaulResources/ASM/MapConstruction.asm
+Mods/Offline/MapOverhaul/MapOverhaulResources/AdjacentMaptileTable.asm
+Mods/Offline/MapOverhaul/MapOverhaul_v1.2.7(asar).asm
+Mods/Offline/itemstime-includes/pausemap.gfx
+Mods/Offline/itemstime-includes/pausemap-dc.gfx
+Mods/Offline/itemstime-includes/equip-screen.ttb
+Mods/Offline/itemstime-includes/equip-screen-dc.ttb
+Mods/Offline/EquipScreenTilemap_Tundain.asm
+Mods/Offline/equip-screen-itemstime.asm
+Mods/Offline/DualSuitsVanillaPower.asm

@@ -47,16 +47,20 @@
 !JumpCounter = $099A
 !missilesCurrent = $09C6
 !missilesMax = $09C8
+!MaxReserveMissiles = $09D4
 !AmmoRegenRate_SRAM = $09EC
 !UniversalAmmoRAM = $09EE
 !ammoFlags = $09F0
 !AccelChargeCounter = $09F4
-!MoarItemsCustomFlags = $0A1A 
+!MoarItemsCustomFlags = $0A1A
+!HyperFlag = $0A76
 !msgRam = $0B0C
 !localGravity = $0B30
 
-!VarWState = $7FFA02
+
+!CollectedItems = $7ED86E
 !OmegaDragnetRAM = $7EF4A0
+!VarWState = $7FFA02
 !NodeverRAM = $7FFC02
 
 

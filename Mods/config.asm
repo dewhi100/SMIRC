@@ -39,7 +39,7 @@
 !HomingDrops_Nodever2 = 1
 
 ;Effects
-!SuitAura_Oi27 = 1		;you can set the item that grants aura in the stddefines.txt file. setting to $0000 will remove the item check
+!SuitAura_Oi27 = 0		;you can set the item that grants aura in the stddefines.txt file. setting to $0000 will remove the item check
 	!AuraRadius = 1     ;(d. pixels)
 	!AuraITM = $0000		;item to activate the aura. unused in my custom version	
 	!gravityEffect = 1		;aura triggers when Gravity suit is equipped in liquids, rather than all the time
@@ -107,7 +107,9 @@
 	!GaussMissilesNoPLM = 0				;/Set to 1 if for some reason you plan to enable gauss missile in a non-item way
 
 ;Intro
+!SkipIntro_Phosphotidyl = 1	;NOT INCLUDED IN SMIRC. SET THIS TO '0'
 !SkipIntroFlashbacks_Nodever2 = 1
+!SkipHexMap_Mfreak = 1	;NOT INCLUDED IN SMIRC. SET THIS TO '0'
 
 ;Jumps
 !LimitedSpaceJumps_Oi27 = 1
@@ -132,6 +134,13 @@
 ;Optimizations
 !Decompression_Kejardon_Tundain = 1	;So much work went into this by both that it makes sense to include them.
 
+;Pause Screen
+!EquipScreenDisassembly_Tundain = 1
+!MapOverhaul_Mfreak = 1					;NOT INCLUDED IN SMIRC. SET THIS TO '0'
+!MenuColoredSamus_RealRed = 1			;NOT INCLUDED IN SMIRC. SET THIS TO '0'
+!PercentTime_FelicityVi = 1				;NOT INCLUDED IN SMIRC. SET THIS TO '0'
+	!TotalItems = 100					;how many items in hack
+
 ;Physics
 !LocalGravity_Dewhi100 = 1
 	!resetGravityMode = 0	;0: use RoomVar, 1:  use RoomVar (positive values only), 2: Zeroed on entering rooms.
@@ -150,17 +159,19 @@
 !TimeElapsedState_Dewhi100 = 1
 
 ;Samus GFX
-!DualSuitGfx_Crashtour99 = 0
+!DualSuitGfx_Crashtour99 = 1	;gfx dont apply properly when using SMART for some reason. asking in the SMART discord
+	!DualGfxPath = "VanillaSamusGFX.gfx"	;path to the alternate GFX
 !MorphRoll_BlackFalcon = 1
-!SamusElbowFix_Kejardon = 0	;not needed if you use different gfx. I think.
+!SamusElbowFix_Kejardon = 0	;not needed if you use crashtour disassembly. I think.
 !SamusMasterDisassembly_Crashtour99 = 1
+!SamusResprite = "Offline/SamusGfxRedesign_Physix.gfx"	;default = ""(Vanilla). Rewrite Samus' graphics
 
 ;Speed Booster
-!Downsparking_Tundain = 1
+!Downsparking_Tundain = 0
 !FixSpeedBoosterJumpMomentum_Nodever2 = 1
 !RemoveShinesparkHealthDrain_Exister = 1
 !ShinesparkCompatibleReflecs_Tundain = 1
-!SparkBounce_Kejardon = 1
+!SparkBounce_Kejardon = 0
 	!disableVertical = 1	;I think vertical sparks from walljump pose feel jarring, so here's an option to disable them.
 
 ;Suits
@@ -177,4 +188,4 @@
 !MissilesPerDoorCap = $05		;5
 !MissilePickupsRefill = 1	;By Exister
 !RemoveMorphBounce = 1		;By Omegadragnet
-!SkipDemo = 0				;1 to skip, 0 to keep
+!SkipDemo = 1				;1 to skip, 0 to keep
