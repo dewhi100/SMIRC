@@ -162,3 +162,6 @@ Bank B8
 - Door Transitions (Nodever2) (Can be anywhere)
 - Full Reserve Tank Indicator (Nodever2) (Can be anywhere)
 - M2 Varia Suit Effect (Oi27)
+
+Bank DF
+- Dual Suits (Crashtour99)
