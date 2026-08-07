@@ -1,7 +1,7 @@
 ;|||   Super Metroid Integrated Resource Collection |||;
 lorom
 
-if 1 == 0	;Easily disable assembling while debugging
+if 1 == 1	;Easily disable assembling while debugging
 {
 ;Configuration;
 
@@ -14,9 +14,6 @@ incsrc "config.asm"
 ;If you want any of these, DM me.
 if !MapOverhaul_Mfreak == 1
 	incsrc "Offline/MapOverhaul/MapOverhaul_v1.2.7(asar).asm"
-endif
-if !MenuColoredSamus_RealRed == 1
-	incsrc "Offline/MenuColoredSamus.asm"
 endif
 if !PercentTime_FelicityVi == 1
 	incsrc "Offline/equip-screen-itemstime.asm"
@@ -250,6 +247,9 @@ endif
 ;Pause screen
 if !EquipScreenDisassembly_Tundain == 1
 	incsrc "Offline/EquipScreenTilemap_Tundain.asm"
+endif
+if !MenuColoredSamus_RealRed == 1
+	incsrc "Pause/MenuColoredSamus_RealRed/MenuColoredSamus.asm"
 endif
 
 ;Physics

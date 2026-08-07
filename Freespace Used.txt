@@ -18,6 +18,7 @@ Bank 82
 - Ammo Regen (dewhi100
 - Door Transitions (Nodever2)
 - Instant Pickups (Oi27)
+- Menu Colored Samus (RealRed)
 
 Bank83
 - Downsparking (Tundain) (Relocated) (Can be anywhere)
@@ -157,6 +158,9 @@ Bank B2
 
 Bank B4
 - MOAR Items (Mccad)
+
+Bank B6
+- Menu Colored Samus (RealRed)
 
 Bank B8
 - Door Transitions (Nodever2) (Can be anywhere)

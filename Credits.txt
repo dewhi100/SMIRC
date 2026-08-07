@@ -102,6 +102,9 @@ PJBoy
 - Bomb Torizo Item Override
 - Respin (With Kejardon, Scyzer)
 
+RealRed
+- Menu Colored Samus
+
 Scyzer
 - Respin (With Kejardon, PJBoy)
 
