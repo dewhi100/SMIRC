@@ -113,6 +113,7 @@ Tundain
 - Decompression Optimization (With Kejardon, and Maddo)
 - Downsparking
 - Enemy Always Freezes Vulnerability
+- Equipment Screen Tilemap Disassembly
 - Flipped Bomb Torizo
 - Improved Metroid Latching
 - Missile Grabbing Golden Torizo

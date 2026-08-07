@@ -246,7 +246,7 @@ endif
 
 ;Pause screen
 if !EquipScreenDisassembly_Tundain == 1
-	incsrc "Offline/EquipScreenTilemap_Tundain.asm"
+	incsrc "Pause/EquipScreenTilemap_Tundain.asm"
 endif
 if !MenuColoredSamus_RealRed == 1
 	incsrc "Pause/MenuColoredSamus_RealRed/MenuColoredSamus.asm"
