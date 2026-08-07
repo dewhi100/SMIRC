@@ -7,7 +7,7 @@
 LoROM
 
 org $82DBB2	;every frame
-JSR RegenAmmo
+JSR RegenAmmo		;originally LDA $09DA
 
 org !free82
 RegenAmmo:
@@ -21,9 +21,11 @@ CMP !missilesMax
 BEQ ++
 INC !missilesCurrent
 ++
+LDA $09DA
 RTS
 +
 STA !AmmoRegenSubammo
+LDA $09DA
 RTS
 
 !free82 #= pc()

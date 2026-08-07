@@ -48,6 +48,10 @@
 !missilesCurrent = $09C6
 !missilesMax = $09C8
 !MaxReserveMissiles = $09D4
+!TimeFrames = $09DA
+!TimeSeconds = $09DC
+!TimeMinutes = $09DE
+!TimeHours = $09E0
 !AmmoRegenRate_SRAM = $09EC
 !UniversalAmmoRAM = $09EE
 !ammoFlags = $09F0

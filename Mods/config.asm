@@ -39,7 +39,7 @@
 !HomingDrops_Nodever2 = 1
 
 ;Effects
-!SuitAura_Oi27 = 0		;you can set the item that grants aura in the stddefines.txt file. setting to $0000 will remove the item check
+!SuitAura_Oi27 = 1		;you can set the item that grants aura in the stddefines.txt file. setting to $0000 will remove the item check
 	!AuraRadius = 1     ;(d. pixels)
 	!AuraITM = $0000		;item to activate the aura. unused in my custom version	
 	!gravityEffect = 1		;aura triggers when Gravity suit is equipped in liquids, rather than all the time
@@ -67,21 +67,21 @@
 !VariableKnockback_Tundain = 1
 
 ;Energy
-!ChargeHeal_Dewhi100 = 1
+!ChargeHeal_Dewhi100 = 0
 	!HealsCutoff = 0				;0 = no limit, 1 = heal if critical alarm is on, 2 = can't heal above critical cutoff (almost same as 1, but cutoff is 1 less)
-!DeathForgivenessRevision2_Nodever2 = 1
+!DeathForgivenessRevision2_Nodever2 = 0
     !HealthThreshold = #$001E ; If Samus has at least this much health, she will survive an instant kill with !HealthRemaining HP. Default: 30 (decimal). This should be greater than !HealthRemaining.
                               ;   In vanilla, the low health alarm plays when Samus has 30 (decimal) or less HP.
     !HealthRemaining = #$0001 ; This is how much health Samus will be left with when she takes damage that is otherwise fatal.
     !ForgivePeriodicDamage       = 1 ; Set to 0 to disable death forgiveness from periodic damage including heat & spikes.
     !ForgiveWhenReservesNotEmpty = 0 ; Set to 0 to disable forgiveness when Samus' reserve health is not zero (REGARDLESS OF IF RESERVE TANKS ARE ON AUTO OR MANUAL MODE)
-!ReserveTankBugfixes_Nodever2 = 1
+!ReserveTankBugfixes_Nodever2 = 0
 
 ;Events
-!BossEvents_OmegaDragnet = 1
-!EventStation_Dewhi100 = 1
-!ItemEventPLM_Dewhi100 = 1
-!RoomClearEventPLM_Dewhi100 = 1
+!BossEvents_OmegaDragnet = 0
+!EventStation_Dewhi100 = 0
+!ItemEventPLM_Dewhi100 = 0
+!RoomClearEventPLM_Dewhi100 = 0
 
 ;HUD
 !FullReserveTankIndicator_Compatability_Nodever2 = 1
@@ -118,7 +118,7 @@
 !SuitlessSpaceJump_Dewhi100 = 1
 
 ;Missiles
-!AmmoRegen_Dewhi100 = 1
+!AmmoRegen_Dewhi100 = 0
 !ChargeMissiles_Tundain = 1	;Note: add $0100 to the PLM argument to make it a charged Super item rather than charged missile
 	!withPLMs = 1			;if 1, will use PLMs to set the item flags
 !IcePlusMissileDamage_Oi27 = 1
@@ -128,35 +128,42 @@
 	!AmmoPLM = 1	;a specialized universal ammo tank.	0XXX = big, 1XXX = small, X0XX ... X2XX are normal/orb/hidden
 
 ;Morph
-!MorphSpeed_OmegaDragnet = 1
-!SafeUnmorph_Tundain = 1
+!MorphSpeed_OmegaDragnet = 0
+!SafeUnmorph_Tundain = 0
 
 ;Optimizations
-!Decompression_Kejardon_Tundain = 1	;So much work went into this by both that it makes sense to include them.
+!Decompression_Kejardon_Tundain = 0	;So much work went into this by both that it makes sense to include them.
 
 ;Pause Screen
 !EquipScreenDisassembly_Tundain = 1
-!MapOverhaul_Mfreak = 1					;NOT INCLUDED IN SMIRC. SET THIS TO '0'
-!MenuColoredSamus_RealRed = 1			;NOT INCLUDED IN SMIRC. SET THIS TO '0'
+!MapOverhaul_Mfreak = 0					;NOT INCLUDED IN SMIRC. SET THIS TO '0'
+!MenuColoredSamus_RealRed = 0			;NOT INCLUDED IN SMIRC. SET THIS TO '0'
 !PercentTime_FelicityVi = 1				;NOT INCLUDED IN SMIRC. SET THIS TO '0'
 	!TotalItems = 100					;how many items in hack
+	!BlankTile = #$295D					;-addresses for tiles in the Pause GFX ("Map Screen Graphics" in SMART)
+	!NumbersStart = #$3966				; |
+	!PercentSign = #$3964				; |
+	!DecimalPoint = #$3960				; |
+	!Colon = #$3963						;/
+
+
 
 ;Physics
-!LocalGravity_Dewhi100 = 1
+!LocalGravity_Dewhi100 = 0
 	!resetGravityMode = 0	;0: use RoomVar, 1:  use RoomVar (positive values only), 2: Zeroed on entering rooms.
-!PlanetaryGravityRework_Dewhi100 = 1	;See patch for customization options
+!PlanetaryGravityRework_Dewhi100 = 0	;See patch for customization options
 
 ;PLMs
-!FX_LevelPLM_OmegaDragnet = 1
-!GenericMaridiaTube_OmegaDragnet = 1
+!FX_LevelPLM_OmegaDragnet = 0
+!GenericMaridiaTube_OmegaDragnet = 0
 	!TheHardcodedTile = $0140 ;Change this to if you want to use another tile.
 	!WaitForInput = 1
-!SingleUseGates_Nodever2 = 1
+!SingleUseGates_Nodever2 = 0
 
 ;Room States
-!BossCountRoomState_Dewhi100 = 1
-!RandomRoomState_Dewhi100 = 1
-!TimeElapsedState_Dewhi100 = 1
+!BossCountRoomState_Dewhi100 = 0
+!RandomRoomState_Dewhi100 = 0
+!TimeElapsedState_Dewhi100 = 0
 
 ;Samus GFX
 !DualSuitGfx_Crashtour99 = 1	;gfx dont apply properly when using SMART for some reason. asking in the SMART discord
@@ -164,20 +171,21 @@
 !MorphRoll_BlackFalcon = 1
 !SamusElbowFix_Kejardon = 0	;not needed if you use crashtour disassembly. I think.
 !SamusMasterDisassembly_Crashtour99 = 1
-!SamusResprite = "Offline/SamusGfxRedesign_Physix.gfx"	;default = ""(Vanilla). Rewrite Samus' graphics
+!SamusResprite = 1		;Rewrite Samus' graphics with gfs at this path
+	!SamusRespritePath = "Offline/SamusGfxRedesign_Physix.gfx"	
 
 ;Speed Booster
 !Downsparking_Tundain = 0
-!FixSpeedBoosterJumpMomentum_Nodever2 = 1
-!RemoveShinesparkHealthDrain_Exister = 1
-!ShinesparkCompatibleReflecs_Tundain = 1
+!FixSpeedBoosterJumpMomentum_Nodever2 = 0
+!RemoveShinesparkHealthDrain_Exister = 0
+!ShinesparkCompatibleReflecs_Tundain = 0
 !SparkBounce_Kejardon = 0
 	!disableVertical = 1	;I think vertical sparks from walljump pose feel jarring, so here's an option to disable them.
 
 ;Suits
-!AcidMod_BlackFalcon = 1
-!M2anim_Oi27 = 1				;This breaks the hidden block variety of Varia, but you weren't planning on using that... were you?
-!PseudoVaria_Dewhi100 = 1
+!AcidMod_BlackFalcon = 0
+!M2anim_Oi27 = 0				;This breaks the hidden block variety of Varia, but you weren't planning on using that... were you?
+!PseudoVaria_Dewhi100 = 0
 	!HeatProofGravitySuit = 0	;Set to 1 if you want Gravity Suit to protect from heat
 	!HalfDamageInLava = 1		;Set if you want charged Ice Beam to reduce lava damage
 

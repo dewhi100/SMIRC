@@ -1,7 +1,7 @@
 ;|||   Super Metroid Integrated Resource Collection |||;
 lorom
 
-if 1 == 1	;Easily disable assembling while debugging
+if 1 == 0	;Easily disable assembling while debugging
 {
 ;Configuration;
 
@@ -24,7 +24,7 @@ endif
 if !SkipHexMap_Mfreak == 1
 	incsrc "Offline/MapOverhaul/NoHexMap.asm"	;smart HATES this. do not use, or at least only use the code part
 endif
-if !SkipIntro_Phosphotidyl = 1
+if !SkipIntro_Phosphotidyl == 1
 	incsrc "Offline/SkipIntro_PhosphotiDYL.asm"
 endif
 
@@ -247,6 +247,11 @@ if !Decompression_Kejardon_Tundain == 1
 	incsrc "Optimizations/Decompression_Kejardon_Tundain.asm"
 endif
 
+;Pause screen
+if !EquipScreenDisassembly_Tundain == 1
+	incsrc "Offline/EquipScreenTilemap_Tundain.asm"
+endif
+
 ;Physics
 if !LocalGravity_Dewhi100 == 1
 	incsrc "Physics/LocalGravity_Dewhi100.asm"
@@ -254,11 +259,6 @@ endif
 if !PlanetaryGravityRework_Dewhi100 == 1
 	incsrc "Physics/PlanetaryGravityRework_Dewhi100.asm"
 endif
-
-;Pause screen
-if !EquipScreenDisassembly_Tundain = 1
-	incsrc "Offline/EquipScreenTilemap_Tundain.asm"
-end
 
 ;PLMs
 if !FX_LevelPLM_OmegaDragnet == 1
@@ -297,10 +297,11 @@ endif
 if !SamusMasterDisassembly_Crashtour99 == 1
 	incsrc "SamusGFX/SamusMasterDisassembly_Crashtour99.asm"
 endif
-if !SamusResprite != ""
+
+if !SamusResprite == 1
 	check bankcross off
 	org $9BE000
-	incbin !SamusResprite
+	incbin !SamusRespritePath
 	warnpc $9FF740
 	check bankcross half
 endif
@@ -335,7 +336,7 @@ if !PseudoVaria_Dewhi100 == 1
 endif
 
 ;Tweaks
-if !AcidSubDamage = $8000 || !AcidDamage = $0000
+if !AcidSubDamage != $8000 || !AcidDamage != $0000
 	org $909E8F	;Acid damage
 	DW !AcidSubDamage, !AcidDamage
 endif
