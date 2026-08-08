@@ -67,12 +67,12 @@
     {;Addresses
 
         ;Bank $90
-        !90 = $900000
-        !90UnusedSpace = $F04B
+;        !90 = $900000
+;        !90UnusedSpace = $F04B
         !FallCap = $910F
 
         ;Bank $91
-        !91 = $910000
+;        !91 = $910000
         !PoseChangeHandler   = $F433
         !PoseChangeAnimation = $FB08
 
@@ -160,8 +160,6 @@
         !SamusYspeed    = $0B2E
         !SamusYsubspeed = $0B2C
 
-        !MaxFallSpeed = $0008 ;Depending on the maximum fall speed, the cannon arc devolves into a straight line.
-
         !AccelMode  = $0B4A
         !MomentumFlag   = $0B3C
         
@@ -238,8 +236,6 @@ lorom
 
 	!free90 #= pc()
 
-    org !90+!FallCap
-        CMP #!MaxFallSpeed
 }
 
 

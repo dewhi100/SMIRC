@@ -18,7 +18,7 @@
 !ScrewAttackBlock_Crashtour99 = 1
 
 ;Bombs
-!BombLauncher_Ob = 1	;set the item bit you want for this in stddefines.txt. Does not handle drawing icon the HUD.
+!BombLauncher_Ob = 0	;set the item bit you want for this in stddefines.txt. Does not handle drawing icon the HUD.
 	!HUD_Index = 4 ; 0..4
 	!bombLauncherAmmoRequirement = 1	;if using universal ammo, you can use it for bomb launcher too.
 !PowerBombsRemoveWater_Moehr = 1
@@ -48,14 +48,14 @@
 !WaterDroplets_Oi27 = 1		;NOTE: you wont see the graphics ingame right away when quickmetting. You need to go through a door transition in order to properly load the GFX
 
 ;Ending
-!NonExplosivePlanet_Tundain = 1
+!NonExplosivePlanet_Tundain = 0
 	!AreaDoesExplode = 0			;If set to 1, part of the surface will still explode. You must supply the art yourself.
-!SkipZebesMode7_OmegaDragnet = 1
+!SkipZebesMode7_OmegaDragnet = 0
 
 ;Enemies
-!BombTorizoItemOverride_PjBoy = 1
+!BombTorizoItemOverride_PjBoy = 0
 !Donkkon_Ob = 1
-!EnemyAlwaysFreezesVulnerability_Tundain = 1
+!EnemyAlwaysFreezesVulnerability_Tundain = 0
 !EnemiesStayDead_Nodever2 = 1
     !NumRooms             = $0005 ; The last !NumRooms rooms where an enemy was killed will be remembered.
 !FlippedBombTorizo_Tundain = 1
@@ -67,32 +67,32 @@
 !VariableKnockback_Tundain = 1
 
 ;Energy
-!ChargeHeal_Dewhi100 = 1
+!ChargeHeal_Dewhi100 = 0
 	!HealsCutoff = 0				;0 = no limit, 1 = heal if critical alarm is on, 2 = can't heal above critical cutoff (almost same as 1, but cutoff is 1 less)
-!DeathForgivenessRevision2_Nodever2 = 1
+!DeathForgivenessRevision2_Nodever2 = 0
     !HealthThreshold = #$001E ; If Samus has at least this much health, she will survive an instant kill with !HealthRemaining HP. Default: 30 (decimal). This should be greater than !HealthRemaining.
                               ;   In vanilla, the low health alarm plays when Samus has 30 (decimal) or less HP.
     !HealthRemaining = #$0001 ; This is how much health Samus will be left with when she takes damage that is otherwise fatal.
     !ForgivePeriodicDamage       = 0 ; Set to 0 to disable death forgiveness from periodic damage including heat & spikes.
     !ForgiveWhenReservesNotEmpty = 0 ; Set to 0 to disable forgiveness when Samus' reserve health is not zero (REGARDLESS OF IF RESERVE TANKS ARE ON AUTO OR MANUAL MODE)
-!MaxHealthHighlight_Nodever2 = 1
-!ReserveTankBugfixes_Nodever2 = 1
+!MaxHealthHighlight_Nodever2 = 0
+!ReserveTankBugfixes_Nodever2 = 0
 
 ;Events
-!BossEvents_OmegaDragnet = 1
-!EventStation_Dewhi100 = 1
-!ItemEventPLM_Dewhi100 = 1
-!RoomClearEventPLM_Dewhi100 = 1
+!BossEvents_OmegaDragnet = 0
+!EventStation_Dewhi100 = 0
+!ItemEventPLM_Dewhi100 = 0
+!RoomClearEventPLM_Dewhi100 = 0
 
 ;HUD
-!FullReserveTankIndicator_Compatability_Nodever2 = 1
-!HudCounterAnimation_Nodever2 = 1
+!FullReserveTankIndicator_Compatability_Nodever2 = 0
+!HudCounterAnimation_Nodever2 = 0
 
 ;Items
-!InstantPickups_Oi27 = 1
+!InstantPickups_Oi27 = 0
 
 ;Items: MOAR Items							;There are just so many that I separated them into their own thing
-!WaveDash_Mccad = 1						;\While spinjumping, hold [run] and double tap left or right. (Mccad's MOAR Items)
+!WaveDash_Mccad = 0						;\While spinjumping, hold [run] and double tap left or right. (Mccad's MOAR Items)
 	!WaveDashSingleTap = 1				;|single tapping to activate (normally a double tap)
 	!WaveDashSetMinimumSpeed = 1 		;|sets speed to a minimum of the below value when activated
 		!WaveDashSpeed = $0004			;|
@@ -101,36 +101,36 @@
 	!WaveDashThroughWalls = 1			;|Samus' collision is disabled when dashing through gates, shutters, and walls of 1 tile thickness
 	!WaveDashOncePerJump = 1			;|Samus must touch the ground in between wave dashes. Based on Spin Boost's code (by Oi27)	;bugged
 	!OverrideAura = 0					;|Suit Aura makes wavedash look ugly, so turn off aura during dash
-!HammerBall_Mccad = 1					;|while in the air in morph, hold down and press [aim down]
+!HammerBall_Mccad = 0					;|while in the air in morph, hold down and press [aim down]
 	!HammerBallTriggerWithJump = 0		;|Hammerball effect triggered by the jump button
 	!HammerBallRequireSpringBall = 0	;|Bundles hammerball with springball
 !GaussMissiles_Mccad = 0				;|(Much) Faster missiles, also hit harder
 	!GaussMissilesNoPLM = 0				;/Set to 1 if for some reason you plan to enable gauss missile in a non-item way
 
 ;Intro
-!SkipIntro_Phosphotidyl = 1	;NOT INCLUDED IN SMIRC. SET THIS TO '0'
-!SkipIntroFlashbacks_Nodever2 = 1
-!SkipHexMap_Mfreak = 1	;NOT INCLUDED IN SMIRC. SET THIS TO '0'
+!SkipIntro_Phosphotidyl = 0	;NOT INCLUDED IN SMIRC. SET THIS TO '0'
+!SkipIntroFlashbacks_Nodever2 = 0
+!SkipHexMap_Mfreak = 0	;NOT INCLUDED IN SMIRC. SET THIS TO '0'
 
 ;Jumps
-!LimitedSpaceJumps_Oi27 = 1
+!LimitedSpaceJumps_Oi27 = 0
 	!JumpsAllowed = $0002 		;number of jumps incl the one from the ground
-!Respin_Kejardon = 1
-!SuitlessSpaceJump_Dewhi100 = 1
+!Respin_Kejardon = 0
+!SuitlessSpaceJump_Dewhi100 = 0
 
 ;Missiles
-!AmmoRegen_Dewhi100 = 1
-!ChargeMissiles_Tundain = 1	;Note: add $0100 to the PLM argument to make it a charged Super item rather than charged missile
+!AmmoRegen_Dewhi100 = 0
+!ChargeMissiles_Tundain = 0	;Note: add $0100 to the PLM argument to make it a charged Super item rather than charged missile
 	!withPLMs = 0			;if 1, will use PLMs to set the item flags
-!IcePlusMissileDamage_Oi27 = 1	
-!SupersNeedMains_Dewhi100 = 1
+!IcePlusMissileDamage_Oi27 = 0	
+!SupersNeedMains_Dewhi100 = 0
 	!StarterAmmo = 05
 !UniversalAmmo_Tundain = 1	;You must supply the "ammo:" HUD text yourself 
 	!AmmoPLM = 0	;a specialized universal ammo tank.	0XXX = big, 1XXX = small, X0XX ... X2XX are normal/orb/hidden
 
 ;Morph
-!MorphSpeed_OmegaDragnet = 1
-!SafeUnmorph_Tundain = 1
+!MorphSpeed_OmegaDragnet = 0
+!SafeUnmorph_Tundain = 0
 
 ;Optimizations
 !Decompression_Kejardon_Tundain = 1	;So much work went into this by both that it makes sense to include them.
@@ -147,47 +147,45 @@
 	!DecimalPoint = #$3960				; |
 	!Colon = #$3963						;/
 
-
-
 ;Physics
-!LocalGravity_Dewhi100 = 1
-	!resetGravityMode = 0	;0: use RoomVar, 1:  use RoomVar (positive values only), 2: Zeroed on entering rooms.
+!LocalGravity_Dewhi100 = 0
+	!resetGravityMode = 1	;0: use RoomVar, 1:  use RoomVar (positive values only), 2: Zeroed on entering rooms.
 !PlanetaryGravityRework_Dewhi100 = 0	;See patch for customization options
 
 ;PLMs
-!FX_LevelPLM_OmegaDragnet = 1
-!GenericMaridiaTube_OmegaDragnet = 1
+!FX_LevelPLM_OmegaDragnet = 0
+!GenericMaridiaTube_OmegaDragnet = 0
 	!TheHardcodedTile = $0140 ;Change this to if you want to use another tile.
 	!WaitForInput = 0
-!SingleUseGates_Nodever2 = 1
+!SingleUseGates_Nodever2 = 0
 
 ;Room States
-!BossCountRoomState_Dewhi100 = 1
-!RandomRoomState_Dewhi100 = 1
-!TimeElapsedState_Dewhi100 = 1
+!BossCountRoomState_Dewhi100 = 0
+!RandomRoomState_Dewhi100 = 0
+!TimeElapsedState_Dewhi100 = 0
 
 ;Samus GFX
 !DualSuitGfx_Crashtour99 = 0	;gfx dont apply properly when using SMART for some reason. asking in the SMART discord
 	!DualGfxPath = "VanillaSamusGFX.gfx"	;path to the alternate GFX
-!MorphRoll_BlackFalcon = 1
-!SamusElbowFix_Kejardon = 1	;not needed if you use crashtour disassembly. I think.
-!SamusMasterDisassembly_Crashtour99 = 1
-!SamusResprite = 1		;Rewrite Samus' graphics with gfs at this path
+!MorphRoll_BlackFalcon = 0
+!SamusElbowFix_Kejardon = 0	;not needed if you use crashtour disassembly. I think.
+!SamusMasterDisassembly_Crashtour99 = 0
+!SamusResprite = 0		;Rewrite Samus' graphics with gfs at this path
 	!SamusRespritePath = "Offline/SamusGfxRedesign_Physix.gfx"
 
 ;Speed Booster
-!ChainSpark_Various = 1
-!Downsparking_Tundain = 1
-!FixSpeedBoosterJumpMomentum_Nodever2 = 1
-!RemoveShinesparkHealthDrain_Exister = 1
-!ShinesparkCompatibleReflecs_Tundain = 1
+!ChainSpark_Various = 0
+!Downsparking_Tundain = 0
+!FixSpeedBoosterJumpMomentum_Nodever2 = 0
+!RemoveShinesparkHealthDrain_Exister = 0
+!ShinesparkCompatibleReflecs_Tundain = 0
 !SparkBounce_Kejardon = 1
 	!disableVertical = 0	;I think vertical sparks from walljump pose feel jarring, so here's an option to disable them.
 
 ;Suits
-!AcidMod_BlackFalcon = 1
-!M2anim_Oi27 = 1				;This breaks the hidden block variety of Varia, but you weren't planning on using that... were you?
-!PseudoVaria_Dewhi100 = 1
+!AcidMod_BlackFalcon = 0
+!M2anim_Oi27 = 0				;This breaks the hidden block variety of Varia, but you weren't planning on using that... were you?
+!PseudoVaria_Dewhi100 = 0
 	!HeatProofGravitySuit = 0	;Set to 1 if you want Gravity Suit to protect from heat
 	!HalfDamageInLava = 0		;Set if you want charged Ice Beam to reduce lava damage
 
@@ -199,3 +197,4 @@
 !MissilePickupsRefill = 0	;By Exister
 !RemoveMorphBounce = 0		;By Omegadragnet
 !SkipDemo = 0				;1 to skip, 0 to keep
+!TerminalVelocity = 5		;vanilla = 5

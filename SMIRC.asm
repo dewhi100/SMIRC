@@ -65,7 +65,7 @@ if !EventBTS_OmegaDragnet == 1
 	incsrc "Blocks/EventBTS_OmegaDragnet.asm"
 endif
 if !MissileBlock_Oi27 == 1
-;	incsrc "Blocks/MissileBlock_Oi27.asm"
+	incsrc "Blocks/MissileBlock_Oi27.asm"
 endif
 if !ScrewAttackBlock_Crashtour99 == 1
 	incsrc "Blocks/ScrewAttackBlock_Crashtour99.asm"
@@ -375,5 +375,9 @@ endif
 ;Bomb Torizo Door Closing Timer (PJ Boy)
 org $84BA54 : dw $28 ; Change this if you want, vanilla is 28h
 ;;;;;;;;;;;;;;;
+if !TerminalVelocity != 5
+	org $90910F
+	CMP #!TerminalVelocity
+endif
 }		;end of master toggle for file
 endif

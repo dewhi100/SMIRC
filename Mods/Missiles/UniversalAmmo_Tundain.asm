@@ -37,10 +37,10 @@ lorom
 !smallammoweight = #$0005 ;how much a small plm gives
 !largeammoweight = #$000A ;how much a large plm gives
 ;FREESPACE!
-!Bank80freespace = $80D180 ;repoint this to freespace in bank $80, doesn't need much
-!Bank84Freespace = $84F500 ;repoint to freespace in bank $84
-!Bank90freespace = $90F640 ;repoint to freespace in bank $90
-!Bank86freespace = $86F4B0 ;repoint to freespace in bank $86, doesn't need a lot
+;!Bank80freespace = $80D180 ;repoint this to freespace in bank $80, doesn't need much
+;!Bank84Freespace = $84F500 ;repoint to freespace in bank $84
+;!Bank90freespace = $90F640 ;repoint to freespace in bank $90
+;!Bank86freespace = $86F4B0 ;repoint to freespace in bank $86, doesn't need a lot
 
 
 ;-----------BANK $80 STUFF---------------------
@@ -146,6 +146,9 @@ updatemissles:
   STA $09C6
   INC !UniversalAmmoRAM ; unuses SRAM to know if you've collected missiles
   RTS
+
+!free84 #= pc()	;later on in the file, !free84 MAY get assigned again, if ammo PLM is enabled.
+				;But this is here to safeguard the freespace we've already used.
 
 if !AmmoPLM != 0
 {
