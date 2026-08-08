@@ -35,6 +35,9 @@ endif
 if !BrokenChargeBeam_PHOSPHOTiDYL
 	incsrc "Beams/BrokenChargeBeam_PHOSPHOTiDYL.asm"
 endif
+if !ChargeFlareFix_HAM == 1
+incsrc "Offline/ChargeFlareFix_HAM.asm"
+endif
 if !FullHealthChargeShot_InsaneFirebat == 1
 	incsrc "Beams/FullHealthChargeShot_InsaneFirebat.asm"
 endif
@@ -47,9 +50,9 @@ endif
 if !SmoothGrappleBetterLatching_Tundain == 1
 	incsrc "Beams/SmoothGrappleBetterLatching_Tundain.asm"
 endif
-if !SpinningChargeFlare_Tundain == 1
-	incsrc "Beams/SpinningChargeFlare_Tundain.asm"
-endif
+; if !SpinningChargeFlare_Tundain == 1
+	; incsrc "Beams/SpinningChargeFlare_Tundain.asm"
+; endif
 
 ;Blocks
 if !ChainBlocks_BlackFalcon == 1
@@ -305,7 +308,7 @@ if !SamusResprite == 1
 	check bankcross half
 endif
 if !ZeroSuitDeath_ProjectXVIII == 1
-	org $9B0000
+	org $9B8000
 	incbin "Offline/ZeroSuitDeath_ProjectXVIII.gfx"
 endif
 

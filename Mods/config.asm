@@ -4,11 +4,12 @@
 	!DoubleDamage = 0
 !BeamPatch_Mfreak = 0			;NOT IMPLEMENTED. HERE FOR FUTUREPROOFING
 !BrokenChargeBeam_PHOSPHOTiDYL = 1
+!ChargeFlareFix_HAM = 1
 !FullHealthChargeShot_InsaneFirebat = 1
 !PseudoScrewRequiresSpazer_Dewhi100 = 1
 !RedBeamsLowHP_Dewhi100 = 1
 !SmoothGrappleBetterLatching_Tundain = 1
-!SpinningChargeFlare_Tundain = 0	;possibly bugged. tundain is notified.
+;!SpinningChargeFlare_Tundain = 0	;possibly bugged. tundain is notified.
 
 ;Blocks
 !ChainBlocks_BlackFalcon = 1	;D horizontal E veritcal F = cross. uses shotblcoks and bomb blocks. crumbles would be nice
