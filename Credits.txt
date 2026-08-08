@@ -71,6 +71,7 @@ Nodever2
 - Single Use Gates
 - Skip Intro Flashbacks
 - Speed Booster Jump Momentum Fix
+- Speedkeep (With Oi27, Omegadragnet, Scyzer)
 - Torizo Area Bit Using Speed1
 
 Ob
@@ -85,6 +86,7 @@ Oi27
 - Limited Space Jump
 - M2 Varia Suit Effect
 - Missile Block
+- Speedkeep (With Nodever2, Omegadragnet, Scyzer)
 - Suit Aura
 - Water Droplets Effect
 
@@ -97,6 +99,7 @@ OmegaDragnet9
 - Item Grey Doors
 - Morph Speed
 - Skip Zebes Mode7 Escape
+- Speedkeep (With Nodever2, Oi27, Scyzer)
 
 PHOSPHOTiDYL
 - BrokenChargeBeam
@@ -114,6 +117,7 @@ RealRed
 
 Scyzer
 - Respin (With Kejardon, PJBoy)
+- Speedkeep (With Nodever2, Oi27, Omegadragnet)
 
 Tundain
 - Charge Missiles

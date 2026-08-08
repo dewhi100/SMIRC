@@ -181,7 +181,8 @@
 !RemoveShinesparkHealthDrain_Exister = 1
 !ShinesparkCompatibleReflecs_Tundain = 1
 !SparkBounce_Kejardon = 1
-	!disableVertical = 0	;I think vertical sparks from walljump pose feel jarring, so here's an option to disable them.
+	!disableVertical = 1	;I think vertical sparks from walljump pose feel jarring, so here's an option to disable them.
+!SpeedKeep_Various = 1		;This is the "modern" speedkeep, that requires you to press run as you land.
 
 ;Suits
 !AcidMod_BlackFalcon = 1

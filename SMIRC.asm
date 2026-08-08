@@ -285,7 +285,6 @@ if !TimeElapsedState_Dewhi100 == 1
 endif
 
 ;Samus GFX
-incsrc "SpeedBooster/SpeedKeep_Various.asm"
 if !DualSuitGfx_Crashtour99 == 1
 	incsrc "SamusGFX/DualSuitGfx_Crashtour99.asm"
 endif
@@ -298,7 +297,6 @@ endif
 if !SamusMasterDisassembly_Crashtour99 == 1
 	incsrc "SamusGFX/SamusMasterDisassembly_Crashtour99.asm"
 endif
-
 if !SamusResprite == 1
 	check bankcross off
 	org $9BE000
@@ -325,7 +323,9 @@ if !ShinesparkCompatibleReflecs_Tundain == 1
 endif
 if !SparkBounce_Kejardon == 1
 	incsrc "SpeedBooster/SparkBounce_Kejarardon/SparkBounceFunctions.asm"
-;	incsrc "SpeedBooster/SparkBounce_Kejarardon/SparkBounceTransitionTable.asm"
+endif
+if !SpeedKeep_Various == 1
+	incsrc "SpeedBooster/SpeedKeep_Various.asm"
 endif
 
 ;Suits

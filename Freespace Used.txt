@@ -98,6 +98,7 @@ Bank 90
 - Respin (Kejardon)
 - Smooth Grapple & Better Latching (Tundain)
 - Spark Bounce (Kejardon)
+- Speedkeep (Nodever2, Oi27, Omegadragnet, Scyzer)
 - Spinjump into Spacejump (dewhi100)
 - Suit Aura (Oi27)
 - Suitless Spacejump (dewhi100)
