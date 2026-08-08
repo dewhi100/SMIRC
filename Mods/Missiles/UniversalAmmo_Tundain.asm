@@ -85,12 +85,12 @@ hijacked:
   STA $7EC6A0
   LDA ammotiles+$06
   STA $7EC6A2
-  LDA #$2C5C ; draw the slash symbol (change the low byte of this value to change which hud gfx to use, or comment out this LDA and the next STA if you don't want it)
+  LDA #$2C14 ; draw the slash symbol (change the low byte of this value to change which hud gfx to use, or comment out this LDA and the next STA if you don't want it)
   STA $7EC6AA
 skiptoend:
   RTS
 ammotiles:
-DW #$2C58,#$2C59,#$2C5A,#$2C5B ; change the low byte of these value to change which tiles from the hud to use for the word "ammo"
+DW #$2C10,#$2C11,#$2C12,#$2C13 ; change the low byte of these value to change which tiles from the hud to use for the word "ammo"
 
 !free80 #= pc()
 

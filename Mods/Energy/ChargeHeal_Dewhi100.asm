@@ -22,13 +22,13 @@ CMP $09C4					;Samus Max Energy
 BPL +						;|Skip healing if full energy
 BEQ +						;/
 INC
-if !HealsCutoff == 2
-	if !HealthAlarmRevamp_MetroidNerd == 1
-		CMP !lowHealthThreshold : BPL +	;custom
-	else
+;if !HealsCutoff == 2
+;	if !HealthAlarmRevamp_MetroidNerd == 1
+;		CMP !lowHealthThreshold : BPL +	;custom
+;	else
 		CMP #$001E : BPL +	;vanilla
-	endif
-endif
+;	endif
+;endif
 STA $09C2
 +
 LDA $0CD0

@@ -115,9 +115,6 @@ WJ_CheckColR_N:
 	CLC : RTS
 }
 
-
-
-
 ;*** Also include fix for screw contact dmg not triggering during wall kick pose, can remove this next block of code if you dont want it
 
 ;;;;;;;;;;;;;;;;;;;
@@ -133,7 +130,7 @@ WJ_Screw:
 	BRA WJ_Screw_Yes
 
 WJ_Screw_No:
-	LDA $0CD0 : 
+	LDA $0CD0
 	if !AccelCharge_Oi27 == 0
 		CMP #$003C
 	else

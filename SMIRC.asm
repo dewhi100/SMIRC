@@ -1,5 +1,7 @@
 ;|||   Super Metroid Integrated Resource Collection |||;
-lorom
+
+ASAR 1.90
+LoROM
 
 if 1 == 1	;Easily disable assembling while debugging
 {
@@ -7,11 +9,18 @@ if 1 == 1	;Easily disable assembling while debugging
 
 incsrc "config.asm"
 
+
 ;"Offline" resources. These are in my local build but not source control.
 ;This is because I haven't received permission to host them, or was explicitly told not to.
 ;(Nobody has told me "no" yet, only left me on read. In the future I may host those people's resources depending on circumstances.)"
 ;(For example, an author who nobody has seen nor heard from in years. Not naming any names.)
 ;If you want any of these, DM me.
+if !BlockRevealingMissile_MarioFanGamer == 1
+	incsrc "Offline/BlockRevealingMissile_MarioFanGamer.asm"
+endif
+if !ChargeFlareFix_HAM == 1
+	incsrc "Offline/ChargeFlareFix_HAM.asm"
+endif
 if !MapOverhaul_Mfreak == 1
 	incsrc "Offline/MapOverhaul/MapOverhaul_v1.2.7(asar).asm"
 endif
@@ -24,6 +33,10 @@ endif
 if !SkipIntro_Phosphotidyl == 1
 	incsrc "Offline/SkipIntro_PhosphotiDYL.asm"
 endif
+if !ZeroSuitDeath_ProjectXVIII == 1
+	org $9B8000
+	incbin "Offline/ZeroSuitDeath_ProjectXVIII.gfx"
+endif
 
 ;Beams
 if !AccelCharge_Oi27 == 1
@@ -34,9 +47,6 @@ if !BeamBasedPseudoScrewDamage_Dewhi100 == 1
 endif
 if !BrokenChargeBeam_PHOSPHOTiDYL
 	incsrc "Beams/BrokenChargeBeam_PHOSPHOTiDYL.asm"
-endif
-if !ChargeFlareFix_HAM == 1
-incsrc "Offline/ChargeFlareFix_HAM.asm"
 endif
 if !FullHealthChargeShot_InsaneFirebat == 1
 	incsrc "Beams/FullHealthChargeShot_InsaneFirebat.asm"
@@ -55,6 +65,8 @@ endif
 ; endif
 
 ;Blocks
+
+
 if !ChainBlocks_BlackFalcon == 1
 	incsrc "Blocks/ChainBlocks_BlackFalcon.asm"
 endif
@@ -315,10 +327,6 @@ if !SamusResprite == 1
 	warnpc $9FF740
 	check bankcross half
 endif
-if !ZeroSuitDeath_ProjectXVIII == 1
-	org $9B8000
-	incbin "Offline/ZeroSuitDeath_ProjectXVIII.gfx"
-endif
 
 ;Speed Booster
 if !ChainSpark_Various == 1
@@ -376,6 +384,9 @@ endif
 if !MissilePickupsRefill == 1
 	org $8489B3
 	STA $09C6		;Store max missile that was just calculated to samus missile
+	if !UniversalAmmo_Tundain == 1
+		JSR updatemissles
+	endif
 	JMP $89BD		;Jump past now undeeded code space
 endif
 if !RemoveMorphBounce == 1
