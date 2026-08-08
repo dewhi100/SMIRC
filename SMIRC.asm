@@ -304,6 +304,10 @@ if !SamusResprite == 1
 	warnpc $9FF740
 	check bankcross half
 endif
+if !ZeroSuitDeath_ProjectXVIII == 1
+	org $9B0000
+	incbin "Offline/ZeroSuitDeath_ProjectXVIII.gfx"
+endif
 
 ;Speed Booster
 if !ChainSpark_Various == 1

@@ -138,9 +138,9 @@
 
 ;Pause Screen
 !EquipScreenDisassembly_Tundain = 1
-!MapOverhaul_Mfreak = 1					;NOT INCLUDED IN SMIRC. SET THIS TO '0'
-!MenuColoredSamus_RealRed = 1			;NOT INCLUDED IN SMIRC. SET THIS TO '0'
-!PercentTime_FelicityVi = 1				;NOT INCLUDED IN SMIRC. SET THIS TO '0'
+!MapOverhaul_Mfreak = 1					;NOT INCLUDED IN SMIRC. SET THIS TO 0!
+!MenuColoredSamus_RealRed = 1			;NOT INCLUDED IN SMIRC. SET THIS TO 0!
+!PercentTime_FelicityVi = 1				;NOT INCLUDED IN SMIRC. SET THIS TO 0!
 	!TotalItems = 100					;how many items in hack
 	!BlankTile = #$295D					;-addresses for tiles in the Pause GFX ("Map Screen Graphics" in SMART)
 	!NumbersStart = #$3966				; |
@@ -173,6 +173,7 @@
 !SamusMasterDisassembly_Crashtour99 = 1
 !SamusResprite = 1		;Rewrite Samus' graphics with gfs at this path
 	!SamusRespritePath = "Offline/SamusGfxRedesign_Physix.gfx"
+!ZeroSuitDeath_ProjectXVIII = 1	;NOT INCLUDED IN SMIRC. SET THIS TO 0!
 
 ;Speed Booster
 !ChainSpark_Various = 1
