@@ -118,10 +118,11 @@
 !SkipHexMap_Mfreak = 1	;NOT INCLUDED IN SMIRC. SET THIS TO '0'
 
 ;Jumps
-!LimitedSpaceJumps_Oi27 = 1
+!EasierWallJump_Benox50 = 0
+!LimitedSpaceJumps_Oi27 = 0
 	!JumpsAllowed = $0002 		;number of jumps incl the one from the ground
-!Respin_Kejardon = 1
-!SuitlessSpaceJump_Dewhi100 = 1
+!Respin_Kejardon = 0
+!SuitlessSpaceJump_Dewhi100 = 0
 
 ;Missiles
 !AmmoRegen_Dewhi100 = 1
@@ -153,9 +154,9 @@
 	!Colon = #$3963						;/
 
 ;Physics
-!LocalGravity_Dewhi100 = 1
+!LocalGravity_Dewhi100 = 0
 	!resetGravityMode = 1	;0: use RoomVar, 1:  use RoomVar (positive values only), 2: Zeroed on entering rooms.
-!PlanetaryGravityRework_Dewhi100 = 1	;See patch for customization options
+!PlanetaryGravityRework_Dewhi100 = 0	;See patch for customization options
 
 ;PLMs
 !FX_LevelPLM_OmegaDragnet = 1
@@ -182,10 +183,10 @@
 ;Speed Booster
 !ChainSpark_Various = 1
 !Downsparking_Tundain = 1
-!FixSpeedBoosterJumpMomentum_Nodever2 = 1
+!FixSpeedBoosterJumpMomentum_Nodever2 = 0
 !RemoveShinesparkHealthDrain_Exister = 1
 !ShinesparkCompatibleReflecs_Tundain = 1
-!SparkBounce_Kejardon = 1
+!SparkBounce_Kejardon = 0
 	!disableVertical = 1	;I think vertical sparks from walljump pose feel jarring, so here's an option to disable them.
 !SpeedKeep_Various = 1		;This is the "modern" speedkeep, that requires you to press run as you land.
 

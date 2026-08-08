@@ -2,6 +2,7 @@ List of resources, by author:
 
 Benox50
 - Chain Sparking (PHOSPHOTiDYL, Project Base devs)
+- Easier Wall Jumps
 
 Black Falcon
 - Acid Mod

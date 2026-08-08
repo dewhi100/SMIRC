@@ -211,6 +211,9 @@ if !SkipIntroFlashbacks_Nodever2 == 1
 endif
 
 ;Jumps
+if !EasierWallJump_Benox50 == 1
+	incsrc "Jumps/EasierWallJump_Benox50.asm"
+endif
 if !LimitedSpaceJumps_Oi27 == 1
 	incsrc "Jumps/LimitedSpaceJumps_Oi27.asm"
 endif
