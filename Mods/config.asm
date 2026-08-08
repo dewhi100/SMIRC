@@ -176,6 +176,7 @@
 	!SamusRespritePath = "Offline/SamusGfxRedesign_Physix.gfx"
 
 ;Speed Booster
+!ChainSpark_Various = 1
 !Downsparking_Tundain = 1
 !FixSpeedBoosterJumpMomentum_Nodever2 = 1
 !RemoveShinesparkHealthDrain_Exister = 1

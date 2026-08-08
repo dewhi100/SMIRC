@@ -122,6 +122,7 @@ Bank 93
 
 Bank 94
 - Bomb Launcher (Ob)
+- Chain Spark (Benox50, PHOSPHOTiDYL, Project Base devs)
 - Drop-Thru Platforms
 - Event BTS (OmegaDragnet)
 - MOAR Items (Mccad)

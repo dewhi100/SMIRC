@@ -1,5 +1,8 @@
 List of resources, by author:
 
+Benox50
+- Chain Sparking (PHOSPHOTiDYL, Project Base devs)
+
 Black Falcon
 - Acid Mod
 - Chain Blocks
@@ -97,10 +100,14 @@ OmegaDragnet9
 
 PHOSPHOTiDYL
 - BrokenChargeBeam
+- Chain Sparking (With Benox50, Project Base devs)
 
 PJBoy
 - Bomb Torizo Item Override
 - Respin (With Kejardon, Scyzer)
+
+Project Base
+- Chain Sparking (With Benox50, PHOSPHOTiDYL)
 
 RealRed
 - Menu Colored Samus
