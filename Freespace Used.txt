@@ -37,6 +37,7 @@ Bank 84
 - Event Doors (dewhi100)
 - Event Gray Doors (OmegaDragnet)
 - Event Station (dewhi100)
+- Fix Kraid Vomit (PJBoy)
 - FX Level PLM
 - Gadora Charge Vulnerability (Nodever2)
 - Generic Maridia Tube (OmegaDragnet)

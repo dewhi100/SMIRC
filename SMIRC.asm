@@ -82,6 +82,11 @@ if !PowerBombsRemoveWater_Moehr == 1
 	incsrc "Bombs/PowerBombsRemoveWater_Moehr.asm"
 endif
 
+;Bosses
+if !FixKraidVomit_PJBoy == 1
+	incsrc "Bosses/FixKraidVomit_PJBoy.asm"
+endif
+
 ;Doors
 if !DoorTransitions_Nodever2 == 1
 	incsrc "Doors/Door_Transitions_v1.1.1_Nodever2.asm"

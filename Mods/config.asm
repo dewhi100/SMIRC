@@ -25,6 +25,9 @@
 	!bombLauncherAmmoRequirement = 1	;if using universal ammo, you can use it for bomb launcher too.
 !PowerBombsRemoveWater_Moehr = 1
 
+;Bosses
+!FixKraidVomit_PJBoy = 1
+
 ;Doors
 !DoorTransitions_Nodever2 = 1	;see file for full list of custom options. There are too many to list here.
     !AddOptionToFadeLayer1      = 0  ; If enabled, set the 20h bit in door elevator properties to fade layer 1 per-door (this works just like the CRE bitflag that bosses use in vanilla). (In SMART: Raw > bitflag)

@@ -107,6 +107,7 @@ PHOSPHOTiDYL
 
 PJBoy
 - Bomb Torizo Item Override
+- Fix Kraid Vomit
 - Respin (With Kejardon, Scyzer)
 
 Project Base
