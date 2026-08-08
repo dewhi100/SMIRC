@@ -285,6 +285,7 @@ if !TimeElapsedState_Dewhi100 == 1
 endif
 
 ;Samus GFX
+incsrc "SpeedBooster/SpeedKeep_Various.asm"
 if !DualSuitGfx_Crashtour99 == 1
 	incsrc "SamusGFX/DualSuitGfx_Crashtour99.asm"
 endif
