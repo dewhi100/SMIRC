@@ -1,7 +1,7 @@
 lorom
 
 ;-----------------------------------------------------------------------------------------------MOAR ITEMS----------------------------------------------------------------------------------------------|
-;MOAR ITEMS adds 3 new, unique upgrades to Super Metroid without overwriting or disabling any of the vanilla items, as well as PLMs to unlock them. The equipment bits are loaded to $7ED8AE.			|
+;MOAR ITEMS adds 3 new, unique upgrades to Super Metroid without overwriting or disabling any of the vanilla items, as well as PLMs to unlock them. The equipment bits are loaded to !MoarItemsFlags.			|
 ;-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 ;WAVE DASH: While spinjumping, hold run and double tap left or right to become temporarily invulerable and dash through enemies.																		|
 ;																																																		|
@@ -48,7 +48,7 @@ else;																			|
 endif;																			|
 !DashCooldn = #$0008 ; cooldown of wave dash in frames							|
 !HamBalVelc = #$000C ; Hammer ball velocity										|
-!GaussMDmg = #$0096 ; Gauss missile damage										|
+!GaussMDmg = $0096 ; Gauss missile damage										|
 ;!MSGWaveDsh = #$01 ; Wave dash message box index								|	;;; THE NEW ITEMS DO NOT HAVE CUSTOM MESSAGE BOXES!			
 ;!MSGGaussMs	= #$01 ; Gauss missile message box index							|	;;; Adding the new message boxes for these items
 ;!MSGHammer = #$01 ;Hammer ball message box index								|	;;; is up to you, and can be done with existing
@@ -69,13 +69,19 @@ JSL $A08EB6 : RTL								;Run the instruction overwritten by the hijack and then
 endif
 
 if !WaveDash_Mccad == 1 && !WaveDashOncePerJump == 1
+	if !LimitedSpaceJumps_Oi27 == 0
 	org $91E94A
-	JSR resetWaveDashCounter91
-	org !free91
-	resetWaveDashCounter91:
+	JSL resetWaveDashCounterFromBank91
+	NOP
+	;JSR resetWaveDashCounter91
+	org !free83
+	resetWaveDashCounterFromBank91:
 	JSL resetWaveDashCounter
-	RTS
-	!free91 #= pc()
+	LDA #$0005
+	STA $0A2E
+	RTL
+	!free83 #= pc()
+	endif
 endif
 
 ORG !free85
@@ -103,7 +109,6 @@ if !WaveDash_Mccad != 0
 if !WaveDashOncePerJump == 1
 	resetWaveDashCounter:
 	LDA !MoarItemsCustomFlags : AND #$FFFE : STA !MoarItemsCustomFlags ;zeroes the counter
-	LDA	#$0005	;hijacked instruction
 	RTL
 endif
 
@@ -123,7 +128,7 @@ LDA !VarDirTime : BEQ + : DEC A : STA !VarDirTime : BRA ++ : + : LDA #$0000 : ST
 GetStateWave:
 
 if !WaveDashChargeCombo == 0
-	LDA $7ED8AE : BIT #$0001 : BEQ ++					;Only check inputs if Wave Dash is equipped
+	LDA !MoarItemsFlags : BIT #$0001 : BEQ ++					;Only check inputs if Wave Dash is equipped
 	LDA $8B : BIT $09B6 : BNE +						;Only check inputs if the run button is held
 else
 	LDA $09A6 : BIT #$0001	: BEQ ++ 	;is wave beam equipped
@@ -184,6 +189,13 @@ endif
 LDA $8B : BIT $09B0 : BEQ + : LDA !VarWState : CMP #$0002 : BEQ EndWaveDash			;If you press right while going left, end the routine
 + : LDA $8B : BIT $09AE : BEQ + : LDA !VarWState : CMP #$0001 : BEQ EndWaveDash		;If you press left while going right, end the routine			
 + : LDA $0A1F : AND #$00FF : CMP #$0003 : BNE EndWaveDash 
+
+; LDA $0DD0 : BEQ +
+; LDA $0AF6		; Samus X position
+; CMP $0B10		; Samus previous X position.
+; BEQ EndWaveDash
+; +
+
 JMP WaveDashMainASM	;End routine if not spinjumping
 
 EndWaveDash:															;;;Branch here to end wave dash
@@ -275,7 +287,7 @@ if !HammerBall_Mccad != 0
 HammerBallRoutine:
 print "HAMMERBALL: ", pc
 if !HammerBallRequireSpringBall == 0
-	LDA $7ED8AE : BIT #$0004 : BNE + : JMP EndHMB ;dont do hb if missing item flag
+	LDA !MoarItemsFlags : BIT #$0004 : BNE + : JMP EndHMB ;dont do hb if missing item flag
 else
 	LDA $09A2 : BIT #$0002 : BNE ++ : JMP EndHMB	;check for springball
 endif
@@ -380,52 +392,52 @@ endmacro
 ;GAUSS MISSLES
 CreateGaussMissile:	;;;Runs from the projectile initialization routine in $93. Checks if the projectile is a missile, and then checks for the Gauss missile item bits. If so, manually set to dataset 4.
 CPY #$0002 : BNE + 												;If not missiles, return
-LDA $7ED8AE : BIT #$0002 : BEQ +									;If gauss missiles are not equipped, branch out
+LDA !MoarItemsFlags : BIT #$0002 : BEQ +									;If gauss missiles are not equipped, branch out
 LDY #$0008 														;Load dataset 4 (#$0008)
 + : LDA $83F1,Y : TAY : RTL										;Run vanilla code and return
 
 SpeedupGaussY: PHA : LDA $0C18,X : CMP #$8100 : BNE ++		;Check the projectile type for missile
-LDA $7ED8AE : BIT #$0002 : BEQ ++								;If gauss missiles are not equipped, branch out
+LDA !MoarItemsFlags : BIT #$0002 : BEQ ++								;If gauss missiles are not equipped, branch out
 LDA $0BF0,X : BMI +												;If its a missile, check the Y speed.
 LDA #$0C00 : STA $0BF0,X : PLA : %BeamPatchCompatability($94A4D9) : RTL				;If positive, set speed to #$0800
 + : LDA #$F4FF : STA $0BF0,X : PLA : %BeamPatchCompatability($94A4D9) : RTL			;If negative, set speed to #$F800
 ++ : PLA : %BeamPatchCompatability($94A4D9) : RTL										;If its not a missile, dont change anything
 
 SpeedupGaussX: PHA : LDA $0C18,X : CMP #$8100 : BNE ++		;Check the projectile type for missile
-LDA $7ED8AE : BIT #$0002 : BEQ ++								;If gauss missiles are not equipped, branch out
+LDA !MoarItemsFlags : BIT #$0002 : BEQ ++								;If gauss missiles are not equipped, branch out
 LDA $0BDC,X : BMI +												;If its a missile, check the X speed.
 LDA #$0C00 : STA $0BDC,X : PLA : %BeamPatchCompatability($94A46F) : RTL				;If positive, set speed to #$0800
 + : LDA #$F4FF : STA $0BDC,X : PLA : %BeamPatchCompatability($94A46F) : RTL			;If negative, set speed to #$F800
 ++ : PLA : %BeamPatchCompatability($94A46F) : RTL										;If its not a missile, dont change anything
 
 SpeedupGaussYDiag: PHA : LDA $0C18,X : CMP #$8100 : BNE ++	;Check the projectile type for missile
-LDA $7ED8AE : BIT #$0002 : BEQ ++								;If gauss missiles are not equipped, branch out
+LDA !MoarItemsFlags : BIT #$0002 : BEQ ++								;If gauss missiles are not equipped, branch out
 LDA $0BF0,X : BMI +												;If its a missile, check the Y speed.
 LDA #$0800 : STA $0BF0,X : PLA : %BeamPatchCompatability($94A4D9) : RTL				;If positive, set speed to #$0800
 + : LDA #$F7FF : STA $0BF0,X : PLA : %BeamPatchCompatability($94A4D9) : RTL			;If negative, set speed to #$F800
 ++ : PLA : %BeamPatchCompatability($94A4D9) : RTL										;If its not a missile, dont change anything
 
 SpeedupGaussXDiag: PHA : LDA $0C18,X : CMP #$8100 : BNE ++	;Check the projectile type for missile
-LDA $7ED8AE : BIT #$0002 : BEQ ++								;If gauss missiles are not equipped, branch out
+LDA !MoarItemsFlags : BIT #$0002 : BEQ ++								;If gauss missiles are not equipped, branch out
 LDA $0BDC,X : BMI +												;If its a missile, check the X speed.
 LDA #$0800 : STA $0BDC,X : PLA : %BeamPatchCompatability($94A46F) : RTL				;If positive, set speed to #$0800
 + : LDA #$F7FF : STA $0BDC,X : PLA : %BeamPatchCompatability($94A46F) : RTL			;If negative, set speed to #$F800
 ++ : PLA : %BeamPatchCompatability($94A46F) : RTL										;If its not a missile, dont change anything
 
 SoundFXGauss: PHA : CPX #$0002 : BNE + 						;Check for a missile
-LDA $7ED8AE : BIT #$0002 : BEQ +									;If gauss missiles are not equipped, branch out
+LDA !MoarItemsFlags : BIT #$0002 : BEQ +									;If gauss missiles are not equipped, branch out
 LDA #$001f : JSL $80914D : PLA : RTL								;If so, play a library 3 sound
 + : PLA : JSL $809049 : RTL										;Otherwise, play the normal sound effect
 
 !free85 #= pc()
 
 ORG $938038 : JSL CreateGaussMissile				;guass missiles are commented to save room
-if !BeamPatch_Mfreak == 0
+;if !BeamPatch_Mfreak == 0
 	ORG $90AFCA : JSL SpeedupGaussY
 	ORG $90AFD2 : JSL SpeedupGaussXDiag
 	ORG $90AFD8 : JSL SpeedupGaussYDiag
 	ORG $90AFE0 : JSL SpeedupGaussX
-endif
+;	endif
 
 ORG $90BEEF : JSL SoundFXGauss 		;BEEF
 
@@ -537,7 +549,7 @@ if !WaveDash_Mccad == 1 || !GaussMissiles_Mccad == 1 || !HammerBall_Mccad == 1
 ORG !free84
 FreeSpace84:	;;;PLM ENTRIES
 
-if !WaveDash_Mccad && !WaveDashChargeCombo != 1
+if !WaveDash_Mccad == 1 && !WaveDashChargeCombo != 1
 	print "||||||||||||||||"
 	print "wave dash PLM ", pc
 	DW $EE64,PLMWaveDashInst				;Wave dash item plm
@@ -659,8 +671,8 @@ if !HammerBall_Mccad && !HammerBallRequireSpringBall != 1
 endif
 
 	SetBit:
-	LDA $1234
-	LDA $7ED8AE : ORA $0000,Y : STA $7ED8AE					;Set the item to equipped
+	LDA $1234	;????
+	LDA !MoarItemsFlags : ORA $0000,Y : STA !MoarItemsFlags					;Set the item to equipped
 	LDA #$0168 : JSL $82E118									;Play room music after 6 seconds
 	LDA $0002,Y : AND #$00FF : JSL $858080					;Display message box
 	INY : INY : INY : RTS									;Y += 3
@@ -679,12 +691,20 @@ JSR IgnoreWalls : NOP
 org !free94
 IgnoreWalls:
 PHA ;save A for later (it will become X). 
-LDA !VarWState : BEQ +
-LDA $7F0000,x : AND #$F000 : BNE + ;branch if not air
-LDA $7F0004,x : AND #$F000 : BNE + ;x = current block + 1 (well 2 but you get it), load that block and test if its air.
-PLA : RTS ;skip the collision routine
+;BRA ++
+LDA !VarWState : BEQ ++
+CMP #$0001 : BEQ rightWallCheck		;1 is right 2 is left
+LDA $7F0000,x : BIT #$F000 : BEQ + ;block to our left. branch if air.
+BRA centerWallCheck
+rightWallCheck:
+LDA $7F0004,x : BIT #$F000 : BEQ + ;block to our right. branch if air.
+centerWallCheck:
+LDA $7F0002,x : BIT #$F000 : BEQ ++ ;our block. branch if not air.
+LDA #$0000 : STA !VarWState			;clear wave dash state
+++
+PLA : TAX : JSR ($94D5,x) : RTS		;do normal code
 +
-PLA : TAX : JSR ($94D5,x) : RTS	;do normal code
+PLA : RTS 							;skip the collision routine
 
 IgnoreWallsVertical:
 PHA : LDA !VarWState : BEQ +

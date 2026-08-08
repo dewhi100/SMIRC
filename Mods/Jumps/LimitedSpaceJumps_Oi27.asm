@@ -66,12 +66,17 @@ RTS
 
 org $91E94A
 JSR ClearLandFlag
+NOP : NOP
 
 org !unused91EC9D
 ClearLandFlag:
 ;[A] needs to be 5 before RTS.
 JSL RecoverSpaceJump
+if !WaveDash_Mccad == 1 && !WaveDashOncePerJump == 1
+JSL resetWaveDashCounter
+endif
 LDA #$0005
+STA $0A2E
 RTS
 
 warnpc !unused91EC9DEnd

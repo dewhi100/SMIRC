@@ -63,6 +63,7 @@
 
 
 !CollectedItems = $7ED86E
+!MoarItemsFlags = $7ED8AE
 !OmegaDragnetRAM = $7EF4A0
 !VarWState = $7FFA02
 !NodeverRAM = $7FFC02

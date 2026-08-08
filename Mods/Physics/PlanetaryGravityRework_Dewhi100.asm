@@ -140,7 +140,7 @@ warnpc $909CAC
 org $9098BC	;Routine: Make Samus Jump
 MakeSamusJump:
 if !LimitedSpaceJumps_Oi27 == 0
-	PHP : PHB : PHK : 
+	PHP : PHB : PHK
 else
 JSR CountJump
 PLB : REP #$30	;the usual housekeeping (abridged)

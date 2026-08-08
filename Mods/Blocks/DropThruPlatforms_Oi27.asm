@@ -68,3 +68,5 @@ LDA $0AFA : CLC : ADC $0B00 : CMP $16 : BPL + ;If Samus is above the block
 +
 PLA
 RTS
+
+!free94 #= pc()
