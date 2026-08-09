@@ -59,6 +59,7 @@
 !AccelChargeCounter = $09F4
 !MoarItemsCustomFlags = $0A1A
 !HyperFlag = $0A76
+!Freezetime = $0A78
 !msgRam = $0B0C
 !localGravity = $0B30
 !E_Ypos = $0F7E

@@ -113,6 +113,7 @@ PJBoy
 
 Project Base
 - Chain Sparking (With Benox50, PHOSPHOTiDYL)
+- Fast Elevators
 
 RealRed
 - Menu Colored Samus
@@ -122,6 +123,7 @@ Scyzer
 - Speedkeep (With Nodever2, Oi27, Omegadragnet)
 
 Tundain
+- Camera Rework
 - Charge Missiles
 - Decompression Optimization (With Kejardon, and Maddo)
 - Downsparking

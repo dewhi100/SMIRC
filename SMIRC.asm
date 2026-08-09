@@ -266,6 +266,9 @@ if !SafeUnmorph_Tundain == 1
 endif
 
 ;Optimizations
+if !CameraRework_Tundain == 1
+	incsrc "Optimizations/CameraRework_Tundain/camera rework.asm"
+endif
 if !Decompression_Kejardon_Tundain == 1
 	incsrc "Optimizations/Decompression_Kejardon_Tundain.asm"
 endif

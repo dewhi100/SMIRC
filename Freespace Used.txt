@@ -15,7 +15,8 @@ Bank 81
 - Suit Aura (Oi27)
 
 Bank 82
-- Ammo Regen (dewhi100
+- Ammo Regen (dewhi100)
+- Camera Rework (Tundain)
 - Door Transitions (Nodever2)
 - Instant Pickups (Oi27)
 - Menu Colored Samus (RealRed)
@@ -55,6 +56,9 @@ Bank 84
 Bank 86
 - Universal Ammo (Tundain)
 - Water Droplets Effect (Oi27)
+
+Bank 88
+- Camera Rework (Tundain)
 
 Bank 89
 - Accel Charge (Oi27)
@@ -124,6 +128,7 @@ Bank 93
 
 Bank 94
 - Bomb Launcher (Ob)
+- Camera Rework (Tundain)
 - Chain Spark (Benox50, PHOSPHOTiDYL, Project Base devs)
 - Drop-Thru Platforms
 - Event BTS (OmegaDragnet)
@@ -137,6 +142,7 @@ Bank 9B
 Bank A0
 - Beam Based Pseudo-Screw Attack Damage (dewhi100)
 - Bomb Launcher (Ob)
+- Camera Rework (Tundain)
 - Enemy Always Freezes Vulnerability (Tundain)
 - Enemies Stay Dead (Nodever2)
 - Ice Plus Missile Damage (Oi27)
@@ -155,6 +161,9 @@ Bank A3
 
 Bank AA
 - Torizo Area Bit (Nodever2)
+
+Bank B0
+- Camera Rework (Tundain)
 
 Bank B2
 - Slope Compatible Space Pirates (Tundain)

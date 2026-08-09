@@ -142,6 +142,8 @@
 !SafeUnmorph_Tundain = 1
 
 ;Optimizations
+!CameraRework_Tundain = 1
+	!disableManualCamera = 1	;if set to 1, no manual camera control (I have seen people trigger it by mistake while playing and get confused)
 !Decompression_Kejardon_Tundain = 1	;So much work went into this by both that it makes sense to include them.
 !FasterElevators_ProjectBase = 1
 

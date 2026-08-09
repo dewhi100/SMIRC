@@ -20,7 +20,7 @@ LoROM
 
 ;;Jumping constants (with and without Hi-jump)
 
-!subJumpAir = $E000		;vanilla $E000
+!subJumpAir = $4000		;vanilla $E000
 !subJumpWater = $C000	;vanilla $C000
 !subJumpLava = $C000	;vanilla $C000
 
