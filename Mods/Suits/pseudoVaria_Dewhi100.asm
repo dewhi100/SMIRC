@@ -21,7 +21,7 @@ ChargedIceCheck:	;returns item flags, after bitmasking with varia and/or gravity
 JSR CheckIce
 BCS +
 LDA $09A2	;if charge counter not 78 or euipped beams does not have ice, load normal item flags
-if !HeatProofGravitySuit = 0
+if !HeatProofGravitySuit == 0
 	AND #$0001	;CHANGE TO #$0021 TO INCLUDE GRAVITY
 else
 	AND #$0021	;CHANGE TO #$0021 TO INCLUDE GRAVITY

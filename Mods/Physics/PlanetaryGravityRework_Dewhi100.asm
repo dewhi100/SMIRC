@@ -60,7 +60,7 @@ LoROM
 !subBombjumpWater = $1000	;vanilla $1000
 !subBombjumpLava = $1000	;vanilla $1000
 
-!bombjumpAir = 2			;vanilla 2
+!bombjumpAir = 3			;vanilla 2
 !bombjumpWater = 0			;vanilla 0
 !bombjumpLava = 0			;vanilla 0
 

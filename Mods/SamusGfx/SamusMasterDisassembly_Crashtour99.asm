@@ -2589,7 +2589,7 @@ ORG $92945D		;lower half indexing
 DW (P00_LT-$808D)/2, (P01_LT-$808D)/2, (P02_LT-$808D)/2, (P03_LT-$808D)/2, (P04_LT-$808D)/2, (P05_LT-$808D)/2, (P06_LT-$808D)/2, (P07_LT-$808D)/2, (P08_LT-$808D)/2, (P09_LT-$808D)/2, (P0A_LT-$808D)/2, (P0B_LT-$808D)/2, (P0C_LT-$808D)/2, (P0D_LT-$808D)/2, (P0E_LT-$808D)/2, (P0F_LT-$808D)/2
 DW (P10_LT-$808D)/2, (P11_LT-$808D)/2, (P12_LT-$808D)/2, (P13_LT-$808D)/2, (P14_LT-$808D)/2, (P15_LT-$808D)/2, (P16_LT-$808D)/2, (P17_LT-$808D)/2, (P18_LT-$808D)/2, (P19_LT-$808D)/2, (P1A_LT-$808D)/2, (P1B_LT-$808D)/2, (P1C_LT-$808D)/2, (P1D_LT-$808D)/2, (P1E_LT-$808D)/2, (P1F_LT-$808D)/2
 
-if !SparkBounce_Kejardon = 0
+if !SparkBounce_Kejardon == 0
 DW (P20_LT-$808D)/2, (P21_LT-$808D)/2
 else
 DW !TilemapIndexBase+2, !TilemapIndexBase+6

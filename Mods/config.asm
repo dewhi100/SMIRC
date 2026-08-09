@@ -22,7 +22,7 @@
 
 ;Bombs
 !BombLauncher_Ob = 1	;set the item bit you want for this in stddefines.txt. Does not handle drawing icon the HUD.
-	!HUD_Index = 4 ; 0..4
+	!HUD_Index = 2 ; 0..4
 	!bombLauncherAmmoRequirement = 1	;if using universal ammo, you can use it for bomb launcher too.
 !PowerBombsRemoveWater_Moehr = 1
 
@@ -130,9 +130,10 @@
 !AmmoRegen_Dewhi100 = 1
 !BlockRevealingMissile_MarioFanGamer = 1
 !ChargeMissiles_Tundain = 1	;Note: add $0100 to the PLM argument to make it a charged Super item rather than charged missile
-	!withPLMs = 1			;if 1, will use PLMs to set the item flags
+	!needsMainSupers = 1
+	!withPLMs = 0			;if 1, will use PLMs to set the item flags
 !IcePlusMissileDamage_Oi27 = 1
-!SupersNeedMains_Dewhi100 = 1
+!SupersNeedMains_Dewhi100 = 0
 	!StarterAmmo = 05
 !UniversalAmmo_Tundain = 1	;You must supply the "ammo:" HUD text yourself 
 	!AmmoPLM = 1	;a specialized universal ammo tank.	0XXX = big, 1XXX = small, X0XX ... X2XX are normal/orb/hidden

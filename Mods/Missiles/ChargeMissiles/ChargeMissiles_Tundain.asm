@@ -108,6 +108,9 @@ STA $08
 JMP $BE65; go to vanilla missile/super missile handler
 
 charge:
+if !needsMainSupers != 0
+	LDA $09CC : BEQ regular
+endif
 LDA !Chargetimer : STA !PrevChargetimer; update previous charge timer
 LDA !PrevInput : AND !Shootbinding : BEQ finish; if we released shoot (or didn't press it), lookup what to do
 LDA !Chargetimer : CMP #$0078 : BEQ $01 : INC : STA !Chargetimer; else (means we're holding shoot) increase timer if below $0078

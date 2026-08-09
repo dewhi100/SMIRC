@@ -18,6 +18,7 @@ lorom
 ;!Bank88Freespace = $88EE40; fx display correctly
 ;!Bank82Freespace = $82F710 ; door transition cancels manual mode
 ;!BankB0freespace = $B0EE00 ; corner sprites during manual mode gfx
+;and bank a0 is used too.
 
 ;user define
 !ManualSpeed = #$0008 ; speed at which to move when in manual mode, maximum is #$0010, higher will cause scrolling issues.
