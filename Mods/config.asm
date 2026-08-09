@@ -45,6 +45,7 @@
 !HomingDrops_Nodever2 = 1
 
 ;Effects
+!ScrollingSkyFix_Amoeba = 1
 !SuitAura_Oi27 = 1		;you can set the item that grants aura in the stddefines.txt file. setting to $0000 will remove the item check
 	!AuraRadius = 1     ;(d. pixels) CANNOT BE < 1 OR BREAKS BUILD
 	!AuraITM = $0000		;item to activate the aura. unused in my custom version	
