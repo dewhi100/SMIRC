@@ -15,7 +15,9 @@ incsrc "config.asm"
 ;(Nobody has told me "no" yet, only left me on read. In the future I may host those people's resources depending on circumstances.)"
 ;(For example, an author who nobody has seen nor heard from in years. Not naming any names.)
 ;If you want any of these, DM me.
-incsrc "Offline/AmoebaScrollingSky.asm"
+if !ScrollingSkyFix_Amoeba == 1
+	incsrc "Offline/AmoebaScrollingSky.asm"
+endif
 if !BlockRevealingMissile_MarioFanGamer == 1
 	incsrc "Offline/BlockRevealingMissile_MarioFanGamer.asm"
 endif
@@ -266,6 +268,9 @@ endif
 ;Optimizations
 if !Decompression_Kejardon_Tundain == 1
 	incsrc "Optimizations/Decompression_Kejardon_Tundain.asm"
+endif
+if !FasterElevators_ProjectBase == 1
+	incsrc "Optimizations/FasterElevators_ProjectBase.asm"
 endif
 
 ;Pause screen

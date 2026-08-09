@@ -44,6 +44,7 @@
 !spawnSbaFlag = $0332
 !AuraRAM = $0336
 !AmmoRegenSubammo = $05EF
+!W_Game_state = $0998
 !JumpCounter = $099A
 !missilesCurrent = $09C6
 !missilesMax = $09C8
@@ -60,7 +61,8 @@
 !HyperFlag = $0A76
 !msgRam = $0B0C
 !localGravity = $0B30
-
+!E_Ypos = $0F7E
+!E_Ypos_sub = $0F80
 
 !CollectedItems = $7ED86E
 !MoarItemsFlags = $7ED8AE

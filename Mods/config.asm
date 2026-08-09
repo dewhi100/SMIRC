@@ -143,6 +143,7 @@
 
 ;Optimizations
 !Decompression_Kejardon_Tundain = 1	;So much work went into this by both that it makes sense to include them.
+!FasterElevators_ProjectBase = 1
 
 ;Pause Screen
 !EquipScreenDisassembly_Tundain = 1
