@@ -11,9 +11,9 @@ LoROM
 
 ;;Gravitational constants
 
-!airSubGravity = $1C00		;vanilla $1C00
-!waterSubGravity = $0800	;vanilla $0800
-!lavaSubGravity = $0900		;vanilla $0900
+!airSubGravity = $4C00		;vanilla $1C00
+!waterSubGravity = $4800	;vanilla $0800
+!lavaSubGravity = $4900		;vanilla $0900
 !airGravity = 0				;vanilla 0
 !waterGravity = 0			;vanilla 0
 !lavaGravity = 0			;vanilla 0
@@ -28,13 +28,13 @@ LoROM
 !subHiJumpWater = $8000	;vanilla $8000
 !subHiJumpLava = $8000	;vanilla $8000
 
-!jumpAir = 4			;vanilla 4
-!jumpWater = 1			;vanilla 1
-!jumpLava = 2			;vanilla 2
+!jumpAir = 8			;vanilla 4
+!jumpWater = 2			;vanilla 1
+!jumpLava = 4			;vanilla 2
 
-!hiJumpAir = 6			;vanilla 6
-!hiJumpWater = 2		;vanilla 2
-!hiJumpLava = 3			;vanilla 3
+!hiJumpAir = 10			;vanilla 6
+!hiJumpWater = 3		;vanilla 2
+!hiJumpLava = 5			;vanilla 3
 
 ;;Walljumping constants (with and without Hi-jump)
 
@@ -46,9 +46,9 @@ LoROM
 !subHiWalljumpWater = $8000	;vanilla $8000
 !subHiWalljumpLava = $8000	;vanilla $8000
 
-!walljumpAir = 4			;vanilla 4
-!walljumpWater = 0			;vanilla 0
-!walljumpLava = 2			;vanilla 2
+!walljumpAir = 7			;vanilla 4
+!walljumpWater = 2			;vanilla 0
+!walljumpLava = 4			;vanilla 2
 
 !hiWalljumpAir = 5			;vanilla 5
 !hiWalljumpWater = 0		;vanilla 0

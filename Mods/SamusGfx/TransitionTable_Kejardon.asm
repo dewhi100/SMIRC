@@ -495,14 +495,14 @@ TFC:		;FC:;Crouching to standing, facing left and aiming Downleft
 DW $FFFF
 
 T25:		;25:;starting standing right, turning left
-DW $0000,$0280,$001A
-DW $0080,$0000,$004C
+DW $0080,$0200,$001A	;Facing left  - spin jump
+DW $0080,$0000,$004C	;Facing left  - normal jump transition
 DW $0000,$0200,$0025
 DW $FFFF
 
 T26:		;26:;starting standing left, turning right
-DW $0000,$0180,$0019
-DW $0080,$0000,$004B
+DW $0080,$0100,$0019	;Facing right - spin jump
+DW $0080,$0000,$004B	;Facing right - normal jump transition
 DW $0000,$0100,$0026
 DW $FFFF
 
@@ -681,11 +681,11 @@ DW $0000,$0800,$002B
 DW $0000,$0400,$002D
 DW $0000,$0010,$006D
 DW $0000,$0020,$006F
+DW $0000,$0200,$0087
 DW $0000,$0040,$0067
 if !Respin_Kejardon != 0
 DW $0080,$0000,$0019		;Respin
 endif
-DW $0000,$0200,$0087
 DW $0000,$0100,$0067
 DW $FFFF
 
@@ -696,12 +696,12 @@ DW $0000,$0800,$002C
 DW $0000,$0400,$002E
 DW $0000,$0010,$006E
 DW $0000,$0020,$0070
+DW $0000,$0100,$0088
 DW $0000,$0040,$0068
 if !Respin_Kejardon != 0
 DW $0080,$0000,$001A	;Respin
 endif
 DW $0000,$0200,$0068
-DW $0000,$0100,$0088
 DW $FFFF
 
 T79:		;79:;Spring ball on ground, facing right

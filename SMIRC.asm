@@ -18,6 +18,9 @@ incsrc "config.asm"
 if !BlockRevealingMissile_MarioFanGamer == 1
 	incsrc "Offline/BlockRevealingMissile_MarioFanGamer.asm"
 endif
+if !BrokenChargeBeam_PHOSPHOTiDYL
+	incsrc "Beams/BrokenChargeBeam_PHOSPHOTiDYL.asm"
+endif
 if !ChargeFlareFix_HAM == 1
 	incsrc "Offline/ChargeFlareFix_HAM.asm"
 endif
@@ -44,9 +47,6 @@ if !AccelCharge_Oi27 == 1
 endif
 if !BeamBasedPseudoScrewDamage_Dewhi100 == 1
 	incsrc "Beams/BeamBasedPseudoScrewDamage_Dewhi100.asm"
-endif
-if !BrokenChargeBeam_PHOSPHOTiDYL
-	incsrc "Beams/BrokenChargeBeam_PHOSPHOTiDYL.asm"
 endif
 if !FullHealthChargeShot_InsaneFirebat == 1
 	incsrc "Beams/FullHealthChargeShot_InsaneFirebat.asm"

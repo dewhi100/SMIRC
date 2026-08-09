@@ -79,9 +79,12 @@ if !chargeAura == 1
 		LDA $0CD0 : CMP #$0078 : BEQ ++ ; change to BNE + if you uncomment below.	need more complex if using accel charge.
 ;	endif
 endif
-if !gravityEffect == 1
+LDA $0A1C : BEQ ..out	;abort if samus is in elevator pose
+if !gravityEffect != 0
+	if !gravityEffect == 1
+	LDA $0AD2 : BEQ ..out		;if physics is air, abort
+	endif
 	LDA $09A2 : BIT #$0020 : BEQ ..out	;if Gravity Suit not Equipped, abort
-	LDA $0AD2 : BEQ ..out		;if physics is not water, abort
 endif
 ;    $0A5C: Samus drawing handler
 ;    

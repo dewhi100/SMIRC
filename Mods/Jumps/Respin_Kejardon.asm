@@ -17,12 +17,14 @@ org !free90
 	CMP #$0002 : BEQ +		;normal jumping
 	CMP #$0003 : BEQ +		;spinjumping
 	CMP #$0006 : BEQ +		;falling
-	CMP #$0014 : BEQ +		;wall jumping
+	CMP #$000E : BEQ +++	;turning, on ground
+	CMP #$0014 : BEQ +		;wall jumping	
 	++
 	LDA $0A1C				;samus pose
 	EOR $0A20				;old pose
 	BIT #$0001				;did pose change due to turning around
 	BNE +
+	+++
 	JSL $9098BC				;make samus jump
 	+
 	RTL

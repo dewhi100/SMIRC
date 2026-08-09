@@ -2,8 +2,9 @@
 !AccelCharge_Oi27 = 1
 !BeamBasedPseudoScrewDamage_Dewhi100 = 1
 	!DoubleDamage = 1
-!BeamPatch_Mfreak = 1			;NOT IMPLEMENTED. HERE FOR FUTUREPROOFING
+!BeamPatch_Mfreak = 0			;NOT IMPLEMENTED. HERE FOR FUTUREPROOFING
 !BrokenChargeBeam_PHOSPHOTiDYL = 1
+	!brokenChargeBeamTimer = 60				;$3C or 60d is normal. $78 or 120 is SBA and default for the patch.
 !ChargeFlareFix_HAM = 1
 !FullHealthChargeShot_InsaneFirebat = 1
 !PseudoScrewRequiresSpazer_Dewhi100 = 1
@@ -47,7 +48,7 @@
 !SuitAura_Oi27 = 1		;you can set the item that grants aura in the stddefines.txt file. setting to $0000 will remove the item check
 	!AuraRadius = 1     ;(d. pixels) CANNOT BE < 1 OR BREAKS BUILD
 	!AuraITM = $0000		;item to activate the aura. unused in my custom version	
-	!gravityEffect = 1		;aura triggers when Gravity suit is equipped in liquids, rather than all the time
+	!gravityEffect = 2		;0 = always on. 1 = aura triggers when Gravity suit is equipped in liquids, 2 = aura trigegrs if gravity is equipped at all.
 	!chargeAura = 1			;adds an aura with beam color when fully charged. overrides gravity
 	!criticalAura = 1		;aura triggers if samus is at or below critical HP (beam palette). overrides gravity aura (white). Intended to pair with "RedBeamsLowHP"
 !WaterDroplets_Oi27 = 1		;NOTE: you wont see the graphics ingame right away when quickmetting. You need to go through a door transition in order to properly load the GFX
@@ -65,7 +66,7 @@
     !NumRooms             = $0005 ; The last !NumRooms rooms where an enemy was killed will be remembered.
 !FlippedBombTorizo_Tundain = 1
 !ImprovedMetroidLatching_Tundain = 1
-!MissileGrabbingGoldenTorizo_Tundain = 0
+!MissileGrabbingGoldenTorizo_Tundain = 1
 !OneRoomElevator_Dewhi100 = 1
 !SlopeCompatibleSpacePirates_Tundain = 1
 !TorizoAreaBit_Nodever2 = 1
@@ -176,7 +177,7 @@
 	!DualGfxPath = "VanillaSamusGFX.gfx"	;path to the alternate GFX
 !MorphRoll_BlackFalcon = 1
 !SamusElbowFix_Kejardon = 1	;not needed if you use crashtour disassembly. I think.
-!SamusMasterDisassembly_Crashtour99 = 0
+!SamusMasterDisassembly_Crashtour99 = 1
 !SamusResprite = 1		;Rewrite Samus' graphics with gfs at this path
 	!SamusRespritePath = "Offline/SamusGfxRedesign_Physix.gfx"
 !ZeroSuitDeath_ProjectXVIII = 1	;NOT INCLUDED IN SMIRC. SET THIS TO 0!
@@ -202,7 +203,7 @@
 ;If set to custom values, will trigger ASM. Any ASM that conflicts with these will shut them down
 !AcidSubDamage = $4000		;$8000
 !AcidDamage = $0000			;$0000
-!MissilesPerDoorCap = 5		;5
+!MissilesPerDoorCap = 1		;5
 !MissilePickupsRefill = 1	;By Exister
 !RemoveMorphBounce = 0		;By Omegadragnet
 !SkipDemo = 1				;1 to skip, 0 to keep
