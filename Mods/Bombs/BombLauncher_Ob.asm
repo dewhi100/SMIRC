@@ -203,31 +203,10 @@
 
 lorom
 
-;big block of dewhi code. for replacing supers spot. needs refactor
-; org $809AD2
-; JSR LauncherFlagCheck
+;highlight hud item
 
-; ;not needed if using universal ammo
-; ;org $809B0F
-; ;BRA $0C
-
-; org $809C16
-; JSR LauncherFlagCheck
-
-; org $809C34
-; NOP #3
-
-; org !free80
-; LauncherFlagCheck:
-; LDA $09A2	;equipped items
-; BIT #!bombLauncherBitflag
-; BNE + ;branch if launcher equipped
-; LDA #$0000	;default: return 0 if zero
-; RTS
-; +
-; LDA #$0001	;return 1
-; RTS
-; !free80 #= pc()
+;org !free80
+;!free80 #= pc()
 
 ;===== Bank $90 ===== Samus routines.
 org !90+!HUDSwitch
@@ -316,7 +295,7 @@ org !90+!HUDSwitch
 
     SWLauncher: 
         LDA $09A2       ;\
-        BIT !bombLauncherBitflag      ;} Check item equipped
+        BIT #!bombLauncherBitflag      ;} Check item equipped
         BNE +         ;/
 		-
         SEC : RTS       ;} Return if not
@@ -820,3 +799,49 @@ org !freeA0
         JMP $9E4A ;Returns to the JSL to run enemy shot.
 }
 !freeA0 #= pc()
+
+org !free8F
+;says "Bomb Torizo Room", but really this is for whatever room you collect bomb launcher in.
+;leaving it as-is for searchability.
+print "Bomb Torizo Room Code: ", pc
+addBombsToHUD:
+LDA $09a2 : ora $09a4 : bit #!bombLauncherBitflag : BEQ +
+if !HUD_Index == 0
+	JSL $8099CF
+endif
+if !HUD_Index == 1
+	JSL $809A0E	; Add super missiles to HUD tilemap
+endif
+if !HUD_Index == 2
+	JSL $809A1E
+endif
+if !HUD_Index == 3
+	JSL $809A2E
+endif
+if !HUD_Index == 4
+	JSL $809A3E
+endif
+
++ RTS
+
+addBombsToHudLong:
+JSR addBombsToHUD : RTL
+
+!free8F #= pc()
+
+;Adds to the HUD when loading.
+if !HUD_Index == 0
+org $8099CC : NOP #2 : JSL addBombsToHudLong
+endif
+if !HUD_Index == 1
+org $8099D5 : NOP #2 : JSL addBombsToHudLong
+endif
+if !HUD_Index == 2
+org $8099DE : NOP #2 : JSL addBombsToHudLong
+endif
+if !HUD_Index == 3
+org $8099C3 : NOP #2 : JSL addBombsToHudLong
+endif
+if !HUD_Index == 4
+org $8099B7 : NOP #2 : JSL addBombsToHudLong
+endif

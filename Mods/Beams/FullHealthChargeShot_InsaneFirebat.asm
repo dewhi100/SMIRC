@@ -1,9 +1,12 @@
 ; upgrade to charged shot when full energy
+
+if !BrokenChargeBeam_PHOSPHOTiDYL == 0
 org $90B854
     JMP FullEnergyCharge_FireBeam
 
 org $90B86A
     JMP FullEnergyBeam_ReleaseChargeEarly
+endif
 
 org !free90 ; freespace in bank $90
 FullEnergyCharge_FireBeam:

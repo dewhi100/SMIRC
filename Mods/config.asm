@@ -22,7 +22,7 @@
 
 ;Bombs
 !BombLauncher_Ob = 1	;set the item bit you want for this in stddefines.txt. Does not handle drawing icon the HUD.
-	!HUD_Index = 2 ; 0..4
+	!HUD_Index = 1 ; 0..4
 	!bombLauncherAmmoRequirement = 1	;if using universal ammo, you can use it for bomb launcher too.
 !PowerBombsRemoveWater_Moehr = 1
 
@@ -133,7 +133,7 @@
 	!needsMainSupers = 1
 	!withPLMs = 0			;if 1, will use PLMs to set the item flags
 !IcePlusMissileDamage_Oi27 = 1
-!SupersNeedMains_Dewhi100 = 0
+!SupersNeedMains_Dewhi100 = 1
 	!StarterAmmo = 05
 !UniversalAmmo_Tundain = 1	;You must supply the "ammo:" HUD text yourself 
 	!AmmoPLM = 1	;a specialized universal ammo tank.	0XXX = big, 1XXX = small, X0XX ... X2XX are normal/orb/hidden

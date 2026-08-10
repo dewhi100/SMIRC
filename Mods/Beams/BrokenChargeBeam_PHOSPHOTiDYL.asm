@@ -56,7 +56,13 @@ AnotherCheck:
 SameCheck:
 	LDA $0CD0 : BEQ EndIt : CMP #$003C : BPL Charged		;//regular charged shot timer
 Uncharged:
-	STZ $0CD0 : JSR $BCBE : JMP $B887				;//zero charge, fire uncharged shot
+	STZ $0CD0
+	if !FullHealthChargeShot_InsaneFirebat != 0
+	JMP FullEnergyBeam_ReleaseChargeEarly
+	else
+	JSR $BCBE
+	JMP $B887				;//zero charge, fire uncharged shot
+	endif
 Special:
 	JSR $CCC0 : BCC EndIt : BRA ClearEnd				;//sba code
 ;-----------------------------------------------------------------------------------------------;

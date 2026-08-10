@@ -29,8 +29,8 @@ LoROM
 !subHiJumpLava = $8000	;vanilla $8000
 
 !jumpAir = 8			;vanilla 4
-!jumpWater = 2			;vanilla 1
-!jumpLava = 4			;vanilla 2
+!jumpWater = 4			;vanilla 1
+!jumpLava = 6			;vanilla 2
 
 !hiJumpAir = 10			;vanilla 6
 !hiJumpWater = 3		;vanilla 2
@@ -230,3 +230,11 @@ JSR MakeSamusBombjump
 
 org $91FC13
 JSL MakeSamusWalljump
+
+;okay, maybe change spinjumping x speed and see what happens.
+;base table is at $909F55.
+;spinjump starts at $909F79
+;values are x accel, subaccel, max speed, max subspeed, deceleration, and subdecel.
+;vanilla: 0, c000, 1, $6000, 0, 0
+org $909F79
+DW $0001, $C000, $0002
