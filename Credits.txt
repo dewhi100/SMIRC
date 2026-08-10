@@ -1,6 +1,7 @@
 List of resources, by author:
 
 Benox50
+- 3x3 Bombs (With Nodever2)
 - Chain Sparking (PHOSPHOTiDYL, Project Base devs)
 - Easier Wall Jumps
 
@@ -59,6 +60,7 @@ Mccad
 - MOAR Items (Hammerball, Wave Dash, Gauss Missiles)
 
 Nodever2
+- 3x3 Bombs (With Benox50)
 - Death Forgiveness
 - Door Transitions
 - Enemies Stay Dead

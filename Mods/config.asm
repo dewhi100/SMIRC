@@ -21,6 +21,7 @@
 !ScrewAttackBlock_Crashtour99 = 1
 
 ;Bombs
+!ThreeByThreeBombs_Benox50_Nodever2 = 1	;this is out of alphabetical order because "three" == "3" IDK
 !BombLauncher_Ob = 1	;set the item bit you want for this in stddefines.txt. Does not handle drawing icon the HUD.
 	!HUD_Index = 1 ; 0..4
 	!bombLauncherAmmoRequirement = 1	;if using universal ammo, you can use it for bomb launcher too.

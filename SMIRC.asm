@@ -68,8 +68,6 @@ endif
 ; endif
 
 ;Blocks
-
-
 if !ChainBlocks_BlackFalcon == 1
 	incsrc "Blocks/ChainBlocks_BlackFalcon.asm"
 endif
@@ -90,6 +88,9 @@ if !ScrewAttackBlock_Crashtour99 == 1
 endif
 
 ;Bombs
+if !ThreeByThreeBombs_Benox50_Nodever2 == 1
+	incsrc "Bombs/3x3Bombs_Benox50_Nodever2.asm"
+endif
 if !BombLauncher_Ob == 1
 	incsrc "Bombs/BombLauncher_Ob.asm"
 endif
