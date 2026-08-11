@@ -94,13 +94,24 @@ endif
 
 org !free90
 
+print pc, " - Charge Missiles"
+
 ;----MISSILE/SUPERS HUD HANDLER-----------
 missilehandler:
 PHP : REP #$30
 if !withPLMs != 0
 LDA !Hudselection : ASL : TAX : LDA $09A2 : BIT huditembits,x : BEQ regular; check if we have collected corresponding charge item
 endif
+
+;CODE TO CHECK FOR AMMO IF YOU ARE USING UNIVERSAL AMMO
+;IF USING AMMO REGEN, ALLOW CHARGING ANYWAY, AND CHECK FOR REQ AMMO WHEN FIRING 
+if !UniversalAmmo_Tundain != 0 && !AmmoRegen_Dewhi100 == 0
+LDA $09C6	;missiles, or in this case, universal ammo
+SEC : SBC !supermissileweight : BMI regular
+endif 
+
 LDA !Equippedbeams : BIT #$1000 : BNE charge; check if we have charge beam equipped
+
 
 regular:
 LDA !Hudselection : STA $10;load current hud index
@@ -123,9 +134,15 @@ CMP #$003C : BPL FireUpgraded; if long enough, release upgraded variant
 cancelcharge:
 STZ !Chargetimer : JSR $BCBE ;else, cancel charging state (released charge beam but not long enough)
 LDA !Hudselection : STA $10;load current hud index
-JMP $BE76;vanilla firing routine (this allows us to fire by just tapping)
+JMP $BE76	;vanilla firing routine (this allows us to fire by just tapping)
 
 FireUpgraded:
+if !UniversalAmmo_Tundain != 0
+	if !AmmoRegen_Dewhi100 != 0
+		LDA $09C6 : SEC : CMP !supermissileweight : BMI cancelcharge
+	endif
+	LDA $09C6 : SEC : SBC !supermissileweight : STA $09C6
+endif 
 STZ !Chargetimer : JSR $BCBE;clear flare
 JSL $91DEBA;samus palette
 LDA !Hudselection : CMP #$0001 : BEQ +
@@ -133,7 +150,9 @@ INC !spawnSbaFlag; if supers selected, set mini sba flag
 LDA #$0002
 BRA firerockettype
 +:
-DEC !missiles; decrement an extra missile (so we lose two when firing charged missile), comment this line out if you don't want that
+if !UniversalAmmo_Tundain == 0
+	DEC !missiles; decrement an extra missile (so we lose two when firing charged missile), comment this line out if you don't want that
+endif
 LDA #$0001
 firerockettype:
 STA $08

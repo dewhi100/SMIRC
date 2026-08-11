@@ -14,9 +14,6 @@
 ; high byte = X2XX, means hidden plm
 lorom
 
-;these values are how much ammo it will consume when fired
-!supermissileweight = #$0005
-!PowerbombWeight = #$000A
 ;these values is how much ammo you get when picking up ammo drops
 !supermissiledropweight = #$0005
 !PowerbombdropWeight = #$000A
@@ -134,6 +131,7 @@ org $84E9E7;hidden version
 DW !powerbombcount
 
 org !free84; this is just so the game knows if you have collected supers or pbs, could be done a bit more efficiently probably, but meh, it works
+print pc, " - Universal Ammo Routines"
 updatesupers:
   STA $09C6
   INC $09CC

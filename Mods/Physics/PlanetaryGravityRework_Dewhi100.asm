@@ -12,7 +12,7 @@ LoROM
 ;;Gravitational constants
 
 !airSubGravity = $4C00		;vanilla $1C00
-!waterSubGravity = $4800	;vanilla $0800
+!waterSubGravity = $3800	;vanilla $0800
 !lavaSubGravity = $4900		;vanilla $0900
 !airGravity = 0				;vanilla 0
 !waterGravity = 0			;vanilla 0
@@ -29,11 +29,11 @@ LoROM
 !subHiJumpLava = $8000	;vanilla $8000
 
 !jumpAir = 8			;vanilla 4
-!jumpWater = 4			;vanilla 1
+!jumpWater = 5			;vanilla 1
 !jumpLava = 6			;vanilla 2
 
 !hiJumpAir = 10			;vanilla 6
-!hiJumpWater = 3		;vanilla 2
+!hiJumpWater = 7		;vanilla 2
 !hiJumpLava = 5			;vanilla 3
 
 ;;Walljumping constants (with and without Hi-jump)
@@ -47,12 +47,12 @@ LoROM
 !subHiWalljumpLava = $8000	;vanilla $8000
 
 !walljumpAir = 7			;vanilla 4
-!walljumpWater = 2			;vanilla 0
+!walljumpWater = 1			;vanilla 0
 !walljumpLava = 4			;vanilla 2
 
-!hiWalljumpAir = 5			;vanilla 5
-!hiWalljumpWater = 0		;vanilla 0
-!hiWalljumpLava = 3			;vanilla 3
+!hiWalljumpAir = 10			;vanilla 5
+!hiWalljumpWater = 2		;vanilla 0
+!hiWalljumpLava = 6			;vanilla 3
 
 ;;Bombjump constants
 
@@ -231,10 +231,10 @@ JSR MakeSamusBombjump
 org $91FC13
 JSL MakeSamusWalljump
 
-;okay, maybe change spinjumping x speed and see what happens.
 ;base table is at $909F55.
-;spinjump starts at $909F79
 ;values are x accel, subaccel, max speed, max subspeed, deceleration, and subdecel.
-;vanilla: 0, c000, 1, $6000, 0, 0
-org $909F79
+org $909F79	;spinjump
+DW $0001, $C000, $0002
+
+org $90A045	;walljump
 DW $0001, $C000, $0002

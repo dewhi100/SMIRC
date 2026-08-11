@@ -390,7 +390,8 @@ org !freeB8	;Graphic Location
 ;00's end up at $B0EA00
 ;print pc, " - Graphics"
 VAR_GFX:
-incbin varia_DMA_final.bin
+incbin !M2Anim_GFX_Path
+;incbin varia_DMA_final.bin
 ;;;;;print pc, " - Graphics End"
 
 !freeB8 #= pc()

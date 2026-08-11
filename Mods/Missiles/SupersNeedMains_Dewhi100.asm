@@ -57,6 +57,7 @@ if !InstantPickups_Oi27 == 0
 endif
 
 org !free84
+print pc, " - Supers Need Mains"
 PickMessage:
 LDA #$0000+!SuperMissileEvent
 JSL $808233	;carry set if event marked

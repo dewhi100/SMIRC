@@ -334,7 +334,7 @@ if !SamusResprite == 1
 	check bankcross off
 	org $9BE000
 	incbin !SamusRespritePath
-	warnpc $9FF740
+	warnpc $A08000
 	check bankcross half
 endif
 

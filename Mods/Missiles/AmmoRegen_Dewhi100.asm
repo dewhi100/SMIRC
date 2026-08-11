@@ -34,6 +34,7 @@ org $8489A9	;on ammo collect:
 JSR SetAmmoRegenRate
 
 org !free84
+print pc, " - Regenerate Missiles"
 SetAmmoRegenRate:
 LDA !missilesMax
 XBA
@@ -43,7 +44,7 @@ NOP #4		;wait for result
 LDA $4216
 LSR #1
 STA !AmmoRegenRate_SRAM
-LDA !missilesCurrent	;hijacked instruction
+LDA !missilesMax	;hijacked instruction
 RTS
 
 !free84 #= pc()

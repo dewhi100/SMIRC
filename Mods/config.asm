@@ -35,7 +35,7 @@
     !AddOptionToFadeLayer1      = 0  ; If enabled, set the 20h bit in door elevator properties to fade layer 1 per-door (this works just like the CRE bitflag that bosses use in vanilla). (In SMART: Raw > bitflag)
     !ReportFreespaceAndRamUsage = 0  ; Set to 0 to stop this patch from printing it's freespace and RAM usage to the console when assembled.
 !EventDoors_Dewhi100 = 0
-!EventGrayDoors_OmegaDragnet = 1
+!EventGrayDoors_OmegaDragnet = 1	;see patch for details
 	!btsEventDoor = 1
 	!plmEventDoor = 1
 	!bossEventBTS = 1
@@ -138,6 +138,10 @@
 	!StarterAmmo = 05
 !UniversalAmmo_Tundain = 1	;You must supply the "ammo:" HUD text yourself 
 	!AmmoPLM = 1	;a specialized universal ammo tank.	0XXX = big, 1XXX = small, X0XX ... X2XX are normal/orb/hidden
+	;these values are how much ammo it will consume when fired
+	!supermissileweight = #$0005
+	!PowerbombWeight = #$000A
+
 
 ;Morph
 !MorphSpeed_OmegaDragnet = 1
@@ -179,10 +183,10 @@
 !TimeElapsedState_Dewhi100 = 1
 
 ;Samus GFX
-!DualSuitGfx_Crashtour99 = 0	;gfx dont apply properly when using SMART for some reason. asking in the SMART discord
+!DualSuitGfx_Crashtour99 = 1	;gfx dont apply properly when using SMART for some reason. asking in the SMART discord
 	!DualGfxPath = "VanillaSamusGFX.gfx"	;path to the alternate GFX
 !MorphRoll_BlackFalcon = 1
-!SamusElbowFix_Kejardon = 1	;not needed if you use crashtour disassembly. I think.
+!SamusElbowFix_Kejardon = 0	;not needed if you use crashtour disassembly. I think. also possibly collides with custom gfx
 !SamusMasterDisassembly_Crashtour99 = 1
 !SamusResprite = 1		;Rewrite Samus' graphics with gfs at this path
 	!SamusRespritePath = "Offline/SamusGfxRedesign_Physix.gfx"
@@ -201,6 +205,7 @@
 ;Suits
 !AcidMod_BlackFalcon = 1
 !M2anim_Oi27 = 1				;This breaks the hidden block variety of Varia, but you weren't planning on using that... were you?
+	!M2Anim_GFX_Path = "../../Offline/M2Varia_SamusGfxRedesign_Physix.bin"
 !PseudoVaria_Dewhi100 = 1
 	!HeatProofGravitySuit = 0	;Set to 1 if you want Gravity Suit to protect from heat
 	!HalfDamageInLava = 1		;Set if you want charged Ice Beam to reduce lava damage

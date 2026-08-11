@@ -1,0 +1,3 @@
+;;; $EC00: Samus bottom tiles - set 8 - entry 1 ;;;
+{
+; 9Bh: Facing forward - varia/gravity suit - frames 2..5Fh
