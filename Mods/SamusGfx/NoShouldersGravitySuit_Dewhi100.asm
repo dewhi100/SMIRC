@@ -3,8 +3,20 @@ LoROM
 ;Hex tweaks to use the power suit gfx rather than varia when only gravity is equipped.
 ;No credit needed. This is too simple. Can if you want to though, I am not shy
 
-org $90F26E : LDA #$0000
+org $90F23C
+LDA $09A2
+BIT #$0001
+BNE +
+BIT #$0020
+BNE	++
 
+org $90F258
++
+
+org $90F267
+++
+
+org $90F26E : LDA #$0000
 
 if !M2anim_Oi27 == 0
 org $91D557 : NOP : NOP		;|not needed if using m2 varia. which overwrites these addresses anyway

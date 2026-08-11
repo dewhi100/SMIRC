@@ -44,7 +44,9 @@ DW $8724, NEW_INST
 org !free84 ;$84EFD3	;Free space $84
 NEW_INST:
 DW SUMMON_ENEMY
+if !InstantPickups_Oi27 == 0
 DW $8BDD : DB $02                            ; Clear music queue and queue item fanfare music track
+endif
 DW $E29D                               ; Clear charge beam counter
 ;DW $88F3, $0001 : DB $07                       ; Pick up equipment 1 and display message box 7
 ;^Picking up the equip is what turns Samus orange
