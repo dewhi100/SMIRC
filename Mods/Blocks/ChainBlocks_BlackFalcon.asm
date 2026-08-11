@@ -99,8 +99,11 @@
 ; simply setting the *SHOT* (not bombed!) reaction to that of a solid block seems to fix this issue, although further testing might be required
 ; this is a bug that took me ages to figure out
 
-    org $94A175+i_Bomb : DW $9D5B ; Bomb block shot reaction horizontal, this prevents bomb chain blocks from being able to be shot
-    org $94A195+i_Bomb : DW $9D5B ; Bomb block shot reaction vertical
+    ; org $94A175+i_Bomb : DW $9D5B ; Bomb block shot reaction horizontal, this prevents bomb chain blocks from being able to be shot
+    ; org $94A195+i_Bomb : DW $9D5B ; Bomb block shot reaction vertical
+    org $94A175+i_Bomb : DW bombBlockShot ; Bomb block shot reaction horizontal, this prevents bomb chain blocks from being able to be shot
+    org $94A195+i_Bomb : DW bombBlockShot ; Bomb block shot reaction vertical
+
     org $94A83B+i_Bomb : DW $9D5B ; Bomb block Grapple reaction 
     
    
@@ -252,3 +255,23 @@ JSR_SpawnDirectionalChain:
     RTS    
     
 !free84 #= pc()
+
+;;;fixing compatability with block revealing missiles
+
+org !free94
+bombBlockShot:
+	LDX $0DC4		;\
+	LDA $7F6401,x	;|vanilla code
+	AND #$FF00		;/
+	CMP #$0800 : BMI ++	;if BTS < $8, treat as normal bomb block
+	CMP #$1000 : BPL +	;if BTS >= $10, treat as solid
+	CMP #$000C : BMI + 	;if BTS < $C, treat as solid
+	;
+	LDA #$D0C8
+	JMP $A006
+	+ 
+	SEC : RTS			
+	++
+	JMP $9FE0	
+	
+!free94 #= pc()

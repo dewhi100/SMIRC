@@ -52,7 +52,6 @@ if !BombLauncher_Ob == 0
 
 org $90DD61;change hud handler locations
 DW $B80D,missilehandler,missilehandler
-
 endif
 
 org $90BE82 ;skip an unnecessary check in vanilla
