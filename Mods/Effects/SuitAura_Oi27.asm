@@ -79,7 +79,7 @@ if !chargeAura == 1
 		LDA $0CD0 : CMP #$0078 : BEQ ++ ; change to BNE + if you uncomment below.	need more complex if using accel charge.
 ;	endif
 endif
-LDA $0A1C : BEQ ..out	;abort if samus is in elevator pose
+LDA $0A1E : BEQ ..out	; |abort if samus is facing the screen (aura looks ugly)
 if !gravityEffect != 0
 	if !gravityEffect == 1
 	LDA $0AD2 : BEQ ..out		;if physics is air, abort

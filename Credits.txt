@@ -26,6 +26,7 @@ dewhi100
 - Event Station
 - Item Event PLM
 - Local Gravity
+- No Shoulders Gravity Suit
 - Planetary Gravity Rework
 - Pseudo-Screw Attack Requires Spazer
 - Random Room States

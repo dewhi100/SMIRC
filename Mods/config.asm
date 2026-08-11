@@ -186,6 +186,7 @@
 !DualSuitGfx_Crashtour99 = 1	;gfx dont apply properly when using SMART for some reason. asking in the SMART discord
 	!DualGfxPath = "VanillaSamusGFX.gfx"	;path to the alternate GFX
 !MorphRoll_BlackFalcon = 1
+!NoShouldersGravitySuit_Dewhi100 = 1
 !SamusElbowFix_Kejardon = 0	;not needed if you use crashtour disassembly. I think. also possibly collides with custom gfx
 !SamusMasterDisassembly_Crashtour99 = 1
 !SamusResprite = 1		;Rewrite Samus' graphics with gfs at this path

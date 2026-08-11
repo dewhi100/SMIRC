@@ -324,6 +324,9 @@ endif
 if !MorphRoll_BlackFalcon == 1
 	incsrc "SamusGFX/MorphRoll_BlackFalcon.asm"
 endif
+if !NoShouldersGravitySuit_Dewhi100 == 1
+	incsrc "SamusGFX/NoShouldersGravitySuit_Dewhi100.asm"
+endif
 if !SamusElbowFix_Kejardon == 1
 	incsrc "SamusGFX/SamusElbowFix_Kejardon.asm"
 endif
@@ -413,8 +416,8 @@ endif
 org $84BA54 : dw $28 ; Change this if you want, vanilla is 28h
 ;;;;;;;;;;;;;;;
 if !TerminalVelocity != 5
-	org $90910F
-	CMP #!TerminalVelocity
+	org $90910F : CMP #!TerminalVelocity
 endif
+
 }		;end of master toggle for file
 endif
