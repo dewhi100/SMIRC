@@ -106,7 +106,7 @@ endif
 ;IF USING AMMO REGEN, ALLOW CHARGING ANYWAY, AND CHECK FOR REQ AMMO WHEN FIRING 
 if !UniversalAmmo_Tundain != 0 && !AmmoRegen_Dewhi100 == 0
 LDA $09C6	;missiles, or in this case, universal ammo
-SEC : SBC !supermissileweight : BMI regular
+SEC : SBC !supermissileweight-1 : BMI regular				;subtract missile cost MINUS ONE due to one missile always getting spent regardless
 endif 
 
 LDA !Equippedbeams : BIT #$1000 : BNE charge; check if we have charge beam equipped

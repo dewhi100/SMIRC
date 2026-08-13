@@ -97,6 +97,7 @@ Bank 90
 - Local Gravity (dewhi100)
 - Morph Roll (Black Falcon)
 - Morph Speed (OmegaDragnet)
+- No Shoulders Gravity Suit (dewhi100)
 - Pseudo-Varia with Charged Ice Beam (dewhi100)
 - Pseudo-Screw Attack Requires Spazer (dewhi100)
 - Red Beams at Low HP (dewhi100)

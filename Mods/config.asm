@@ -222,3 +222,5 @@
 !RemoveMorphBounce = 0		;By Omegadragnet
 !SkipDemo = 1				;1 to skip, 0 to keep
 !TerminalVelocity = 8		;vanilla = 5
+!GrappleDelta = #$000E		;Vanilla = $000C
+!GrappleMaxLength = #$00A0 	;Vanilla = $0080

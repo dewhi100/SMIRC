@@ -61,8 +61,10 @@ powerBombDrainsWater:
 ; if water present and not draining, set level to lower via powerbomb
 LDA !powerBombActiveFlag : CMP !PB_INACTIVE : BNE exitRoutine
 
+LDA !roomFx 
 ;dewhi tweak: check for acid as well as water
-LDA !roomFx : CMP !ACID_FX : BEQ +
+;	CMP !ACID_FX : BEQ +
+
 ; if water present and not draining, set level to lower via powerbomb
 CMP !WATER_FX : BNE exitRoutine
 +
@@ -100,7 +102,7 @@ doorFxTransitionFix:
 STZ $0A9C
 
 ;restore code from hijack, and return
-JSL !animatedTilesObjectsHandler : RTS
+JSL !animatedTilesObjectsHandler : RTS	
 
 !free82 #= pc()
 

@@ -418,6 +418,10 @@ org $84BA54 : dw $28 ; Change this if you want, vanilla is 28h
 if !TerminalVelocity != 5
 	org $90910F : CMP #!TerminalVelocity
 endif
-
+;Grapple Beam Delta (how fast to send it out
+org $9BC61B			;Grapple beam "delta" (how fast it extends)
+!GrappleDelta		;Vanilla = $000C
+org $9BC71E 		;Grapple Beam max length
+!GrappleMaxLength 	;Vanilla = $0080
 }		;end of master toggle for file
 endif
