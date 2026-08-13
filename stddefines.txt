@@ -78,7 +78,7 @@
 !redEvent		= $23
 !SuperMissileEvent = $30
 
-!BlockGFX = $7F
+!BlockGFX = $DF
 !screwBlockGFX = $7E
 !missileBlockGFX = $7D
 
@@ -104,7 +104,7 @@
 !MSGWaveDsh = $01
 !MSGGaussMs	= $01
 !MSGHammer = $01
-!AccelChargeMessageIndex = $01
+!AccelChargeMessageIndex = $1D
 
 !acidDamage	= $8000
 !acidSubDamage = $0000

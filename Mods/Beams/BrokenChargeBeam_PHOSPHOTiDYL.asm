@@ -24,17 +24,37 @@ NewBeamFire:
 	LDA $09A6 : BIT #$1000 : BNE ChargeBeam					;//if charge beam, avoid this mess
 BrokenCharge:
 	LDA $8B : AND $09B2 : BNE +								;//if not holding fire...
-	LDA $0CD0 : CMP.w #!brokenChargeBeamTimer : BPL Charged					;//large timer for broken charge beam (same as sba timer)
+	LDA $0CD0 
+if !AccelCharge_Oi27 == 0
+	CMP.w #!brokenChargeBeamTimer 
+else
+	CMP AccelCharge_beam,x
+endif
+	BPL Charged					;//large timer for broken charge beam (same as sba timer)
 RegularShot:
 	LDA $8B : AND $09B2 : BEQ ClearEnd						;//if not holding fire, clear charge & end it
 	LDA $0B5E : BEQ NextCheck								;//branch if not firing already
-	LDA $0CD0 : CMP #$003C : BPL Charged				;//if overcharged, fire charged shot
+	LDA $0CD0 
+if !AccelCharge_Oi27 == 0
+	CMP #$003C 
+else
+	CMP AccelCharge_beam,x
+endif
+	BPL Charged												;//if overcharged, fire charged shot
 NextCheck:
 	LDA $8B : AND $09B2 : BEQ ExtraCheck				;//if not holding fire, skip timer increase
 	+
 	LDA $0CD0 : INC A : STA $0CD0 : BRA EndIt			;//else increase charge timer
 ExtraCheck:
-	LDA $0CD0 : BEQ EndIt : CMP #$003C : BPL ClearEnd		;//this is necessary
+	LDA $0CD0 : BEQ EndIt 
+
+if !AccelCharge_Oi27 == 0
+	CMP #$003C 
+else
+	CMP AccelCharge_beam,x
+endif
+
+	BPL ClearEnd		;//this is necessary
 Charged:
 	STZ $0CD0 : JSR $BCBE : JMP $B986				;//zero charge, fire charged shot
 ClearEnd:
@@ -48,13 +68,29 @@ EndIt:
 
 ChargeBeam:
 	LDA $0B5E : BEQ AnotherCheck					;//branch if not firing already
-	LDA $0CD0 : CMP #$003C : BPL Charged : BRA Uncharged		;//timer for regular charge beam
+	LDA $0CD0 
+	
+if !AccelCharge_Oi27 == 0
+	CMP #$003C 
+else
+	CMP AccelCharge_beam,x
+endif
+	
+	BPL Charged : BRA Uncharged		;//timer for regular charge beam
 AnotherCheck:
 	LDA $8B : AND $09B2 : BEQ SameCheck				;//if not holding fire
 	LDA $0CD0 : CMP #$0078 : BPL Special				;//sba timer
 	INC A : STA $0CD0 : BRA EndIt					;//bugfix to not fire one shot b4 holding charge
 SameCheck:
-	LDA $0CD0 : BEQ EndIt : CMP #$003C : BPL Charged		;//regular charged shot timer
+	LDA $0CD0 : BEQ EndIt 
+	
+if !AccelCharge_Oi27 == 0
+	CMP #$003C 
+else
+	CMP AccelCharge_beam,x
+endif
+	
+	BPL Charged		;//regular charged shot timer
 Uncharged:
 	STZ $0CD0
 	if !FullHealthChargeShot_InsaneFirebat != 0

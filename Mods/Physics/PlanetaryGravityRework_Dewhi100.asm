@@ -33,8 +33,8 @@ LoROM
 !jumpLava = 6			;vanilla 2
 
 !hiJumpAir = 10			;vanilla 6
-!hiJumpWater = 7		;vanilla 2
-!hiJumpLava = 5			;vanilla 3
+!hiJumpWater = 6		;vanilla 2
+!hiJumpLava = 7			;vanilla 3
 
 ;;Walljumping constants (with and without Hi-jump)
 
@@ -56,11 +56,11 @@ LoROM
 
 ;;Bombjump constants
 
-!subBombjumpAir = $C000		;vanilla $C000
+!subBombjumpAir = $4000		;vanilla $C000
 !subBombjumpWater = $1000	;vanilla $1000
 !subBombjumpLava = $1000	;vanilla $1000
 
-!bombjumpAir = 3			;vanilla 2
+!bombjumpAir = 4			;vanilla 2
 !bombjumpWater = 0			;vanilla 0
 !bombjumpLava = 0			;vanilla 0
 
@@ -143,8 +143,8 @@ if !LimitedSpaceJumps_Oi27 == 0
 	PHP : PHB : PHK
 else
 JSR CountJump
-PLB : REP #$30	;the usual housekeeping (abridged)
 endif
+PLB : REP #$30	;the usual housekeeping (abridged)
 JSR GetPhysicsIndexWithHiJump
 LDA subJumpTable,x : STA $0B2C	;Samus Y subspeed
 LDA jumpTable,x : STA $0B2E	;Samus Y speed
@@ -238,3 +238,10 @@ DW $0001, $C000, $0002
 
 org $90A045	;walljump
 DW $0001, $C000, $0002
+
+;x accel with speed
+org $909F0D 
+DW #$000A
+
+org $909F01
+DW #$0000, #$0000, #$0000, #$1600

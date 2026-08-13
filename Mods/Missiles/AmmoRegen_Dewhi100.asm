@@ -42,7 +42,7 @@ ORA !missilesMax
 STA $4202	;writes 8-bit max HP to multiplication registers
 NOP #4		;wait for result
 LDA $4216
-LSR #2
+LSR #4
 STA !AmmoRegenRate_SRAM
 LDA !missilesMax	;hijacked instruction
 RTS

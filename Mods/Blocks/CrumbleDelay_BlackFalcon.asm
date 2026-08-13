@@ -37,7 +37,7 @@
 ;*****************************************************************************************************************
 ;*                                                                                                               *
 ;*  EDITABLE LABELS:                                                                                             *
-    !crumble_delay = $0028         ;this is the frame delay for how long Samus can step on it until it breaks    *
+    ;!crumble_delay = $0028         ;this is the frame delay for how long Samus can step on it until it breaks    *
     ;CRUMBLEDELAY_FREESPACE_84 = $84F060    ;Change this to free space if already used                            *
                             ;You can change this to whatever tile you want to display when        *
 ;*                                          stepped on                                                           *

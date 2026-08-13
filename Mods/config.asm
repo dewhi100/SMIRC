@@ -14,7 +14,8 @@
 
 ;Blocks
 !ChainBlocks_BlackFalcon = 1	;D horizontal E veritcal F = cross. uses shotblcoks and bomb blocks. crumbles would be nice
-!CrumbleDelay_BlackFalcon = 1
+!CrumbleDelay_BlackFalcon = 1		;uses !BlockGfx in stddefines.
+	!crumble_delay = $0028         ;this is the frame delay for how long Samus can step on it until it breaks 
 !DropThruPlatforms_Oi27 = 1
 !EventBTS_OmegaDragnet = 1
 !MissileBlock_Oi27 = 1
@@ -107,7 +108,7 @@
 	!WaveDashCancelSpinjump = 0 		;|cancel spinjump after dashing. bugged and funny.
 	!WaveDashChargeCombo = 1			;|WaveDash requires charged wave beam rather than an item.
 	!WaveDashThroughWalls = 1			;|Samus' collision is disabled when dashing through gates, shutters, and walls of 1 tile thickness
-	!WaveDashOncePerJump = 1			;|Samus must touch the ground in between wave dashes. Based on Spin Boost's code (by Oi27)	;bugged
+	!WaveDashOncePerJump = 0			;|Samus must touch the ground in between wave dashes. Based on Spin Boost's code (by Oi27)	;bugged
 	!OverrideAura = 0					;|Suit Aura makes wavedash look ugly, so turn off aura during dash
 !HammerBall_Mccad = 1					;|while in the air in morph, hold down and press [aim down]
 	!HammerBallTriggerWithJump = 1		;|Hammerball effect triggered by the jump button
@@ -122,7 +123,7 @@
 
 ;Jumps
 !EasierWallJump_Benox50 = 1
-!LimitedSpaceJumps_Oi27 = 1
+!LimitedSpaceJumps_Oi27 = 0	;not working, but I wouldn't want it to.
 	!JumpsAllowed = $0002 		;number of jumps incl the one from the ground
 !Respin_Kejardon = 1
 !SuitlessSpaceJump_Dewhi100 = 1
@@ -136,7 +137,7 @@
 !IcePlusMissileDamage_Oi27 = 1
 !SupersNeedMains_Dewhi100 = 1
 	!StarterAmmo = 05
-!UniversalAmmo_Tundain = 0	;You must supply the "ammo:" HUD text yourself 
+!UniversalAmmo_Tundain = 1	;You must supply the "ammo:" HUD text yourself 
 	!AmmoPLM = 1	;a specialized universal ammo tank.	0XXX = big, 1XXX = small, X0XX ... X2XX are normal/orb/hidden
 	;these values are how much ammo it will consume when fired
 	!supermissileweight = #$0005
@@ -185,6 +186,7 @@
 ;Samus GFX
 !DualSuitGfx_Crashtour99 = 1	;gfx dont apply properly when using SMART for some reason. asking in the SMART discord
 	!DualGfxPath = "VanillaSamusGFX.gfx"	;path to the alternate GFX
+	!VariaOnly = 0
 !MorphRoll_BlackFalcon = 1
 !NoShouldersGravitySuit_Dewhi100 = 1
 !SamusElbowFix_Kejardon = 0	;not needed if you use crashtour disassembly. I think. also possibly collides with custom gfx

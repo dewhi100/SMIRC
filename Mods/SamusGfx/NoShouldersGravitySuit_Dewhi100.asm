@@ -23,7 +23,6 @@ org $91D557 : NOP : NOP		;|not needed if using m2 varia. which overwrites these 
 org $91D561 : LDA #$0000	;/ 
 endif
 
-org $91D639 : LDA #$0000	;facing forward, power suit
 org $91E403 : NOP : NOP	
 org $91E74C : NOP : NOP
 org $91E762 : NOP : NOP

@@ -99,7 +99,7 @@
     {;Samus handlers and projectile routines
         ;Bank 90
         !90 = $900000
-        !90Free = $F733
+;        !90Free = $F733
         !HUDSwitch      = $C539 ;Rewritten routine
         !HUDHandler     = $DDC8 ;X-ray's handler
         !KillPj         = $ADB7
@@ -117,7 +117,7 @@
 
         ;Bank 94
         !94 = $940000
-        !94Free = $B31C
+;        !94Free = $B31C
         !SpreadCollision = $A621 ;Vanilla bomb spread collision handler
         !CollisionTable = $A601
     }
@@ -281,6 +281,7 @@ org !90+!HUDSwitch
         LDA $0D32           ;\
         CMP #$C4F0          ;} If [grapple function] != inactive
         BNE +               ;/ Return carry clear
+		JSL $91DEBA	;		(vanilla does this but why tho)
         LDA #$C4F0          ;\
         STA $0D32           ;} Grapple function = inactive
         BRA SwitchCommon    ;
@@ -326,29 +327,28 @@ endif
 		dw BombLauncherHandler ; Bomb Launcher replaces missiles
 	else
 		if !ChargeMissiles_Tundain == 1
-		dw missilehandler	;in the tundain Charge Missiles asm
+			dw missilehandler	;in the tundain Charge Missiles asm
 		else
-		dw $BE62 ; Missiles
+			dw $BE62 ; Missiles
 		endif
 	endif
 	if !HUD_Index == 1
 		dw BombLauncherHandler ; Bomb Launcher replaces Super missiles
 	else
 		if !ChargeMissiles_Tundain == 1
-		dw missilehandler
+			dw missilehandler
 		else
-		dw $BE62 ; Super Missiles (same as missiles)
+			dw $BE62 ; Super Missiles (same as missiles)
 		endif
 	endif
 	if !HUD_Index == 2
 		dw BombLauncherHandler ; Bomb Launcher replaces PBs
 	else
 		if !BrokenChargeBeam_PHOSPHOTiDYL == 0
-			dw $B80D ; Nothing
+			dw $B80D ; Power bombs
 		else
 			dw NewBeamFire
 		endif
-		dw $B80D ; Power bombs
 	endif
 	if !HUD_Index == 3
 		dw BombLauncherHandler ; Bomb Launcher replaces Grapple
