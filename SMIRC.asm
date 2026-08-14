@@ -420,8 +420,15 @@ if !TerminalVelocity != 5
 endif
 ;Grapple Beam Delta (how fast to send it out
 org $9BC61B			;Grapple beam "delta" (how fast it extends)
-!GrappleDelta		;Vanilla = $000C
+LDA #!GrappleDelta		;Vanilla = $000C
 org $9BC71E 		;Grapple Beam max length
-!GrappleMaxLength 	;Vanilla = $0080
+CMP #!GrappleMaxLength 	;Vanilla = $0080
+
+org $9082FB : BIT #!SpeedBoostHandlingFrame	;how often to run the speedbooster handling routine rather than the normal one.
+org $91D9F0 : CMP #!SpeedBoostRequirement	;speed booster requirement counter. vanilla = 0400
+
+;$91:B20A animation delays. FF marks end of cycle
+org $91B20A : db $02, $03, $02, $03, $02, $03, $02, $03, $FF 	;$02, $03, $FF
+
 }		;end of master toggle for file
 endif

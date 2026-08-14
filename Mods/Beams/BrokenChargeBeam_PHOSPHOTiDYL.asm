@@ -20,7 +20,11 @@ print "brokenCharge: ", pc
 NewBeamFire:
 	PHP : REP #$30											;//start it
 	LDA $0CD0 : STA $0DC2									;//vanilla
-	LDA $0A76 : BEQ $03 : JMP $B887							;//fire uncharged shot
+	LDA $0A76 : BEQ $0A 
+
+	LDA $8B : AND $09B2 : BEQ EndIt
+	JMP $B887							;//fire uncharged shot
+	
 	LDA $09A6 : BIT #$1000 : BNE ChargeBeam					;//if charge beam, avoid this mess
 BrokenCharge:
 	LDA $8B : AND $09B2 : BNE +								;//if not holding fire...

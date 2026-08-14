@@ -109,8 +109,11 @@ LDA $09C6	;missiles, or in this case, universal ammo
 SEC : SBC !supermissileweight-1 : BMI regular				;subtract missile cost MINUS ONE due to one missile always getting spent regardless
 endif 
 
+if !BrokenChargeBeam_PHOSPHOTiDYL != 0
+BRA charge
+else
 LDA !Equippedbeams : BIT #$1000 : BNE charge; check if we have charge beam equipped
-
+endif
 
 regular:
 LDA !Hudselection : STA $10;load current hud index

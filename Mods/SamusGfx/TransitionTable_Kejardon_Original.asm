@@ -1,22 +1,4 @@
-; print "master disassembly table start: ", pc
-
-;key bindings, as tested by the transition code
-; !Run = $8000
-; !Cancel = $4000
-; !Select = $2000
-; !Start = $1000
-; !Up = $0800
-; !Down = $0400
-; !Left = $0200
-; !Right = $0100
-; !Jump = $0080
-; !Fire = $0040
-; !AimD = $0020
-; !AimU = $0010
-; !No_Input = $0000
-; !End_Transition = $FFFF
-
-TransitionTable:
+org $919EE2	;original transition table disassembly by Kej
 	DW T00,T01,T02,T03,T04,T05,T06,T07,T08,T09,T0A,T0B,T0C,T0D,T0E,T0F
 	DW T10,T11,T12,T13,T14,T15,T16,T17,T18,T19,T1A,T1B,T1C,T1D,T1E,T1F
 	DW T20,T21,T22,T23,T24,T25,T26,T27,T28,T29,T2A,T2B,T2C,T2D,T2E,T2F
@@ -33,9 +15,6 @@ TransitionTable:
 	DW TD0,TD1,TD2,TD3,TD4,TD5,TD6,TD7,TD8,TD9,TDA,TDB,TDC,TDD,TDE,TDF
 	DW TE0,TE1,TE2,TE3,TE4,TE5,TE6,TE7,TE8,TE9,TEA,TEB,TEC,TED,TEE,TEF
 	DW TF0,TF1,TF2,TF3,TF4,TF5,TF6,TF7,TF8,TF9,TFA,TFB,TFC
-
-;Transition format
-;[new input], [held input], [new pose]
 
 T00:		;00:;Facing forward, ala Elevator pose (power suit)
 T9B:		;9B:;Facing forward, ala Elevator pose (Varia and/or Gravity Suit)
@@ -175,20 +154,17 @@ DW $0000,$0020,$0008
 DW $FFFF
 
 T13:		;13:;Normal jump facing right, gun extended, not aiming or moving
-DW $0000,$0900,$0069	;up, right
-DW $0000,$0500,$006B	;down, right
-DW $0000,$0190,$0069	;right, jump, aim up
-DW $0000,$01A0,$006B	;right, jump, aim down
-DW $0000,$0800,$0015	;up
-DW $0000,$0400,$0017	;down
-DW $0000,$0010,$0069	;aim up
-DW $0000,$0020,$006B	;aim down
-if !Respin_Kejardon != 0
-DW $0080,$0000,$0019
-endif
-DW $0000,$0200,$002F	;left
-DW $0000,$0100,$0051	;right
-DW $0000,$0040,$0013	;shoot
+DW $0000,$0900,$0069
+DW $0000,$0500,$006B
+DW $0000,$0190,$0069
+DW $0000,$01A0,$006B
+DW $0000,$0200,$002F
+DW $0000,$0800,$0015
+DW $0000,$0400,$0017
+DW $0000,$0010,$0069
+DW $0000,$0020,$006B
+DW $0000,$0100,$0051
+DW $0000,$0040,$0013
 DW $FFFF
 
 T14:		;14:;Normal jump facing left, gun extended, not aiming or moving
@@ -196,15 +172,12 @@ DW $0000,$0A00,$006A
 DW $0000,$0600,$006C
 DW $0000,$0290,$006A
 DW $0000,$02A0,$006C
+DW $0000,$0100,$0030
 DW $0000,$0800,$0016
 DW $0000,$0400,$0018
 DW $0000,$0010,$006A
 DW $0000,$0020,$006C
-if !Respin_Kejardon != 0
-DW $0080,$0000,$001A
-endif
 DW $0000,$0200,$0052
-DW $0000,$0100,$0030
 DW $0000,$0040,$0014
 DW $FFFF
 
@@ -217,18 +190,15 @@ DW $0000,$0900,$0069
 DW $0000,$0500,$006B
 DW $0000,$0190,$0069
 DW $0000,$01A0,$006B
+DW $0000,$0200,$002F
 DW $0000,$0800,$0015
 DW $0000,$0400,$0017
-if !Respin_Kejardon != 0
-DW $0080,$0000,$0019
-endif
-DW $0000,$0200,$002F
 DW $0000,$0010,$0069
 DW $0000,$0020,$006B
 DW $0000,$0100,$0051
 DW $0000,$00C0,$0013
-DW $0000,$0040,$0013
 DW $0000,$0080,$004D
+DW $0000,$0040,$0013
 DW $FFFF
 
 T16:		;16:;Normal jump facing left, aiming up
@@ -240,18 +210,15 @@ DW $0000,$0A00,$006A
 DW $0000,$0600,$006C
 DW $0000,$0290,$006A
 DW $0000,$02A0,$006C
+DW $0000,$0100,$0030
 DW $0000,$0800,$0016
 DW $0000,$0400,$0018
-if !Respin_Kejardon != 0
-DW $0080,$0000,$001A
-endif
-DW $0000,$0100,$0030
 DW $0000,$0010,$006A
 DW $0000,$0020,$006C
 DW $0000,$0200,$0052
 DW $0000,$00C0,$0014
-DW $0000,$0040,$0014
 DW $0000,$0080,$004E
+DW $0000,$0040,$0014
 DW $FFFF
 
 T17:		;17:;Normal jump facing right, aiming Down
@@ -260,18 +227,15 @@ DW $0000,$0900,$0069
 DW $0000,$0500,$006B
 DW $0000,$0190,$0069
 DW $0000,$01A0,$006B
+DW $0000,$0200,$002F
 DW $0000,$0800,$0015
 DW $0000,$0400,$0017
 DW $0000,$0010,$0069
 DW $0000,$0020,$006B
-DW $0000,$00C0,$0013
-DW $0000,$0040,$0013
-if !Respin_Kejardon != 0
-DW $0080,$0000,$0019	;Respin
-endif
-DW $0000,$0200,$002F
 DW $0000,$0100,$0051
+DW $0000,$00C0,$0013
 DW $0000,$0080,$0017
+DW $0000,$0040,$0013
 DW $FFFF
 
 T18:		;18:;Normal jump facing left, aiming Down
@@ -280,18 +244,15 @@ DW $0000,$0A00,$006A
 DW $0000,$0600,$006C
 DW $0000,$0290,$006A
 DW $0000,$02A0,$006C
+DW $0000,$0100,$0030
 DW $0000,$0800,$0016
 DW $0000,$0400,$0018
 DW $0000,$0010,$006A
 DW $0000,$0020,$006C
-DW $0000,$00C0,$0014
-DW $0000,$0040,$0014
-if !Respin_Kejardon != 0
-DW $0080,$0000,$001A	;Respin
-endif
 DW $0000,$0200,$0052
-DW $0000,$0100,$0030
+DW $0000,$00C0,$0014
 DW $0000,$0080,$0018
+DW $0000,$0040,$0014
 DW $FFFF
 
 T19:		;19:;Spin jump right
@@ -367,11 +328,8 @@ DW $0000,$0100,$001E
 DW $0000,$0200,$001F
 DW $FFFF
 
-if !SparkBounce_Kejardon == 0
 T20:		;20:;Spinjump right. Unused?
 T21:		;21:;Spinjump right. Unused?
-endif
-
 T22:		;22:;Spinjump right. Unused?
 T23:		;23:;Spinjump right. Unused?
 T24:		;24:;Spinjump right. Unused?
@@ -495,14 +453,14 @@ TFC:		;FC:;Crouching to standing, facing left and aiming Downleft
 DW $FFFF
 
 T25:		;25:;starting standing right, turning left
-DW $0080,$0200,$001A	;Facing left  - spin jump
-DW $0080,$0000,$004C	;Facing left  - normal jump transition
+DW $0000,$0280,$001A
+DW $0080,$0000,$004C
 DW $0000,$0200,$0025
 DW $FFFF
 
 T26:		;26:;starting standing left, turning right
-DW $0080,$0100,$0019	;Facing right - spin jump
-DW $0080,$0000,$004B	;Facing right - normal jump transition
+DW $0000,$0180,$0019
+DW $0080,$0000,$004B
 DW $0000,$0100,$0026
 DW $FFFF
 
@@ -546,15 +504,12 @@ T6D:		;6D:;Falling facing right, aiming upright
 T6F:		;6F:;Falling facing right, aiming Downright
 DW $0000,$0900,$006D
 DW $0000,$0500,$006F
+DW $0000,$0200,$0087
 DW $0000,$0800,$002B
 DW $0000,$0400,$002D
 DW $0000,$0010,$006D
 DW $0000,$0020,$006F
 DW $0000,$0040,$0067
-if !Respin_Kejardon != 0
-DW $0080,$0000,$0019	;Respin
-endif
-DW $0000,$0200,$0087
 DW $0000,$0100,$0029
 DW $FFFF
 
@@ -564,16 +519,13 @@ T6E:		;6E:;Falling facing left, aiming upleft
 T70:		;70:;Falling facing left, aiming Downleft
 DW $0000,$0A00,$006E
 DW $0000,$0600,$0070
+DW $0000,$0100,$0088
 DW $0000,$0800,$002C
 DW $0000,$0400,$002E
 DW $0000,$0010,$006E
 DW $0000,$0020,$0070
 DW $0000,$0040,$0068
-if !Respin_Kejardon != 0
-DW $0080,$0000,$001A	;Respin
-endif
 DW $0000,$0200,$002A
-DW $0000,$0100,$0088
 DW $FFFF
 
 T2D:		;2D:;Falling facing right, aiming Down
@@ -582,13 +534,10 @@ DW $0000,$0900,$006D
 DW $0000,$0500,$006F
 DW $0000,$0800,$002B
 DW $0000,$0400,$002D
+DW $0000,$0200,$0087
 DW $0000,$0010,$006D
 DW $0000,$0020,$006F
 DW $0000,$0040,$0067
-if !Respin_Kejardon != 0
-DW $0080,$0000,$0019	;Respin
-endif
-DW $0000,$0200,$0087
 DW $0000,$0100,$0029
 DW $FFFF
 
@@ -598,14 +547,11 @@ DW $0000,$0A00,$006E
 DW $0000,$0600,$0070
 DW $0000,$0800,$002C
 DW $0000,$0400,$002E
+DW $0000,$0100,$0088
 DW $0000,$0010,$006E
 DW $0000,$0020,$0070
 DW $0000,$0040,$0068
-if !Respin_Kejardon != 0
-DW $0080,$0000,$001A	;Respin
-endif
 DW $0000,$0200,$002A
-DW $0000,$0100,$0088
 DW $FFFF
 
 T31:		;31:;Midair morphball facing right without springball
@@ -679,13 +625,10 @@ DW $0000,$0900,$006D
 DW $0000,$0500,$006F
 DW $0000,$0800,$002B
 DW $0000,$0400,$002D
+DW $0000,$0200,$0087
 DW $0000,$0010,$006D
 DW $0000,$0020,$006F
-DW $0000,$0200,$0087
 DW $0000,$0040,$0067
-if !Respin_Kejardon != 0
-DW $0080,$0000,$0019		;Respin
-endif
 DW $0000,$0100,$0067
 DW $FFFF
 
@@ -694,13 +637,10 @@ DW $0000,$0A00,$006E
 DW $0000,$0600,$0070
 DW $0000,$0800,$002C
 DW $0000,$0400,$002E
+DW $0000,$0100,$0088
 DW $0000,$0010,$006E
 DW $0000,$0020,$0070
-DW $0000,$0100,$0088
 DW $0000,$0040,$0068
-if !Respin_Kejardon != 0
-DW $0080,$0000,$001A	;Respin
-endif
 DW $0000,$0200,$0068
 DW $FFFF
 
@@ -879,31 +819,3 @@ DW $0000,$0100,$00F0
 DW $0000,$0800,$00F0
 DW $0000,$0400,$00F0
 DW $FFFF
-
-if !SparkBounce_Kejardon != 0
-
-T20:
-if !disableVertical == 0
-	DW $0800,$0080,$00CB	;vertical spark
-endif
-if !Downsparking_Tundain == 1
-	DW $0020,$0080,$00CD	;shinespark if aim down
-endif
-DW $0010,$0080,$00CD	;diagonal (up) spark
-DW $0100,$0080,$00C9	;horizontal spark
-DW $0000,$0080,$0020	;continue pose
-DW $FFFF
-
-T21:
-if !disableVertical == 0
-	DW $0800,$0080,$00CC	;vertical spark
-endif
-if !Downsparking_Tundain == 1
-	DW $0020,$0080,$00CE ;shinespark if aim down
-endif
-DW $0010,$0080,$00CE	;diagonal (up) spark
-DW $0200,$0080,$00CA	;horizontal spark
-DW $0000,$0080,$0021	;continue pose
-DW $FFFF
-
-endif

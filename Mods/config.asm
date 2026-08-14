@@ -7,13 +7,13 @@
 	!brokenChargeBeamTimer = 60				;$3C or 60d is normal. $78 or 120 is SBA and default for the patch.
 !ChargeFlareFix_HAM = 1
 !FullHealthChargeShot_InsaneFirebat = 1
-!PseudoScrewRequiresSpazer_Dewhi100 = 1
+!PseudoScrewRequiresSpazer_Dewhi100 = 0
 !RedBeamsLowHP_Dewhi100 = 1
 !SmoothGrappleBetterLatching_Tundain = 1
 ;!SpinningChargeFlare_Tundain = 0	;possibly bugged. tundain is notified.
 
 ;Blocks
-!ChainBlocks_BlackFalcon = 1	;D horizontal E veritcal F = cross. uses shotblcoks and bomb blocks. crumbles would be nice
+!ChainBlocks_BlackFalcon = 0	;D horizontal E veritcal F = cross. uses shotblcoks and bomb blocks. crumbles would be nice
 !CrumbleDelay_BlackFalcon = 1		;uses !BlockGfx in stddefines.
 	!crumble_delay = $0028         ;this is the frame delay for how long Samus can step on it until it breaks 
 !DropThruPlatforms_Oi27 = 1
@@ -58,7 +58,7 @@
 
 ;Ending
 !NonExplosivePlanet_Tundain = 1
-	!AreaDoesExplode = 0			;If set to 1, part of the surface will still explode. You must supply the art yourself.
+	!AreaDoesExplode = 1			;If set to 1, part of the surface will still explode. You must supply the art yourself.
 !SkipZebesMode7_OmegaDragnet = 1
 
 ;Enemies
@@ -67,7 +67,7 @@
 !EnemyAlwaysFreezesVulnerability_Tundain = 1
 !EnemiesStayDead_Nodever2 = 1
     !NumRooms             = $0005 ; The last !NumRooms rooms where an enemy was killed will be remembered.
-!FlippedBombTorizo_Tundain = 1
+!FlippedBombTorizo_Tundain = 0
 !ImprovedMetroidLatching_Tundain = 1
 !MissileGrabbingGoldenTorizo_Tundain = 1
 !OneRoomElevator_Dewhi100 = 1
@@ -76,7 +76,7 @@
 !VariableKnockback_Tundain = 1
 
 ;Energy
-!ChargeHeal_Dewhi100 = 1
+!ChargeHeal_Dewhi100 = 0
 	!HealsCutoff = 2				;0 = no limit, 1 = heal if critical alarm is on, 2 = can't heal above critical cutoff (almost same as 1, but cutoff is 1 less)
 !DeathForgivenessRevision2_Nodever2 = 1
     !HealthThreshold = #$001E ; If Samus has at least this much health, she will survive an instant kill with !HealthRemaining HP. Default: 30 (decimal). This should be greater than !HealthRemaining.
@@ -91,7 +91,7 @@
 !BossEvents_OmegaDragnet = 1
 !EventStation_Dewhi100 = 1
 !ItemEventPLM_Dewhi100 = 1
-!RoomClearEventPLM_Dewhi100 = 1
+!RoomClearEventPLM_Dewhi100 = 0
 
 ;HUD
 !FullReserveTankIndicator_Compatability_Nodever2 = 1
@@ -140,7 +140,7 @@
 !UniversalAmmo_Tundain = 1	;You must supply the "ammo:" HUD text yourself 
 	!AmmoPLM = 1	;a specialized universal ammo tank.	0XXX = big, 1XXX = small, X0XX ... X2XX are normal/orb/hidden
 	;these values are how much ammo it will consume when fired
-	!supermissileweight = #$0005
+	!supermissileweight = #$0004	;this will be 5 if using charge missiles.
 	!PowerbombWeight = #$000A
 
 
@@ -222,5 +222,7 @@
 !RemoveMorphBounce = 0		;By Omegadragnet
 !SkipDemo = 1				;1 to skip, 0 to keep
 !TerminalVelocity = 8		;vanilla = 5
-!GrappleDelta = #$000E		;Vanilla = $000C
-!GrappleMaxLength = #$00A0 	;Vanilla = $0080
+!GrappleDelta = $000E		;Vanilla = $000C
+!GrappleMaxLength = $00A0 	;Vanilla = $0080
+!SpeedBoostRequirement = $0300	;vanilla $0400
+!SpeedBoostHandlingFrame = $0080	;vanilla $0080. bit check against 02, 03, 02, 03, 02, 03, 02, 03, 02, 03, FF

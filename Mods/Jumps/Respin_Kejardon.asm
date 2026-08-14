@@ -8,7 +8,11 @@ LoROM
 ;This version lets you space jump when triggering respin (one button press), rather than making you trigger respin, and then space jump (two button presses)
 
 org !free90
+	print pc, " - Respin"
 	handle_spinjump:
+	LDA $0A23				;previous movement type (one byte)
+	AND #$00FF	
+	CMP #$000E : BEQ +++	;turning, on ground
 	LDA $09A2 				;Equipped items
 	BIT #$0200				;Space Jump
 	BNE ++
@@ -17,7 +21,6 @@ org !free90
 	CMP #$0002 : BEQ +		;normal jumping
 	CMP #$0003 : BEQ +		;spinjumping
 	CMP #$0006 : BEQ +		;falling
-	CMP #$000E : BEQ +++	;turning, on ground
 	CMP #$0014 : BEQ +		;wall jumping	
 	++
 	LDA $0A1C				;samus pose

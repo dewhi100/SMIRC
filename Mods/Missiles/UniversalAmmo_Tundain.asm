@@ -91,6 +91,13 @@ DW #$2C10,#$2C11,#$2C12,#$2C13 ; change the low byte of these value to change wh
 
 !free80 #= pc()
 
+;Bank 81- clear the universal amm flag
+org $81B2D6
+STZ !UniversalAmmoRAM
+STZ !missilesCurrent
+STZ	!missilesMax
+;;;;;;
+
   ;------------BANK $84 STUFF---------------
 org $8489D2 ; super missiles plms affect missile count
   LDA $09C8
@@ -403,7 +410,7 @@ decreasepbs:
   RTS
  ;routines to check if you can select supers based of if 1: you have more then 0 max supers, and 2: you have enough ammo to fire a super
 checkifcanselectmissiles:
-  LDA $09EE
+  LDA !UniversalAmmoRAM
   BEQ itcantshoot
   LDA $09C6
   RTS

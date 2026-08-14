@@ -37,12 +37,16 @@ org !free84
 print pc, " - Regenerate Missiles"
 SetAmmoRegenRate:
 LDA !missilesMax
+CMP #$0100 : BMI +
+LDA #$7FFF : BRA ++
++
 XBA
 ORA !missilesMax
 STA $4202	;writes 8-bit max HP to multiplication registers
 NOP #4		;wait for result
 LDA $4216
 LSR #4
+++
 STA !AmmoRegenRate_SRAM
 LDA !missilesMax	;hijacked instruction
 RTS
