@@ -38,7 +38,7 @@ print pc, " - Regenerate Missiles"
 SetAmmoRegenRate:
 LDA !missilesMax
 CMP #$0100 : BMI +
-LDA #$7FFF : BRA ++
+LDA #$0FFF : BRA ++
 +
 XBA
 ORA !missilesMax

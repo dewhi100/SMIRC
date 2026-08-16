@@ -206,7 +206,7 @@
 !SpeedKeep_Various = 1		;This is the "modern" speedkeep, that requires you to press run as you land.
 
 ;Suits
-!AcidMod_BlackFalcon = 1
+!AcidMod_BlackFalcon = 0
 !M2anim_Oi27 = 1				;This breaks the hidden block variety of Varia, but you weren't planning on using that... were you?
 	!M2Anim_GFX_Path = "../../Offline/M2Varia_SamusGfxRedesign_Physix.bin"
 !PseudoVaria_Dewhi100 = 1
@@ -225,4 +225,3 @@
 !GrappleDelta = $000E		;Vanilla = $000C
 !GrappleMaxLength = $00A0 	;Vanilla = $0080
 !SpeedBoostRequirement = $0300	;vanilla $0400
-!SpeedBoostHandlingFrame = $0080	;vanilla $0080. bit check against 02, 03, 02, 03, 02, 03, 02, 03, 02, 03, FF

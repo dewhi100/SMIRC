@@ -348,6 +348,9 @@ endif
 if !Downsparking_Tundain == 1
 	incsrc "SpeedBooster/Downsparking_Tundain.asm"
 endif
+
+;incsrc "Speedbooster/ExtraSpeedBoost_Dewhi100.asm"
+
 if !FixSpeedBoosterJumpMomentum_Nodever2 == 1
 	incsrc "Speedbooster/FixSpeedBoosterJumpMomentum_Nodever2.asm"	
 endif
@@ -424,11 +427,13 @@ LDA #!GrappleDelta		;Vanilla = $000C
 org $9BC71E 		;Grapple Beam max length
 CMP #!GrappleMaxLength 	;Vanilla = $0080
 
-org $9082FB : BIT #!SpeedBoostHandlingFrame	;how often to run the speedbooster handling routine rather than the normal one.
-org $91D9F0 : CMP #!SpeedBoostRequirement	;speed booster requirement counter. vanilla = 0400
+;org $9082FB : BIT #!SpeedBoostHandlingFrame	;how often to run the speedbooster handling routine rather than the normal one.
+org $908598 : CMP #!SpeedBoostRequirement	;ctually speed boosting
+org $91D9F0 : CMP #!SpeedBoostRequirement	;speed booster palette requirement counter. vanilla = 0400
 
-;$91:B20A animation delays. FF marks end of cycle
-org $91B20A : db $02, $03, $02, $03, $02, $03, $02, $03, $FF 	;$02, $03, $FF
-
+;faster animation cycles for faster blue suit
+org $91B5F3 
+DB $01, $03, $01, $03, $01, $03, $01, $03, $01, $03, $FF
+DB $01, $01, $01, $01, $01, $01, $01, $01, $01, $01, $FF
 }		;end of master toggle for file
 endif
