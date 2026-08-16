@@ -118,6 +118,9 @@ Project Base
 - Chain Sparking (With Benox50, PHOSPHOTiDYL)
 - Fast Elevators
 
+ProjectXVIII
+- Zero Suit Death Animation
+
 RealRed
 - Menu Colored Samus
 

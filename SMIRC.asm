@@ -41,7 +41,9 @@ if !SkipIntro_Phosphotidyl == 1
 endif
 if !ZeroSuitDeath_ProjectXVIII == 1
 	org $9B8000
-	incbin "Offline/ZeroSuitDeath_ProjectXVIII.gfx"
+	incbin "SamusGfx/ZeroSuitDeathAnimation_ProjectXVIII/ZeroSuitDeath_ProjectXVIII.gfx"
+	org $9BA120
+	incbin "SamusGfx/ZeroSuitDeathAnimation_ProjectXVIII/zeroSuitDeath.pal"
 endif
 
 ;Beams
