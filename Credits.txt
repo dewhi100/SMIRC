@@ -1,5 +1,8 @@
 List of resources, by author:
 
+AmoebaOfDoom
+- Scrolling Sky Fix
+
 Benox50
 - 3x3 Bombs (With Nodever2)
 - Chain Sparking (PHOSPHOTiDYL, Project Base devs)

@@ -15,9 +15,6 @@ incsrc "config.asm"
 ;(Nobody has told me "no" yet, only left me on read. In the future I may host those people's resources depending on circumstances.)"
 ;(For example, an author who nobody has seen nor heard from in years. Not naming any names.)
 ;If you want any of these, DM me.
-if !ScrollingSkyFix_Amoeba == 1
-	incsrc "Offline/AmoebaScrollingSky.asm"
-endif
 if !BlockRevealingMissile_MarioFanGamer == 1
 	incsrc "Offline/BlockRevealingMissile_MarioFanGamer.asm"
 endif
@@ -38,12 +35,6 @@ if !SkipHexMap_Mfreak == 1
 endif
 if !SkipIntro_Phosphotidyl == 1
 	incsrc "Offline/SkipIntro_PhosphotiDYL.asm"
-endif
-if !ZeroSuitDeath_ProjectXVIII == 1
-	org $9B8000
-	incbin "SamusGfx/ZeroSuitDeathAnimation_ProjectXVIII/ZeroSuitDeath_ProjectXVIII.gfx"
-	org $9BA120
-	incbin "SamusGfx/ZeroSuitDeathAnimation_ProjectXVIII/zeroSuitDeath.pal"
 endif
 
 ;Beams
@@ -278,6 +269,9 @@ endif
 if !FasterElevators_ProjectBase == 1
 	incsrc "Optimizations/FasterElevators_ProjectBase.asm"
 endif
+if !ScrollingSkyFix_Amoeba == 1
+	incsrc "Optimizations/AmoebaScrollingSky.asm"
+endif
 
 ;Pause screen
 if !EquipScreenDisassembly_Tundain == 1
@@ -342,6 +336,13 @@ if !SamusResprite == 1
 	warnpc $A08000
 	check bankcross half
 endif
+if !ZeroSuitDeath_ProjectXVIII == 1
+	org $9B8000
+	incbin "SamusGfx/ZeroSuitDeathAnimation_ProjectXVIII/ZeroSuitDeath_ProjectXVIII.gfx"
+	org $9BA120
+	incbin "SamusGfx/ZeroSuitDeathAnimation_ProjectXVIII/zeroSuitDeath.pal"
+endif
+
 
 ;Speed Booster
 if !ChainSpark_Various == 1
