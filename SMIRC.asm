@@ -15,9 +15,7 @@ incsrc "config.asm"
 ;(Nobody has told me "no" yet, only left me on read. In the future I may host those people's resources depending on circumstances.)"
 ;(For example, an author who nobody has seen nor heard from in years. Not naming any names.)
 ;If you want any of these, DM me.
-if !BlockRevealingMissile_MarioFanGamer == 1
-	incsrc "Offline/BlockRevealingMissile_MarioFanGamer.asm"
-endif
+
 if !BrokenChargeBeam_PHOSPHOTiDYL
 	incsrc "Beams/BrokenChargeBeam_PHOSPHOTiDYL.asm"
 endif
@@ -237,7 +235,9 @@ endif
 if !AmmoRegen_Dewhi100 == 1
 	incsrc "Missiles/AmmoRegen_Dewhi100.asm"
 endif
-
+if !BlockRevealingMissile_MarioFanGamer == 1
+	incsrc "Missiles/BlockRevealingMissile_MarioFanGamer.asm"
+endif
 if !ChargeMissiles_Tundain == 1
 	incsrc "Missiles/ChargeMissiles/ChargeMissiles_Tundain.asm"
 endif

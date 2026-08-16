@@ -60,6 +60,9 @@ Kejardon
 Maddo
 - Decompression Optimization (With Kejardon, and Tundain)
 
+MarioFanGamer
+- Block-revealing Missiles
+
 Mccad
 - MOAR Items (Hammerball, Wave Dash, Gauss Missiles)
 
