@@ -260,6 +260,7 @@ JSR_SpawnDirectionalChain:
 
 org !free94
 bombBlockShot:
+	print pc, " - DEBUG chainblock"
 	LDX $0DC4		;\
 	LDA $7F6401,x	;|vanilla code
 	AND #$FF00		;/
@@ -272,6 +273,6 @@ bombBlockShot:
 	+ 
 	SEC : RTS			
 	++
-	JMP $9FE0	
+	JMP $9FFE	
 	
 !free94 #= pc()
