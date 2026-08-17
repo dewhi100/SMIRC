@@ -16,17 +16,8 @@ incsrc "config.asm"
 ;(For example, an author who nobody has seen nor heard from in years. Not naming any names.)
 ;If you want any of these, DM me.
 
-if !BrokenChargeBeam_PHOSPHOTiDYL
-	incsrc "Beams/BrokenChargeBeam_PHOSPHOTiDYL.asm"
-endif
 if !ChargeFlareFix_HAM == 1
 	incsrc "Offline/ChargeFlareFix_HAM.asm"
-endif
-if !MapOverhaul_Mfreak == 1
-	incsrc "Offline/MapOverhaul/MapOverhaul_v1.2.7(asar).asm"
-endif
-if !SkipHexMap_Mfreak == 1
-	incsrc "Offline/MapOverhaul/NoHexMap.asm"	;smart HATES this. do not use, or at least only use the code part
 endif
 
 ;Beams
@@ -35,6 +26,9 @@ if !AccelCharge_Oi27 == 1
 endif
 if !BeamBasedPseudoScrewDamage_Dewhi100 == 1
 	incsrc "Beams/BeamBasedPseudoScrewDamage_Dewhi100.asm"
+endif
+if !BrokenChargeBeam_PHOSPHOTiDYL
+	incsrc "Beams/BrokenChargeBeam_PHOSPHOTiDYL.asm"
 endif
 if !FullHealthChargeShot_InsaneFirebat == 1
 	incsrc "Beams/FullHealthChargeShot_InsaneFirebat.asm"
@@ -49,7 +43,7 @@ if !SmoothGrappleBetterLatching_Tundain == 1
 	incsrc "Beams/SmoothGrappleBetterLatching_Tundain.asm"
 endif
 ; if !SpinningChargeFlare_Tundain == 1
-	; incsrc "Beams/SpinningChargeFlare_Tundain.asm"
+	; incsrc "Beams/SpinningChargeFlare_Tundain.asm"	;has graphical bug. not using for now.
 ; endif
 
 ;Blocks
@@ -207,12 +201,16 @@ if !WaveDash_Mccad == 1 || !HammerBall_Mccad == 1 || !GaussMissiles_Mccad == 1
 endif
 
 ;Intro
+if !SkipHexMap_Mfreak == 1
+	incsrc "Intro/NoHexMap.asm"	;smart HATES this. do not use, or at least only use the code part
+endif
 if !SkipIntroFlashbacks_Nodever2 == 1
 	incsrc "Intro/SkipIntroFlashbacks_Nodever2.asm"
 endif
 if !SkipIntro_Phosphotidyl == 1
 	incsrc "Intro/SkipIntro_PhosphotiDYL.asm"
 endif
+
 
 ;Jumps
 if !EasierWallJump_Benox50 == 1
@@ -273,6 +271,9 @@ endif
 ;Pause screen
 if !EquipScreenDisassembly_Tundain == 1
 	incsrc "Pause/EquipScreenTilemap_Tundain.asm"
+endif
+if !MapOverhaul_Mfreak == 1
+	incsrc "Pause/MapOverhaul/MapOverhaul_v1.2.7(asar).asm"
 endif
 if !MenuColoredSamus_RealRed == 1
 	incsrc "Pause/MenuColoredSamus_RealRed/MenuColoredSamus.asm"
