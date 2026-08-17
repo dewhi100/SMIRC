@@ -114,6 +114,10 @@ OmegaDragnet9
 PHOSPHOTiDYL
 - BrokenChargeBeam
 - Chain Sparking (With Benox50, Project Base devs)
+- Skip Intro
+
+Physix
+- Samus GFX Redesign
 
 PJBoy
 - Bomb Torizo Item Override

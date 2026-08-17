@@ -31,9 +31,6 @@ endif
 if !SkipHexMap_Mfreak == 1
 	incsrc "Offline/MapOverhaul/NoHexMap.asm"	;smart HATES this. do not use, or at least only use the code part
 endif
-if !SkipIntro_Phosphotidyl == 1
-	incsrc "Offline/SkipIntro_PhosphotiDYL.asm"
-endif
 
 ;Beams
 if !AccelCharge_Oi27 == 1
@@ -215,6 +212,9 @@ endif
 ;Intro
 if !SkipIntroFlashbacks_Nodever2 == 1
 	incsrc "Intro/SkipIntroFlashbacks_Nodever2.asm"
+endif
+if !SkipIntro_Phosphotidyl == 1
+	incsrc "Intro/SkipIntro_PhosphotiDYL.asm"
 endif
 
 ;Jumps
