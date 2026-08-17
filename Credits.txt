@@ -48,6 +48,9 @@ Exister
 - Missile Tanks Refill (Hex Tweak)
 - Remove Shinespark Health Drain
 
+FelicityVi
+- Equipment Screen Time/Percent
+
 Insane Firebat
 - Full Health Charge Shots
 

@@ -25,9 +25,6 @@ endif
 if !MapOverhaul_Mfreak == 1
 	incsrc "Offline/MapOverhaul/MapOverhaul_v1.2.7(asar).asm"
 endif
-if !PercentTime_FelicityVi == 1
-	incsrc "Offline/equip-screen-itemstime.asm"
-endif
 if !SkipHexMap_Mfreak == 1
 	incsrc "Offline/MapOverhaul/NoHexMap.asm"	;smart HATES this. do not use, or at least only use the code part
 endif
@@ -279,6 +276,9 @@ if !EquipScreenDisassembly_Tundain == 1
 endif
 if !MenuColoredSamus_RealRed == 1
 	incsrc "Pause/MenuColoredSamus_RealRed/MenuColoredSamus.asm"
+endif
+if !PercentTime_FelicityVi == 1
+	incsrc "Pause/EquipmentScreenTimePercent_FelicityVi/equip-screen-itemstime.asm"
 endif
 
 ;Physics
