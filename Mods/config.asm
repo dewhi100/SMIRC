@@ -208,7 +208,7 @@
 ;Suits
 !AcidMod_BlackFalcon = 0
 !M2anim_Oi27 = 1				;This breaks the hidden block variety of Varia, but you weren't planning on using that... were you?
-	!M2Anim_GFX_Path = "../../Offline/M2Varia_SamusGfxRedesign_Physix.bin"
+	!M2Anim_GFX_Path = "../../SamusGfx/M2Varia_SamusGfxRedesign_Physix.bin"
 !PseudoVaria_Dewhi100 = 1
 	!HeatProofGravitySuit = 0	;Set to 1 if you want Gravity Suit to protect from heat
 	!HalfDamageInLava = 1		;Set if you want charged Ice Beam to reduce lava damage
