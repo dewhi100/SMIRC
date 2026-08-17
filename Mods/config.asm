@@ -192,7 +192,7 @@
 !SamusElbowFix_Kejardon = 0	;not needed if you use crashtour disassembly. I think. also possibly collides with custom gfx
 !SamusMasterDisassembly_Crashtour99 = 1
 !SamusResprite = 1		;Rewrite Samus' graphics with gfs at this path
-	!SamusRespritePath = "Offline/SamusGfxRedesign_Physix.gfx"
+	!SamusRespritePath = "SamusGfx/SamusGfxRedesign_Physix.gfx"
 !ZeroSuitDeath_ProjectXVIII = 1	;NOT INCLUDED IN SMIRC. SET THIS TO 0!
 
 ;Speed Booster
