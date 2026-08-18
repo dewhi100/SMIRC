@@ -170,6 +170,7 @@ Bank B2
 - Slope Compatible Space Pirates (Tundain)
 
 Bank B4
+- Enemy Hit Explosion (H A M)
 - MOAR Items (Mccad)
 
 Bank B6

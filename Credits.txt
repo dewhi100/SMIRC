@@ -51,6 +51,9 @@ Exister
 FelicityVi
 - Equipment Screen Time/Percent
 
+H A M
+- Enemy Hit Explosion
+
 Insane Firebat
 - Full Health Charge Shots
 

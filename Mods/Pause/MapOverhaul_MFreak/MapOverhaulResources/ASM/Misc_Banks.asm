@@ -244,14 +244,16 @@ ORG $8EE4E2 : DW $4631, $7FF4, $001F, $7FE0, $7EA0, $7D40, $7C00, $6417, $4C12, 
 
 ;---------------------------------------BANK $8F----------------------------------------------------
 ;Custom setup ASM (set collected map on current area)
-ORG $8F0000+!SetCollectedAreaCodePosition
+;ORG $8F0000+!SetCollectedAreaCodePosition
+org !free8F
+	print pc, " - Setup ASM for Map Overhaul Tourian Map"
 	REP #$30
 	LDX $079F : LDA $7ED908,x
 	BIT #$0001 : BNE +							;check if map station bit has been set for this area
 	ORA #$0001 : STA $7ED908,x : STA $0789		;set map station bit for this area
 	JSL ConstructMap							;reload active map
 + : RTS
-
+!free8F #= pc()
 
 ;---------------------------------------BANK $A7----------------------------------------------------
 ;Copy the whole HUD tile sheet in Kraid unpause hook when Kraid is dead

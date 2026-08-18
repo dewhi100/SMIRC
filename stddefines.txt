@@ -6,6 +6,7 @@
 !free84 = $84EFD3
 !free85 = $859643
 !free86 = $86F4A6
+!free87 = $87C964
 !free88 = $88EE40
 !free89 = $89AEFD
 !free8B = $8BF760

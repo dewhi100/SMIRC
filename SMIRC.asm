@@ -273,7 +273,7 @@ if !EquipScreenDisassembly_Tundain == 1
 	incsrc "Pause/EquipScreenTilemap_Tundain.asm"
 endif
 if !MapOverhaul_Mfreak == 1
-	incsrc "Pause/MapOverhaul/MapOverhaul_v1.2.7(asar).asm"
+	incsrc "Pause/MapOverhaul_MFreak/MapOverhaul_v1.2.7(asar).asm"
 endif
 if !MenuColoredSamus_RealRed == 1
 	incsrc "Pause/MenuColoredSamus_RealRed/MenuColoredSamus.asm"

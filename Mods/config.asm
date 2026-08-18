@@ -7,7 +7,7 @@
 	!brokenChargeBeamTimer = 60				;$3C or 60d is normal. $78 or 120 is SBA and default for the patch.
 !ChargeFlareFix_HAM = 1
 !FullHealthChargeShot_InsaneFirebat = 1
-!PseudoScrewRequiresSpazer_Dewhi100 = 0
+!PseudoScrewRequiresSpazer_Dewhi100 = 1
 !RedBeamsLowHP_Dewhi100 = 1
 !SmoothGrappleBetterLatching_Tundain = 1
 ;!SpinningChargeFlare_Tundain = 0	;possibly bugged. tundain is notified.
@@ -54,7 +54,7 @@
 	!gravityEffect = 2		;0 = always on. 1 = aura triggers when Gravity suit is equipped in liquids, 2 = aura trigegrs if gravity is equipped at all.
 	!chargeAura = 1			;adds an aura with beam color when fully charged. overrides gravity
 	!criticalAura = 1		;aura triggers if samus is at or below critical HP (beam palette). overrides gravity aura (white). Intended to pair with "RedBeamsLowHP"
-!WaterDroplets_Oi27 = 1		;NOTE: you wont see the graphics ingame right away when quickmetting. You need to go through a door transition in order to properly load the GFX
+!WaterDroplets_Oi27 = 0		;NOTE: you wont see the graphics ingame right away when quickmetting. You need to go through a door transition in order to properly load the GFX
 
 ;Ending
 !NonExplosivePlanet_Tundain = 1
@@ -65,6 +65,7 @@
 !BombTorizoItemOverride_PjBoy = 1
 !Donkkon_Ob = 1
 !EnemyAlwaysFreezesVulnerability_Tundain = 1
+!EnemyProjectileCollision_HAM = 1
 !EnemiesStayDead_Nodever2 = 1
     !NumRooms             = $0005 ; The last !NumRooms rooms where an enemy was killed will be remembered.
 !FlippedBombTorizo_Tundain = 0
@@ -78,7 +79,7 @@
 ;Energy
 !ChargeHeal_Dewhi100 = 0
 	!HealsCutoff = 2				;0 = no limit, 1 = heal if critical alarm is on, 2 = can't heal above critical cutoff (almost same as 1, but cutoff is 1 less)
-!DeathForgivenessRevision2_Nodever2 = 1
+!DeathForgivenessRevision2_Nodever2 = 0
     !HealthThreshold = #$001E ; If Samus has at least this much health, she will survive an instant kill with !HealthRemaining HP. Default: 30 (decimal). This should be greater than !HealthRemaining.
                               ;   In vanilla, the low health alarm plays when Samus has 30 (decimal) or less HP.
     !HealthRemaining = #$0001 ; This is how much health Samus will be left with when she takes damage that is otherwise fatal.
@@ -91,7 +92,7 @@
 !BossEvents_OmegaDragnet = 1
 !EventStation_Dewhi100 = 1
 !ItemEventPLM_Dewhi100 = 1
-!RoomClearEventPLM_Dewhi100 = 0
+!RoomClearEventPLM_Dewhi100 = 1
 
 ;HUD
 !FullReserveTankIndicator_Compatability_Nodever2 = 1
@@ -108,7 +109,7 @@
 	!WaveDashCancelSpinjump = 0 		;|cancel spinjump after dashing. bugged and funny.
 	!WaveDashChargeCombo = 1			;|WaveDash requires charged wave beam rather than an item.
 	!WaveDashThroughWalls = 1			;|Samus' collision is disabled when dashing through gates, shutters, and walls of 1 tile thickness
-	!WaveDashOncePerJump = 0			;|Samus must touch the ground in between wave dashes. Based on Spin Boost's code (by Oi27)	;bugged
+	!WaveDashOncePerJump = 1			;|Samus must touch the ground in between wave dashes. Based on Spin Boost's code (by Oi27)	;bugged
 	!OverrideAura = 0					;|Suit Aura makes wavedash look ugly, so turn off aura during dash
 !HammerBall_Mccad = 1					;|while in the air in morph, hold down and press [aim down]
 	!HammerBallTriggerWithJump = 1		;|Hammerball effect triggered by the jump button
@@ -117,13 +118,13 @@
 	!GaussMissilesNoPLM = 0				;/Set to 1 if for some reason you plan to enable gauss missile in a non-item way
 
 ;Intro
-!SkipIntro_Phosphotidyl = 1	;NOT INCLUDED IN SMIRC. SET THIS TO '0'
+!SkipIntro_Phosphotidyl = 1
 !SkipIntroFlashbacks_Nodever2 = 1
-!SkipHexMap_Mfreak = 1	;NOT INCLUDED IN SMIRC. SET THIS TO '0'
+!SkipHexMap_Mfreak = 1
 
 ;Jumps
 !EasierWallJump_Benox50 = 1
-!LimitedSpaceJumps_Oi27 = 0	;not working, but I wouldn't want it to.
+!LimitedSpaceJumps_Oi27 = 1	;not working, but I wouldn't want it to.
 	!JumpsAllowed = $0002 		;number of jumps incl the one from the ground
 !Respin_Kejardon = 1
 !SuitlessSpaceJump_Dewhi100 = 1
@@ -156,9 +157,9 @@
 
 ;Pause Screen
 !EquipScreenDisassembly_Tundain = 1
-!MapOverhaul_Mfreak = 1					;NOT INCLUDED IN SMIRC. SET THIS TO 0!
-!MenuColoredSamus_RealRed = 1			;NOT INCLUDED IN SMIRC. SET THIS TO 0!
-!PercentTime_FelicityVi = 1				;NOT INCLUDED IN SMIRC. SET THIS TO 0!
+!MapOverhaul_Mfreak = 1	
+!MenuColoredSamus_RealRed = 1
+!PercentTime_FelicityVi = 1
 	!TotalItems = 100					;how many items in hack
 	!BlankTile = #$295D					;-addresses for tiles in the Pause GFX ("Map Screen Graphics" in SMART)
 	!NumbersStart = #$3966				; |
@@ -184,7 +185,7 @@
 !TimeElapsedState_Dewhi100 = 1
 
 ;Samus GFX
-!DualSuitGfx_Crashtour99 = 1	;gfx dont apply properly when using SMART for some reason. asking in the SMART discord
+!DualSuitGfx_Crashtour99 = 1	;NOTE: SMART will not properly apply samus gfx, as it cannot apply more than $10000 bytes at a time for "reasons"
 	!DualGfxPath = "VanillaSamusGFX.gfx"	;path to the alternate GFX
 	!VariaOnly = 0
 !MorphRoll_BlackFalcon = 1
@@ -193,7 +194,7 @@
 !SamusMasterDisassembly_Crashtour99 = 1
 !SamusResprite = 1		;Rewrite Samus' graphics with gfs at this path
 	!SamusRespritePath = "SamusGfx/SamusGfxRedesign_Physix.gfx"
-!ZeroSuitDeath_ProjectXVIII = 1	;NOT INCLUDED IN SMIRC. SET THIS TO 0!
+!ZeroSuitDeath_ProjectXVIII = 1
 
 ;Speed Booster
 !ChainSpark_Various = 1

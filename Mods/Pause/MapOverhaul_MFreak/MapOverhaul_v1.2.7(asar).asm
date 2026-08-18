@@ -46,7 +46,7 @@ LOROM
 ;with the addition that it will be updated on the minimap too.
 ;Must be in bank $8F for it to work. Duo to SMART you have to change the setup asm pointers yourself.
 ;Custom setup asm for setting map station bit (size: $1D)
-	!SetCollectedAreaCodePosition = $E99B
+;	!SetCollectedAreaCodePosition = $E99B	;this should be handled automatically
 }
 
 {;-------------------------------------- COVER TILES -----------------------------------------------

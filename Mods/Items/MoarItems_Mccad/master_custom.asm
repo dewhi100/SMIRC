@@ -57,10 +57,10 @@ endif;																			|
 if !WaveDash_Mccad == 1 || !HammerBall_Mccad == 1
 {
 ;;Main hijack, runs the custom code before processing samus's movement
-ORG $828B47 : JSL Freespace82
+ORG $828B47 : JSL MOAR_ITEMS_Freespace82
 
 ORG !free82 
-Freespace82:
+MOAR_ITEMS_Freespace82:
 JSL FreespaceCustomCode		;Process the custom code
 JSL $A08EB6 : RTL								;Run the instruction overwritten by the hijack and then return
 
@@ -374,6 +374,8 @@ ShineSparkPalTable: DW $9C80,$9E80,$A080
 }
 endif 	;if !HammerBall_Mccad != 0
 
+!free85 #= pc()
+
 if !GaussMissiles_Mccad != 0
 
 macro BeamPatchCompatability(routine)
@@ -390,6 +392,9 @@ endmacro
 ;endif 
 
 ;GAUSS MISSLES
+
+org !free85
+
 CreateGaussMissile:	;;;Runs from the projectile initialization routine in $93. Checks if the projectile is a missile, and then checks for the Gauss missile item bits. If so, manually set to dataset 4.
 CPY #$0002 : BNE + 												;If not missiles, return
 LDA !MoarItemsFlags : BIT #$0002 : BEQ +									;If gauss missiles are not equipped, branch out
@@ -505,8 +510,9 @@ if !WaveDash_Mccad != 0
 	ORG $9498DC : JSL CollisionHijackA : NOP : NOP
 	ORG $948F49 : JSL CollisionHijackB	
 	ORG $A0A096 : NOP : NOP : NOP		;Prevents screw attack from disabling the dash
-	ORG $B4BC69 : LDA SpriteListRePoint,Y
-
+	if !EnemyProjectileCollision_HAM == 0
+		ORG $B4BC69 : LDA SpriteListRePoint,Y
+	endif
 ;;;Custom Sprites {
 ORG !freeB4
 FreeSpaceB4:

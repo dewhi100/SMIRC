@@ -8,6 +8,7 @@
 !MapStationActive = "LDA $0789 : BNE + : LDA #$0300 : STA $2E"	;check if mapstation is active in current area
 
 ORG !free85	;!Freespace_MapConstruction
+print pc, " - Map Overhaul freespace 85"
 LoadMapFromPause:
 	PHP : REP #$30 : STZ $2E
 	!MapDecorationAppearence		;config: draw map deco depending on mapstation setting
