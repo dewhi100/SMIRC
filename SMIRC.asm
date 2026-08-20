@@ -3,7 +3,7 @@
 ASAR 1.90
 LoROM
 
-if 1 == 1	;Easily disable assembling while debugging
+if 1 == 0	;Easily disable assembling while debugging
 {
 ;Configuration;
 
