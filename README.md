@@ -7,6 +7,7 @@ FreespaceUsed.txt	-	Tracks which ASMs use which banks' freespace.
 stddefines.txt		-	Lists freespace, RAM addresses, or other constants or shared values you might want to track, such as custom BTS indices  
 stdincludes.txt		-	I don't really have a good use for this, apart from including the base "Mods" folder  
 test.asm		-	Used to detect ASM collistions between SMIRC and new ASMs before integrating them  
+TODO			-	Sometimes I am lazy and leave things for later. You can ignore this, or check it to see if the thing you want doesn't work yet.
 scratchpad		-	Not needed, but possibly useful for separating out in-development mods  
 Mods			-	Hosts all the different patches  
 Mods/config.asm		-	The UI for SMIRC. Has all the flags for indivual mods and features, and other defines for them.  
@@ -16,7 +17,7 @@ Mods/config.asm		-	The UI for SMIRC. Has all the flags for indivual mods and fea
 - Download this repository into your ASM folder.
 	- SMIRC.asm and test.asm should be the only ASM files at the root level. sort any ASMs you have into the Mods folder.
 - Open Mods/config.asm; To enable a mod, set its flag to 1. To disable, set it to zero.
-	- Example: !ChargeHeal_Dewhi100 = 0	;enable dewhi100s Charge Healing
+	- Example: !ChargeHeal_Dewhi100 = 1	;enable dewhi100s Charge Healing
 - I recommend running an instance of ASAR directly in the ASM folder. 
 	- If you don't you will need to copy stddefines and stdincludes to wherever you are keeping ASAR.
 	- In the copy of stdincludes.txt, change the filepath so that it points to your Mods folder.
@@ -32,11 +33,11 @@ SMIRC should be the only assembly file that runs when you assemble. Otherwise, y
 - At the end of every code block in freespace, add '[freespace variable] #= pc()'
 	- Example: !free90 #= pc()
 - Open test.asm
-- 'incsrc [path to main file for the resource]'
+- 'incsrc [path to main file for the new resource]'
 - Use Asar to apply both patches, and note conflicts. SMART does this easily.
 	- If the only conflicts happen within freespace, the resource is safe to include in the main file
 	- If conflicts happen within code blocks, its up to you to resolve them. This is advanced work.
-	- It helps to define custom RAM or ROM addresses in stdincludes.txt 
+	- It helps to define custom RAM or ROM addresses in stdincludes.txt to prevent accidental overlaps
 - Once conflicts are resolved, create an entry in config.asm, following the naming conventions that include the original author's name. This helps for giving credit later.
 - Open SMIRC.asm and create a similar entry to run the resource.
 - Clear test.asm

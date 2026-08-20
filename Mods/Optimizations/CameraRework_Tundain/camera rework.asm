@@ -447,6 +447,8 @@ warnpc $80A893
 ;--------------BANK $88------------------------------
 
 ; tweaks to make it so FX effects ignore time is frozen flag
+if !disableManualCamera == 0
+
 org $88DA55
 BRA $02
 org $88DB44
@@ -459,6 +461,7 @@ org $88C498
 BRA $02
 org $88D9AF
 BRA $02
+
 
 ;---hijacks to make liquids don't move, but still draw at the right height when manual mode is on------
 org $88B382
@@ -496,6 +499,8 @@ JSR $B2C9
 PLA : RTS
 
 !free88 #= pc()
+
+endif
 
 ;--------------------------------
 ;-----------------------------------------------------------------

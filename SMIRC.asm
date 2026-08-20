@@ -3,7 +3,7 @@
 ASAR 1.90
 LoROM
 
-if 1 == 0	;Easily disable assembling while debugging
+if 1 == 1	;Easily disable assembling while debugging
 {
 ;Configuration;
 
@@ -99,6 +99,9 @@ if !HomingDrops_Nodever2 == 1
 endif
 
 ;Effects
+if !FxOverhaul_Mfreak == 1
+	incsrc "Effects\FxOverhaul_MFreak\FX_Overhaul_v1.0.asm"
+endif
 if !SuitAura_Oi27 == 1
 	incsrc "Effects/SuitAura_Oi27.asm"
 endif

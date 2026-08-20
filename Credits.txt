@@ -72,6 +72,10 @@ MarioFanGamer
 Mccad
 - MOAR Items (Hammerball, Wave Dash, Gauss Missiles)
 
+MFreak
+- FX Overhaul
+- Map Overhaul
+
 Nodever2
 - 3x3 Bombs (With Benox50)
 - Death Forgiveness

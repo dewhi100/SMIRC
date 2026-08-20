@@ -107,7 +107,7 @@ JSL !animatedTilesObjectsHandler : RTS
 !free82 #= pc()
 
 ;dewhi edit 
-org $88B367 ;normally start of the  "wait to rise" fx code (does earthquake and ticks down fx timer.)
-BRA DecrementFxTimer ;I want to skip that and only do earthquake when lava/acid is rising/falling (tides dont count)
-org $88B376
-DecrementFxTimer:
+; org $88B367 ;normally start of the  "wait to rise" fx code (does earthquake and ticks down fx timer.)
+; BRA DecrementFxTimer ;I want to skip that and only do earthquake when lava/acid is rising/falling (tides dont count)
+; org $88B376
+; DecrementFxTimer:

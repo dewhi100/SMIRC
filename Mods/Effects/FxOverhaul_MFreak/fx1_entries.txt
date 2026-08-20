@@ -1,0 +1,75 @@
+00 - No FX1
+02 - Lava
+04 - Acid
+06 - Water
+08 - Spores
+0A - Rain
+0C - Fog
+0E - *BG3 Effect 4*
+10 - *BG3 Effect 5*
+12 - *BG3 Effect 6*
+14 - *BG3 Effect 7*
+16 - *BG3 Effect 8*
+18 - *BG3 Effect 9*
+1A - *BG3 Effect 10*
+1C - *BG3 Effect 11*
+1E - *BG3 Effect 12*
+20 - BG Scroll
+22 - Object
+24 - Fireflea
+26 - *4 Statues*
+28 - *Ceres Ridley*
+2A - *Ceres Mode 7*
+2C - Haze
+
+00 - *nothing*
+02 - "Default"
+04 - (C2) off
+06 - (C1) off
+08 - (CSprite) off
+0A - (C1/CSprite) off
+0C - Subtract
+0E - Subtract, (C1) off
+10 - Halved
+12 - Halved, (C2/CBackdrop) off
+14 - ColorMode "CM"
+16 - CM, Subtract
+18 - CM, Subtract, (C1/CSprite) off
+1A - WindowMode "WM"
+1C - "Mother Brain"
+1E - Subtract, (C2/CBackdrop) off
+20 - CM, (C2/CSprite) off
+22 - CM, Subtract, (C2/CSprite) off
+24 - WM, (C2) off
+26 - WM, (CSprite) off
+28 - WM, (C1/CSprite) off
+2A - WM, Subtract
+2C - WM, Subtract, (C1/CSprite) off
+2E - WM inverted
+30 - WM inverted, Subtract
+32 - *nothing*
+34 - *nothing*
+36 - *nothing*
+38 - *nothing*
+3A - *nothing*
+3C - *nothing*
+3E - *nothing*
+40 - *nothing*
+
+00 - *nothing*
+02 - "Default"
+04 - (L2) off
+06 - add (Sprite) to Sublayer
+08 - change (L2) to Sublayer
+0A - (L2) Sublayer / (L3) Mainlayer
+0C - "Liquid"
+0E - PowerBomb "PB" (L2) off
+10 - "Liquid" + PB (L2) off
+12 - PB (L1) off
+14 - change (L1) to Sublayer
+16 - (L1) Sublayer / (L3) Mainlayer
+18 - set (L2) to Maskout
+1A - add (L1/Sprites) to Maskout
+1C - *nothing*
+1E - *nothing*
+20 - *nothing*

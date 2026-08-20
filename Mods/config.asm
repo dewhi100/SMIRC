@@ -47,6 +47,7 @@
 !HomingDrops_Nodever2 = 1
 
 ;Effects
+!FxOverhaul_Mfreak = 0
 !ScrollingSkyFix_Amoeba = 1
 !SuitAura_Oi27 = 1		;you can set the item that grants aura in the stddefines.txt file. setting to $0000 will remove the item check
 	!AuraRadius = 1     ;(d. pixels) CANNOT BE < 1 OR BREAKS BUILD
@@ -54,7 +55,7 @@
 	!gravityEffect = 2		;0 = always on. 1 = aura triggers when Gravity suit is equipped in liquids, 2 = aura trigegrs if gravity is equipped at all.
 	!chargeAura = 1			;adds an aura with beam color when fully charged. overrides gravity
 	!criticalAura = 1		;aura triggers if samus is at or below critical HP (beam palette). overrides gravity aura (white). Intended to pair with "RedBeamsLowHP"
-!WaterDroplets_Oi27 = 0		;NOTE: you wont see the graphics ingame right away when quickmetting. You need to go through a door transition in order to properly load the GFX
+!WaterDroplets_Oi27 = 1		;NOTE: you wont see the graphics ingame right away when quickmetting. You need to go through a door transition in order to properly load the GFX
 
 ;Ending
 !NonExplosivePlanet_Tundain = 1
