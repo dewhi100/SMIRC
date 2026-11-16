@@ -16,7 +16,7 @@ incsrc "config.asm"
 ;(For example, an author who nobody has seen nor heard from in years. Not naming any names.)
 ;If you want any of these, DM me.
 
-if !ChargeFlareFix_HAM == 1
+if !ChargeFlareFix_HAM == 0
 	incsrc "Offline/ChargeFlareFix_HAM.asm"
 endif
 
